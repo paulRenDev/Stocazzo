@@ -62,23 +62,30 @@ def _scan_insider_transactions(seen_data):
     """
     alerts = []
     try:
-        # Fetch latest transactions (no symbol = all recent)
-        r = requests.get(
-            f"{FINNHUB_BASE}/stock/insider-transactions",
-            params={"token": FINNHUB_KEY},
-            timeout=10,
-        )
-        if r.status_code != 200:
-            print(f"Insider transactions: HTTP {r.status_code}")
-            return alerts
+        # Fetch per ticker — global endpoint ignores date filter
+        from_date = (datetime.now(timezone.utc) - timedelta(days=14)).strftime("%Y-%m-%d")
+        to_date   = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        all_txs   = []
 
-        data   = r.json().get("data", [])
-        print(f"Insider transactions: {len(data)} transactions")
-
-        for tx in data[:40]:
-            symbol = str(tx.get("symbol", "")).upper()
-            if symbol not in WATCH_TICKERS:
+        for symbol in WATCH_TICKERS[:15]:  # limit API calls
+            try:
+                r = requests.get(
+                    f"{FINNHUB_BASE}/stock/insider-transactions",
+                    params={"symbol": symbol, "from": from_date, "to": to_date, "token": FINNHUB_KEY},
+                    timeout=6,
+                )
+                if r.status_code == 200:
+                    txs = r.json().get("data", [])
+                    for tx in txs:
+                        tx["symbol"] = symbol
+                    all_txs.extend(txs)
+            except Exception:
                 continue
+
+        print(f"Insider transactions: {len(all_txs)} transactions across {min(15, len(WATCH_TICKERS))} tickers")
+
+        for tx in all_txs:
+            symbol = str(tx.get("symbol", "")).upper()
 
             name        = tx.get("name", "Unknown")
             change      = tx.get("change", 0)      # positive = BUY, negative = SELL
