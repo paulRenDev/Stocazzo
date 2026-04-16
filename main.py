@@ -101,14 +101,35 @@ def main():
     generate_sources_html(seen_data)
     generate_index_html()
 
-    # 8. Send email if anything to report
-    if all_alerts or backcheck_results or advice_cards:
-        priority = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
-        all_alerts.sort(key=lambda x: (
-            0 if x["source"] == "CONVERGENCE"
-            else priority.get(x.get("urgency", "LOW"), 2)
-        ))
+    # 8. Send email — only on meaningful events, not every run
+    priority = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
+    all_alerts.sort(key=lambda x: (
+        0 if x["source"] == "CONVERGENCE"
+        else priority.get(x.get("urgency", "LOW"), 2)
+    ))
+
+    # Mail triggers:
+    # - Any HIGH urgency signal
+    # - CONVERGENCE alert
+    # - Backcheck/portfolio results (position closed)
+    # - At least 2 MEDIUM signals in same run (= multiple sources agree)
+    high_alerts  = [a for a in all_alerts if a.get("urgency") == "HIGH" or a.get("source") == "CONVERGENCE"]
+    medium_alerts = [a for a in all_alerts if a.get("urgency") == "MEDIUM"]
+    portfolio_closings = [c for c in portfolio_checks if c.get("window") == "5d"]
+
+    should_mail = (
+        len(high_alerts) > 0 or
+        len(medium_alerts) >= 2 or
+        len(backcheck_results) > 0 or
+        len(portfolio_closings) > 0
+    )
+
+    if should_mail:
+        print(f"Sending email: {len(high_alerts)} HIGH, {len(medium_alerts)} MEDIUM, "
+              f"{len(backcheck_results)} backchecks, {len(portfolio_closings)} closed positions")
         send_email(all_alerts, backcheck_results, seen_data, advice_cards)
+    else:
+        print(f"No email — {len(all_alerts)} low-priority signals only")
 
     # 9. Save and commit
     commit_seen(seen_data)
