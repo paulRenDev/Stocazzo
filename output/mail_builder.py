@@ -140,7 +140,7 @@ def _action_advice(alert):
 
 
 # ── HOOFDFUNCTIE ──────────────────────────────────────────────────────────────
-def send_email(alerts, backcheck_results, seen_data):
+def send_email(alerts, backcheck_results, seen_data, advice_cards=None):
     """Bouwt en verstuurt HTML mail naar de mailing list."""
 
     if not alerts and not backcheck_results:
@@ -240,6 +240,47 @@ def send_email(alerts, backcheck_results, seen_data):
             f"Updated hit rates:</div>{stats_spans}</div></td></tr>"
         )
 
+    # Build advice section for email
+    advice_html_email = ""
+    if advice_cards:
+        advice_rows = ""
+        for card in advice_cards[:4]:
+            ac   = card["action_color"]
+            conf = card["confidence"]
+            cc   = "#007a5e" if conf >= 65 else "#b06000" if conf >= 45 else "#cc2222"
+            etf_str = " · ".join(e[0] for e in card["etfs"][:3])
+            src_str = " · ".join(card["sources"][:4])
+            advice_rows += (
+                f"<tr><td style='padding:12px 16px;border-bottom:1px solid #f0f0eb;'>"
+                f"<div style='display:flex;gap:8px;align-items:center;margin-bottom:6px;'>"
+                f"<span style='background:{ac};color:#fff;font-family:monospace;font-size:11px;"
+                f"font-weight:700;padding:2px 10px;border-radius:3px;'>{card['action']}</span>"
+                f"<span style='font-size:13px;font-weight:600;text-transform:capitalize;color:#1a1a1a;'>"
+                f"{card['theme'].replace('_',' ')}</span>"
+                f"<span style='font-size:10px;font-family:monospace;color:#9a9a9a;margin-left:auto;'>"
+                f"{card['n_sources']} sources · {conf}% confidence</span></div>"
+                f"<div style='font-size:12px;color:#6b6b6b;margin-bottom:6px;line-height:1.5;'>"
+                f"{card['active_scenario']}</div>"
+                f"<div style='display:flex;gap:16px;font-size:11px;'>"
+                f"<div style='background:#e8f4f0;padding:6px 10px;border-radius:3px;flex:1;'>"
+                f"<span style='color:#007a5e;font-family:monospace;font-size:10px;'>BULL </span>"
+                f"<span style='color:#1a5e4a;'>{card['bull_case'][:100]}</span></div>"
+                f"<div style='background:#fce8e8;padding:6px 10px;border-radius:3px;flex:1;'>"
+                f"<span style='color:#cc2222;font-family:monospace;font-size:10px;'>BEAR </span>"
+                f"<span style='color:#8b1a1a;'>{card['bear_case'][:100]}</span></div></div>"
+                f"<div style='margin-top:8px;'>"
+                f"<span style='font-size:11px;color:#9a9a9a;font-family:monospace;'>ETFs: {etf_str} · Sources: {src_str}</span>"
+                f"</div></td></tr>"
+            )
+        advice_html_email = (
+            f"<tr><td style='padding:0;'>"
+            f"<div style='background:#f5f5f0;padding:12px 16px;border-bottom:1px solid #e8e8e0;'>"
+            f"<div style='font-size:10px;font-family:monospace;color:#6b6b6b;text-transform:uppercase;"
+            f"letter-spacing:0.06em;'>Cumulative advice — {len(advice_cards)} themes</div></div>"
+            f"<table style='width:100%;border-collapse:collapse;'>{advice_rows}</table>"
+            f"</td></tr>"
+        )
+
     html = (
         f"<html><body style='font-family:Arial,sans-serif;background:#f5f5f0;margin:0;padding:20px;'>"
         f"<div style='max-width:680px;margin:0 auto;background:white;border:1px solid #d8d8d0;"
@@ -251,10 +292,11 @@ def send_email(alerts, backcheck_results, seen_data):
         f"{len(alerts)} nieuw{'e' if len(alerts) != 1 else ''} signaal{'en' if len(alerts) != 1 else ''}</div>"
         f"<div style='font-size:12px;color:#9fe1cb;margin-top:4px;font-family:monospace;'>"
         f"{now_utc()} &nbsp;·&nbsp; {now_be()}</div></div>"
-        f"<table style='width:100%;border-collapse:collapse;'>{rows}{backcheck_html}</table>"
+        f"<table style='width:100%;border-collapse:collapse;'>{rows}{backcheck_html}{advice_html_email}</table>"
         f"<div style='padding:16px 24px;background:#f5f5f0;border-top:1px solid #d8d8d0;'>"
         f"<div style='font-size:11px;color:#9a9a9a;font-family:monospace;'>"
-        f"Sources: Polymarket · Kalshi · Dark Pool · Congress · Pelosi Tracker · Options Flow<br>"
+        f"Sources: Polymarket · Kalshi · Dark Pool · Congress · Pelosi Tracker · Options Flow · "
+        f"Truth Social · SEC EDGAR · GDELT · Reuters · Fear &amp; Greed<br>"
         f"<a href='{SITE_URL}' style='color:#1a5fb5;'>Open Stocazzo Signal Tracker →</a>"
         f"</div></div></div></body></html>"
     )

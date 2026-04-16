@@ -1,6 +1,311 @@
 {
-  "ids": [],
+  "ids": [
+    "acefd863227a",
+    "0d4041a7fae2",
+    "556f276c2cb7",
+    "f4e705fed31d",
+    "7b1420f5d653",
+    "1d6b86fe014c"
+  ],
   "stats": {},
-  "pending_checks": [],
-  "history": []
+  "pending_checks": [
+    {
+      "uid": "7b1420f5d653",
+      "source": "Lobbying",
+      "ticker": "LMT",
+      "direction": "WATCH",
+      "date": "2026-04-16T15:33:17.649366+00:00",
+      "price_at_signal": 604.62,
+      "title": "LMT lobbying: $4,300,000 in last 90 days"
+    },
+    {
+      "uid": "acefd863227a",
+      "source": "Lobbying",
+      "ticker": "NVDA",
+      "direction": "WATCH",
+      "date": "2026-04-16T15:33:18.090789+00:00",
+      "price_at_signal": 199.11,
+      "title": "NVDA lobbying: $1,700,000 in last 90 days"
+    }
+  ],
+  "history": [
+    {
+      "uid": "0d4041a7fae2",
+      "date": "16/04/2026 15:33 UTC",
+      "date_be": "16/04/2026 17:33 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider",
+      "direction": "SELL",
+      "title": "Barnum Jeremy \u2014 SELL 5,611 shares of JPM",
+      "detail": "JPM insider SELL. Shares changed: -5,611 | Total held: 35,460 | Filed: 2026-04-15",
+      "urgency": "LOW",
+      "keywords": "JPM, insider, sell",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-insider-transactions/JPM",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Barnum Jeremy filed SELL of 5,611 JPM shares.  ",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 35,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "7b1420f5d653",
+      "date": "16/04/2026 15:33 UTC",
+      "date_be": "16/04/2026 17:33 CEST",
+      "source": "Lobbying",
+      "type": "Senate/House \u00b7 LMT",
+      "direction": "WATCH",
+      "title": "LMT lobbying: $4,300,000 in last 90 days",
+      "detail": "10 lobbying filings. Latest: Defense and aerospace technology company. Period: Q4",
+      "urgency": "LOW",
+      "keywords": "LMT, lobbying, regulation",
+      "etfs": [
+        [
+          "LMT",
+          "Lockheed Martin",
+          "NYSE"
+        ],
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finnhub.io/stock-lobbying/LMT",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "LMT spent $4,300,000 lobbying in 90 days \u2014 10 filings. Large lobbying spend precedes regulatory changes or contract wins.",
+        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
+        "confidence": 35,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "acefd863227a",
+      "date": "16/04/2026 15:33 UTC",
+      "date_be": "16/04/2026 17:33 CEST",
+      "source": "Lobbying",
+      "type": "Senate/House \u00b7 NVDA",
+      "direction": "WATCH",
+      "title": "NVDA lobbying: $1,700,000 in last 90 days",
+      "detail": "4 lobbying filings. Latest: Computer technology, semiconductor design, telecommunications, and artificial intelligence. Period: Q4",
+      "urgency": "LOW",
+      "keywords": "NVDA, lobbying, regulation",
+      "etfs": [
+        [
+          "NVDA",
+          "NVIDIA Corporation",
+          "NASDAQ"
+        ],
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://finnhub.io/stock-lobbying/NVDA",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "NVDA spent $1,700,000 lobbying in 90 days \u2014 4 filings. Large lobbying spend precedes regulatory changes or contract wins.",
+        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
+        "confidence": 35,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "f4e705fed31d",
+      "date": "16/04/2026 15:33 UTC",
+      "date_be": "16/04/2026 17:33 CEST",
+      "source": "Lobbying",
+      "type": "Senate/House \u00b7 MSFT",
+      "direction": "WATCH",
+      "title": "MSFT lobbying: $3,612,500 in last 90 days",
+      "detail": "20 lobbying filings. Latest: Platform that enables professional networking & development, hiring, marketing & learning.. Period: Q4",
+      "urgency": "LOW",
+      "keywords": "MSFT, lobbying, regulation",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-lobbying/MSFT",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "MSFT spent $3,612,500 lobbying in 90 days \u2014 20 filings. Large lobbying spend precedes regulatory changes or contract wins.",
+        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
+        "confidence": 35,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "556f276c2cb7",
+      "date": "16/04/2026 15:33 UTC",
+      "date_be": "16/04/2026 17:33 CEST",
+      "source": "Lobbying",
+      "type": "Senate/House \u00b7 META",
+      "direction": "WATCH",
+      "title": "META lobbying: $526,250 in last 90 days",
+      "detail": "10 lobbying filings. Latest: Technology. Period: Q4",
+      "urgency": "LOW",
+      "keywords": "META, lobbying, regulation",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-lobbying/META",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "META spent $526,250 lobbying in 90 days \u2014 10 filings. Large lobbying spend precedes regulatory changes or contract wins.",
+        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
+        "confidence": 35,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1d6b86fe014c",
+      "date": "16/04/2026 15:33 UTC",
+      "date_be": "16/04/2026 17:33 CEST",
+      "source": "Lobbying",
+      "type": "Senate/House \u00b7 XOM",
+      "direction": "WATCH",
+      "title": "XOM lobbying: $2,190,000 in last 90 days",
+      "detail": "8 lobbying filings. Latest: low-carbon technology company. Period: Q4",
+      "urgency": "LOW",
+      "keywords": "XOM, lobbying, regulation",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-lobbying/XOM",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "XOM spent $2,190,000 lobbying in 90 days \u2014 8 filings. Large lobbying spend precedes regulatory changes or contract wins.",
+        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
+        "confidence": 35,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    }
+  ],
+  "advice_checks": [
+    {
+      "uid": "4984482a1921",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 5,
+      "confidence": 35,
+      "sources": [
+        "SEC EDGAR"
+      ],
+      "date": "2026-04-16T15:33:15.773040+00:00",
+      "price_at_signal": 441.06,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "78eb02d1ffc2",
+      "theme": "defense",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "ITA",
+      "score": 3,
+      "confidence": 23,
+      "sources": [
+        "Lobbying"
+      ],
+      "date": "2026-04-16T15:33:16.403477+00:00",
+      "price_at_signal": 230.41,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "7500e08debfa",
+      "theme": "tech",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "QQQ",
+      "score": 3,
+      "confidence": 23,
+      "sources": [
+        "Lobbying"
+      ],
+      "date": "2026-04-16T15:33:16.759262+00:00",
+      "price_at_signal": 640.01,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "b5c694734f40",
+      "theme": "macro",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "SPY",
+      "score": 3,
+      "confidence": 23,
+      "sources": [
+        "Lobbying"
+      ],
+      "date": "2026-04-16T15:33:16.989270+00:00",
+      "price_at_signal": 700.95,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    }
+  ]
 }
