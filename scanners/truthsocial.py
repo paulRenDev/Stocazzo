@@ -37,6 +37,10 @@ MARKET_KEYWORDS = {
         "semiconductor", "chip", "nvidia", "tech",
         "defense", "military", "war", "threat",
         "announcement", "big news", "something big",
+        "market", "trade", "deal", "negotiat", "agreement",
+        "sanction", "export", "import", "tax", "duty",
+        "rates", "cut", "hike", "recession", "growth",
+        "europe", "russia", "north korea", "middle east",
     ],
     # Context signals — lower weight
     "low": [
@@ -59,7 +63,7 @@ BEARISH_WORDS = [
 ]
 
 # How old a post can be (hours) to still be considered relevant
-MAX_POST_AGE_HOURS = 4
+MAX_POST_AGE_HOURS = 48  # extended — CNN archive may lag a few hours
 
 
 def scan_truthsocial(seen_data):
@@ -80,7 +84,7 @@ def scan_truthsocial(seen_data):
         cutoff = now - timedelta(hours=MAX_POST_AGE_HOURS)
 
         new_posts = 0
-        for post in posts[:50]:  # check latest 50
+        for post in posts[:200]:  # check latest 200
             # Parse date
             created_raw = post.get("created_at", "")
             try:
@@ -89,7 +93,7 @@ def scan_truthsocial(seen_data):
                 continue
 
             if created < cutoff:
-                break  # archive is newest-first, stop when too old
+                continue  # skip old posts, don't break (archive may not be sorted)
 
             new_posts += 1
 

@@ -288,7 +288,6 @@ def _portfolio_html(seen_data):
 
 # ── LIVE.HTML ─────────────────────────────────────────────────────────────────
 def generate_live_html(seen_data, all_alerts, advice_cards=None, skip_prices=False):
-    etf_quotes     = _fetch_etf_quotes()
     active_tickers = {t for a in all_alerts for t, n, e in a.get("etfs", [])}
     advice_cards_list = advice_cards or []
     advice_html       = format_advice_html_section(advice_cards_list)
@@ -364,42 +363,11 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None, skip_prices=Fal
             "No new signals in this run — scanner active every 30 min</div>"
         )
 
-    # ── ETF WATCHLIST ─────────────────────────────────────────────────────────
-    etf_grid = ""
-    for t, n, e, theme in KEY_ETFS:
-        is_active    = t in active_tickers
-        border_style = "border-left:3px solid var(--green);" if is_active else ""
-        active_dot   = "<span style='width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;'></span>" if is_active else ""
-        q            = etf_quotes.get(t)
-        price_html   = ""
-        if q:
-            pct_color = "var(--green)" if q["pct"] > 0 else "var(--red)"
-            pct_icon  = "▲" if q["pct"] > 0 else "▼"
-            price_html = (
-                f"<div style='display:flex;justify-content:space-between;align-items:baseline;margin-top:6px;'>"
-                f"<span style='font-family:var(--mono);font-weight:600;font-size:13px;'>${q['price']:.2f}</span>"
-                f"<span style='font-family:var(--mono);font-size:11px;font-weight:600;color:{pct_color};'>"
-                f"{pct_icon} {abs(q['pct']):.2f}%</span></div>"
-            )
-        etf_grid += (
-            f"<div style='background:var(--surface);border:1px solid var(--border);padding:10px;"
-            f"border-radius:4px;{border_style}'>"
-            f"<div style='display:flex;align-items:center;justify-content:space-between;'>"
-            f"<a href='{etf_yahoo_url(t,e)}' target='_blank' style='font-family:var(--mono);font-size:14px;"
-            f"font-weight:700;color:var(--green);text-decoration:none;'>{t}</a>{active_dot}</div>"
-            f"<div style='font-size:12px;color:var(--muted);margin:2px 0;'>{n}</div>"
-            f"<div style='display:flex;justify-content:space-between;align-items:center;margin-top:3px;'>"
-            f"<span style='font-family:var(--mono);font-size:11px;color:var(--dim);'>{e}</span>"
-            f"<span style='font-size:10px;background:#f0f0eb;color:var(--muted);padding:1px 6px;border-radius:3px;'>{theme}</span></div>"
-            f"{price_html}"
-            f"<div style='display:flex;gap:4px;margin-top:6px;'>"
-            f"<a href='{etf_yahoo_url(t,e)}' target='_blank' style='font-family:var(--mono);font-size:10px;"
-            f"padding:2px 7px;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--blue);'>Yahoo</a>"
-            f"<a href='{etf_google_url(t,e)}' target='_blank' style='font-family:var(--mono);font-size:10px;"
-            f"padding:2px 7px;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--muted);'>Google</a>"
-            f"</div></div>"
-        )
+    # ── ETF WATCHLIST — dynamic JS rendering ─────────────────────────────────
+    # Prices fetched client-side via Twelve Data API — no server needed
+    active_tickers_js = str(list(active_tickers)).replace("'", '"')
 
+    twelvedata_key = TWELVEDATA_KEY or ""
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -445,12 +413,109 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None, skip_prices=Fal
   </div>
 
   <div class="section">
-    <div class="section-title">ETF watchlist</div>
-    <div class="etf-grid">{etf_grid}</div>
+    <div class="section-title">ETF watchlist — live prices</div>
+    <div id="fear-greed-bar" style="margin-bottom:12px;"></div>
+    <div id="etf-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+      <div style="color:var(--muted);font-family:var(--mono);font-size:12px;padding:8px;">Loading prices...</div>
+    </div>
   </div>
 </div>
+<div id="td-key" data-key="{twelvedata_key}" style="display:none;"></div>
+<div id="active-tickers" data-tickers="{active_tickers_js}" style="display:none;"></div>
 </body>
 </html>"""
+
+    # Dynamic ETF + Fear&Greed script — injected separately to avoid f-string brace conflicts
+    _ETF_DATA_JSON = '{\n  "XLE": {\n    "name": "Energy Select SPDR",\n    "exchange": "NYSE",\n    "theme": "Energie",\n    "yahoo": "https://finance.yahoo.com/quote/XLE",\n    "google": "https://www.google.com/finance/quote/XLE:NYSE"\n  },\n  "IEO": {\n    "name": "Oil & Gas E&P",\n    "exchange": "NYSE",\n    "theme": "Energie",\n    "yahoo": "https://finance.yahoo.com/quote/IEO",\n    "google": "https://www.google.com/finance/quote/IEO:NYSE"\n  },\n  "INRG": {\n    "name": "Global Clean Energy",\n    "exchange": "AMS",\n    "theme": "Renewables",\n    "yahoo": "https://finance.yahoo.com/quote/INRG.AS",\n    "google": "https://www.google.com/finance/quote/INRG:AMS"\n  },\n  "ICLN": {\n    "name": "Clean Energy",\n    "exchange": "NASDAQ",\n    "theme": "Renewables",\n    "yahoo": "https://finance.yahoo.com/quote/ICLN",\n    "google": "https://www.google.com/finance/quote/ICLN:NASDAQ"\n  },\n  "GLD": {\n    "name": "SPDR Gold",\n    "exchange": "NYSE",\n    "theme": "Goud",\n    "yahoo": "https://finance.yahoo.com/quote/GLD",\n    "google": "https://www.google.com/finance/quote/GLD:NYSE"\n  },\n  "IGLN": {\n    "name": "Physical Gold ETC",\n    "exchange": "AMS",\n    "theme": "Goud",\n    "yahoo": "https://finance.yahoo.com/quote/IGLN.AS",\n    "google": "https://www.google.com/finance/quote/IGLN:AMS"\n  },\n  "ITA": {\n    "name": "US Aerospace & Defense",\n    "exchange": "NYSE",\n    "theme": "Defensie",\n    "yahoo": "https://finance.yahoo.com/quote/ITA",\n    "google": "https://www.google.com/finance/quote/ITA:NYSE"\n  },\n  "SOXX": {\n    "name": "Semiconductors",\n    "exchange": "NASDAQ",\n    "theme": "Tech",\n    "yahoo": "https://finance.yahoo.com/quote/SOXX",\n    "google": "https://www.google.com/finance/quote/SOXX:NASDAQ"\n  },\n  "QQQ": {\n    "name": "Nasdaq-100",\n    "exchange": "NASDAQ",\n    "theme": "Tech",\n    "yahoo": "https://finance.yahoo.com/quote/QQQ",\n    "google": "https://www.google.com/finance/quote/QQQ:NASDAQ"\n  },\n  "IBIT": {\n    "name": "Bitcoin Trust",\n    "exchange": "NASDAQ",\n    "theme": "Crypto",\n    "yahoo": "https://finance.yahoo.com/quote/IBIT",\n    "google": "https://www.google.com/finance/quote/IBIT:NASDAQ"\n  },\n  "TLT": {\n    "name": "20yr Treasury Bond",\n    "exchange": "NASDAQ",\n    "theme": "Obligaties",\n    "yahoo": "https://finance.yahoo.com/quote/TLT",\n    "google": "https://www.google.com/finance/quote/TLT:NASDAQ"\n  },\n  "IWDA": {\n    "name": "MSCI World",\n    "exchange": "AMS",\n    "theme": "Breed",\n    "yahoo": "https://finance.yahoo.com/quote/IWDA.AS",\n    "google": "https://www.google.com/finance/quote/IWDA:AMS"\n  }\n}'
+    _DYNAMIC_SCRIPT = """<script>
+(function() {
+  var key     = document.getElementById('td-key').getAttribute('data-key');
+  var active  = JSON.parse(document.getElementById('active-tickers').getAttribute('data-tickers') || '[]');
+  var etfData = """ + _ETF_DATA_JSON + """;
+  var tickers = Object.keys(etfData);
+  var prices  = {};
+
+  function renderGrid() {
+    var grid = document.getElementById('etf-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    tickers.forEach(function(t) {
+      var info = etfData[t];
+      var q    = prices[t];
+      var isActive = active.indexOf(t) >= 0;
+      var border = isActive ? 'border-left:3px solid var(--green);' : '';
+      var dot    = isActive ? '<span style="width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block;"></span>' : '';
+      var priceHtml = '';
+      if (q && q.close) {
+        var pct   = parseFloat(q.percent_change || 0);
+        var price = parseFloat(q.close);
+        var pc    = pct >= 0 ? 'var(--green)' : 'var(--red)';
+        var icon  = pct >= 0 ? '\u25b2' : '\u25bc';
+        priceHtml = '<div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:6px;">' +
+          '<span style="font-family:var(--mono);font-weight:600;font-size:13px;">$' + price.toFixed(2) + '</span>' +
+          '<span style="font-family:var(--mono);font-size:11px;font-weight:600;color:' + pc + ';">' + icon + ' ' + Math.abs(pct).toFixed(2) + '%</span>' +
+          '</div>';
+      } else {
+        priceHtml = '<div style="font-family:var(--mono);font-size:11px;color:var(--dim);margin-top:6px;">—</div>';
+      }
+      var d = document.createElement('div');
+      d.style.cssText = 'background:var(--surface);border:1px solid var(--border);padding:10px;border-radius:4px;' + border;
+      d.innerHTML =
+        '<div style="display:flex;align-items:center;justify-content:space-between;">' +
+        '<a href="' + info.yahoo + '" target="_blank" style="font-family:var(--mono);font-size:14px;font-weight:700;color:var(--green);text-decoration:none;">' + t + '</a>' + dot +
+        '</div>' +
+        '<div style="font-size:12px;color:var(--muted);margin:2px 0;">' + info.name + '</div>' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-top:3px;">' +
+        '<span style="font-family:var(--mono);font-size:11px;color:var(--dim);">' + info.exchange + '</span>' +
+        '<span style="font-size:10px;background:#f0f0eb;color:var(--muted);padding:1px 6px;border-radius:3px;">' + info.theme + '</span>' +
+        '</div>' + priceHtml +
+        '<div style="display:flex;gap:4px;margin-top:6px;">' +
+        '<a href="' + info.yahoo + '" target="_blank" style="font-family:var(--mono);font-size:10px;padding:2px 7px;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--blue);">Yahoo</a>' +
+        '<a href="' + info.google + '" target="_blank" style="font-family:var(--mono);font-size:10px;padding:2px 7px;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--muted);">Google</a>' +
+        '</div>';
+      grid.appendChild(d);
+    });
+  }
+
+  function fetchNext(i) {
+    if (i >= tickers.length) { renderGrid(); return; }
+    if (!key) { renderGrid(); return; }
+    var t = tickers[i];
+    fetch('https://api.twelvedata.com/quote?symbol=' + t + '&apikey=' + key)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data && data.close) prices[t] = data;
+        renderGrid();
+        setTimeout(function() { fetchNext(i + 1); }, 600);
+      }).catch(function() {
+        setTimeout(function() { fetchNext(i + 1); }, 600);
+      });
+  }
+
+  fetch('https://production.dataviz.cnn.io/index/fearandgreed/graphdata')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var fg    = data.fear_and_greed || {};
+      var score = parseFloat(fg.score || fg.value || 50);
+      var label = fg.rating || fg.value_classification || '';
+      var color = score <= 25 ? '#cc2222' : score <= 45 ? '#b06000' : score <= 55 ? '#888' : score <= 75 ? '#007a5e' : '#005f4a';
+      var bar = document.getElementById('fear-greed-bar');
+      if (bar) bar.innerHTML =
+        '<div style="display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:10px 14px;">' +
+        '<span style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;">Fear &amp; Greed</span>' +
+        '<div style="background:#e0e0d8;border-radius:4px;height:8px;width:200px;"><div style="background:' + color + ';height:8px;border-radius:4px;width:' + score + '%;"></div></div>' +
+        '<span style="font-family:var(--mono);font-size:14px;font-weight:600;color:' + color + ';">' + Math.round(score) + '/100</span>' +
+        '<span style="font-size:12px;color:var(--muted);">' + label + '</span>' +
+        '<span style="font-size:10px;color:var(--dim);margin-left:auto;font-family:var(--mono);">live</span>' +
+        '</div>';
+    }).catch(function() {});
+
+  fetchNext(0);
+})();
+</script>"""
+
+    # Inject script into html at the end
+    html = html.replace("</body>\n</html>", _DYNAMIC_SCRIPT + "\n</body>\n</html>")
 
     with open("live.html", "w") as f:
         f.write(html)
