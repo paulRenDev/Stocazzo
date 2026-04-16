@@ -1,61 +1,63 @@
 {
   "ids": [
-    "1ede72cc1fa0",
-    "af68940ec1e0",
-    "e87b4da2717b",
-    "31843a5643ef",
-    "23ab136875d6",
-    "0d4041a7fae2",
-    "ff9000f9e899",
-    "343d17b3e17a",
     "51045d443f94",
-    "3e9307dee462",
-    "85c4730b886c",
-    "5f23b9a680d2",
-    "cfdcae65b396",
-    "943a2fc41358",
+    "e5a2151f14c5",
+    "23ab136875d6",
     "045f55b844a4",
-    "3bb58e487f35",
-    "1431412201ef",
-    "dd9d19a9c5a4",
-    "7045bde3dbe3",
-    "36ac56b06e2b",
-    "ec40e3cfacb3",
-    "7013b47db36c",
-    "aabbc8a157d5",
     "1de84568c6f2",
-    "994fb09849c9",
+    "dd9d19a9c5a4",
+    "0d4041a7fae2",
+    "81c7d996ca75",
+    "9b3073f18896",
+    "ec40e3cfacb3",
+    "ff9000f9e899",
+    "7b1420f5d653",
+    "5f23b9a680d2",
+    "943a2fc41358",
     "28cc4ad9c612",
-    "6268e160a599",
-    "2fb60ff4a3bf",
+    "7a2691723cce",
+    "9c5e7c4556c7",
+    "9d7f440c781e",
+    "a6ab397cf266",
+    "7013b47db36c",
+    "624842d27583",
+    "2e469813dd1c",
+    "1431412201ef",
     "74e38c979ed6",
-    "556f276c2cb7",
-    "060828854bf6",
+    "36ac56b06e2b",
+    "6268e160a599",
+    "889bec77b208",
+    "39a94e2128a3",
+    "31843a5643ef",
+    "eff4ba5df193",
     "1d6b86fe014c",
     "2925e4685dcf",
     "169ebe479f0f",
-    "9c5e7c4556c7",
-    "9d7f440c781e",
-    "f4e705fed31d",
-    "dfa924e4f13d",
-    "2763e2fd180a",
-    "7a2691723cce",
-    "624842d27583",
-    "39a94e2128a3",
-    "b421c50e856a",
-    "acefd863227a",
     "ecc0ec2d9067",
-    "81c7d996ca75",
-    "9b3073f18896",
-    "e5a2151f14c5",
+    "343d17b3e17a",
+    "af68940ec1e0",
+    "aabbc8a157d5",
+    "acefd863227a",
+    "2fb60ff4a3bf",
+    "d56a5cdfbb96",
     "500615d0f735",
-    "2e469813dd1c",
-    "7b1420f5d653",
-    "a75e66a206d2",
+    "f4e705fed31d",
+    "cfdcae65b396",
+    "2763e2fd180a",
+    "734a420b9235",
+    "3bb58e487f35",
+    "994fb09849c9",
+    "556f276c2cb7",
     "14812c35cbe0",
-    "889bec77b208",
-    "eff4ba5df193",
-    "734a420b9235"
+    "7045bde3dbe3",
+    "e87b4da2717b",
+    "3e9307dee462",
+    "dfa924e4f13d",
+    "1ede72cc1fa0",
+    "060828854bf6",
+    "a75e66a206d2",
+    "b421c50e856a",
+    "85c4730b886c"
   ],
   "stats": {},
   "pending_checks": [
@@ -319,6 +321,15 @@
       "date": "2026-04-16T19:37:56.068364+00:00",
       "price_at_signal": 56.55,
       "title": "Trump: \"will someone please tell pope leo that iran has killed at least 42,000 i"
+    },
+    {
+      "uid": "d56a5cdfbb96",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "WATCH",
+      "date": "2026-04-16T20:46:29.512234+00:00",
+      "price_at_signal": 229.03,
+      "title": "Trump: \"the out of control trump hating, washington, d.c. district court judge, "
     }
   ],
   "history": [
@@ -2329,6 +2340,70 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "d56a5cdfbb96",
+      "date": "16/04/2026 20:46 UTC",
+      "date_be": "16/04/2026 22:46 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 41m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"the out of control trump hating, washington, d.c. district court judge, who does\"",
+      "detail": "the out of control trump hating, washington, d.c. district court judge, who doesn't want to accept a $400 million dollar gift of one of the most beautiful ballrooms anywhere in the world, desperately ",
+      "urgency": "MEDIUM",
+      "keywords": "military",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116416177838768498",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 41m ago. Matched: military",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "a6ab397cf266",
+      "date": "16/04/2026 20:46 UTC",
+      "date_be": "16/04/2026 22:46 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 1h 8m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"the person who filed the meritless and lawless suit on the desperately needed wh\"",
+      "detail": "the person who filed the meritless and lawless suit on the desperately needed white house ballroom, being built as a gift to america (without tax dollars!), a woman walking her dog, has absolutely no ",
+      "urgency": "MEDIUM",
+      "keywords": "import, tax",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116416069269152200",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 1h 8m ago. Matched: import, tax",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -2441,10 +2516,14 @@
       ],
       "date": "2026-04-16T16:08:52.505668+00:00",
       "price_at_signal": 56.59,
-      "check_4h": null,
+      "check_4h": "2026-04-16T20:45:45.325597+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.02,
+        "hit": null,
+        "price": 56.6
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -2461,10 +2540,14 @@
       ],
       "date": "2026-04-16T16:08:52.684687+00:00",
       "price_at_signal": 702.46,
-      "check_4h": null,
+      "check_4h": "2026-04-16T20:45:45.500290+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.13,
+        "hit": null,
+        "price": 701.53
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -2481,10 +2564,14 @@
       ],
       "date": "2026-04-16T16:08:52.863232+00:00",
       "price_at_signal": 702.46,
-      "check_4h": null,
+      "check_4h": "2026-04-16T20:45:45.681286+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.13,
+        "hit": false,
+        "price": 701.53
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -2501,10 +2588,14 @@
       ],
       "date": "2026-04-16T16:08:53.027681+00:00",
       "price_at_signal": 641.78,
-      "check_4h": null,
+      "check_4h": "2026-04-16T20:45:45.841718+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.21,
+        "hit": false,
+        "price": 640.41
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -2832,16 +2923,76 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "d753384e86b2",
+      "theme": "defense",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "ITA",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-16T20:46:25.895982+00:00",
+      "price_at_signal": 228.99,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "fb279d84234f",
+      "theme": "fed",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "TLT",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-16T20:46:26.066740+00:00",
+      "price_at_signal": 86.29,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "9ac59b99a817",
+      "theme": "trade",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "IWDA",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-16T20:46:26.279200+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 0,
-    "misses": 1,
-    "watches": 3,
+    "misses": 3,
+    "watches": 5,
     "by_window": {
       "4h": {
         "hits": 0,
-        "misses": 1
+        "misses": 3
       },
       "24h": {
         "hits": 0,
@@ -2863,11 +3014,19 @@
       },
       "tech": {
         "hits": 0,
-        "misses": 0
+        "misses": 1
       },
       "macro": {
         "hits": 0,
         "misses": 0
+      },
+      "energy": {
+        "hits": 0,
+        "misses": 0
+      },
+      "risk_on": {
+        "hits": 0,
+        "misses": 1
       }
     }
   },
