@@ -71,7 +71,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
     <div>
       <div class="logo">STOCAZZO // SIGNAL TRACKER</div>
       <h1>Signal History &amp; Backcheck</h1>
-      <div class="updated">Updated: 16/04/2026 18:27 UTC · 16/04/2026 20:27 CEST · 46 signals</div>
+      <div class="updated">Updated: 16/04/2026 18:51 UTC · 16/04/2026 20:51 CEST · 47 signals</div>
     </div>
     <div>
       <a href="live.html" class="nav-link">Live Dashboard →</a>
@@ -80,7 +80,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
   </header>
 
   <div class="stats-grid">
-    <div class="stat"><div class="val">46</div><div class="lbl">Total signals</div></div>
+    <div class="stat"><div class="val">47</div><div class="lbl">Total signals</div></div>
     <div class="stat"><div class="val" style="color:var(--green);">0</div><div class="lbl">Verified hits</div></div>
     <div class="stat"><div class="val" style="color:var(--red);">0</div><div class="lbl">Missed predictions</div></div>
     <div class="stat"><div class="val" style="color:var(--amber);">n/a</div><div class="lbl">Overall hit rate</div></div>
@@ -97,16 +97,48 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
   <div class="section">
     <div class="section-title">Signal log — click row to expand reasoning</div>
     <div style="margin-bottom:10px;">
-      <button class="filter-btn active" onclick="filter('all',this)">All (46)</button>
+      <button class="filter-btn active" onclick="filter('all',this)">All (47)</button>
       <button class="filter-btn" onclick="filter('hit',this)">✓ Hits (0)</button>
       <button class="filter-btn" onclick="filter('miss',this)">✗ Misses (0)</button>
-      <button class="filter-btn" onclick="filter('pending',this)">· Pending (46)</button>
+      <button class="filter-btn" onclick="filter('pending',this)">· Pending (47)</button>
       <button class="filter-btn" onclick="filter('convergence',this)">⚡ Convergence</button>
     </div>
     <table id="sig-table">
       <tr><th>Date (BE)</th><th>Source</th><th>Direction</th><th>Signal</th><th>ETFs</th><th>Confidence</th><th>Result</th><th></th></tr>
       
         <tr class="signal-row pending" onclick="toggleR(0)">
+          <td class="mono muted small" style="white-space:nowrap;">16/04/2026 20:51</td>
+          <td><span class="badge src-macrorss">MACRO RSS</span></td>
+          <td class="mono green bold small">BULLISH</td>
+          <td style="max-width:300px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="Israel and Lebanon agree 10-day ceasefire, Trump says">Israel and Lebanon agree 10-day ceasefire, Trump says</span></td>
+          <td><a href="https://finance.yahoo.com/quote/ITA" class="etf-badge" target="_blank">ITA</a><a href="https://finance.yahoo.com/quote/XAR" class="etf-badge" target="_blank">XAR</a><a href="https://finance.yahoo.com/quote/QQQ" class="etf-badge" target="_blank">QQQ</a></td>
+          <td>
+            <div class="conf-mini-wrap"><div class="conf-mini" style="width:40%;background:#cc2222;"></div></div>
+            <span class="mono small" style="color:#cc2222;">40%</span>
+          </td>
+          <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
+            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei0" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+        </tr>
+        <tr id="rr0" style="display:none;">
+          <td colspan="8" style="padding:0;">
+            <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
+              <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>Agreement could increase the chance of securing a permanent end to the war between the US and Iran &nbsp;<a href='https://www.ft.com/content/34c827e4-eda0-4094-ab29-d104c49469c6' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
+                  <div style="font-size:12px;line-height:1.5;">Financial Times reports on defense, tech. 1 bullish / 0 bearish signals in text.</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
+                  <div style="font-size:12px;color:var(--amber);line-height:1.5;">News follows events — not predictive. Use to confirm crony signals or set macro context.</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                <div style="flex:1;background:#e0e0d8;border-radius:2px;height:5px;"><div style="background:#cc2222;height:5px;border-radius:2px;width:40%;"></div></div>
+                <span class="mono small" style="color:#cc2222;">Confidence: 40%</span>
+              </div>
+              
+            </div>
+          </td>
+        </tr>
+        <tr class="signal-row pending" onclick="toggleR(1)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -117,10 +149,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#b06000;">60%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei0" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei1" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr0" style="display:none;">
+        <tr id="rr1" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>i am working very hard with our great speaker, mike johnson, along with chairman jim jordan and chairman rick crawford, to get a clean extension of fisa 702 through the house of representatives this w &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404390855989138' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -138,7 +170,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(1)">
+        <tr class="signal-row pending" onclick="toggleR(2)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -150,9 +182,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei1" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei2" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr1" style="display:none;">
+        <tr id="rr2" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse highly respected san diego county supervisor, jim desmond, who is running to represent the tremendous people of california's 48th congressional district.a brave u.s. na &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404449008520677' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -170,7 +202,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(2)">
+        <tr class="signal-row pending" onclick="toggleR(3)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -181,10 +213,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#b06000;">60%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei2" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei3" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr2" style="display:none;">
+        <tr id="rr3" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse maga warrior, jim kingston, who is running to represent the fantastic people of georgia's 1st congressional district.a very successful businessman, civic leader, and co &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404472864736440' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -202,7 +234,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(3)">
+        <tr class="signal-row pending" onclick="toggleR(4)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -214,9 +246,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei3" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei4" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr3" style="display:none;">
+        <tr id="rr4" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse highly respected state representative houston gaines, who is running to represent the incredible people of georgia's 10th congressional district.an eighth-generation ge &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404524514355598' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -234,7 +266,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(4)">
+        <tr class="signal-row pending" onclick="toggleR(5)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -246,9 +278,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei4" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei5" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr4" style="display:none;">
+        <tr id="rr5" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse america first patriot, eric conroy, who is running to represent the wonderful people of ohio's 1st congressional district. he is running against greg landsman, a true r &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404544522100081' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -266,7 +298,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(5)">
+        <tr class="signal-row pending" onclick="toggleR(6)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -278,9 +310,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei5" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei6" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr5" style="display:none;">
+        <tr id="rr6" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse highly respected omaha city councilman, brinker harding, who is running to represent the fantastic people of nebraska's 2nd congressional district.a fourth generation o &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404554093132959' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -298,7 +330,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(6)">
+        <tr class="signal-row pending" onclick="toggleR(7)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -310,9 +342,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei6" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei7" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr6" style="display:none;">
+        <tr id="rr7" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse u.s. marine corps veteran and former albuquerque police detective, greg cunningham, who is running to represent the wonderful people of new mexico's 2nd congressional d &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404602696446666' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -330,7 +362,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(7)">
+        <tr class="signal-row pending" onclick="toggleR(8)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -342,9 +374,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei7" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei8" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr7" style="display:none;">
+        <tr id="rr8" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse highly respected state senator, and brave u.s. navy veteran, john braun, who is running to represent the amazing people of washington's 3rd congressional district.john  &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404627442914911' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -362,7 +394,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(8)">
+        <tr class="signal-row pending" onclick="toggleR(9)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -374,9 +406,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei8" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei9" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr8" style="display:none;">
+        <tr id="rr9" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse america first patriot, marty o'donnell, who is running to represent the incredible people of nevada's 3rd congressional district.marty is running against susie lee, a t &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404659067780412' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -394,7 +426,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(9)">
+        <tr class="signal-row pending" onclick="toggleR(10)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -406,9 +438,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei9" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei10" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr9" style="display:none;">
+        <tr id="rr10" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>it is my great honor to endorse highly respected state senator, carrie buck, who is running to represent the fantastic people of nevada's 1st congressional district.carrie is running against a career  &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116404717003537033' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -426,7 +458,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(10)">
+        <tr class="signal-row pending" onclick="toggleR(11)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono red bold small">BEARISH</td>
@@ -438,9 +470,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei10" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei11" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr10" style="display:none;">
+        <tr id="rr11" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>will someone please tell pope leo that iran has killed at least 42,000 innocent, completely unarmed, protesters in the last two months, and that for iran to have a nuclear bomb is absolutely unaccepta &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116406622416293152' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -458,7 +490,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(11)">
+        <tr class="signal-row pending" onclick="toggleR(12)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -469,10 +501,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#b06000;">60%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei11" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei12" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr11" style="display:none;">
+        <tr id="rr12" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>nato wasn't there for us, and they won't be there for us in the future! president donald j. trump | Posted: 38h 15m ago | Keywords: nato &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116406639178992552' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -490,7 +522,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(12)">
+        <tr class="signal-row pending" onclick="toggleR(13)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -501,10 +533,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#b06000;">60%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei12" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei13" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr12" style="display:none;">
+        <tr id="rr13" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>chokehold: iran could run out of oil storage with trump blockade, wreaking havoc with its economy: https://justthenews.com/politics-policy/energy/strait-hormuz-blockaded-globe-has-limited-options-addr &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116406733740752601' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -522,7 +554,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(13)">
+        <tr class="signal-row pending" onclick="toggleR(14)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -533,10 +565,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#b06000;">60%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei13" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei14" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr13" style="display:none;">
+        <tr id="rr14" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>china is very happy that i am permanently opening the strait of hormuz. i am doing it for them, also - and the world. this situation will never happen again. they have agreed not to send weapons to ir &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116408554531050811' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -554,7 +586,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(14)">
+        <tr class="signal-row pending" onclick="toggleR(15)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:55</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono red bold small">BEARISH</td>
@@ -566,9 +598,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei14" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei15" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr14" style="display:none;">
+        <tr id="rr15" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>jerome starkey: if hot air was a weapon starmer would have rearmed britain – but words don't win wars:https://www.thesun.co.uk/news/38819687/starmer-words-dont-win-wars-iran-russia-jerome-starkey/ | P &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116408647042304061' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -586,7 +618,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(15)">
+        <tr class="signal-row pending" onclick="toggleR(16)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono red bold small">BEARISH</td>
@@ -598,9 +630,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei15" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei16" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr15" style="display:none;">
+        <tr id="rr16" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>i am working very hard with our great speaker, mike johnson, along with chairman jim jordan and chairman rick crawford, to get a clean extension of fisa 702 through the house of representatives this w &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116409146419851362' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -618,7 +650,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(16)">
+        <tr class="signal-row pending" onclick="toggleR(17)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -630,9 +662,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei16" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei17" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr16" style="display:none;">
+        <tr id="rr17" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AVGO insider SELL. Shares changed: -22,000 | Total held: 110,836 | Filed: 2026-04-10 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AVGO' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -650,7 +682,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(17)">
+        <tr class="signal-row pending" onclick="toggleR(18)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -662,9 +694,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei17" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei18" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr17" style="display:none;">
+        <tr id="rr18" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AVGO insider SELL. Shares changed: -10,000 | Total held: 787,184 | Filed: 2026-04-10 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AVGO' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -682,7 +714,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(18)">
+        <tr class="signal-row pending" onclick="toggleR(19)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -694,9 +726,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei18" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei19" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr18" style="display:none;">
+        <tr id="rr19" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AVGO insider SELL. Shares changed: -12,955 | Total held: 83,192 | Filed: 2026-04-10 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AVGO' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -714,7 +746,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(19)">
+        <tr class="signal-row pending" onclick="toggleR(20)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -726,9 +758,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei19" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei20" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr19" style="display:none;">
+        <tr id="rr20" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AVGO insider SELL. Shares changed: -17,260 | Total held: 65,932 | Filed: 2026-04-10 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AVGO' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -746,7 +778,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(20)">
+        <tr class="signal-row pending" onclick="toggleR(21)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -758,9 +790,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei20" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei21" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr20" style="display:none;">
+        <tr id="rr21" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AVGO insider SELL. Shares changed: -8,000 | Total held: 57,932 | Filed: 2026-04-14 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AVGO' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -778,7 +810,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(21)">
+        <tr class="signal-row pending" onclick="toggleR(22)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -790,9 +822,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei21" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei22" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr21" style="display:none;">
+        <tr id="rr22" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>GOOGL insider BUY. Shares changed: +83,899 | Total held: 83,899 | Filed: 2026-04-10 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/GOOGL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -810,7 +842,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(22)">
+        <tr class="signal-row pending" onclick="toggleR(23)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -822,9 +854,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei22" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei23" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr22" style="display:none;">
+        <tr id="rr23" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>GOOGL insider BUY. Shares changed: +83,899 | Total held: 83,899 | Filed: 2026-04-10 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/GOOGL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -842,7 +874,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(23)">
+        <tr class="signal-row pending" onclick="toggleR(24)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -854,9 +886,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei23" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei24" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr23" style="display:none;">
+        <tr id="rr24" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>GOOGL insider BUY. Shares changed: +87,255 | Total held: 87,255 | Filed: 2026-04-10 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/GOOGL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -874,7 +906,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(24)">
+        <tr class="signal-row pending" onclick="toggleR(25)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -886,9 +918,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei24" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei25" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr24" style="display:none;">
+        <tr id="rr25" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>GOOGL insider BUY. Shares changed: +106,272 | Total held: 106,272 | Filed: 2026-04-10 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/GOOGL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -906,7 +938,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(25)">
+        <tr class="signal-row pending" onclick="toggleR(26)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -918,9 +950,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei25" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei26" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr25" style="display:none;">
+        <tr id="rr26" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AMZN insider BUY. Shares changed: +20,309 | Total held: 20,309 | Filed: 2026-04-09 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AMZN' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -938,7 +970,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(26)">
+        <tr class="signal-row pending" onclick="toggleR(27)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -950,9 +982,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei26" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei27" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr26" style="display:none;">
+        <tr id="rr27" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AMZN insider BUY. Shares changed: +106,374 | Total held: 106,374 | Filed: 2026-04-09 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AMZN' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -970,7 +1002,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(27)">
+        <tr class="signal-row pending" onclick="toggleR(28)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -982,9 +1014,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei27" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei28" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr27" style="display:none;">
+        <tr id="rr28" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AMZN insider BUY. Shares changed: +106,374 | Total held: 106,374 | Filed: 2026-04-09 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AMZN' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1002,7 +1034,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(28)">
+        <tr class="signal-row pending" onclick="toggleR(29)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -1014,9 +1046,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei28" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei29" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr28" style="display:none;">
+        <tr id="rr29" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AMZN insider BUY. Shares changed: +174,741 | Total held: 174,741 | Filed: 2026-04-09 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AMZN' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1034,7 +1066,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(29)">
+        <tr class="signal-row pending" onclick="toggleR(30)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono green bold small">BUY</td>
@@ -1046,9 +1078,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei29" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei30" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr29" style="display:none;">
+        <tr id="rr30" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AMZN insider BUY. Shares changed: +218,535 | Total held: 218,535 | Filed: 2026-04-09 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AMZN' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1066,7 +1098,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(30)">
+        <tr class="signal-row pending" onclick="toggleR(31)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -1078,9 +1110,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei30" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei31" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr30" style="display:none;">
+        <tr id="rr31" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AAPL insider SELL. Shares changed: -5,087 | Total held: 3,340,280 | Filed: 2026-04-03 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AAPL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1098,7 +1130,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(31)">
+        <tr class="signal-row pending" onclick="toggleR(32)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -1110,9 +1142,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei31" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei32" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr31" style="display:none;">
+        <tr id="rr32" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AAPL insider SELL. Shares changed: -9,147 | Total held: 3,331,133 | Filed: 2026-04-03 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AAPL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1130,7 +1162,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(32)">
+        <tr class="signal-row pending" onclick="toggleR(33)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -1142,9 +1174,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei32" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei33" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr32" style="display:none;">
+        <tr id="rr33" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AAPL insider SELL. Shares changed: -16,083 | Total held: 3,313,172 | Filed: 2026-04-03 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AAPL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1162,7 +1194,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(33)">
+        <tr class="signal-row pending" onclick="toggleR(34)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -1174,9 +1206,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei33" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei34" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr33" style="display:none;">
+        <tr id="rr34" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AAPL insider SELL. Shares changed: -28,188 | Total held: 3,284,984 | Filed: 2026-04-03 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AAPL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1194,7 +1226,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(34)">
+        <tr class="signal-row pending" onclick="toggleR(35)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -1206,9 +1238,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei34" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei35" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr34" style="display:none;">
+        <tr id="rr35" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AAPL insider SELL. Shares changed: -20,338 | Total held: 146,474 | Filed: 2026-04-03 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AAPL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1226,7 +1258,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(35)">
+        <tr class="signal-row pending" onclick="toggleR(36)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -1238,9 +1270,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei35" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei36" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr35" style="display:none;">
+        <tr id="rr36" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>AAPL insider SELL. Shares changed: -9,664 | Total held: 136,810 | Filed: 2026-04-03 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/AAPL' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1258,7 +1290,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(36)">
+        <tr class="signal-row pending" onclick="toggleR(37)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 19:54</td>
           <td><span class="badge src-darkpool">DARK POOL</span></td>
           <td class="mono green bold small">ACCUMULATION</td>
@@ -1270,9 +1302,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei36" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei37" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr36" style="display:none;">
+        <tr id="rr37" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>Institutional dark pool activity. Total volume: 1.99B. Broad market = possible accumulation before announcement. &nbsp;<a href='https://www.whalestream.com/market-data/top-dark-pool-flow' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1290,7 +1322,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(37)">
+        <tr class="signal-row pending" onclick="toggleR(38)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 18:31</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -1301,10 +1333,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#cc2222;">35%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei37" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei38" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr37" style="display:none;">
+        <tr id="rr38" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>rt: https://truthsocial.com/users/realdonaldtrump/statuses/116415122630904602in addition to the statement just issued, i will be inviting the prime minister of israel, bibi netanyahu, and the presiden &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116415190299043508' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1322,7 +1354,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(38)">
+        <tr class="signal-row pending" onclick="toggleR(39)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 18:08</td>
           <td><span class="badge src-macrorss">MACRO RSS</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -1334,9 +1366,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei38" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei39" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr38" style="display:none;">
+        <tr id="rr39" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>US president posts that 10-day truce will start on Thursday evening &nbsp;<a href='https://www.ft.com/content/25d286a0-df45-448c-9e90-5dce350624b4' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1354,7 +1386,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(39)">
+        <tr class="signal-row pending" onclick="toggleR(40)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 18:08</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -1365,10 +1397,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#007a5e;">85%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei39" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei40" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr39" style="display:none;">
+        <tr id="rr40" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>i just had excellent conversations with the highly respected president joseph aoun, of lebanon, and prime minister bibi netanyahu, of israel. these two leaders have agreed that in order to achieve pea &nbsp;<a href='https://truthsocial.com/@realDonaldTrump/116415122630904602' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1386,7 +1418,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(40)">
+        <tr class="signal-row pending" onclick="toggleR(41)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -1397,10 +1429,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#cc2222;">35%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei40" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei41" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr40" style="display:none;">
+        <tr id="rr41" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>8 lobbying filings. Latest: low-carbon technology company. Period: Q4 &nbsp;<a href='https://finnhub.io/stock-lobbying/XOM' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1418,7 +1450,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(41)">
+        <tr class="signal-row pending" onclick="toggleR(42)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -1429,10 +1461,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#cc2222;">35%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei41" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei42" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr41" style="display:none;">
+        <tr id="rr42" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>10 lobbying filings. Latest: Technology. Period: Q4 &nbsp;<a href='https://finnhub.io/stock-lobbying/META' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1450,7 +1482,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(42)">
+        <tr class="signal-row pending" onclick="toggleR(43)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -1461,10 +1493,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#cc2222;">35%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei42" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei43" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr42" style="display:none;">
+        <tr id="rr43" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>20 lobbying filings. Latest: Platform that enables professional networking & development, hiring, marketing & learning.. Period: Q4 &nbsp;<a href='https://finnhub.io/stock-lobbying/MSFT' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1482,7 +1514,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(43)">
+        <tr class="signal-row pending" onclick="toggleR(44)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -1493,10 +1525,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#cc2222;">35%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei43" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei44" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr43" style="display:none;">
+        <tr id="rr44" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>4 lobbying filings. Latest: Computer technology, semiconductor design, telecommunications, and artificial intelligence. Period: Q4 &nbsp;<a href='https://finnhub.io/stock-lobbying/NVDA' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1514,7 +1546,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(44)">
+        <tr class="signal-row pending" onclick="toggleR(45)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -1525,10 +1557,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             <span class="mono small" style="color:#cc2222;">35%</span>
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei44" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+            background:#f5f5f0;color:var(--dim);">— WATCH</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei45" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr44" style="display:none;">
+        <tr id="rr45" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>10 lobbying filings. Latest: Defense and aerospace technology company. Period: Q4 &nbsp;<a href='https://finnhub.io/stock-lobbying/LMT' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
@@ -1546,7 +1578,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(45)">
+        <tr class="signal-row pending" onclick="toggleR(46)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -1558,9 +1590,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei45" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei46" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr45" style="display:none;">
+        <tr id="rr46" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>JPM insider SELL. Shares changed: -5,611 | Total held: 35,460 | Filed: 2026-04-15 &nbsp;<a href='https://finnhub.io/stock-insider-transactions/JPM' target='_blank' style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a></div>
