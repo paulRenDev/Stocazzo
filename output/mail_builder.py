@@ -304,10 +304,12 @@ def send_email(alerts, backcheck_results, seen_data, advice_cards=None):
     # Mailing list: ALERT_EMAIL kan kommagescheiden zijn voor meerdere ontvangers
     recipients = [e.strip() for e in ALERT_EMAIL.split(",") if e.strip()]
 
+    high_count = sum(1 for a in alerts if a.get("urgency") == "HIGH" or a.get("source") == "CONVERGENCE")
+
     try:
         msg = MIMEMultipart("alternative")
         msg["Subject"] = (
-            f"Crony Signal: {len(alerts)} new signal{'s' if len(alerts) != 1 else ''} — {now_be()}"
+            f"{'[HIGH] ' if high_count else ''}Stocazzo: {len(alerts)} signal{'s' if len(alerts) != 1 else ''} — {now_be()}"
         )
         msg["From"] = GMAIL_USER
         msg["To"]   = ", ".join(recipients)
