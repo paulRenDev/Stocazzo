@@ -1,0 +1,50 @@
+name: Stocazzo Scanner
+
+on:
+  schedule:
+    # Elke 30 min, ma-vr 7:00-22:00 UTC (= 9:00-00:00 CEST)
+    - cron: '0,30 7-22 * * 1-5'
+  workflow_dispatch:  # manueel starten via GitHub UI
+
+permissions:
+  contents: write  # nodig voor git push
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Installeer dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scanner
+        env:
+          GMAIL_USER:      ${{ secrets.GMAIL_USER }}
+          GMAIL_PASSWORD:  ${{ secrets.GMAIL_PASSWORD }}
+          ALERT_EMAIL:     ${{ secrets.ALERT_EMAIL }}
+          FINNHUB_KEY:     ${{ secrets.FINNHUB_KEY }}
+          TWELVEDATA_KEY:  ${{ secrets.TWELVEDATA_KEY }}
+          GOVGREED_KEY:    ${{ secrets.GOVGREED_KEY }}
+        run: python main.py
+
+      - name: Deploy naar GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          include_files: |
+            live.html
+            history.html
+            index.html
