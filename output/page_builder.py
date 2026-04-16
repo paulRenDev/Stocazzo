@@ -1,9 +1,10 @@
 """
-output/page_builder.py — CronyPony v7
-Genereert live.html, history.html en index.html.
+output/page_builder.py — Stocazzo v7
+Generates live.html, history.html, sources.html and index.html.
 No scan logic, no mail logic.
 """
 import requests
+import re
 
 from config import SOURCE_CREDIBILITY, FINNHUB_KEY, TWELVEDATA_KEY, SITE_URL
 from output.advice import format_advice_html_section
@@ -11,7 +12,7 @@ from helpers import now_utc, now_be, urgency_color
 from etf_mapper import KEY_ETFS, etf_yahoo_url, etf_google_url
 from scoring import get_source_hit_rate
 
-# ── GEDEELDE CSS ──────────────────────────────────────────────────────────────
+# ── SHARED CSS ────────────────────────────────────────────────────────────────
 _CSS = """
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
 :root {
@@ -33,63 +34,104 @@ h1 { font-size:22px; font-weight:300; margin-top:4px; }
 .badge { font-size:10px; font-weight:700; padding:2px 7px; border-radius:3px; font-family:var(--mono); white-space:nowrap; }
 .src-polymarket { background:#e8f4f0; color:var(--green); }
 .src-kalshi { background:#e8f0f8; color:var(--blue); }
-.src-darkpool, .src-dark { background:#f0f0eb; color:#444; }
+.src-darkpool,.src-dark { background:#f0f0eb; color:#444; }
 .src-congress { background:#fdf0e8; color:var(--amber); }
 .src-pelositracker { background:#f0e8f8; color:#7a3fb5; }
 .src-optionsflow { background:#e8f0f0; color:#1a7a7a; }
 .src-socialsignal { background:#f8f0e8; color:#8b4513; }
 .src-convergence { background:#1a1a1a; color:#fff; }
+.src-truthsocial { background:#fff0e8; color:#c04000; }
+.src-secedgar,.src-edgar { background:#f0f4e8; color:#3a6010; }
+.src-lobbying { background:#f0e8f4; color:#6030a0; }
+.src-govcontracts { background:#e8f0f8; color:#0050a0; }
+.src-macrors { background:#f5f5f0; color:#555; }
+.src-gdelt { background:#e8f8f8; color:#006070; }
+.src-feargreed { background:#fff8e8; color:#804000; }
 .mono { font-family:var(--mono); } .small { font-size:11px; } .muted { color:var(--muted); }
 .dim { color:var(--dim); } .bold { font-weight:600; }
 .green { color:var(--green); } .red { color:var(--red); } .amber { color:var(--amber); }
 .etf-badge { background:#e8f4f0; color:var(--green); font-family:var(--mono); font-size:11px; font-weight:700; padding:2px 6px; border-radius:3px; text-decoration:none; margin-right:3px; }
 .etf-badge:hover { background:var(--green); color:#fff; }
+.stock-badge { background:#f0f0eb; color:#1a1a1a; font-family:var(--mono); font-size:11px; font-weight:700; padding:2px 6px; border-radius:3px; text-decoration:none; margin-right:3px; }
+.stock-badge:hover { background:#1a1a1a; color:#fff; }
 .conf-mini-wrap { background:#e8e8e0; border-radius:2px; height:3px; width:52px; margin-bottom:2px; }
 .conf-mini { height:3px; border-radius:2px; }
 @media(max-width:700px) { .etf-grid { grid-template-columns:repeat(2,1fr) !important; } }
 """
 
+# ── LEGEND BAR ────────────────────────────────────────────────────────────────
+def _legend_bar():
+    return """
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;
+      padding:10px 14px;background:var(--surface);border:1px solid var(--border);
+      border-radius:4px;margin-bottom:1.5rem;font-size:12px;">
+      <span style="font-family:var(--mono);font-size:10px;color:var(--muted);
+        text-transform:uppercase;letter-spacing:0.08em;margin-right:4px;">Legend</span>
+      <span style="display:flex;align-items:center;gap:5px;">
+        <span style="width:10px;height:10px;border-radius:2px;background:#007a5e;display:inline-block;"></span>
+        <span style="color:var(--green);font-weight:600;">BUY</span>
+        <span style="color:var(--muted);">— signal pointing up</span>
+      </span>
+      <span style="display:flex;align-items:center;gap:5px;">
+        <span style="width:10px;height:10px;border-radius:2px;background:#b06000;display:inline-block;"></span>
+        <span style="color:var(--amber);font-weight:600;">WATCH</span>
+        <span style="color:var(--muted);">— monitor, no clear direction</span>
+      </span>
+      <span style="display:flex;align-items:center;gap:5px;">
+        <span style="width:10px;height:10px;border-radius:2px;background:#cc2222;display:inline-block;"></span>
+        <span style="color:var(--red);font-weight:600;">SELL / REDUCE</span>
+        <span style="color:var(--muted);">— signal pointing down</span>
+      </span>
+      <span style="border-left:1px solid var(--border2);padding-left:20px;display:flex;gap:14px;">
+        <span style="display:flex;align-items:center;gap:4px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#cc2222;display:inline-block;"></span>
+          <span style="color:var(--muted);">HIGH — act within 30 min</span>
+        </span>
+        <span style="display:flex;align-items:center;gap:4px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#b06000;display:inline-block;"></span>
+          <span style="color:var(--muted);">MEDIUM — verify first</span>
+        </span>
+        <span style="display:flex;align-items:center;gap:4px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#007a5e;display:inline-block;"></span>
+          <span style="color:var(--muted);">LOW — background info</span>
+        </span>
+      </span>
+    </div>"""
+
+
+# ── EXTRACT STOCKS FROM ALERT ─────────────────────────────────────────────────
+def _extract_stocks(alert):
+    """Extract individual stock tickers mentioned in an alert."""
+    KNOWN_STOCKS = [
+        "NVDA","MSFT","AAPL","AMZN","META","GOOGL","TSLA","PLTR","AVGO","AMD",
+        "LMT","RTX","NOC","GD","BA","HII",
+        "XOM","CVX","COP","OXY","SLB",
+        "COIN","MSTR","JPM","GS","BAC",
+        "INTC","TSM","QCOM","ASML",
+    ]
+    text = (
+        alert.get("title","") + " " +
+        alert.get("detail","") + " " +
+        alert.get("keywords","")
+    ).upper()
+
+    found = []
+    for ticker in KNOWN_STOCKS:
+        if re.search(r'\b' + ticker + r'\b', text):
+            found.append(ticker)
+    return found[:4]
+
 
 # ── LIVE.HTML ─────────────────────────────────────────────────────────────────
 def generate_live_html(seen_data, all_alerts, advice_cards=None):
-    stats   = seen_data.get("stats", {})
-    history = seen_data.get("history", [])
-
-    # Koersen ophalen voor ETF watchlist
-    etf_quotes = _fetch_etf_quotes()
-
-    # Actieve tickers in huidige alerts
+    etf_quotes     = _fetch_etf_quotes()
     active_tickers = {t for a in all_alerts for t, n, e in a.get("etfs", [])}
+    advice_cards_list = advice_cards or []
+    advice_html       = format_advice_html_section(advice_cards_list)
 
-    # Source status blokken
-    source_cards = ""
-    for src, cred in SOURCE_CREDIBILITY.items():
-        stat  = stats.get(src, {"hits": 0, "misses": 0, "pending": 0})
-        total = stat["hits"] + stat["misses"]
-        w     = cred["weight"]
-        stars = "★" * w + "☆" * (5 - w)
-        rate_html = (
-            f"<div style='font-size:12px;font-weight:600;font-family:var(--mono);color:var(--green);margin:3px 0;'>"
-            f"{stat['hits']}/{total} verified · {stat['hits']/total:.0%}</div>"
-            if total > 0 else
-            f"<div style='font-size:12px;font-family:var(--mono);color:var(--muted);margin:3px 0;'>"
-            f"No verified data yet</div>"
-        )
-        source_cards += (
-            f"<div style='background:var(--surface);border:1px solid var(--border);padding:12px;border-radius:4px;'>"
-            f"<div style='font-family:var(--mono);font-size:11px;font-weight:600;margin-bottom:4px;'>{src}</div>"
-            f"<div style='font-size:13px;color:var(--amber);margin-bottom:3px;'>{stars}</div>"
-            f"<div style='font-size:11px;color:var(--muted);margin-bottom:2px;'>{cred.get('type','')}</div>"
-            f"<div style='font-size:11px;color:var(--blue);font-family:var(--mono);margin-bottom:3px;'>"
-            f"Lead time: {cred.get('avg_lead_time','?')}</div>"
-            f"{rate_html}"
-            f"<div style='font-size:11px;color:var(--muted);line-height:1.4;'>{cred['note']}</div>"
-            f"</div>"
-        )
-
-    # Alert kaarten
+    # ── SIGNAL CARDS ──────────────────────────────────────────────────────────
     alert_cards = ""
-    for a in all_alerts[:8]:
+    for a in all_alerts[:10]:
         c       = urgency_color(a["urgency"])
         is_conv = a["source"] == "CONVERGENCE"
         r       = a.get("reasoning", {})
@@ -97,46 +139,67 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None):
         cc      = "#007a5e" if cp >= 65 else "#b06000" if cp >= 45 else "#cc2222"
         d       = a.get("direction", "").upper()
         dc      = "var(--green)" if any(w in d for w in ["BUY","YES","ACCUM","BULLISH"]) else \
-                  "var(--red)"   if any(w in d for w in ["SELL","NO","REDUCE","BEARISH"])  else "var(--amber)"
-        src_cls = "src-" + a.get("source","").lower().replace(" ","").replace("(","").replace(")","")
+                  "var(--red)"   if any(w in d for w in ["SELL","NO","REDUCE","BEARISH"]) else "var(--amber)"
+        src_cls = "src-" + a.get("source","").lower().replace(" ","").replace("(","").replace(")","").replace("/","").replace("&","")
+
+        # ETF badges
         etf_badges = "".join(
             f'<a href="{etf_yahoo_url(t,e)}" class="etf-badge" target="_blank">{t}</a>'
             for t, n, e in a.get("etfs", [])[:3]
         )
+
+        # Individual stock badges (separate row)
+        stocks      = _extract_stocks(a)
+        stock_row   = ""
+        if stocks:
+            stock_badges = "".join(
+                f'<a href="https://finance.yahoo.com/quote/{s}" class="stock-badge" target="_blank">{s}</a>'
+                for s in stocks
+            )
+            stock_row = (
+                f"<div style='margin-top:4px;'>"
+                f"<span style='font-size:10px;font-family:var(--mono);color:var(--muted);margin-right:6px;'>Stocks</span>"
+                f"{stock_badges}</div>"
+            )
 
         alert_cards += (
             f"<div style='background:var(--surface);border:1px solid var(--border);border-radius:4px;"
             f"padding:14px;margin-bottom:10px;border-left:3px solid {'#1a1a1a' if is_conv else c};'>"
             f"<div style='display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;'>"
             f"<span class='badge {src_cls}'>{a.get('source','').upper()}</span>"
-            f"<span style='font-family:var(--mono);font-size:11px;font-weight:600;color:{dc};'>{a.get('direction','')[:20]}</span>"
+            f"<span style='font-family:var(--mono);font-size:11px;font-weight:600;color:{dc};'>{a.get('direction','')[:25]}</span>"
             f"<span style='font-size:10px;font-family:var(--mono);padding:2px 8px;border-radius:10px;"
             f"font-weight:600;background:{c}20;color:{c};'>{a.get('urgency','')}</span>"
             f"<span style='font-family:var(--mono);font-size:10px;color:var(--dim);margin-left:auto;'>{now_be()[:16]}</span>"
             f"</div>"
             f"<div style='font-size:14px;font-weight:600;margin-bottom:4px;line-height:1.4;'>{a.get('title','')[:100]}</div>"
-            f"<div style='font-size:12px;color:var(--muted);margin-bottom:6px;line-height:1.5;'>{a.get('detail','')[:150]}</div>"
+            f"<div style='font-size:12px;color:var(--muted);margin-bottom:6px;line-height:1.5;'>{a.get('detail','')[:160]}</div>"
             f"<div style='font-size:12px;color:var(--muted);margin-bottom:8px;border-left:2px solid var(--border2);"
-            f"padding-left:8px;line-height:1.5;'><span style='font-family:var(--mono);'>Why: </span>{r.get('why','')[:120]}</div>"
-            f"<div style='display:flex;justify-content:space-between;align-items:center;"
-            f"padding-top:8px;border-top:1px solid var(--border2);flex-wrap:wrap;gap:8px;'>"
-            f"<div>{etf_badges}</div>"
+            f"padding-left:8px;line-height:1.5;'><span style='font-family:var(--mono);'>Why: </span>{r.get('why','')[:140]}</div>"
+            f"<div style='padding-top:8px;border-top:1px solid var(--border2);'>"
+            f"<div style='display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;'>"
+            f"<div>"
+            f"<div style='margin-bottom:4px;'>"
+            f"<span style='font-size:10px;font-family:var(--mono);color:var(--muted);margin-right:6px;'>ETFs</span>"
+            f"{etf_badges}</div>"
+            f"{stock_row}"
+            f"</div>"
             f"<div style='display:flex;align-items:center;gap:8px;'>"
             f"<div class='conf-mini-wrap'><div class='conf-mini' style='width:{cp}%;background:{cc};'></div></div>"
             f"<span style='font-family:var(--mono);font-size:11px;color:{cc};'>{cp}%</span>"
             f"<a href='{a.get('link','#')}' style='font-family:var(--mono);font-size:11px;color:var(--blue);"
-            f"text-decoration:none;' target='_blank'>bron ↗</a>"
-            f"</div></div></div>"
+            f"text-decoration:none;' target='_blank'>source ↗</a>"
+            f"</div></div></div></div>"
         )
 
     if not alert_cards:
         alert_cards = (
-            f"<div style='text-align:center;color:var(--dim);font-family:var(--mono);font-size:12px;"
-            f"padding:2rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;'>"
-            f"No new signals in this run — scanner active every 30 min</div>"
+            "<div style='text-align:center;color:var(--dim);font-family:var(--mono);font-size:12px;"
+            "padding:2rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;'>"
+            "No new signals in this run — scanner active every 30 min</div>"
         )
 
-    # ETF watchlist
+    # ── ETF WATCHLIST ─────────────────────────────────────────────────────────
     etf_grid = ""
     for t, n, e, theme in KEY_ETFS:
         is_active    = t in active_tickers
@@ -153,7 +216,6 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None):
                 f"<span style='font-family:var(--mono);font-size:11px;font-weight:600;color:{pct_color};'>"
                 f"{pct_icon} {abs(q['pct']):.2f}%</span></div>"
             )
-
         etf_grid += (
             f"<div style='background:var(--surface);border:1px solid var(--border);padding:10px;"
             f"border-radius:4px;{border_style}'>"
@@ -163,24 +225,18 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None):
             f"<div style='font-size:12px;color:var(--muted);margin:2px 0;'>{n}</div>"
             f"<div style='display:flex;justify-content:space-between;align-items:center;margin-top:3px;'>"
             f"<span style='font-family:var(--mono);font-size:11px;color:var(--dim);'>{e}</span>"
-            f"<span style='font-size:10px;background:#f0f0eb;color:var(--muted);padding:1px 6px;"
-            f"border-radius:3px;'>{theme}</span></div>"
+            f"<span style='font-size:10px;background:#f0f0eb;color:var(--muted);padding:1px 6px;border-radius:3px;'>{theme}</span></div>"
             f"{price_html}"
             f"<div style='display:flex;gap:4px;margin-top:6px;'>"
             f"<a href='{etf_yahoo_url(t,e)}' target='_blank' style='font-family:var(--mono);font-size:10px;"
-            f"padding:2px 7px;border:1px solid var(--border);border-radius:3px;text-decoration:none;"
-            f"color:var(--blue);'>Yahoo</a>"
+            f"padding:2px 7px;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--blue);'>Yahoo</a>"
             f"<a href='{etf_google_url(t,e)}' target='_blank' style='font-family:var(--mono);font-size:10px;"
-            f"padding:2px 7px;border:1px solid var(--border);border-radius:3px;text-decoration:none;"
-            f"color:var(--muted);'>Google</a>"
+            f"padding:2px 7px;border:1px solid var(--border);border-radius:3px;text-decoration:none;color:var(--muted);'>Google</a>"
             f"</div></div>"
         )
 
-    advice_cards_list = advice_cards or []
-    advice_html = format_advice_html_section(advice_cards_list)
-
     html = f"""<!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -200,23 +256,21 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None):
       <div class="updated">Last scan: {now_utc()} · {now_be()}</div>
     </div>
     <div>
+      <a href="sources.html" class="nav-link">Sources →</a>
       <a href="history.html" class="nav-link">Signal History →</a>
     </div>
   </header>
 
+  {_legend_bar()}
+
   <div class="section">
-    <div class="section-title">Sources ({len(SOURCE_CREDIBILITY)} active)</div>
-    <div class="sources-grid">{source_cards}</div>
+    <div class="section-title">Cumulative advice ({len(advice_cards_list)} themes) — all sources combined</div>
+    {advice_html}
   </div>
 
   <div class="section">
     <div class="section-title">Current signals ({len(all_alerts)})</div>
     {alert_cards}
-  </div>
-
-  <div class="section">
-    <div class="section-title">Cumulative advice ({len(advice_cards_list)} themes) — all sources combined</div>
-    {advice_html}
   </div>
 
   <div class="section">
@@ -232,6 +286,110 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None):
     print("live.html generated")
 
 
+# ── SOURCES.HTML ──────────────────────────────────────────────────────────────
+def generate_sources_html(seen_data):
+    """Dedicated sources page — moved off live dashboard."""
+    stats = seen_data.get("stats", {})
+
+    source_cards = ""
+    for src, cred in SOURCE_CREDIBILITY.items():
+        stat  = stats.get(src, {"hits": 0, "misses": 0, "pending": 0})
+        total = stat["hits"] + stat["misses"]
+        w     = cred["weight"]
+        stars = "★" * w + "☆" * (5 - w)
+
+        if total > 0:
+            rate      = f"{stat['hits']/total:.0%}"
+            bar       = int(stat['hits']/total*100)
+            rate_html = (
+                f"<div style='background:#e0e0d8;border-radius:2px;height:4px;width:100%;margin:6px 0 3px;'>"
+                f"<div style='background:var(--green);height:4px;border-radius:2px;width:{bar}%;'></div></div>"
+                f"<div style='font-size:12px;font-family:var(--mono);color:var(--green);font-weight:600;'>"
+                f"{stat['hits']}/{total} · {rate}</div>"
+            )
+        else:
+            rate_html = (
+                f"<div style='font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:6px;'>"
+                f"No verified data yet</div>"
+            )
+
+        src_cls = "src-" + src.lower().replace(" ","").replace("(","").replace(")","").replace("/","").replace("&","")
+
+        # Category label
+        is_crony = src in ["Polymarket","Kalshi","SEC EDGAR","Pelosi Tracker","Congress","Dark Pool","Options Flow","Truth Social","Lobbying","Gov Contracts"]
+        cat_color = "#cc2222" if is_crony else "#1a5fb5"
+        cat_label = "Crony" if is_crony else "Macro"
+
+        source_cards += (
+            f"<div style='background:var(--surface);border:1px solid var(--border);"
+            f"border-radius:4px;padding:16px;'>"
+            f"<div style='display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;'>"
+            f"<span class='badge {src_cls}'>{src.upper()}</span>"
+            f"<span style='font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;"
+            f"background:{cat_color}15;color:{cat_color};font-weight:600;'>{cat_label}</span>"
+            f"</div>"
+            f"<div style='font-size:13px;color:var(--amber);margin-bottom:6px;letter-spacing:0.05em;'>{stars}</div>"
+            f"<div style='font-size:12px;color:var(--muted);margin-bottom:4px;'>{cred.get('type','')}</div>"
+            f"<div style='font-size:11px;font-family:var(--mono);color:var(--blue);margin-bottom:6px;'>"
+            f"Lead time: {cred.get('avg_lead_time','?')}</div>"
+            f"<div style='font-size:11px;color:var(--text);line-height:1.5;margin-bottom:8px;'>{cred['note']}</div>"
+            f"{rate_html}"
+            f"</div>"
+        )
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stocazzo — Sources</title>
+<style>{_CSS}
+.sources-full {{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }}
+@media(max-width:700px) {{ .sources-full {{ grid-template-columns:1fr; }} }}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="logo">STOCAZZO // SIGNAL TRACKER</div>
+      <h1>Signal Sources</h1>
+      <div class="updated">{len(SOURCE_CREDIBILITY)} active sources · {now_be()}</div>
+    </div>
+    <div>
+      <a href="live.html" class="nav-link">Live Dashboard →</a>
+      <a href="history.html" class="nav-link">Signal History →</a>
+    </div>
+  </header>
+
+  <div style="display:flex;gap:12px;margin-bottom:1.5rem;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;">
+      <span style="width:10px;height:10px;border-radius:2px;background:#cc222215;border:1px solid #cc2222;display:inline-block;"></span>
+      <span style="color:#cc2222;font-weight:600;">Crony</span>
+      <span style="color:var(--muted);">— signals BEFORE the news (insider, prediction markets)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;">
+      <span style="width:10px;height:10px;border-radius:2px;background:#1a5fb515;border:1px solid #1a5fb5;display:inline-block;"></span>
+      <span style="color:#1a5fb5;font-weight:600;">Macro</span>
+      <span style="color:var(--muted);">— signals AFTER the news (RSS, GDELT, sentiment)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;margin-left:auto;">
+      <span style="color:var(--amber);">★★★★★</span>
+      <span style="color:var(--muted);">= source weight (1-5)</span>
+    </div>
+  </div>
+
+  <div class="sources-full">{source_cards}</div>
+
+</div>
+</body>
+</html>"""
+
+    with open("sources.html", "w") as f:
+        f.write(html)
+    print("sources.html generated")
+
+
 # ── HISTORY.HTML ──────────────────────────────────────────────────────────────
 def generate_history_html(seen_data):
     history = seen_data.get("history", [])
@@ -243,7 +401,7 @@ def generate_history_html(seen_data):
     pending = sum(1 for h in history if h.get("verified") is None)
     rate    = f"{hits/(hits+misses):.0%}" if (hits + misses) > 0 else "n/a"
 
-    # Per-bron stats tabel
+    # Per-source stats table
     source_rows = ""
     for src, stat in stats.items():
         t     = stat["hits"] + stat["misses"]
@@ -260,11 +418,11 @@ def generate_history_html(seen_data):
             f"<td><div style='background:#e0e0d8;border-radius:2px;height:4px;width:80px;margin-bottom:3px;'>"
             f"<div style='background:{color};height:4px;border-radius:2px;width:{bar}%;'></div></div>"
             f"<span class='mono small bold' style='color:{color};'>{r}</span></td>"
-            f"<td class='muted small'>{note}</td>"
+            f"<td class='muted small'>{note[:80]}</td>"
             f"</tr>"
         )
 
-    # Signaalrijen met uitklapbare reasoning
+    # Signal rows
     signal_rows = ""
     for idx, h in enumerate(reversed(history)):
         verified = h.get("verified")
@@ -288,7 +446,6 @@ def generate_history_html(seen_data):
 
         cp = min(100, max(5, h.get("confidence", 50)))
         cc = "#007a5e" if cp >= 65 else "#b06000" if cp >= 45 else "#cc2222"
-
         r       = h.get("reasoning_stored", {})
         why     = r.get("why", h.get("detail", ""))
         caveat  = r.get("caveat", "")
@@ -300,27 +457,24 @@ def generate_history_html(seen_data):
             bd_rows += (
                 f"<tr><td class='mono small'>{b['source']}</td>"
                 f"<td class='mono small {bdc} bold'>{b['direction']}</td>"
-                f"<td class='mono small green'>{b['points']}ptn</td>"
+                f"<td class='mono small green'>{b['points']}pts</td>"
                 f"<td class='mono small muted'>{b['reasoning']}</td></tr>"
             )
-
         bd_html = (
             f"<table style='width:100%;border-collapse:collapse;font-size:11px;margin-top:8px;"
             f"border:1px solid var(--border2);'>"
-            f"<tr style='background:#f0f0eb;'><th style='padding:4px 8px;'>Bron</th>"
-            f"<th style='padding:4px 8px;'>Richting</th><th style='padding:4px 8px;'>Ptn</th>"
+            f"<tr style='background:#f0f0eb;'><th style='padding:4px 8px;'>Source</th>"
+            f"<th style='padding:4px 8px;'>Direction</th><th style='padding:4px 8px;'>Pts</th>"
             f"<th style='padding:4px 8px;'>Reasoning</th></tr>{bd_rows}</table>"
             if bd_rows else ""
         )
-
         vd_html = (
             f"<div style='margin-top:8px;padding-top:8px;border-top:1px solid var(--border2);'>"
             f"<span class='mono small muted'>Verified: {h.get('verified_date','')} · "
-            f"Entry: ${h.get('price_entry','—')} → Nu: ${h.get('price_now','—')}</span></div>"
+            f"Entry: ${h.get('price_entry','—')} → Now: ${h.get('price_now','—')}</span></div>"
             if verified is not None else ""
         )
-
-        src_cls = "src-" + h.get("source","").lower().replace(" ","").replace("(","").replace(")","")
+        src_cls = "src-" + h.get("source","").lower().replace(" ","").replace("(","").replace(")","").replace("/","").replace("&","")
 
         signal_rows += f"""
         <tr class="signal-row {sc}" onclick="toggleR({idx})">
@@ -341,7 +495,7 @@ def generate_history_html(seen_data):
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
                   <div style="font-size:12px;line-height:1.5;">{why}</div></div>
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
                   <div style="font-size:12px;color:var(--amber);line-height:1.5;">{caveat}</div></div>
@@ -361,7 +515,7 @@ def generate_history_html(seen_data):
     rate_color = "var(--green)" if rate != "n/a" and int(rate.replace('%','')) >= 60 else "var(--amber)"
 
     html = f"""<!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -393,6 +547,7 @@ td {{ padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:m
     </div>
     <div>
       <a href="live.html" class="nav-link">Live Dashboard →</a>
+      <a href="sources.html" class="nav-link">Sources →</a>
     </div>
   </header>
 
@@ -406,7 +561,7 @@ td {{ padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:m
   <div class="section">
     <div class="section-title">Hit rate per source</div>
     <table>
-      <tr><th>Bron</th><th>Hits</th><th>Misses</th><th>Pending</th><th>Hit rate</th><th>Notities</th></tr>
+      <tr><th>Source</th><th>Hits</th><th>Misses</th><th>Pending</th><th>Hit rate</th><th>Notes</th></tr>
       {source_rows}
     </table>
   </div>
@@ -421,7 +576,7 @@ td {{ padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:m
       <button class="filter-btn" onclick="filter('convergence',this)">⚡ Convergence</button>
     </div>
     <table id="sig-table">
-      <tr><th>Datum (BE)</th><th>Bron</th><th>Richting</th><th>Signaal</th><th>ETFs</th><th>Vertrouwen</th><th>Resultaat</th><th></th></tr>
+      <tr><th>Date (BE)</th><th>Source</th><th>Direction</th><th>Signal</th><th>ETFs</th><th>Confidence</th><th>Result</th><th></th></tr>
       {signal_rows}
     </table>
   </div>
@@ -464,17 +619,15 @@ def generate_index_html():
 <html><head><meta charset="UTF-8">
 <meta http-equiv="refresh" content="0;url=live.html">
 <title>Stocazzo</title></head>
-<body><a href="live.html">Ga naar Live Dashboard →</a></body></html>""")
+<body><a href="live.html">Go to Live Dashboard →</a></body></html>""")
     print("index.html generated")
 
 
-# ── FETCH ETF QUOTES ─────────────────────────────────────────────────────────
+# ── FETCH ETF QUOTES ──────────────────────────────────────────────────────────
 def _fetch_etf_quotes():
-    """Fetch intraday quotes for the ETF watchlist. Returns {ticker: {price, pct}}."""
-    quotes = {}
+    quotes  = {}
     tickers = [t for t, n, e, theme in KEY_ETFS]
 
-    # Twelve Data /quote gives close + percent_change directly
     if TWELVEDATA_KEY:
         for ticker in tickers:
             try:
@@ -491,9 +644,8 @@ def _fetch_etf_quotes():
                         quotes[ticker] = {"price": price, "pct": pct}
             except Exception as e:
                 print(f"Twelve Data quote {ticker}: {e}")
-                break  # stop on error to avoid burning API credits
+                break
 
-    # Finnhub fallback for any missing tickers
     if FINNHUB_KEY:
         for t, n, e, theme in KEY_ETFS:
             if t in quotes:
