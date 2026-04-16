@@ -62,7 +62,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
     <div>
       <div class="logo">STOCAZZO // SIGNAL TRACKER</div>
       <h1>Signal History &amp; Backcheck</h1>
-      <div class="updated">Updated: 16/04/2026 15:33 UTC · 16/04/2026 17:33 CEST · 6 signals</div>
+      <div class="updated">Updated: 16/04/2026 16:08 UTC · 16/04/2026 18:08 CEST · 8 signals</div>
     </div>
     <div>
       <a href="live.html" class="nav-link">Live Dashboard →</a>
@@ -70,7 +70,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
   </header>
 
   <div class="stats-grid">
-    <div class="stat"><div class="val">6</div><div class="lbl">Total signals</div></div>
+    <div class="stat"><div class="val">8</div><div class="lbl">Total signals</div></div>
     <div class="stat"><div class="val" style="color:var(--green);">0</div><div class="lbl">Verified hits</div></div>
     <div class="stat"><div class="val" style="color:var(--red);">0</div><div class="lbl">Missed predictions</div></div>
     <div class="stat"><div class="val" style="color:var(--amber);">n/a</div><div class="lbl">Overall hit rate</div></div>
@@ -87,16 +87,78 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
   <div class="section">
     <div class="section-title">Signal log — click row to expand reasoning</div>
     <div style="margin-bottom:10px;">
-      <button class="filter-btn active" onclick="filter('all',this)">All (6)</button>
+      <button class="filter-btn active" onclick="filter('all',this)">All (8)</button>
       <button class="filter-btn" onclick="filter('hit',this)">✓ Hits (0)</button>
       <button class="filter-btn" onclick="filter('miss',this)">✗ Misses (0)</button>
-      <button class="filter-btn" onclick="filter('pending',this)">· Pending (6)</button>
+      <button class="filter-btn" onclick="filter('pending',this)">· Pending (8)</button>
       <button class="filter-btn" onclick="filter('convergence',this)">⚡ Convergence</button>
     </div>
     <table id="sig-table">
       <tr><th>Datum (BE)</th><th>Bron</th><th>Richting</th><th>Signaal</th><th>ETFs</th><th>Vertrouwen</th><th>Resultaat</th><th></th></tr>
       
         <tr class="signal-row pending" onclick="toggleR(0)">
+          <td class="mono muted small" style="white-space:nowrap;">16/04/2026 18:08</td>
+          <td><span class="badge src-macrorss">MACRO RSS</span></td>
+          <td class="mono green bold small">BULLISH</td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Israel and Lebanon agree ceasefire, Trump says</span></td>
+          <td><a href="https://finance.yahoo.com/quote/QQQ" class="etf-badge" target="_blank">QQQ</a><a href="https://finance.yahoo.com/quote/EQQQ.AS" class="etf-badge" target="_blank">EQQQ</a></td>
+          <td>
+            <div class="conf-mini-wrap"><div class="conf-mini" style="width:40%;background:#cc2222;"></div></div>
+            <span class="mono small" style="color:#cc2222;">40%</span>
+          </td>
+          <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
+            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei0" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+        </tr>
+        <tr id="rr0" style="display:none;">
+          <td colspan="8" style="padding:0;">
+            <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
+                  <div style="font-size:12px;line-height:1.5;">Financial Times reports on tech. 1 bullish / 0 bearish signals in text.</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
+                  <div style="font-size:12px;color:var(--amber);line-height:1.5;">News follows events — not predictive. Use to confirm crony signals or set macro context.</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                <div style="flex:1;background:#e0e0d8;border-radius:2px;height:5px;"><div style="background:#cc2222;height:5px;border-radius:2px;width:40%;"></div></div>
+                <span class="mono small" style="color:#cc2222;">Confidence: 40%</span>
+              </div>
+              
+            </div>
+          </td>
+        </tr>
+        <tr class="signal-row pending" onclick="toggleR(1)">
+          <td class="mono muted small" style="white-space:nowrap;">16/04/2026 18:08</td>
+          <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
+          <td class="mono amber bold small">WATCH</td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Trump: "i just had excellent conversations with the highly respected president j</span></td>
+          <td><a href="https://finance.yahoo.com/quote/IWDA.AS" class="etf-badge" target="_blank">IWDA</a><a href="https://finance.yahoo.com/quote/XLE" class="etf-badge" target="_blank">XLE</a></td>
+          <td>
+            <div class="conf-mini-wrap"><div class="conf-mini" style="width:85%;background:#007a5e;"></div></div>
+            <span class="mono small" style="color:#007a5e;">85%</span>
+          </td>
+          <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
+            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei1" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+        </tr>
+        <tr id="rr1" style="display:none;">
+          <td colspan="8" style="padding:0;">
+            <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
+                  <div style="font-size:12px;line-height:1.5;">Trump posted market-relevant content 31m ago. Matched: ceasefire</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
+                  <div style="font-size:12px;color:var(--amber);line-height:1.5;">Not all Trump posts move markets. High urgency keywords have strongest historical correlation.</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                <div style="flex:1;background:#e0e0d8;border-radius:2px;height:5px;"><div style="background:#007a5e;height:5px;border-radius:2px;width:85%;"></div></div>
+                <span class="mono small" style="color:#007a5e;">Confidence: 85%</span>
+              </div>
+              
+            </div>
+          </td>
+        </tr>
+        <tr class="signal-row pending" onclick="toggleR(2)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -108,9 +170,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei0" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei2" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr0" style="display:none;">
+        <tr id="rr2" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
@@ -127,7 +189,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(1)">
+        <tr class="signal-row pending" onclick="toggleR(3)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -139,9 +201,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei1" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei3" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr1" style="display:none;">
+        <tr id="rr3" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
@@ -158,7 +220,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(2)">
+        <tr class="signal-row pending" onclick="toggleR(4)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -170,9 +232,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei2" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei4" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr2" style="display:none;">
+        <tr id="rr4" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
@@ -189,7 +251,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(3)">
+        <tr class="signal-row pending" onclick="toggleR(5)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -201,9 +263,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei3" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei5" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr3" style="display:none;">
+        <tr id="rr5" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
@@ -220,7 +282,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(4)">
+        <tr class="signal-row pending" onclick="toggleR(6)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -232,9 +294,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei4" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei6" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr4" style="display:none;">
+        <tr id="rr6" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
@@ -251,7 +313,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(5)">
+        <tr class="signal-row pending" onclick="toggleR(7)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-secedgar">SEC EDGAR</span></td>
           <td class="mono red bold small">SELL</td>
@@ -263,9 +325,9 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei5" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei7" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr5" style="display:none;">
+        <tr id="rr7" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">

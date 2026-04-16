@@ -1,11 +1,13 @@
 {
   "ids": [
     "acefd863227a",
-    "0d4041a7fae2",
+    "943a2fc41358",
+    "1d6b86fe014c",
     "556f276c2cb7",
-    "f4e705fed31d",
     "7b1420f5d653",
-    "1d6b86fe014c"
+    "f4e705fed31d",
+    "ecc0ec2d9067",
+    "0d4041a7fae2"
   ],
   "stats": {},
   "pending_checks": [
@@ -26,6 +28,24 @@
       "date": "2026-04-16T15:33:18.090789+00:00",
       "price_at_signal": 199.11,
       "title": "NVDA lobbying: $1,700,000 in last 90 days"
+    },
+    {
+      "uid": "ecc0ec2d9067",
+      "source": "Truth Social",
+      "ticker": "IWDA",
+      "direction": "WATCH",
+      "date": "2026-04-16T16:08:53.207205+00:00",
+      "price_at_signal": 0,
+      "title": "Trump: \"i just had excellent conversations with the highly respected president j"
+    },
+    {
+      "uid": "943a2fc41358",
+      "source": "Macro RSS",
+      "ticker": "QQQ",
+      "direction": "BULLISH",
+      "date": "2026-04-16T16:08:53.424124+00:00",
+      "price_at_signal": 641.78,
+      "title": "Israel and Lebanon agree ceasefire, Trump says"
     }
   ],
   "history": [
@@ -224,6 +244,86 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "ecc0ec2d9067",
+      "date": "16/04/2026 16:08 UTC",
+      "date_be": "16/04/2026 18:08 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 31m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"i just had excellent conversations with the highly respected president joseph ao\"",
+      "detail": "i just had excellent conversations with the highly respected president joseph aoun, of lebanon, and prime minister bibi netanyahu, of israel. these two leaders have agreed that in order to achieve pea",
+      "urgency": "HIGH",
+      "keywords": "ceasefire",
+      "etfs": [
+        [
+          "IWDA",
+          "iShares Core MSCI World UCITS ETF",
+          "AMS"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116415122630904602",
+      "confidence": 85,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 31m ago. Matched: ceasefire",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 85,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "943a2fc41358",
+      "date": "16/04/2026 16:08 UTC",
+      "date_be": "16/04/2026 18:08 CEST",
+      "source": "Macro RSS",
+      "type": "Financial Times \u00b7 tech",
+      "direction": "BULLISH",
+      "title": "Israel and Lebanon agree ceasefire, Trump says",
+      "detail": "US president posts that 10-day truce will start on Thursday evening",
+      "urgency": "MEDIUM",
+      "keywords": "tech",
+      "etfs": [
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "EQQQ",
+          "Invesco EQQQ Nasdaq-100 UCITS ETF",
+          "AMS"
+        ]
+      ],
+      "link": "https://www.ft.com/content/25d286a0-df45-448c-9e90-5dce350624b4",
+      "confidence": 40,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Financial Times reports on tech. 1 bullish / 0 bearish signals in text.",
+        "signal_type": "News RSS \u2014 Financial Times. Macro context signal.",
+        "confidence": 40,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "News follows events \u2014 not predictive. Use to confirm crony signals or set macro context."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -306,6 +406,106 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "699f27e7d665",
+      "theme": "energy",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "XLE",
+      "score": 13,
+      "confidence": 83,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-16T16:08:52.505668+00:00",
+      "price_at_signal": 56.59,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "e568bb805c0b",
+      "theme": "macro",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "SPY",
+      "score": 13,
+      "confidence": 83,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-16T16:08:52.684687+00:00",
+      "price_at_signal": 702.46,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "24d8935ca1cc",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 5,
+      "confidence": 35,
+      "sources": [
+        "Macro RSS"
+      ],
+      "date": "2026-04-16T16:08:52.863232+00:00",
+      "price_at_signal": 702.46,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "6dbcc510940f",
+      "theme": "tech",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "QQQ",
+      "score": 5,
+      "confidence": 35,
+      "sources": [
+        "Macro RSS"
+      ],
+      "date": "2026-04-16T16:08:53.027681+00:00",
+      "price_at_signal": 641.78,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
-  ]
+  ],
+  "platform_score": {
+    "hits": 0,
+    "misses": 0,
+    "watches": 0,
+    "by_window": {
+      "4h": {
+        "hits": 0,
+        "misses": 0
+      },
+      "24h": {
+        "hits": 0,
+        "misses": 0
+      },
+      "5d": {
+        "hits": 0,
+        "misses": 0
+      }
+    },
+    "by_theme": {}
+  }
 }
