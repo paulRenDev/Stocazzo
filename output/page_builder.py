@@ -405,6 +405,7 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None, skip_prices=Fal
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="120">
 <title>Stocazzo — Live</title>
 <style>{_CSS}
 .sources-grid {{ display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }}
