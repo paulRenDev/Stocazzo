@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stocazzo — Sources</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+:root {
+  --bg:#f5f5f0; --surface:#fff; --border:#d8d8d0; --border2:#ebebeb;
+  --text:#1a1a1a; --muted:#6b6b6b; --dim:#aaa;
+  --green:#007a5e; --red:#cc2222; --amber:#b06000; --blue:#1a5fb5;
+  --mono:'IBM Plex Mono',monospace; --sans:'IBM Plex Sans',sans-serif;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--text); font-family:var(--sans); font-size:14px; line-height:1.5; }
+.app { max-width:1100px; margin:0 auto; padding:2rem 1.5rem; }
+header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; }
+.logo { font-family:var(--mono); font-size:10px; color:var(--green); letter-spacing:0.1em; }
+h1 { font-size:22px; font-weight:300; margin-top:4px; }
+.nav-link { font-family:var(--mono); font-size:11px; color:var(--blue); text-decoration:none; margin-left:12px; }
+.updated { font-size:11px; color:var(--dim); font-family:var(--mono); margin-top:4px; }
+.section { margin-bottom:2rem; }
+.section-title { font-size:10px; font-family:var(--mono); color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; }
+.badge { font-size:10px; font-weight:700; padding:2px 7px; border-radius:3px; font-family:var(--mono); white-space:nowrap; }
+.src-polymarket { background:#e8f4f0; color:var(--green); }
+.src-kalshi { background:#e8f0f8; color:var(--blue); }
+.src-darkpool,.src-dark { background:#f0f0eb; color:#444; }
+.src-congress { background:#fdf0e8; color:var(--amber); }
+.src-pelositracker { background:#f0e8f8; color:#7a3fb5; }
+.src-optionsflow { background:#e8f0f0; color:#1a7a7a; }
+.src-socialsignal { background:#f8f0e8; color:#8b4513; }
+.src-convergence { background:#1a1a1a; color:#fff; }
+.src-truthsocial { background:#fff0e8; color:#c04000; }
+.src-secedgar,.src-edgar { background:#f0f4e8; color:#3a6010; }
+.src-lobbying { background:#f0e8f4; color:#6030a0; }
+.src-govcontracts { background:#e8f0f8; color:#0050a0; }
+.src-macrors { background:#f5f5f0; color:#555; }
+.src-gdelt { background:#e8f8f8; color:#006070; }
+.src-feargreed { background:#fff8e8; color:#804000; }
+.mono { font-family:var(--mono); } .small { font-size:11px; } .muted { color:var(--muted); }
+.dim { color:var(--dim); } .bold { font-weight:600; }
+.green { color:var(--green); } .red { color:var(--red); } .amber { color:var(--amber); }
+.etf-badge { background:#e8f4f0; color:var(--green); font-family:var(--mono); font-size:11px; font-weight:700; padding:2px 6px; border-radius:3px; text-decoration:none; margin-right:3px; }
+.etf-badge:hover { background:var(--green); color:#fff; }
+.stock-badge { background:#f0f0eb; color:#1a1a1a; font-family:var(--mono); font-size:11px; font-weight:700; padding:2px 6px; border-radius:3px; text-decoration:none; margin-right:3px; }
+.stock-badge:hover { background:#1a1a1a; color:#fff; }
+.conf-mini-wrap { background:#e8e8e0; border-radius:2px; height:3px; width:52px; margin-bottom:2px; }
+.conf-mini { height:3px; border-radius:2px; }
+@media(max-width:700px) { .etf-grid { grid-template-columns:repeat(2,1fr) !important; } }
+
+.sources-full { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+@media(max-width:700px) { .sources-full { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="logo">STOCAZZO // SIGNAL TRACKER</div>
+      <h1>Signal Sources</h1>
+      <div class="updated">7 active sources · 16/04/2026 18:31 CEST</div>
+    </div>
+    <div>
+      <a href="live.html" class="nav-link">Live Dashboard →</a>
+      <a href="history.html" class="nav-link">Signal History →</a>
+    </div>
+  </header>
+
+  <div style="display:flex;gap:12px;margin-bottom:1.5rem;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;">
+      <span style="width:10px;height:10px;border-radius:2px;background:#cc222215;border:1px solid #cc2222;display:inline-block;"></span>
+      <span style="color:#cc2222;font-weight:600;">Crony</span>
+      <span style="color:var(--muted);">— signals BEFORE the news (insider, prediction markets)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;">
+      <span style="width:10px;height:10px;border-radius:2px;background:#1a5fb515;border:1px solid #1a5fb5;display:inline-block;"></span>
+      <span style="color:#1a5fb5;font-weight:600;">Macro</span>
+      <span style="color:var(--muted);">— signals AFTER the news (RSS, GDELT, sentiment)</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;font-size:12px;margin-left:auto;">
+      <span style="color:var(--amber);">★★★★★</span>
+      <span style="color:var(--muted);">= source weight (1-5)</span>
+    </div>
+  </div>
+
+  <div class="sources-full"><div style='background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;'><div style='display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;'><span class='badge src-polymarket'>POLYMARKET</span><span style='font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:#cc222215;color:#cc2222;font-weight:600;'>Crony</span></div><div style='font-size:13px;color:var(--amber);margin-bottom:6px;letter-spacing:0.05em;'>★★★☆☆</div><div style='font-size:12px;color:var(--muted);margin-bottom:4px;'>Prediction market — crowd wisdom + possible insider</div><div style='font-size:11px;font-family:var(--mono);color:var(--blue);margin-bottom:6px;'>Lead time: 15 min – 4 hours</div><div style='font-size:11px;color:var(--text);line-height:1.5;margin-bottom:8px;'>4/5 verified correct (Mar-Apr 2026). Anonymous — cannot confirm insider vs retail.</div><div style='font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:6px;'>No verified data yet</div></div><div style='background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;'><div style='display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;'><span class='badge src-kalshi'>KALSHI</span><span style='font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:#cc222215;color:#cc2222;font-weight:600;'>Crony</span></div><div style='font-size:13px;color:var(--amber);margin-bottom:6px;letter-spacing:0.05em;'>★★★☆☆</div><div style='font-size:12px;color:var(--muted);margin-bottom:4px;'>CFTC-regulated prediction market</div><div style='font-size:11px;font-family:var(--mono);color:var(--blue);margin-bottom:6px;'>Lead time: Hours – days</div><div style='font-size:11px;color:var(--text);line-height:1.5;margin-bottom:8px;'>Regulated = harder to manipulate. Less insider activity. No verified data yet.</div><div style='font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:6px;'>No verified data yet</div></div><div style='background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;'><div style='display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;'><span class='badge src-darkpool'>DARK POOL</span><span style='font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:#cc222215;color:#cc2222;font-weight:600;'>Crony</span></div><div style='font-size:13px;color:var(--amber);margin-bottom:6px;letter-spacing:0.05em;'>★★☆☆☆</div><div style='font-size:12px;color:var(--muted);margin-bottom:4px;'>Institutional order flow (Whalestream)</div><div style='font-size:11px;font-family:var(--mono);color:var(--blue);margin-bottom:6px;'>Lead time: Hours – days (no directional info)</div><div style='font-size:11px;color:var(--text);line-height:1.5;margin-bottom:8px;'>Shows WHERE institutions trade, not BUY/SELL. Needs confirmation from other sources.</div><div style='font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:6px;'>No verified data yet</div></div><div style='background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;'><div style='display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;'><span class='badge src-congress'>CONGRESS</span><span style='font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:#cc222215;color:#cc2222;font-weight:600;'>Crony</span></div><div style='font-size:13px;color:var(--amber);margin-bottom:6px;letter-spacing:0.05em;'>★★☆☆☆</div><div style='font-size:12px;color:var(--muted);margin-bottom:4px;'>STOCK Act mandatory disclosure</div><div style='font-size:11px;font-family:var(--mono);color:var(--blue);margin-bottom:6px;'>Lead time: Up to 45 days after trade</div><div style='font-size:11px;color:var(--text);line-height:1.5;margin-bottom:8px;'>Always delayed 45 days by law. Use for sector trend, not timing.</div><div style='font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:6px;'>No verified data yet</div></div><div style='background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;'><div style='display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;'><span class='badge src-pelositracker'>PELOSI TRACKER</span><span style='font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:#cc222215;color:#cc2222;font-weight:600;'>Crony</span></div><div style='font-size:13px;color:var(--amber);margin-bottom:6px;letter-spacing:0.05em;'>★★★☆☆</div><div style='font-size:12px;color:var(--muted);margin-bottom:4px;'>Real-time Pelosi trade tracking</div><div style='font-size:11px;font-family:var(--mono);color:var(--blue);margin-bottom:6px;'>Lead time: Up to 45 days after trade</div><div style='font-size:11px;color:var(--text);line-height:1.5;margin-bottom:8px;'>Pelosi portfolio outperformed S&P by 3-5% annually. Deep-in-money calls = signature move.</div><div style='font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:6px;'>No verified data yet</div></div><div style='background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;'><div style='display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;'><span class='badge src-optionsflow'>OPTIONS FLOW</span><span style='font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:#cc222215;color:#cc2222;font-weight:600;'>Crony</span></div><div style='font-size:13px;color:var(--amber);margin-bottom:6px;letter-spacing:0.05em;'>★★☆☆☆</div><div style='font-size:12px;color:var(--muted);margin-bottom:4px;'>Unusual Whales options + dark pool news</div><div style='font-size:11px;font-family:var(--mono);color:var(--blue);margin-bottom:6px;'>Lead time: Hours (flow precedes news)</div><div style='font-size:11px;color:var(--text);line-height:1.5;margin-bottom:8px;'>Institutional footprint. Direction unclear — hedge vs speculation. Best combined with Polymarket.</div><div style='font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:6px;'>No verified data yet</div></div><div style='background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;'><div style='display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;'><span class='badge src-socialsignal'>SOCIAL SIGNAL</span><span style='font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:3px;background:#1a5fb515;color:#1a5fb5;font-weight:600;'>Macro</span></div><div style='font-size:13px;color:var(--amber);margin-bottom:6px;letter-spacing:0.05em;'>★☆☆☆☆</div><div style='font-size:12px;color:var(--muted);margin-bottom:4px;'>Reddit top posts (WSB, r/stocks, r/options)</div><div style='font-size:11px;font-family:var(--mono);color:var(--blue);margin-bottom:6px;'>Lead time: Variable — hours to days</div><div style='font-size:11px;color:var(--text);line-height:1.5;margin-bottom:8px;'>Very noisy. Only useful when confirmed by other sources. Never act alone.</div><div style='font-size:11px;font-family:var(--mono);color:var(--muted);margin-top:6px;'>No verified data yet</div></div></div>
+
+</div>
+</body>
+</html>

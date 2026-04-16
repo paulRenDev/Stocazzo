@@ -107,7 +107,7 @@ def commit_seen(seen_data):
     try:
         os.system('git config user.email "crony-scanner@github-actions"')
         os.system('git config user.name "Crony Scanner"')
-        os.system(f'git add {SEEN_FILE} live.html history.html index.html')
+        os.system(f'git add {SEEN_FILE} live.html history.html sources.html index.html')
         changed = os.popen('git diff --cached --quiet || echo "yes"').read().strip()
         if changed == "yes":
             os.system('git commit -m "chore: update signals [skip ci]"')

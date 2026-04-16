@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,17 +25,26 @@ h1 { font-size:22px; font-weight:300; margin-top:4px; }
 .badge { font-size:10px; font-weight:700; padding:2px 7px; border-radius:3px; font-family:var(--mono); white-space:nowrap; }
 .src-polymarket { background:#e8f4f0; color:var(--green); }
 .src-kalshi { background:#e8f0f8; color:var(--blue); }
-.src-darkpool, .src-dark { background:#f0f0eb; color:#444; }
+.src-darkpool,.src-dark { background:#f0f0eb; color:#444; }
 .src-congress { background:#fdf0e8; color:var(--amber); }
 .src-pelositracker { background:#f0e8f8; color:#7a3fb5; }
 .src-optionsflow { background:#e8f0f0; color:#1a7a7a; }
 .src-socialsignal { background:#f8f0e8; color:#8b4513; }
 .src-convergence { background:#1a1a1a; color:#fff; }
+.src-truthsocial { background:#fff0e8; color:#c04000; }
+.src-secedgar,.src-edgar { background:#f0f4e8; color:#3a6010; }
+.src-lobbying { background:#f0e8f4; color:#6030a0; }
+.src-govcontracts { background:#e8f0f8; color:#0050a0; }
+.src-macrors { background:#f5f5f0; color:#555; }
+.src-gdelt { background:#e8f8f8; color:#006070; }
+.src-feargreed { background:#fff8e8; color:#804000; }
 .mono { font-family:var(--mono); } .small { font-size:11px; } .muted { color:var(--muted); }
 .dim { color:var(--dim); } .bold { font-weight:600; }
 .green { color:var(--green); } .red { color:var(--red); } .amber { color:var(--amber); }
 .etf-badge { background:#e8f4f0; color:var(--green); font-family:var(--mono); font-size:11px; font-weight:700; padding:2px 6px; border-radius:3px; text-decoration:none; margin-right:3px; }
 .etf-badge:hover { background:var(--green); color:#fff; }
+.stock-badge { background:#f0f0eb; color:#1a1a1a; font-family:var(--mono); font-size:11px; font-weight:700; padding:2px 6px; border-radius:3px; text-decoration:none; margin-right:3px; }
+.stock-badge:hover { background:#1a1a1a; color:#fff; }
 .conf-mini-wrap { background:#e8e8e0; border-radius:2px; height:3px; width:52px; margin-bottom:2px; }
 .conf-mini { height:3px; border-radius:2px; }
 @media(max-width:700px) { .etf-grid { grid-template-columns:repeat(2,1fr) !important; } }
@@ -62,15 +71,16 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
     <div>
       <div class="logo">STOCAZZO // SIGNAL TRACKER</div>
       <h1>Signal History &amp; Backcheck</h1>
-      <div class="updated">Updated: 16/04/2026 16:08 UTC · 16/04/2026 18:08 CEST · 8 signals</div>
+      <div class="updated">Updated: 16/04/2026 16:31 UTC · 16/04/2026 18:31 CEST · 9 signals</div>
     </div>
     <div>
       <a href="live.html" class="nav-link">Live Dashboard →</a>
+      <a href="sources.html" class="nav-link">Sources →</a>
     </div>
   </header>
 
   <div class="stats-grid">
-    <div class="stat"><div class="val">8</div><div class="lbl">Total signals</div></div>
+    <div class="stat"><div class="val">9</div><div class="lbl">Total signals</div></div>
     <div class="stat"><div class="val" style="color:var(--green);">0</div><div class="lbl">Verified hits</div></div>
     <div class="stat"><div class="val" style="color:var(--red);">0</div><div class="lbl">Missed predictions</div></div>
     <div class="stat"><div class="val" style="color:var(--amber);">n/a</div><div class="lbl">Overall hit rate</div></div>
@@ -79,7 +89,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
   <div class="section">
     <div class="section-title">Hit rate per source</div>
     <table>
-      <tr><th>Bron</th><th>Hits</th><th>Misses</th><th>Pending</th><th>Hit rate</th><th>Notities</th></tr>
+      <tr><th>Source</th><th>Hits</th><th>Misses</th><th>Pending</th><th>Hit rate</th><th>Notes</th></tr>
       
     </table>
   </div>
@@ -87,16 +97,47 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
   <div class="section">
     <div class="section-title">Signal log — click row to expand reasoning</div>
     <div style="margin-bottom:10px;">
-      <button class="filter-btn active" onclick="filter('all',this)">All (8)</button>
+      <button class="filter-btn active" onclick="filter('all',this)">All (9)</button>
       <button class="filter-btn" onclick="filter('hit',this)">✓ Hits (0)</button>
       <button class="filter-btn" onclick="filter('miss',this)">✗ Misses (0)</button>
-      <button class="filter-btn" onclick="filter('pending',this)">· Pending (8)</button>
+      <button class="filter-btn" onclick="filter('pending',this)">· Pending (9)</button>
       <button class="filter-btn" onclick="filter('convergence',this)">⚡ Convergence</button>
     </div>
     <table id="sig-table">
-      <tr><th>Datum (BE)</th><th>Bron</th><th>Richting</th><th>Signaal</th><th>ETFs</th><th>Vertrouwen</th><th>Resultaat</th><th></th></tr>
+      <tr><th>Date (BE)</th><th>Source</th><th>Direction</th><th>Signal</th><th>ETFs</th><th>Confidence</th><th>Result</th><th></th></tr>
       
         <tr class="signal-row pending" onclick="toggleR(0)">
+          <td class="mono muted small" style="white-space:nowrap;">16/04/2026 18:31</td>
+          <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
+          <td class="mono amber bold small">WATCH</td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Trump: "rt: https://truthsocial.com/users/realdonaldtrump/statuses/1164151226309</span></td>
+          <td></td>
+          <td>
+            <div class="conf-mini-wrap"><div class="conf-mini" style="width:35%;background:#cc2222;"></div></div>
+            <span class="mono small" style="color:#cc2222;">35%</span>
+          </td>
+          <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
+            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei0" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+        </tr>
+        <tr id="rr0" style="display:none;">
+          <td colspan="8" style="padding:0;">
+            <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
+                  <div style="font-size:12px;line-height:1.5;">Trump posted market-relevant content 36m ago. Matched: talks</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
+                  <div style="font-size:12px;color:var(--amber);line-height:1.5;">Not all Trump posts move markets. High urgency keywords have strongest historical correlation.</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                <div style="flex:1;background:#e0e0d8;border-radius:2px;height:5px;"><div style="background:#cc2222;height:5px;border-radius:2px;width:35%;"></div></div>
+                <span class="mono small" style="color:#cc2222;">Confidence: 35%</span>
+              </div>
+              
+            </div>
+          </td>
+        </tr>
+        <tr class="signal-row pending" onclick="toggleR(1)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 18:08</td>
           <td><span class="badge src-macrorss">MACRO RSS</span></td>
           <td class="mono green bold small">BULLISH</td>
@@ -108,13 +149,13 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei0" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei1" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr0" style="display:none;">
+        <tr id="rr1" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
                   <div style="font-size:12px;line-height:1.5;">Financial Times reports on tech. 1 bullish / 0 bearish signals in text.</div></div>
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
                   <div style="font-size:12px;color:var(--amber);line-height:1.5;">News follows events — not predictive. Use to confirm crony signals or set macro context.</div></div>
@@ -127,7 +168,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(1)">
+        <tr class="signal-row pending" onclick="toggleR(2)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 18:08</td>
           <td><span class="badge src-truthsocial">TRUTH SOCIAL</span></td>
           <td class="mono amber bold small">WATCH</td>
@@ -139,13 +180,13 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           </td>
           <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
             background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei1" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei2" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
         </tr>
-        <tr id="rr1" style="display:none;">
+        <tr id="rr2" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
                   <div style="font-size:12px;line-height:1.5;">Trump posted market-relevant content 31m ago. Matched: ceasefire</div></div>
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
                   <div style="font-size:12px;color:var(--amber);line-height:1.5;">Not all Trump posts move markets. High urgency keywords have strongest historical correlation.</div></div>
@@ -158,42 +199,11 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
             </div>
           </td>
         </tr>
-        <tr class="signal-row pending" onclick="toggleR(2)">
-          <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
-          <td><span class="badge src-lobbying">LOBBYING</span></td>
-          <td class="mono amber bold small">WATCH</td>
-          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">XOM lobbying: $2,190,000 in last 90 days</span></td>
-          <td></td>
-          <td>
-            <div class="conf-mini-wrap"><div class="conf-mini" style="width:35%;background:#cc2222;"></div></div>
-            <span class="mono small" style="color:#cc2222;">35%</span>
-          </td>
-          <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
-            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
-          <td style="width:24px;text-align:center;"><span id="ei2" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
-        </tr>
-        <tr id="rr2" style="display:none;">
-          <td colspan="8" style="padding:0;">
-            <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
-              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
-                  <div style="font-size:12px;line-height:1.5;">XOM spent $2,190,000 lobbying in 90 days — 8 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
-                  <div style="font-size:12px;color:var(--amber);line-height:1.5;">Lobbying is routine for large companies. Only valuable as sector context, not directional signal.</div></div>
-              </div>
-              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-                <div style="flex:1;background:#e0e0d8;border-radius:2px;height:5px;"><div style="background:#cc2222;height:5px;border-radius:2px;width:35%;"></div></div>
-                <span class="mono small" style="color:#cc2222;">Confidence: 35%</span>
-              </div>
-              
-            </div>
-          </td>
-        </tr>
         <tr class="signal-row pending" onclick="toggleR(3)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
-          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">META lobbying: $526,250 in last 90 days</span></td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">XOM lobbying: $2,190,000 in last 90 days</span></td>
           <td></td>
           <td>
             <div class="conf-mini-wrap"><div class="conf-mini" style="width:35%;background:#cc2222;"></div></div>
@@ -207,8 +217,8 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
-                  <div style="font-size:12px;line-height:1.5;">META spent $526,250 lobbying in 90 days — 10 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
+                  <div style="font-size:12px;line-height:1.5;">XOM spent $2,190,000 lobbying in 90 days — 8 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
                   <div style="font-size:12px;color:var(--amber);line-height:1.5;">Lobbying is routine for large companies. Only valuable as sector context, not directional signal.</div></div>
               </div>
@@ -224,7 +234,7 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
-          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">MSFT lobbying: $3,612,500 in last 90 days</span></td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">META lobbying: $526,250 in last 90 days</span></td>
           <td></td>
           <td>
             <div class="conf-mini-wrap"><div class="conf-mini" style="width:35%;background:#cc2222;"></div></div>
@@ -238,8 +248,8 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
-                  <div style="font-size:12px;line-height:1.5;">MSFT spent $3,612,500 lobbying in 90 days — 20 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
+                  <div style="font-size:12px;line-height:1.5;">META spent $526,250 lobbying in 90 days — 10 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
                   <div style="font-size:12px;color:var(--amber);line-height:1.5;">Lobbying is routine for large companies. Only valuable as sector context, not directional signal.</div></div>
               </div>
@@ -255,8 +265,8 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
-          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">NVDA lobbying: $1,700,000 in last 90 days</span></td>
-          <td><a href="https://finance.yahoo.com/quote/NVDA" class="etf-badge" target="_blank">NVDA</a><a href="https://finance.yahoo.com/quote/SOXX" class="etf-badge" target="_blank">SOXX</a></td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">MSFT lobbying: $3,612,500 in last 90 days</span></td>
+          <td></td>
           <td>
             <div class="conf-mini-wrap"><div class="conf-mini" style="width:35%;background:#cc2222;"></div></div>
             <span class="mono small" style="color:#cc2222;">35%</span>
@@ -269,8 +279,8 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
-                  <div style="font-size:12px;line-height:1.5;">NVDA spent $1,700,000 lobbying in 90 days — 4 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
+                  <div style="font-size:12px;line-height:1.5;">MSFT spent $3,612,500 lobbying in 90 days — 20 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
                   <div style="font-size:12px;color:var(--amber);line-height:1.5;">Lobbying is routine for large companies. Only valuable as sector context, not directional signal.</div></div>
               </div>
@@ -286,8 +296,8 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
           <td><span class="badge src-lobbying">LOBBYING</span></td>
           <td class="mono amber bold small">WATCH</td>
-          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">LMT lobbying: $4,300,000 in last 90 days</span></td>
-          <td><a href="https://finance.yahoo.com/quote/LMT" class="etf-badge" target="_blank">LMT</a><a href="https://finance.yahoo.com/quote/ITA" class="etf-badge" target="_blank">ITA</a></td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">NVDA lobbying: $1,700,000 in last 90 days</span></td>
+          <td><a href="https://finance.yahoo.com/quote/NVDA" class="etf-badge" target="_blank">NVDA</a><a href="https://finance.yahoo.com/quote/SOXX" class="etf-badge" target="_blank">SOXX</a></td>
           <td>
             <div class="conf-mini-wrap"><div class="conf-mini" style="width:35%;background:#cc2222;"></div></div>
             <span class="mono small" style="color:#cc2222;">35%</span>
@@ -300,8 +310,8 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
-                  <div style="font-size:12px;line-height:1.5;">LMT spent $4,300,000 lobbying in 90 days — 10 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
+                  <div style="font-size:12px;line-height:1.5;">NVDA spent $1,700,000 lobbying in 90 days — 4 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
                   <div style="font-size:12px;color:var(--amber);line-height:1.5;">Lobbying is routine for large companies. Only valuable as sector context, not directional signal.</div></div>
               </div>
@@ -315,10 +325,10 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
         </tr>
         <tr class="signal-row pending" onclick="toggleR(7)">
           <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
-          <td><span class="badge src-secedgar">SEC EDGAR</span></td>
-          <td class="mono red bold small">SELL</td>
-          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Barnum Jeremy — SELL 5,611 shares of JPM</span></td>
-          <td></td>
+          <td><span class="badge src-lobbying">LOBBYING</span></td>
+          <td class="mono amber bold small">WATCH</td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">LMT lobbying: $4,300,000 in last 90 days</span></td>
+          <td><a href="https://finance.yahoo.com/quote/LMT" class="etf-badge" target="_blank">LMT</a><a href="https://finance.yahoo.com/quote/ITA" class="etf-badge" target="_blank">ITA</a></td>
           <td>
             <div class="conf-mini-wrap"><div class="conf-mini" style="width:35%;background:#cc2222;"></div></div>
             <span class="mono small" style="color:#cc2222;">35%</span>
@@ -331,7 +341,38 @@ td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:mi
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
-                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Waarom</div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
+                  <div style="font-size:12px;line-height:1.5;">LMT spent $4,300,000 lobbying in 90 days — 10 filings. Large lobbying spend precedes regulatory changes or contract wins.</div></div>
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
+                  <div style="font-size:12px;color:var(--amber);line-height:1.5;">Lobbying is routine for large companies. Only valuable as sector context, not directional signal.</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+                <div style="flex:1;background:#e0e0d8;border-radius:2px;height:5px;"><div style="background:#cc2222;height:5px;border-radius:2px;width:35%;"></div></div>
+                <span class="mono small" style="color:#cc2222;">Confidence: 35%</span>
+              </div>
+              
+            </div>
+          </td>
+        </tr>
+        <tr class="signal-row pending" onclick="toggleR(8)">
+          <td class="mono muted small" style="white-space:nowrap;">16/04/2026 17:33</td>
+          <td><span class="badge src-secedgar">SEC EDGAR</span></td>
+          <td class="mono red bold small">SELL</td>
+          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">Barnum Jeremy — SELL 5,611 shares of JPM</span></td>
+          <td></td>
+          <td>
+            <div class="conf-mini-wrap"><div class="conf-mini" style="width:35%;background:#cc2222;"></div></div>
+            <span class="mono small" style="color:#cc2222;">35%</span>
+          </td>
+          <td><span style="font-size:11px;font-family:var(--mono);font-weight:600;padding:2px 8px;border-radius:3px;
+            background:#f5f5f0;color:var(--dim);">· PENDING</span></td>
+          <td style="width:24px;text-align:center;"><span id="ei8" style="font-size:11px;color:var(--dim);font-family:var(--mono);transition:transform 0.15s;display:inline-block;">▸</span></td>
+        </tr>
+        <tr id="rr8" style="display:none;">
+          <td colspan="8" style="padding:0;">
+            <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
+              <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
+                <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
                   <div style="font-size:12px;line-height:1.5;">Barnum Jeremy filed SELL of 5,611 JPM shares.  </div></div>
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Caveat</div>
                   <div style="font-size:12px;color:var(--amber);line-height:1.5;">Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal.</div></div>

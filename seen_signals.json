@@ -1,13 +1,14 @@
 {
   "ids": [
-    "acefd863227a",
+    "f4e705fed31d",
+    "7b1420f5d653",
+    "0d4041a7fae2",
+    "556f276c2cb7",
     "943a2fc41358",
     "1d6b86fe014c",
-    "556f276c2cb7",
-    "7b1420f5d653",
-    "f4e705fed31d",
-    "ecc0ec2d9067",
-    "0d4041a7fae2"
+    "acefd863227a",
+    "3bb58e487f35",
+    "ecc0ec2d9067"
   ],
   "stats": {},
   "pending_checks": [
@@ -324,6 +325,35 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "3bb58e487f35",
+      "date": "16/04/2026 16:31 UTC",
+      "date_be": "16/04/2026 18:31 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 36m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"rt: https://truthsocial.com/users/realdonaldtrump/statuses/116415122630904602in \"",
+      "detail": "rt: https://truthsocial.com/users/realdonaldtrump/statuses/116415122630904602in addition to the statement just issued, i will be inviting the prime minister of israel, bibi netanyahu, and the presiden",
+      "urgency": "LOW",
+      "keywords": "talks",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116415190299043508",
+      "confidence": 35,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 36m ago. Matched: talks",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 35,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -507,5 +537,6 @@
       }
     },
     "by_theme": {}
-  }
+  },
+  "portfolio": []
 }
