@@ -24,7 +24,7 @@ from convergence         import build_convergence
 from output.advice       import build_advice, log_advice_for_scoring, run_advice_backcheck
 
 # Output
-from output.page_builder import generate_live_html, generate_history_html, generate_index_html
+from output.page_builder import generate_live_html, generate_history_html, generate_index_html, generate_sources_html
 from output.mail_builder import send_email
 
 
@@ -90,6 +90,7 @@ def main():
     # 7. Generate HTML pages
     generate_history_html(seen_data)
     generate_live_html(seen_data, all_alerts, advice_cards)
+    generate_sources_html(seen_data)
     generate_index_html()
 
     # 8. Send email if anything to report
