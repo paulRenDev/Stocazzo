@@ -6,6 +6,7 @@ No scan logic, no mail logic.
 import requests
 
 from config import SOURCE_CREDIBILITY, FINNHUB_KEY, TWELVEDATA_KEY, SITE_URL
+from output.advice import format_advice_html_section
 from helpers import now_utc, now_be, urgency_color
 from etf_mapper import KEY_ETFS, etf_yahoo_url, etf_google_url
 from scoring import get_source_hit_rate
@@ -50,7 +51,7 @@ h1 { font-size:22px; font-weight:300; margin-top:4px; }
 
 
 # ── LIVE.HTML ─────────────────────────────────────────────────────────────────
-def generate_live_html(seen_data, all_alerts):
+def generate_live_html(seen_data, all_alerts, advice_cards=None):
     stats   = seen_data.get("stats", {})
     history = seen_data.get("history", [])
 
@@ -175,6 +176,9 @@ def generate_live_html(seen_data, all_alerts):
             f"</div></div>"
         )
 
+    advice_cards_list = advice_cards or []
+    advice_html = format_advice_html_section(advice_cards_list)
+
     html = f"""<!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -208,6 +212,11 @@ def generate_live_html(seen_data, all_alerts):
   <div class="section">
     <div class="section-title">Current signals ({len(all_alerts)})</div>
     {alert_cards}
+  </div>
+
+  <div class="section">
+    <div class="section-title">Cumulative advice ({len(advice_cards_list)} themes) — all sources combined</div>
+    {advice_html}
   </div>
 
   <div class="section">
