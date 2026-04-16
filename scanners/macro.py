@@ -159,14 +159,19 @@ def _scan_rss_feeds(seen_data):
 
 # ── GDELT ─────────────────────────────────────────────────────────────────────
 def _scan_gdelt(seen_data):
+    import time
     alerts = []
     try:
-        for query, theme in GDELT_QUERIES:
+        for i, (query, theme) in enumerate(GDELT_QUERIES):
+            if i >= 1:  # max 1 GDELT query per run to avoid 429
+                break
             try:
+                time.sleep(3)
                 url = GDELT_URL.format(query=query.replace(" ", "%20"))
                 r   = safe_get(url, timeout=8)
                 if not r:
-                    continue
+                    print("GDELT: skipping remaining queries")
+                    break
 
                 data     = r.json()
                 articles = data.get("articles", [])
