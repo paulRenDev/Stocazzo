@@ -459,37 +459,32 @@ def generate_index_html():
     print("index.html generated")
 
 
-# ── KOERSEN OPHALEN ───────────────────────────────────────────────────────────
+# ── FETCH ETF QUOTES ─────────────────────────────────────────────────────────
 def _fetch_etf_quotes():
-    """Haalt intraday koersen op voor de watchlist ETFs."""
+    """Fetch intraday quotes for the ETF watchlist. Returns {ticker: {price, pct}}."""
     quotes = {}
     tickers = [t for t, n, e, theme in KEY_ETFS]
 
-    # Twelve Data batch (tot 5 tickers per request op gratis tier)
+    # Twelve Data /quote gives close + percent_change directly
     if TWELVEDATA_KEY:
-        batch = ",".join(tickers[:8])
-        try:
-            r = requests.get(
-                "https://api.twelvedata.com/price",
-                params={"symbol": batch, "apikey": TWELVEDATA_KEY},
-                timeout=8,
-            )
-            if r.status_code == 200:
-                data = r.json()
-                # Als meerdere tickers: dict van dicts; anders direct
-                if "price" in data:
-                    data = {tickers[0]: data}
-                for ticker, info in data.items():
-                    try:
-                        price = float(info.get("price", 0))
-                        if price:
-                            quotes[ticker] = {"price": price, "pct": 0}
-                    except Exception:
-                        pass
-        except Exception as e:
-            print(f"Twelve Data batch koersen: {e}")
+        for ticker in tickers:
+            try:
+                r = requests.get(
+                    "https://api.twelvedata.com/quote",
+                    params={"symbol": ticker, "apikey": TWELVEDATA_KEY},
+                    timeout=6,
+                )
+                if r.status_code == 200:
+                    data  = r.json()
+                    price = float(data.get("close", 0) or 0)
+                    pct   = float(data.get("percent_change", 0) or 0)
+                    if price:
+                        quotes[ticker] = {"price": price, "pct": pct}
+            except Exception as e:
+                print(f"Twelve Data quote {ticker}: {e}")
+                break  # stop on error to avoid burning API credits
 
-    # Finnhub fallback voor ontbrekende tickers
+    # Finnhub fallback for any missing tickers
     if FINNHUB_KEY:
         for t, n, e, theme in KEY_ETFS:
             if t in quotes:
