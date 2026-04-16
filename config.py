@@ -95,6 +95,62 @@ SOURCE_CREDIBILITY = {
         "avg_lead_time": "Variable — hours to days",
         "note": "Very noisy. Only useful when confirmed by other sources. Never act alone.",
     },
+    "Truth Social": {
+        "weight": 4,
+        "historical_hit_rate": 0.85,
+        "verified_count": 1,
+        "type": "Trump posts via CNN archive (5-min updates)",
+        "avg_lead_time": "15-30 min",
+        "note": "Fastest market mover. 9 Apr 2026: buy signal → +9.5% Nasdaq in 23 min. High signal/noise ratio with keyword filter.",
+    },
+    "SEC EDGAR": {
+        "weight": 3,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "Form 3/4/5 insider transactions (Finnhub)",
+        "avg_lead_time": "2 business days",
+        "note": "2-day lag vs STOCK Act 45 days. CEO/CFO buys = strongest signal. Sells often = diversification.",
+    },
+    "Lobbying": {
+        "weight": 2,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "Senate/House lobbying disclosures (Finnhub)",
+        "avg_lead_time": "Weeks to months",
+        "note": "High spend precedes regulation or contract. Background context only.",
+    },
+    "Gov Contracts": {
+        "weight": 2,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "USASpending government contracts (Finnhub)",
+        "avg_lead_time": "Days to weeks after award",
+        "note": "Defense contract wins = revenue catalyst. Most valuable for LMT/RTX/NOC/GD.",
+    },
+    "Macro RSS": {
+        "weight": 2,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "Reuters, FT, ECB, Fed, WSJ, CNBC RSS",
+        "avg_lead_time": "Reactive — after news breaks",
+        "note": "Confirms trends. Not predictive. Use to validate crony signals.",
+    },
+    "GDELT": {
+        "weight": 2,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "GDELT geopolitical news tone analysis",
+        "avg_lead_time": "Reactive",
+        "note": "Aggregates thousands of sources. Tone score indicates geopolitical direction.",
+    },
+    "Fear & Greed": {
+        "weight": 2,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "CNN Fear & Greed Index (composite of 7 indicators)",
+        "avg_lead_time": "Contrarian — extremes signal reversals",
+        "note": "Extreme Fear (<20) = buy signal historically. Extreme Greed (>80) = caution.",
+    },
 }
 
 DEFAULT_STATS = {
@@ -105,6 +161,13 @@ DEFAULT_STATS = {
     "Pelosi Tracker": {"hits": 0, "misses": 0, "pending": 0},
     "Options Flow":   {"hits": 0, "misses": 0, "pending": 0},
     "Social Signal":  {"hits": 0, "misses": 0, "pending": 0},
+    "SEC EDGAR":      {"hits": 0, "misses": 0, "pending": 0},
+    "Lobbying":       {"hits": 0, "misses": 0, "pending": 0},
+    "Gov Contracts":  {"hits": 0, "misses": 0, "pending": 0},
+    "Truth Social":   {"hits": 0, "misses": 0, "pending": 0},
+    "Macro RSS":      {"hits": 0, "misses": 0, "pending": 0},
+    "GDELT":          {"hits": 0, "misses": 0, "pending": 0},
+    "Fear & Greed":   {"hits": 0, "misses": 0, "pending": 0},
 }
 
 # ── URGENCY DEFINITIONS ───────────────────────────────────────────────────────
@@ -161,4 +224,4 @@ REDDIT_TICKER_KEYWORDS = [
 ]
 
 # ── SITE URL ──────────────────────────────────────────────────────────────────
-SITE_URL = "https://paulrendev.github.io/Stocazzo"
+SITE_URL = "https://paulrendev.github.io/stocazzo"
