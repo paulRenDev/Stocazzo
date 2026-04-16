@@ -22,6 +22,7 @@ from scanners.macro      import scan_macro
 # Core engines
 from convergence         import build_convergence
 from output.advice       import build_advice, log_advice_for_scoring, run_advice_backcheck
+from portfolio           import open_position, update_positions
 
 # Output
 from output.page_builder import generate_live_html, generate_history_html, generate_index_html, generate_sources_html
@@ -77,9 +78,16 @@ def main():
     advice_cards = build_advice(all_alerts, seen_data)
     print(f"Advice cards generated: {len(advice_cards)}")
 
-    # 5. Log advice for backcheck scoring
+    # 5. Log advice + open virtual positions
     if advice_cards:
         log_advice_for_scoring(advice_cards, seen_data)
+        for card in advice_cards:
+            open_position(card, seen_data)
+
+    # 5b. Update existing portfolio positions
+    portfolio_checks = update_positions(seen_data)
+    if portfolio_checks:
+        print(f"Portfolio checks: {len(portfolio_checks)} position updates")
 
     # 6. Queue signals for backcheck + add to history
     for a in all_alerts:
