@@ -7,6 +7,7 @@ import requests
 import re
 
 from config import SOURCE_CREDIBILITY, FINNHUB_KEY, TWELVEDATA_KEY, SITE_URL
+from portfolio import get_open_positions, get_closed_positions, get_platform_score
 from output.advice import format_advice_html_section
 from helpers import now_utc, now_be, urgency_color
 from etf_mapper import KEY_ETFS, etf_yahoo_url, etf_google_url
@@ -122,12 +123,176 @@ def _extract_stocks(alert):
     return found[:4]
 
 
+
+def _portfolio_html(seen_data):
+    """Renders virtual portfolio section: open positions + platform score."""
+    from helpers import urgency_color
+
+    perf       = get_platform_score(seen_data)
+    open_pos   = get_open_positions(seen_data)
+    closed_pos = get_closed_positions(seen_data, limit=10)
+
+    # Platform score bar
+    roll_rate  = perf.get("rolling_rate")
+    roll_hits  = perf.get("rolling_hits", 0)
+    roll_total = perf.get("rolling_total", 0)
+    total_pnl  = perf.get("total_pnl", 0.0)
+    best_theme = perf.get("best_theme", "")
+    best_trate = perf.get("best_theme_rate", 0)
+
+    if roll_rate is not None:
+        bar_w     = int(roll_rate * 100)
+        bar_color = "#007a5e" if roll_rate >= 0.6 else "#b06000" if roll_rate >= 0.4 else "#cc2222"
+        rate_str  = f"{roll_rate:.0%}"
+        score_html = (
+            f"<div style='display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:12px;'>"
+            f"<div>"
+            f"<div style='font-size:10px;font-family:var(--mono);color:var(--muted);margin-bottom:4px;'>Rolling hit rate (last {roll_total} positions)</div>"
+            f"<div style='display:flex;align-items:center;gap:8px;'>"
+            f"<div style='background:#e0e0d8;border-radius:2px;height:8px;width:120px;'>"
+            f"<div style='background:{bar_color};height:8px;border-radius:2px;width:{bar_w}%;'></div></div>"
+            f"<span style='font-family:var(--mono);font-size:16px;font-weight:600;color:{bar_color};'>{rate_str}</span>"
+            f"<span style='font-family:var(--mono);font-size:11px;color:var(--muted);'>({roll_hits}/{roll_total} hits)</span>"
+            f"</div></div>"
+            f"<div style='border-left:1px solid var(--border2);padding-left:16px;'>"
+            f"<div style='font-size:10px;font-family:var(--mono);color:var(--muted);margin-bottom:4px;'>Total virtual P&amp;L</div>"
+            f"<div style='font-size:16px;font-weight:600;font-family:var(--mono);"
+            f"color:{'var(--green)' if total_pnl >= 0 else 'var(--red);'}'>"
+            f"{'+'if total_pnl>=0 else ''}€{total_pnl:.0f}</div>"
+            f"</div>"
+        )
+        if best_theme:
+            score_html += (
+                f"<div style='border-left:1px solid var(--border2);padding-left:16px;'>"
+                f"<div style='font-size:10px;font-family:var(--mono);color:var(--muted);margin-bottom:4px;'>Best theme</div>"
+                f"<div style='font-size:14px;font-weight:600;text-transform:capitalize;color:var(--green);'>"
+                f"{best_theme.replace('_',' ')} ({best_trate:.0%})</div>"
+                f"</div>"
+            )
+        score_html += "</div>"
+    else:
+        score_html = (
+            "<div style='font-size:12px;color:var(--muted);font-family:var(--mono);padding:8px 0;'>"
+            "No closed positions yet — score builds after first 5-day checks</div>"
+        )
+
+    # Open positions table
+    if open_pos:
+        pos_rows = ""
+        for p in open_pos:
+            pct   = p.get("current_pct", 0)
+            pnl   = p.get("current_pnl", 0)
+            pc    = "var(--green)" if pct >= 0 else "var(--red)"
+            icon  = "▲" if pct >= 0 else "▼"
+            side  = p.get("side", "BUY")
+            sc    = "var(--green)" if side == "BUY" else "var(--red)"
+
+            # Check badges
+            c4h  = p.get("check_4h")
+            c24h = p.get("check_24h")
+            check_badges = ""
+            for label, chk in [("4h", c4h), ("24h", c24h)]:
+                if chk:
+                    chk_color = "var(--green)" if chk["hit"] else "var(--red)"
+                    check_badges += (
+                        f"<span style='font-size:10px;font-family:var(--mono);padding:1px 6px;"
+                        f"border-radius:3px;background:{chk_color}15;color:{chk_color};margin-right:3px;'>"
+                        f"{label}: {chk['pct']:+.1f}%</span>"
+                    )
+
+            pos_rows += (
+                f"<tr>"
+                f"<td style='font-family:var(--mono);font-size:12px;font-weight:700;color:{sc};padding:8px 10px;'>{side}</td>"
+                f"<td style='font-family:var(--mono);font-size:13px;font-weight:700;padding:8px 10px;'>"
+                f"<a href='https://finance.yahoo.com/quote/{p['ticker']}' target='_blank' "
+                f"style='color:var(--green);text-decoration:none;'>{p['ticker']}</a></td>"
+                f"<td style='font-size:12px;text-transform:capitalize;padding:8px 10px;'>{p['theme'].replace('_',' ')}</td>"
+                f"<td style='font-family:var(--mono);font-size:12px;padding:8px 10px;'>€1,000 @ ${p['entry_price']:.2f}</td>"
+                f"<td style='font-family:var(--mono);font-size:12px;font-weight:600;color:{pc};padding:8px 10px;'>"
+                f"{icon} {abs(pct):.2f}% · {'+'if pnl>=0 else ''}€{pnl:.0f}</td>"
+                f"<td style='font-size:11px;color:var(--muted);font-family:var(--mono);padding:8px 10px;'>{p.get('age','')}</td>"
+                f"<td style='padding:8px 10px;'>{check_badges}</td>"
+                f"</tr>"
+            )
+        open_html = (
+            f"<div style='margin-bottom:8px;font-size:10px;font-family:var(--mono);"
+            f"color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;'>"
+            f"Open positions ({len(open_pos)})</div>"
+            f"<table style='width:100%;border-collapse:collapse;background:var(--surface);"
+            f"border:1px solid var(--border);font-size:13px;margin-bottom:16px;'>"
+            f"<tr style='background:#f0f0eb;'>"
+            f"<th style='padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Side</th>"
+            f"<th style='padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Ticker</th>"
+            f"<th style='padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Theme</th>"
+            f"<th style='padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Entry</th>"
+            f"<th style='padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>P&amp;L</th>"
+            f"<th style='padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Age</th>"
+            f"<th style='padding:6px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Checks</th>"
+            f"</tr>{pos_rows}</table>"
+        )
+    else:
+        open_html = (
+            "<div style='font-size:12px;color:var(--muted);font-family:var(--mono);"
+            "padding:12px 0;'>No open positions — opens when advice fires with BUY or SELL direction</div>"
+        )
+
+    # Closed positions (recent)
+    if closed_pos:
+        closed_rows = ""
+        for p in closed_pos:
+            fpct  = p.get("final_pct", 0) or 0
+            fpnl  = p.get("final_pnl", 0) or 0
+            pc    = "var(--green)" if fpct >= 0 else "var(--red)"
+            icon  = "✓" if fpct >= 2 else "✗"
+            ic    = "var(--green)" if fpct >= 2 else "var(--red)"
+            side  = p.get("side", "BUY")
+            sc    = "var(--green)" if side == "BUY" else "var(--red)"
+            closed_rows += (
+                f"<tr>"
+                f"<td style='font-family:var(--mono);font-size:12px;font-weight:700;color:{sc};padding:6px 10px;'>{side}</td>"
+                f"<td style='font-family:var(--mono);font-size:13px;font-weight:700;padding:6px 10px;'>{p['ticker']}</td>"
+                f"<td style='font-size:12px;text-transform:capitalize;padding:6px 10px;'>{p['theme'].replace('_',' ')}</td>"
+                f"<td style='font-family:var(--mono);font-size:12px;font-weight:600;color:{pc};padding:6px 10px;'>"
+                f"{'+' if fpct>=0 else ''}{fpct:.2f}% · {'+'if fpnl>=0 else ''}€{fpnl:.0f}</td>"
+                f"<td style='font-size:12px;font-weight:600;color:{ic};padding:6px 10px;'>{icon}</td>"
+                f"<td style='font-size:11px;color:var(--muted);font-family:var(--mono);padding:6px 10px;'>{p.get('entry_be','')[:10]}</td>"
+                f"</tr>"
+            )
+        closed_html = (
+            f"<div style='margin-bottom:8px;font-size:10px;font-family:var(--mono);"
+            f"color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;'>"
+            f"Recent closed positions</div>"
+            f"<table style='width:100%;border-collapse:collapse;background:var(--surface);"
+            f"border:1px solid var(--border);font-size:13px;'>"
+            f"<tr style='background:#f0f0eb;'>"
+            f"<th style='padding:5px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Side</th>"
+            f"<th style='padding:5px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Ticker</th>"
+            f"<th style='padding:5px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Theme</th>"
+            f"<th style='padding:5px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Result</th>"
+            f"<th style='padding:5px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Hit</th>"
+            f"<th style='padding:5px 10px;font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;text-align:left;'>Date</th>"
+            f"</tr>{closed_rows}</table>"
+        )
+    else:
+        closed_html = ""
+
+    return (
+        f"<div style='background:var(--surface);border:1px solid var(--border);"
+        f"border-radius:4px;padding:16px;'>"
+        f"{score_html}"
+        f"{open_html}"
+        f"{closed_html}"
+        f"</div>"
+    )
+
+
 # ── LIVE.HTML ─────────────────────────────────────────────────────────────────
-def generate_live_html(seen_data, all_alerts, advice_cards=None):
+def generate_live_html(seen_data, all_alerts, advice_cards=None, skip_prices=False):
     etf_quotes     = _fetch_etf_quotes()
     active_tickers = {t for a in all_alerts for t, n, e in a.get("etfs", [])}
     advice_cards_list = advice_cards or []
     advice_html       = format_advice_html_section(advice_cards_list)
+    portfolio_section = _portfolio_html(seen_data)
 
     # ── SIGNAL CARDS ──────────────────────────────────────────────────────────
     alert_cards = ""
@@ -266,6 +431,11 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None):
   <div class="section">
     <div class="section-title">Cumulative advice ({len(advice_cards_list)} themes) — all sources combined</div>
     {advice_html}
+  </div>
+
+  <div class="section">
+    <div class="section-title">Virtual portfolio — €1,000 per advice · adaptive confidence score</div>
+    {portfolio_section}
   </div>
 
   <div class="section">
