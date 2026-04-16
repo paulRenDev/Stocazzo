@@ -22,6 +22,7 @@ from scanners.macro      import scan_macro
 # Core engines
 from convergence         import build_convergence
 from output.advice       import build_advice, log_advice_for_scoring, run_advice_backcheck
+from output.analysts     import build_analyst_panel
 from portfolio           import open_position, update_positions
 
 # Output
@@ -78,6 +79,11 @@ def main():
     advice_cards = build_advice(all_alerts, seen_data)
     print(f"Advice cards generated: {len(advice_cards)}")
 
+    # 4b. Build analyst panel verdict
+    analyst_verdicts, panel_advice = build_analyst_panel(all_alerts, seen_data)
+    active = sum(1 for v in analyst_verdicts if v["verdict"] != "NEUTRAL")
+    print(f"Analyst panel: {active}/5 analysts with verdict — {panel_advice['direction']} ({panel_advice['confidence']}%)")
+
     # 5. Log advice + open virtual positions
     if advice_cards:
         log_advice_for_scoring(advice_cards, seen_data)
@@ -97,7 +103,7 @@ def main():
 
     # 7. Generate HTML pages
     generate_history_html(seen_data)
-    generate_live_html(seen_data, all_alerts, advice_cards)
+    generate_live_html(seen_data, all_alerts, advice_cards, analyst_verdicts, panel_advice)
     generate_sources_html(seen_data)
     generate_index_html()
 
@@ -119,7 +125,7 @@ def main():
 
     should_mail = (
         len(high_alerts) > 0 or
-        len(medium_alerts) >= 2 or
+        len(medium_alerts) >= 5 or   # at least 5 medium = meaningful cluster
         len(backcheck_results) > 0 or
         len(portfolio_closings) > 0
     )
