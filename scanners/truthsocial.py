@@ -103,10 +103,29 @@ def scan_truthsocial(seen_data):
             text = re.sub(r'<[^>]+>', ' ', content).lower().strip()
             text = re.sub(r'\s+', ' ', text)
 
-            if not text or len(text) < 10:
+            if not text or len(text) < 20:
                 continue
 
-            uid = make_id(f"truth-{post.get('id', created_raw)}")
+            # Skip retweets / pure URL posts — no actionable content
+            if text.startswith("rt:") or text.startswith("rt "):
+                mark_seen(uid, seen_data)
+                continue
+            if text.startswith("http") and len(text) < 80:
+                mark_seen(uid, seen_data)
+                continue
+            # Skip posts that are just a URL with no text
+            import urllib.parse
+            stripped = re.sub('https?://[^ ]+', '', text).strip()
+            if len(stripped) < 15:
+                mark_seen(uid, seen_data)
+                continue
+
+            # Dedup per day: same post re-evaluated each day
+            # This ensures we don't miss recurring relevant content
+            from datetime import date
+            day_str = created.strftime("%Y-%m-%d")
+            text_hash = make_id(text[:100])
+            uid = make_id(f"truth-{day_str}-{text_hash}")
             if is_seen(uid, seen_data):
                 continue
 
@@ -132,6 +151,26 @@ def scan_truthsocial(seen_data):
                         matched_keywords.append(kw)
 
             if not urgency_level or not matched_keywords:
+                continue
+
+            # Skip posts that are clearly NOT market-relevant
+            # Endorsements, political rallies, personal praise = noise
+            SKIP_PATTERNS = [
+                "it is my great honor to endorse",
+                "i am proud to endorse",
+                "has my complete and total endorsement",
+                "will be a great",
+                "running for",
+                "republican primary",
+                "congratulations to",
+                "happy birthday",
+                "thank you to",
+                "we love you",
+                "god bless",
+                "maga",
+            ]
+            if any(skip in text for skip in SKIP_PATTERNS):
+                mark_seen(uid, seen_data)  # mark as seen so we don't re-check
                 continue
 
             # Direction

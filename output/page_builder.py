@@ -689,10 +689,15 @@ def generate_history_html(seen_data):
         verified = h.get("verified")
         pct      = h.get("pct_change")
 
+        d_upper = h.get("direction","").upper()
+        is_actionable = any(w in d_upper for w in ["BUY","SELL","BULLISH","BEARISH","REDUCE","ACCUM","YES","NO"])
+
         if verified is True:
             sc, si, sl = "hit",     "✓", f"HIT {pct:+.1f}%" if pct is not None else "HIT"
         elif verified is False:
             sc, si, sl = "miss",    "✗", f"MISS {pct:+.1f}%" if pct is not None else "MISS"
+        elif not is_actionable:
+            sc, si, sl = "pending", "—", "WATCH"
         else:
             sc, si, sl = "pending", "·", "PENDING"
 
