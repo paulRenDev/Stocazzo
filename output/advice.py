@@ -290,6 +290,60 @@ def _build_advice_card(theme, data, seen_data):
     }
 
 
+
+def _scenarios_html(card):
+    """Show bull+bear for WATCH, only relevant scenario for BUY/SELL."""
+    direction = card.get("direction", "WATCH")
+    is_buy    = "BUY" in direction
+    is_sell   = "SELL" in direction or "REDUCE" in direction
+    is_watch  = not is_buy and not is_sell
+
+    if is_watch:
+        # Show both — no clear direction
+        return (
+            f"<div style='display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;'>"
+            f"<div style='background:#e8f4f0;border-radius:4px;padding:8px 10px;'>"
+            f"<div style='font-size:10px;font-family:monospace;color:#007a5e;"
+            f"text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;'>Bull case</div>"
+            f"<div style='font-size:11px;color:#1a5e4a;line-height:1.5;'>{card['bull_case']}</div></div>"
+            f"<div style='background:#fce8e8;border-radius:4px;padding:8px 10px;'>"
+            f"<div style='font-size:10px;font-family:monospace;color:#cc2222;"
+            f"text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;'>Bear case</div>"
+            f"<div style='font-size:11px;color:#8b1a1a;line-height:1.5;'>{card['bear_case']}</div></div>"
+            f"</div>"
+        )
+    elif is_buy:
+        # Show bull case + bear case as risk only
+        return (
+            f"<div style='display:grid;grid-template-columns:2fr 1fr;gap:8px;margin-bottom:10px;'>"
+            f"<div style='background:#e8f4f0;border-radius:4px;padding:8px 10px;"
+            f"border-left:3px solid #007a5e;'>"
+            f"<div style='font-size:10px;font-family:monospace;color:#007a5e;"
+            f"text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;'>Bull case (active)</div>"
+            f"<div style='font-size:11px;color:#1a5e4a;line-height:1.5;font-weight:500;'>{card['bull_case']}</div></div>"
+            f"<div style='background:#f8f8f4;border-radius:4px;padding:8px 10px;'>"
+            f"<div style='font-size:10px;font-family:monospace;color:#9a9a9a;"
+            f"text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;'>Risk / bear</div>"
+            f"<div style='font-size:11px;color:#9a9a9a;line-height:1.5;'>{card['bear_case']}</div></div>"
+            f"</div>"
+        )
+    else:
+        # Show bear case + bull case as risk only
+        return (
+            f"<div style='display:grid;grid-template-columns:2fr 1fr;gap:8px;margin-bottom:10px;'>"
+            f"<div style='background:#fce8e8;border-radius:4px;padding:8px 10px;"
+            f"border-left:3px solid #cc2222;'>"
+            f"<div style='font-size:10px;font-family:monospace;color:#cc2222;"
+            f"text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;'>Bear case (active)</div>"
+            f"<div style='font-size:11px;color:#8b1a1a;line-height:1.5;font-weight:500;'>{card['bear_case']}</div></div>"
+            f"<div style='background:#f8f8f4;border-radius:4px;padding:8px 10px;'>"
+            f"<div style='font-size:10px;font-family:monospace;color:#9a9a9a;"
+            f"text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;'>Risk / bull</div>"
+            f"<div style='font-size:11px;color:#9a9a9a;line-height:1.5;'>{card['bull_case']}</div></div>"
+            f"</div>"
+        )
+
+
 def format_advice_html_section(advice_cards):
     """
     Renders advice cards as HTML for embedding in live.html.
@@ -343,18 +397,7 @@ def format_advice_html_section(advice_cards):
             {card['active_scenario']}
           </div>
 
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
-            <div style="background:#e8f4f0;border-radius:4px;padding:8px 10px;">
-              <div style="font-size:10px;font-family:monospace;color:#007a5e;
-                text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Bull case</div>
-              <div style="font-size:11px;color:#1a5e4a;line-height:1.5;">{card['bull_case']}</div>
-            </div>
-            <div style="background:#fce8e8;border-radius:4px;padding:8px 10px;">
-              <div style="font-size:10px;font-family:monospace;color:#cc2222;
-                text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;">Bear case</div>
-              <div style="font-size:11px;color:#8b1a1a;line-height:1.5;">{card['bear_case']}</div>
-            </div>
-          </div>
+          {_scenarios_html(card)}
 
           <div style="margin-bottom:8px;">{etf_badges}</div>
 
