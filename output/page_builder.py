@@ -634,6 +634,24 @@ def generate_sources_html(seen_data):
 
 
 # ── HISTORY.HTML ──────────────────────────────────────────────────────────────
+
+def _detail_block(h):
+    """Render the detail/snippet block with optional source link."""
+    detail = h.get("detail","") or h.get("title","")
+    link   = h.get("link","")
+    link_html = ""
+    if link:
+        link_html = (
+            f" &nbsp;<a href='{link}' target='_blank' "
+            f"style='font-family:var(--mono);font-size:11px;color:var(--blue);'>source ↗</a>"
+        )
+    return (
+        f"<div style='background:var(--surface);border:1px solid var(--border2);border-radius:4px;"
+        f"padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);'>"
+        f"{detail}{link_html}</div>"
+    )
+
+
 def generate_history_html(seen_data):
     history = seen_data.get("history", [])
     stats   = seen_data.get("stats", {})
@@ -737,11 +755,7 @@ def generate_history_html(seen_data):
         <tr id="rr{idx}" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
-              <div style="background:var(--surface);border:1px solid var(--border2);border-radius:4px;
-                padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);">
-                {h.get('detail','') or h.get('title','')}
-                {"&nbsp;<a href=\"" + h.get("link","") + "\" target=\"_blank\" style=\"font-family:var(--mono);font-size:11px;color:var(--blue);\">source ↗</a>" if h.get("link") else ""}
-              </div>
+              {_detail_block(h)}
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
                   <div style="font-size:12px;line-height:1.5;">{why}</div></div>
