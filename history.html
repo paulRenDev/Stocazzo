@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crony Pony — History</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+:root {
+  --bg:#f5f5f0; --surface:#fff; --border:#d8d8d0; --border2:#ebebeb;
+  --text:#1a1a1a; --muted:#6b6b6b; --dim:#aaa;
+  --green:#007a5e; --red:#cc2222; --amber:#b06000; --blue:#1a5fb5;
+  --mono:'IBM Plex Mono',monospace; --sans:'IBM Plex Sans',sans-serif;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--text); font-family:var(--sans); font-size:14px; line-height:1.5; }
+.app { max-width:1100px; margin:0 auto; padding:2rem 1.5rem; }
+header { border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:8px; }
+.logo { font-family:var(--mono); font-size:10px; color:var(--green); letter-spacing:0.1em; }
+h1 { font-size:22px; font-weight:300; margin-top:4px; }
+.nav-link { font-family:var(--mono); font-size:11px; color:var(--blue); text-decoration:none; margin-left:12px; }
+.updated { font-size:11px; color:var(--dim); font-family:var(--mono); margin-top:4px; }
+.section { margin-bottom:2rem; }
+.section-title { font-size:10px; font-family:var(--mono); color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; }
+.badge { font-size:10px; font-weight:700; padding:2px 7px; border-radius:3px; font-family:var(--mono); white-space:nowrap; }
+.src-polymarket { background:#e8f4f0; color:var(--green); }
+.src-kalshi { background:#e8f0f8; color:var(--blue); }
+.src-darkpool, .src-dark { background:#f0f0eb; color:#444; }
+.src-congress { background:#fdf0e8; color:var(--amber); }
+.src-pelositracker { background:#f0e8f8; color:#7a3fb5; }
+.src-optionsflow { background:#e8f0f0; color:#1a7a7a; }
+.src-socialsignal { background:#f8f0e8; color:#8b4513; }
+.src-convergence { background:#1a1a1a; color:#fff; }
+.mono { font-family:var(--mono); } .small { font-size:11px; } .muted { color:var(--muted); }
+.dim { color:var(--dim); } .bold { font-weight:600; }
+.green { color:var(--green); } .red { color:var(--red); } .amber { color:var(--amber); }
+.etf-badge { background:#e8f4f0; color:var(--green); font-family:var(--mono); font-size:11px; font-weight:700; padding:2px 6px; border-radius:3px; text-decoration:none; margin-right:3px; }
+.etf-badge:hover { background:var(--green); color:#fff; }
+.conf-mini-wrap { background:#e8e8e0; border-radius:2px; height:3px; width:52px; margin-bottom:2px; }
+.conf-mini { height:3px; border-radius:2px; }
+@media(max-width:700px) { .etf-grid { grid-template-columns:repeat(2,1fr) !important; } }
+
+table { width:100%; border-collapse:collapse; background:var(--surface); border:1px solid var(--border); font-size:13px; }
+th { background:#f0f0eb; padding:7px 10px; text-align:left; font-size:10px; font-family:var(--mono); color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; border-bottom:1px solid var(--border); }
+td { padding:9px 10px; border-bottom:1px solid var(--border2); vertical-align:middle; }
+.signal-row { cursor:pointer; } .signal-row:hover td { background:#fafaf8; }
+.signal-row.hit td:first-child { border-left:3px solid var(--green); }
+.signal-row.miss td:first-child { border-left:3px solid var(--red); }
+.signal-row.pending td:first-child { border-left:3px solid #ddd; }
+.stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:1.5rem; }
+.stat { background:var(--surface); border:1px solid var(--border); padding:14px; border-radius:4px; }
+.stat .val { font-size:26px; font-weight:400; font-family:var(--mono); }
+.stat .lbl { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.06em; margin-top:3px; }
+.filter-btn { font-family:var(--mono); font-size:11px; padding:4px 10px; border:1px solid var(--border); background:var(--surface); cursor:pointer; border-radius:3px; color:var(--muted); margin-right:4px; margin-bottom:4px; }
+.filter-btn.active, .filter-btn:hover { background:var(--text); color:#fff; border-color:var(--text); }
+@media(max-width:700px) { .stats-grid { grid-template-columns:repeat(2,1fr); } }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <div class="logo">CRONY PONY // SIGNAL TRACKER</div>
+      <h1>Signal History &amp; Backcheck</h1>
+      <div class="updated">Updated: 16/04/2026 07:25 UTC · 16/04/2026 09:25 CEST · 0 signals</div>
+    </div>
+    <div>
+      <a href="live.html" class="nav-link">Live Dashboard →</a>
+    </div>
+  </header>
+
+  <div class="stats-grid">
+    <div class="stat"><div class="val">0</div><div class="lbl">Total signals</div></div>
+    <div class="stat"><div class="val" style="color:var(--green);">0</div><div class="lbl">Verified hits</div></div>
+    <div class="stat"><div class="val" style="color:var(--red);">0</div><div class="lbl">Missed predictions</div></div>
+    <div class="stat"><div class="val" style="color:var(--amber);">n/a</div><div class="lbl">Overall hit rate</div></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Hit rate per source</div>
+    <table>
+      <tr><th>Bron</th><th>Hits</th><th>Misses</th><th>Pending</th><th>Hit rate</th><th>Notities</th></tr>
+      <tr><td class='mono'>Polymarket</td><td class='mono green bold'>4</td><td class='mono red'>0</td><td class='mono muted'>0</td><td><div style='background:#e0e0d8;border-radius:2px;height:4px;width:80px;margin-bottom:3px;'><div style='background:var(--green);height:4px;border-radius:2px;width:100%;'></div></div><span class='mono small bold' style='color:var(--green);'>100%</span></td><td class='muted small'>4/5 verified correct (Mar-Apr 2026). Anonymous — cannot confirm insider vs retail.</td></tr><tr><td class='mono'>Kalshi</td><td class='mono green bold'>0</td><td class='mono red'>0</td><td class='mono muted'>0</td><td><div style='background:#e0e0d8;border-radius:2px;height:4px;width:80px;margin-bottom:3px;'><div style='background:var(--red);height:4px;border-radius:2px;width:0%;'></div></div><span class='mono small bold' style='color:var(--red);'>—</span></td><td class='muted small'>Regulated = harder to manipulate. Less insider activity. No verified data yet.</td></tr><tr><td class='mono'>Dark Pool</td><td class='mono green bold'>1</td><td class='mono red'>0</td><td class='mono muted'>1</td><td><div style='background:#e0e0d8;border-radius:2px;height:4px;width:80px;margin-bottom:3px;'><div style='background:var(--green);height:4px;border-radius:2px;width:100%;'></div></div><span class='mono small bold' style='color:var(--green);'>100%</span></td><td class='muted small'>Shows WHERE institutions trade, not BUY/SELL. Needs confirmation from other sources.</td></tr><tr><td class='mono'>Congress</td><td class='mono green bold'>0</td><td class='mono red'>0</td><td class='mono muted'>0</td><td><div style='background:#e0e0d8;border-radius:2px;height:4px;width:80px;margin-bottom:3px;'><div style='background:var(--red);height:4px;border-radius:2px;width:0%;'></div></div><span class='mono small bold' style='color:var(--red);'>—</span></td><td class='muted small'>Always delayed 45 days by law. Use for sector trend, not timing.</td></tr><tr><td class='mono'>Pelosi Tracker</td><td class='mono green bold'>0</td><td class='mono red'>0</td><td class='mono muted'>0</td><td><div style='background:#e0e0d8;border-radius:2px;height:4px;width:80px;margin-bottom:3px;'><div style='background:var(--red);height:4px;border-radius:2px;width:0%;'></div></div><span class='mono small bold' style='color:var(--red);'>—</span></td><td class='muted small'>Pelosi portfolio outperformed S&P by 3-5% annually. Deep-in-money calls = signature move.</td></tr><tr><td class='mono'>Options Flow</td><td class='mono green bold'>0</td><td class='mono red'>0</td><td class='mono muted'>0</td><td><div style='background:#e0e0d8;border-radius:2px;height:4px;width:80px;margin-bottom:3px;'><div style='background:var(--red);height:4px;border-radius:2px;width:0%;'></div></div><span class='mono small bold' style='color:var(--red);'>—</span></td><td class='muted small'>Institutional footprint. Direction unclear — hedge vs speculation. Best combined with Polymarket.</td></tr><tr><td class='mono'>Social Signal</td><td class='mono green bold'>0</td><td class='mono red'>0</td><td class='mono muted'>0</td><td><div style='background:#e0e0d8;border-radius:2px;height:4px;width:80px;margin-bottom:3px;'><div style='background:var(--red);height:4px;border-radius:2px;width:0%;'></div></div><span class='mono small bold' style='color:var(--red);'>—</span></td><td class='muted small'>Very noisy. Only useful when confirmed by other sources. Never act alone.</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Signal log — click row to expand reasoning</div>
+    <div style="margin-bottom:10px;">
+      <button class="filter-btn active" onclick="filter('all',this)">All (0)</button>
+      <button class="filter-btn" onclick="filter('hit',this)">✓ Hits (0)</button>
+      <button class="filter-btn" onclick="filter('miss',this)">✗ Misses (0)</button>
+      <button class="filter-btn" onclick="filter('pending',this)">· Pending (0)</button>
+      <button class="filter-btn" onclick="filter('convergence',this)">⚡ Convergence</button>
+    </div>
+    <table id="sig-table">
+      <tr><th>Datum (BE)</th><th>Bron</th><th>Richting</th><th>Signaal</th><th>ETFs</th><th>Vertrouwen</th><th>Resultaat</th><th></th></tr>
+      <tr><td colspan="8" style="text-align:center;color:var(--dim);padding:2rem;font-family:var(--mono);">No signals recorded yet</td></tr>
+    </table>
+  </div>
+</div>
+
+<script>
+function toggleR(i) {
+  var rr=document.getElementById('rr'+i), ei=document.getElementById('ei'+i);
+  var open=rr.style.display!=='none';
+  rr.style.display=open?'none':'table-row';
+  ei.style.transform=open?'':'rotate(90deg)';
+}
+function filter(f,btn) {
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#sig-table .signal-row').forEach(function(row) {
+    var idx=row.getAttribute('onclick').match(/[0-9]+/)[0];
+    var rr=document.getElementById('rr'+idx);
+    var show=false;
+    if(f==='all') show=true;
+    else if(f==='convergence') show=!!row.querySelector('.src-convergence');
+    else show=row.classList.contains(f);
+    row.style.display=show?'':'none';
+    if(rr&&!show) rr.style.display='none';
+  });
+}
+</script>
+</body>
+</html>
