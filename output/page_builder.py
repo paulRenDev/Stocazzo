@@ -9,6 +9,7 @@ import re
 from config import SOURCE_CREDIBILITY, FINNHUB_KEY, TWELVEDATA_KEY, SITE_URL
 from portfolio import get_open_positions, get_closed_positions, get_platform_score
 from output.advice import format_advice_html_section
+from output.analysts import format_panel_html
 from helpers import now_utc, now_be, urgency_color
 from etf_mapper import KEY_ETFS, etf_yahoo_url, etf_google_url
 from scoring import get_source_hit_rate
@@ -287,11 +288,17 @@ def _portfolio_html(seen_data):
 
 
 # ── LIVE.HTML ─────────────────────────────────────────────────────────────────
-def generate_live_html(seen_data, all_alerts, advice_cards=None, skip_prices=False):
+def generate_live_html(seen_data, all_alerts, advice_cards=None, analyst_verdicts=None, panel_advice=None, skip_prices=False):
     active_tickers = {t for a in all_alerts for t, n, e in a.get("etfs", [])}
     advice_cards_list = advice_cards or []
     advice_html       = format_advice_html_section(advice_cards_list)
     portfolio_section = _portfolio_html(seen_data)
+    # Analyst panel
+    if analyst_verdicts and panel_advice:
+        panel_html = format_panel_html(analyst_verdicts, panel_advice)
+    else:
+        panel_html = "<div style='color:var(--muted);font-family:var(--mono);font-size:12px;padding:1rem;'>No panel data yet — run scanner first.</div>"
+
 
     # ── SIGNAL CARDS ──────────────────────────────────────────────────────────
     alert_cards = ""
@@ -334,7 +341,7 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None, skip_prices=Fal
             f"<span style='font-family:var(--mono);font-size:11px;font-weight:600;color:{dc};'>{a.get('direction','')[:25]}</span>"
             f"<span style='font-size:10px;font-family:var(--mono);padding:2px 8px;border-radius:10px;"
             f"font-weight:600;background:{c}20;color:{c};'>{a.get('urgency','')}</span>"
-            f"<span style='font-family:var(--mono);font-size:10px;color:var(--dim);margin-left:auto;'>{now_be()[:16]}</span>"
+            f"<span style='font-family:var(--mono);font-size:10px;color:var(--dim);margin-left:auto;'>scan: {now_be()[:16]}</span>"
             f"</div>"
             f"<div style='font-size:14px;font-weight:600;margin-bottom:4px;line-height:1.4;'>{a.get('title','')[:100]}</div>"
             f"<div style='font-size:12px;color:var(--muted);margin-bottom:6px;line-height:1.5;'>{a.get('detail','')[:160]}</div>"
@@ -398,8 +405,8 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None, skip_prices=Fal
   {_legend_bar()}
 
   <div class="section">
-    <div class="section-title">Cumulative advice ({len(advice_cards_list)} themes) — all sources combined</div>
-    {advice_html}
+    <div class="section-title">Analyst panel — weighted verdict</div>
+    {panel_html}
   </div>
 
   <div class="section">
@@ -717,7 +724,7 @@ def generate_history_html(seen_data):
           <td class="mono muted small" style="white-space:nowrap;">{h.get('date_be','')[:16]}</td>
           <td><span class="badge {src_cls}">{h.get('source','').upper()}</span></td>
           <td class="mono {dc} bold small">{h.get('direction','')[:18]}</td>
-          <td style="max-width:260px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{h.get('title','')[:80]}</span></td>
+          <td style="max-width:300px;"><span style="display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{h.get('title','')}">{h.get('title','')[:100]}</span></td>
           <td>{etf_badges}</td>
           <td>
             <div class="conf-mini-wrap"><div class="conf-mini" style="width:{cp}%;background:{cc};"></div></div>
@@ -730,6 +737,11 @@ def generate_history_html(seen_data):
         <tr id="rr{idx}" style="display:none;">
           <td colspan="8" style="padding:0;">
             <div style="background:#f8f8f4;border-top:1px solid var(--border2);padding:14px 16px;">
+              <div style="background:var(--surface);border:1px solid var(--border2);border-radius:4px;
+                padding:10px 12px;margin-bottom:12px;font-size:13px;line-height:1.6;color:var(--text);">
+                {h.get('detail','') or h.get('title','')}
+                {"&nbsp;<a href=\"" + h.get("link","") + "\" target=\"_blank\" style=\"font-family:var(--mono);font-size:11px;color:var(--blue);\">source ↗</a>" if h.get("link") else ""}
+              </div>
               <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:10px;">
                 <div><div style="font-size:10px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;margin-bottom:3px;">Why</div>
                   <div style="font-size:12px;line-height:1.5;">{why}</div></div>
