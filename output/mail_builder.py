@@ -115,7 +115,7 @@ def _action_advice(alert):
     etf_names = ", ".join(e[0] for e in etfs[:2]) if etfs else "geen ETF match"
 
     if source == "CONVERGENCE":
-        return alert.get("_conv_action", "WATCH"), alert.get("_conv_color", "#b06000"), alert.get("_conv_advice", "Multi-bron convergentie")
+        return alert.get("_conv_action", "WATCH"), alert.get("_conv_color", "#b06000"), alert.get("_conv_advice", "Multi-source convergence")
 
     if source in ("Polymarket", "Kalshi"):
         if "YES" in direction:
@@ -289,7 +289,7 @@ def send_email(alerts, backcheck_results, seen_data, advice_cards=None):
         f"<div style='font-family:monospace;font-size:10px;color:#9fe1cb;letter-spacing:0.12em;'>"
         f"STOCAZZO // SIGNAL TRACKER</div>"
         f"<div style='font-size:22px;font-weight:300;color:white;'>"
-        f"{len(alerts)} nieuw{'e' if len(alerts) != 1 else ''} signaal{'en' if len(alerts) != 1 else ''}</div>"
+        f"{len(alerts)} new signal{'s' if len(alerts) != 1 else ''}</div>"
         f"<div style='font-size:12px;color:#9fe1cb;margin-top:4px;font-family:monospace;'>"
         f"{now_utc()} &nbsp;·&nbsp; {now_be()}</div></div>"
         f"<table style='width:100%;border-collapse:collapse;'>{rows}{backcheck_html}{advice_html_email}</table>"
