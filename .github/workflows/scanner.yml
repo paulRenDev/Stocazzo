@@ -2,8 +2,8 @@ name: Stocazzo Scanner
 
 on:
   schedule:
-    # Elke 30 min, ma-vr 7:00-22:00 UTC (= 9:00-00:00 CEST)
-    - cron: '0,30 7-22 * * 1-5'
+    # Elke 12 min, ma-vr 7:00-22:00 UTC (= 9:00-00:00 CEST)
+    - cron: '0,12 7-22 * * 1-5'
   workflow_dispatch:  # manueel starten via GitHub UI
 
 permissions:
