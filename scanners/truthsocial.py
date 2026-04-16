@@ -103,7 +103,21 @@ def scan_truthsocial(seen_data):
             text = re.sub(r'<[^>]+>', ' ', content).lower().strip()
             text = re.sub(r'\s+', ' ', text)
 
-            if not text or len(text) < 10:
+            if not text or len(text) < 20:
+                continue
+
+            # Skip retweets / pure URL posts — no actionable content
+            if text.startswith("rt:") or text.startswith("rt "):
+                mark_seen(uid, seen_data)
+                continue
+            if text.startswith("http") and len(text) < 80:
+                mark_seen(uid, seen_data)
+                continue
+            # Skip posts that are just a URL with no text
+            import urllib.parse
+            stripped = re.sub('https?://[^ ]+', '', text).strip()
+            if len(stripped) < 15:
+                mark_seen(uid, seen_data)
                 continue
 
             # Dedup per day: same post re-evaluated each day
