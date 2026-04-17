@@ -1,89 +1,91 @@
 {
   "ids": [
-    "9b3073f18896",
-    "b698fe4a17d2",
-    "3bb58e487f35",
-    "e990de2f3299",
-    "2e469813dd1c",
-    "6cb05f24f18c",
-    "e5a2151f14c5",
-    "8a06a3214a28",
-    "f1288e8da16d",
-    "312fe7511d0b",
-    "8f9b844b1ff6",
-    "40c4233b088c",
-    "2fb60ff4a3bf",
-    "ff9000f9e899",
-    "b5af3579ee95",
-    "ecc0ec2d9067",
-    "e87b4da2717b",
-    "1ede72cc1fa0",
-    "dfa924e4f13d",
-    "4115620504a4",
-    "36ac56b06e2b",
-    "acefd863227a",
-    "2763e2fd180a",
-    "b0ec811419ad",
-    "994fb09849c9",
-    "556f276c2cb7",
-    "624842d27583",
-    "889bec77b208",
-    "d56a5cdfbb96",
-    "a6ab397cf266",
-    "ca2188a90354",
-    "cfdcae65b396",
-    "9d7f440c781e",
-    "50ff7c2d8ffe",
-    "5f23b9a680d2",
-    "0d4041a7fae2",
-    "2925e4685dcf",
-    "eff4ba5df193",
-    "74e38c979ed6",
-    "31843a5643ef",
-    "943a2fc41358",
-    "39a94e2128a3",
-    "2bd8b6a7de86",
-    "67908201a79d",
-    "65485aaaed6b",
-    "318f368c76b5",
-    "7b1420f5d653",
-    "343d17b3e17a",
-    "1678c8c092e0",
-    "f4e705fed31d",
-    "7045bde3dbe3",
-    "169ebe479f0f",
-    "a75e66a206d2",
-    "7a2691723cce",
-    "af68940ec1e0",
-    "1d6b86fe014c",
-    "b83922ad5cd6",
-    "7013b47db36c",
-    "14812c35cbe0",
-    "fc1a21193f87",
-    "28cc4ad9c612",
-    "045f55b844a4",
-    "3bfcff9e1160",
-    "aabbc8a157d5",
-    "81c7d996ca75",
-    "17ba5e679fa6",
-    "3e9307dee462",
-    "51045d443f94",
-    "23ab136875d6",
-    "92ac1f18e228",
-    "dd9d19a9c5a4",
-    "1de84568c6f2",
-    "6268e160a599",
     "47fd0f06b413",
+    "a75e66a206d2",
+    "045f55b844a4",
+    "8f9b844b1ff6",
+    "343d17b3e17a",
+    "b5af3579ee95",
+    "fe03774bbb0a",
+    "e5a2151f14c5",
+    "ec40e3cfacb3",
+    "a6ab397cf266",
+    "e87b4da2717b",
+    "51045d443f94",
+    "36ac56b06e2b",
+    "cfdcae65b396",
+    "1d6b86fe014c",
+    "9b3073f18896",
+    "af68940ec1e0",
+    "734a420b9235",
+    "45a67124f3bb",
+    "2bd8b6a7de86",
+    "e990de2f3299",
+    "7013b47db36c",
+    "318f368c76b5",
+    "23ab136875d6",
+    "b698fe4a17d2",
+    "d56a5cdfbb96",
+    "3bb58e487f35",
+    "3e9307dee462",
+    "1678c8c092e0",
+    "2fb60ff4a3bf",
+    "7045bde3dbe3",
+    "40c4233b088c",
+    "6268e160a599",
+    "dfa924e4f13d",
+    "6cb05f24f18c",
+    "3bfcff9e1160",
+    "dd9d19a9c5a4",
+    "31843a5643ef",
+    "889bec77b208",
+    "312fe7511d0b",
+    "aabbc8a157d5",
+    "624842d27583",
+    "28cc4ad9c612",
+    "63c86818a1fd",
+    "556f276c2cb7",
+    "65485aaaed6b",
+    "5f23b9a680d2",
+    "9d7f440c781e",
+    "eff4ba5df193",
+    "1ede72cc1fa0",
+    "92ac1f18e228",
+    "2e469813dd1c",
     "060828854bf6",
     "85c4730b886c",
     "1431412201ef",
+    "f1288e8da16d",
+    "2925e4685dcf",
+    "169ebe479f0f",
+    "39a94e2128a3",
+    "14812c35cbe0",
+    "2763e2fd180a",
     "b421c50e856a",
-    "734a420b9235",
     "500615d0f735",
     "7aeaaa602ba5",
+    "f4e705fed31d",
+    "7b1420f5d653",
+    "ecc0ec2d9067",
+    "1de84568c6f2",
+    "8a06a3214a28",
+    "b0ec811419ad",
+    "acefd863227a",
+    "81c7d996ca75",
+    "17ba5e679fa6",
+    "ff9000f9e899",
+    "ca2188a90354",
+    "74e38c979ed6",
+    "67908201a79d",
+    "4115620504a4",
+    "7a2691723cce",
+    "50ff7c2d8ffe",
+    "994fb09849c9",
+    "b83922ad5cd6",
+    "943a2fc41358",
     "9c5e7c4556c7",
-    "ec40e3cfacb3",
-    "63c86818a1fd"
+    "0d4041a7fae2",
+    "fc1a21193f87"
   ],
   "stats": {},
   "pending_checks": [
@@ -491,6 +493,24 @@
       "date": "2026-04-17T19:33:32.147125+00:00",
       "price_at_signal": 201.35,
       "title": "Dark pool: SPY, QQQ, IWM, NVDA, HYG"
+    },
+    {
+      "uid": "45a67124f3bb",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "WATCH",
+      "date": "2026-04-17T19:55:03.775506+00:00",
+      "price_at_signal": 231.91,
+      "title": "Trump: \"senate confirms doj's new 'war on fraud' prosecutor colin mcdonald \u2014 wit"
+    },
+    {
+      "uid": "fe03774bbb0a",
+      "source": "Truth Social",
+      "ticker": "QQQ",
+      "direction": "WATCH",
+      "date": "2026-04-17T19:55:03.988534+00:00",
+      "price_at_signal": 648.19,
+      "title": "Trump: \"trump effect: apple expands american manufacturing program with 4 partne"
     }
   ],
   "history": [
@@ -3541,6 +3561,86 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "45a67124f3bb",
+      "date": "17/04/2026 19:55 UTC",
+      "date_be": "17/04/2026 21:55 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 32m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"senate confirms doj's new 'war on fraud' prosecutor colin mcdonald \u2014 with vp van\"",
+      "detail": "senate confirms doj's new 'war on fraud' prosecutor colin mcdonald \u2014 with vp vance's backing: https://nypost.com/2026/03/24/us-news/senate-confirms-dojs-new-top-fraud-prosecutor-colin-mcdonald/ | Post",
+      "urgency": "MEDIUM",
+      "keywords": "war, cut",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116421671494376872",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 32m ago. Matched: war, cut",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "fe03774bbb0a",
+      "date": "17/04/2026 19:55 UTC",
+      "date_be": "17/04/2026 21:55 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 33m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"trump effect: apple expands american manufacturing program with 4 partners: http\"",
+      "detail": "trump effect: apple expands american manufacturing program with 4 partners: https://www.breitbart.com/tech/2026/03/26/trump-effect-apple-expands-american-manufacturing-program-with-4-partners/ | Poste",
+      "urgency": "MEDIUM",
+      "keywords": "tech",
+      "etfs": [
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "EQQQ",
+          "Invesco EQQQ Nasdaq-100 UCITS ETF",
+          "AMS"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116421668823698549",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 33m ago. Matched: tech",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -4059,14 +4159,18 @@
       "date": "2026-04-16T19:37:50.271849+00:00",
       "price_at_signal": 56.55,
       "check_4h": "2026-04-17T06:39:17.320094+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T19:54:13.101011+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.05,
         "hit": null,
         "price": 56.58
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -2.65,
+        "hit": null,
+        "price": 55.05
+      },
       "result_5d": null
     },
     {
@@ -4083,14 +4187,18 @@
       "date": "2026-04-16T19:37:50.458184+00:00",
       "price_at_signal": 701.27,
       "check_4h": "2026-04-17T06:39:17.455780+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T19:54:13.318089+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.06,
         "hit": null,
         "price": 701.66
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.22,
+        "hit": null,
+        "price": 709.82
+      },
       "result_5d": null
     },
     {
@@ -4107,14 +4215,18 @@
       "date": "2026-04-16T19:37:50.637283+00:00",
       "price_at_signal": 229.56,
       "check_4h": "2026-04-17T06:39:17.582388+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T19:54:13.535812+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.23,
         "hit": false,
         "price": 229.03
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.05,
+        "hit": false,
+        "price": 231.98
+      },
       "result_5d": null
     },
     {
@@ -4131,14 +4243,18 @@
       "date": "2026-04-16T19:37:50.780645+00:00",
       "price_at_signal": 440.04,
       "check_4h": "2026-04-17T06:39:17.715581+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T19:54:13.735807+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.01,
         "hit": false,
         "price": 440.08
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.37,
+        "hit": false,
+        "price": 446.07
+      },
       "result_5d": null
     },
     {
@@ -4155,14 +4271,18 @@
       "date": "2026-04-16T19:37:50.923785+00:00",
       "price_at_signal": 440.04,
       "check_4h": "2026-04-17T06:39:17.840031+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T19:54:13.940771+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.01,
         "hit": false,
         "price": 440.08
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.37,
+        "hit": false,
+        "price": 446.07
+      },
       "result_5d": null
     },
     {
@@ -4179,14 +4299,18 @@
       "date": "2026-04-16T19:37:51.062197+00:00",
       "price_at_signal": 86.37,
       "check_4h": "2026-04-17T06:39:17.972922+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T19:54:14.150242+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.1,
         "hit": false,
         "price": 86.28
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 0.81,
+        "hit": false,
+        "price": 87.07
+      },
       "result_5d": null
     },
     {
@@ -4592,12 +4716,52 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "fd33e358ae9e",
+      "theme": "defense",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "ITA",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-17T19:55:02.745828+00:00",
+      "price_at_signal": 231.91,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "b2ba1b0de7b9",
+      "theme": "commodities",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "GLD",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-17T19:55:03.023422+00:00",
+      "price_at_signal": 445.96,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 1,
-    "misses": 32,
-    "watches": 14,
+    "misses": 36,
+    "watches": 16,
     "by_window": {
       "4h": {
         "hits": 1,
@@ -4606,7 +4770,7 @@
       },
       "24h": {
         "hits": 2,
-        "misses": 19,
+        "misses": 23,
         "pnl": 54.239999999999995
       },
       "5d": {
@@ -4618,12 +4782,12 @@
     "by_theme": {
       "risk_off": {
         "hits": 0,
-        "misses": 10,
+        "misses": 11,
         "pnl": -61.57
       },
       "defense": {
         "hits": 0,
-        "misses": 12,
+        "misses": 13,
         "pnl": -0.23000000000000043
       },
       "tech": {
@@ -4652,12 +4816,12 @@
       },
       "commodities": {
         "hits": 0,
-        "misses": 2,
+        "misses": 3,
         "pnl": -14.95
       },
       "fed": {
         "hits": 0,
-        "misses": 2,
+        "misses": 3,
         "pnl": -7.41
       }
     },
