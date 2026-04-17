@@ -319,31 +319,34 @@ def _panel_vote(verdicts, all_alerts):
     elif active_voting < 3:
         confidence = min(confidence, 65)
 
-    # Participation note
-    if abstained:
-        participation = f"{active_count}/{total_count} analysts active ({', '.join(abstained[:3])} had no data)."
-    else:
-        participation = f"{active_count}/{total_count} analysts active."
-
     # Build structured summary
-    if direction == "BULLISH":
-        action_line = f"Action: BUY / accumulate {sector_str} exposure. Consider: {etf_str}."
+    all_quiet = active_count == 0
+
+    if all_quiet:
+        # Nothing firing — keep it short
+        summary = "All sources quiet this scan. No position changes."
+    elif direction == "BULLISH":
         who_line    = f"{len(bull_names)} analyst{'s' if len(bull_names)!=1 else ''} bullish: {', '.join(bull_names)}."
+        action_line = f"Consider: BUY {etf_str} ({sector_str})."
+        why_line    = ("Driven by: " + " · ".join(thesis_signals[:2]) + ".") if thesis_signals else ""
+        parts = [who_line, action_line]
+        if why_line: parts.append(why_line)
+        if abstained: parts.append(f"{active_count}/{total_count} analysts active — {', '.join(abstained[:2])} had no data.")
+        summary = " ".join(parts)
     elif direction == "BEARISH":
-        action_line = f"Action: REDUCE / hedge {sector_str} exposure. Consider: {etf_str}."
         who_line    = f"{len(bear_names)} analyst{'s' if len(bear_names)!=1 else ''} bearish: {', '.join(bear_names)}."
+        action_line = f"Consider: REDUCE / hedge {sector_str}. Watch: {etf_str}."
+        why_line    = ("Driven by: " + " · ".join(thesis_signals[:2]) + ".") if thesis_signals else ""
+        parts = [who_line, action_line]
+        if why_line: parts.append(why_line)
+        if abstained: parts.append(f"{active_count}/{total_count} analysts active — {', '.join(abstained[:2])} had no data.")
+        summary = " ".join(parts)
     else:
-        action_line = "Action: WATCH. No clear direction — wait for confirmation."
-        who_line    = "No analyst has strong conviction."
-
-    why_line = ""
-    if thesis_signals:
-        why_line = "Driven by: " + " · ".join(thesis_signals[:2]) + "."
-
-    summary = f"{who_line} {action_line}"
-    if why_line:
-        summary += f" {why_line}"
-    summary += f" {participation}"
+        # NEUTRAL with some data but no conviction
+        if abstained and active_count < 3:
+            summary = f"Conflicting signals — no clear direction. {active_count}/{total_count} analysts had data."
+        else:
+            summary = "Mixed signals across sources — no actionable conviction. Monitor for confirmation."
 
     return {
         "direction":    direction,

@@ -234,7 +234,7 @@ def _portfolio_html(seen_data):
     else:
         open_html = (
             "<div style='font-size:12px;color:var(--muted);font-family:var(--mono);"
-            "padding:12px 0;'>No open positions — opens when advice fires with BUY or SELL direction</div>"
+            "padding:12px 0;'>No open positions — portfolio opens when a BUY or SELL verdict fires with sufficient confidence</div>"
         )
 
     # Closed positions (recent)
@@ -410,7 +410,7 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None, analyst_verdict
   </div>
 
   <div class="section">
-    <div class="section-title">Virtual portfolio — €1,000 per advice · adaptive confidence score</div>
+    <div class="section-title">Virtual portfolio — €100,000 capital · one position per ticker · live P&amp;L</div>
     {portfolio_section}
   </div>
 
