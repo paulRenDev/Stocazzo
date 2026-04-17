@@ -239,16 +239,20 @@ def _update_platform_score(seen_data, new_checks):
                 score["by_window"][window]["hits"]   += 1
             else:
                 score["by_window"][window]["misses"] += 1
-            score["by_window"][window]["pnl"] += pnl
+            score["by_window"][window]["pnl"] = score["by_window"][window].get("pnl", 0.0) + pnl
 
-        # By theme
+        # By theme — always use _theme_entry() to ensure schema
         if theme not in score["by_theme"]:
             score["by_theme"][theme] = {"hits": 0, "misses": 0, "pnl": 0.0}
+        t = score["by_theme"][theme]
+        t.setdefault("hits",   0)
+        t.setdefault("misses", 0)
+        t.setdefault("pnl",    0.0)
         if hit:
-            score["by_theme"][theme]["hits"]   += 1
+            t["hits"]   += 1
         else:
-            score["by_theme"][theme]["misses"] += 1
-        score["by_theme"][theme]["pnl"] += pnl
+            t["misses"] += 1
+        t["pnl"] += pnl
 
         # Rolling window (only 5d = final result)
         if window == "5d":
@@ -275,8 +279,14 @@ def _ensure_score(seen_data):
     score = seen_data.setdefault("platform_score", {})
     for k, v in defaults.items():
         score.setdefault(k, v)
-    for w in ["4h","24h","5d"]:
-        score["by_window"].setdefault(w, {"hits":0,"misses":0,"pnl":0.0})
+    # Deep-merge by_window — existing entries may be missing keys (e.g. "pnl")
+    window_default = {"hits": 0, "misses": 0, "pnl": 0.0}
+    for w in ["4h", "24h", "5d"]:
+        if w not in score["by_window"]:
+            score["by_window"][w] = dict(window_default)
+        else:
+            for wk, wv in window_default.items():
+                score["by_window"][w].setdefault(wk, wv)
     return score
 
 

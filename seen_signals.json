@@ -1,79 +1,88 @@
 {
   "ids": [
-    "6268e160a599",
-    "4115620504a4",
-    "63c86818a1fd",
-    "3bb58e487f35",
-    "060828854bf6",
-    "e5a2151f14c5",
-    "a6ab397cf266",
-    "eff4ba5df193",
-    "a75e66a206d2",
-    "1ede72cc1fa0",
-    "9c5e7c4556c7",
-    "40c4233b088c",
-    "28cc4ad9c612",
-    "acefd863227a",
-    "8a06a3214a28",
-    "2fb60ff4a3bf",
-    "1d6b86fe014c",
-    "8f9b844b1ff6",
     "af68940ec1e0",
-    "36ac56b06e2b",
-    "2925e4685dcf",
-    "ec40e3cfacb3",
-    "cfdcae65b396",
-    "23ab136875d6",
-    "39a94e2128a3",
-    "2bd8b6a7de86",
-    "7a2691723cce",
-    "624842d27583",
-    "85c4730b886c",
-    "318f368c76b5",
-    "51045d443f94",
-    "7045bde3dbe3",
-    "994fb09849c9",
-    "b83922ad5cd6",
-    "556f276c2cb7",
-    "7013b47db36c",
-    "e87b4da2717b",
-    "ca2188a90354",
-    "ff9000f9e899",
-    "889bec77b208",
-    "ecc0ec2d9067",
-    "e990de2f3299",
-    "343d17b3e17a",
-    "d56a5cdfbb96",
-    "67908201a79d",
-    "6cb05f24f18c",
-    "2763e2fd180a",
-    "b421c50e856a",
-    "2e469813dd1c",
-    "9b3073f18896",
-    "1431412201ef",
-    "f1288e8da16d",
-    "3e9307dee462",
-    "31843a5643ef",
-    "65485aaaed6b",
-    "f4e705fed31d",
-    "045f55b844a4",
-    "14812c35cbe0",
-    "aabbc8a157d5",
+    "7aeaaa602ba5",
+    "50ff7c2d8ffe",
     "5f23b9a680d2",
-    "3bfcff9e1160",
-    "9d7f440c781e",
+    "dd9d19a9c5a4",
+    "23ab136875d6",
+    "d56a5cdfbb96",
+    "2925e4685dcf",
+    "6268e160a599",
+    "b698fe4a17d2",
+    "7a2691723cce",
+    "b0ec811419ad",
+    "e990de2f3299",
+    "ff9000f9e899",
+    "acefd863227a",
+    "943a2fc41358",
+    "ca2188a90354",
+    "3e9307dee462",
+    "81c7d996ca75",
+    "ecc0ec2d9067",
+    "cfdcae65b396",
+    "1431412201ef",
+    "624842d27583",
+    "36ac56b06e2b",
+    "b421c50e856a",
+    "2bd8b6a7de86",
+    "f4e705fed31d",
+    "7013b47db36c",
+    "4115620504a4",
+    "85c4730b886c",
     "169ebe479f0f",
+    "eff4ba5df193",
+    "b83922ad5cd6",
+    "17ba5e679fa6",
+    "31843a5643ef",
+    "1ede72cc1fa0",
+    "7045bde3dbe3",
+    "a6ab397cf266",
+    "ec40e3cfacb3",
+    "1678c8c092e0",
+    "2e469813dd1c",
+    "0d4041a7fae2",
+    "7b1420f5d653",
+    "39a94e2128a3",
+    "65485aaaed6b",
+    "318f368c76b5",
+    "6cb05f24f18c",
+    "9c5e7c4556c7",
+    "a75e66a206d2",
+    "14812c35cbe0",
+    "9b3073f18896",
+    "8f9b844b1ff6",
+    "8a06a3214a28",
+    "40c4233b088c",
+    "312fe7511d0b",
+    "63c86818a1fd",
+    "67908201a79d",
+    "f1288e8da16d",
+    "500615d0f735",
+    "045f55b844a4",
+    "51045d443f94",
+    "28cc4ad9c612",
+    "b5af3579ee95",
+    "889bec77b208",
+    "e5a2151f14c5",
+    "47fd0f06b413",
+    "2763e2fd180a",
+    "343d17b3e17a",
+    "aabbc8a157d5",
+    "e87b4da2717b",
+    "994fb09849c9",
+    "9d7f440c781e",
+    "1de84568c6f2",
+    "3bb58e487f35",
+    "734a420b9235",
+    "556f276c2cb7",
+    "2fb60ff4a3bf",
     "dfa924e4f13d",
     "92ac1f18e228",
-    "0d4041a7fae2",
-    "943a2fc41358",
-    "81c7d996ca75",
-    "1de84568c6f2",
     "74e38c979ed6",
-    "7b1420f5d653",
-    "dd9d19a9c5a4",
-    "734a420b9235",
-    "500615d0f735"
+    "1d6b86fe014c",
+    "3bfcff9e1160",
+    "060828854bf6"
   ],
   "stats": {},
   "pending_checks": [
@@ -409,6 +418,69 @@
       "date": "2026-04-17T06:39:35.234998+00:00",
       "price_at_signal": 229.03,
       "title": "Israel-Lebanon ceasefire takes effect"
+    },
+    {
+      "uid": "17ba5e679fa6",
+      "source": "Polymarket",
+      "ticker": "XLE",
+      "direction": "NO (92%)",
+      "date": "2026-04-17T18:13:41.956323+00:00",
+      "price_at_signal": 54.86,
+      "title": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?"
+    },
+    {
+      "uid": "b5af3579ee95",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-17T18:13:42.238818+00:00",
+      "price_at_signal": 54.86,
+      "title": "Trump: \"the failing new york times, fake news cnn, and others, just don't know w"
+    },
+    {
+      "uid": "50ff7c2d8ffe",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-17T18:13:42.590985+00:00",
+      "price_at_signal": 54.86,
+      "title": "Trump: \"iran has agreed to never close the strait of hormuz again. it will no lo"
+    },
+    {
+      "uid": "312fe7511d0b",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-17T18:13:42.961893+00:00",
+      "price_at_signal": 54.86,
+      "title": "Trump: \"iran, with the help of the u.s.a., has removed, or is removing, all sea "
+    },
+    {
+      "uid": "47fd0f06b413",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-17T18:13:43.306282+00:00",
+      "price_at_signal": 54.86,
+      "title": "Trump: \"now that the hormuz strait situation is over, i received a call from nat"
+    },
+    {
+      "uid": "1678c8c092e0",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-17T18:13:43.717421+00:00",
+      "price_at_signal": 54.86,
+      "title": "Trump: \"the strait of hormuz is completely open and ready for business and full "
+    },
+    {
+      "uid": "b0ec811419ad",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-17T18:13:43.995798+00:00",
+      "price_at_signal": 54.86,
+      "title": "Trump: \"iran has just announced that the strait of iran is fully open and ready "
     }
   ],
   "history": [
@@ -3018,6 +3090,402 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "c05d4f4b19fd",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 15",
+      "direction": "SELL",
+      "title": "[2x CONVERGENCE] XLE \u2014 SELL",
+      "detail": "Score: 15pts across 2 independent sources: Polymarket, Truth Social",
+      "urgency": "HIGH",
+      "keywords": "XLE",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "IEO",
+          "iShares U.S. Oil & Gas E&P ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "1/2 sources bearish on XLE",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Polymarket",
+            "direction": "NO (92%)",
+            "urgency": "MEDIUM",
+            "points": 7,
+            "reasoning": "weight=3 + urgency=2 + hit_rate=80%x2 = 7pts",
+            "signal": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?"
+          },
+          {
+            "source": "Truth Social",
+            "direction": "WATCH",
+            "urgency": "MEDIUM",
+            "points": 8,
+            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
+            "signal": "Trump: \"the failing new york times, fake news cnn, and other"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "17ba5e679fa6",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "NO (92%)",
+      "title": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?",
+      "detail": "Probability NO: 92% | 24h volume: $30,323",
+      "urgency": "MEDIUM",
+      "keywords": "p=92%, vol=$30,323",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "IEO",
+          "iShares U.S. Oil & Gas E&P ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-the-edmonton-oilers-win-the-2026-nhl-stanley-cup",
+      "confidence": 92,
+      "hit_rate": "80% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 92% with $30,323 24h volume \u2014 statistically significant",
+        "signal_type": "Crowd wisdom + possible insider positioning",
+        "confidence": 92,
+        "source_weight": 3,
+        "hit_rate": "80% (historical baseline)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail"
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b5af3579ee95",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 3h 14m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"the failing new york times, fake news cnn, and others, just don't know what to d\"",
+      "detail": "the failing new york times, fake news cnn, and others, just don't know what to do. they are desperately looking for a reason to criticize president donald j. trump on the iran situation, but just can'",
+      "urgency": "MEDIUM",
+      "keywords": "iran",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116420635683173112",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 3h 14m ago. Matched: iran",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "50ff7c2d8ffe",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 3h 33m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"iran has agreed to never close the strait of hormuz again. it will no longer be \"",
+      "detail": "iran has agreed to never close the strait of hormuz again. it will no longer be used as a weapon against the world! president donald j. trump | Posted: 3h 33m ago | Keywords: iran",
+      "urgency": "MEDIUM",
+      "keywords": "iran",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116420562510387829",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 3h 33m ago. Matched: iran",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "7aeaaa602ba5",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 3h 46m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"again! this deal is not tied, in any way, to lebanon, but we will, make lebanon \"",
+      "detail": "again! this deal is not tied, in any way, to lebanon, but we will, make lebanon great again! | Posted: 3h 46m ago | Keywords: deal",
+      "urgency": "MEDIUM",
+      "keywords": "deal",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116420512192383443",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 3h 46m ago. Matched: deal",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "312fe7511d0b",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 3h 53m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"iran, with the help of the u.s.a., has removed, or is removing, all sea mines! t\"",
+      "detail": "iran, with the help of the u.s.a., has removed, or is removing, all sea mines! thank you! president djt | Posted: 3h 53m ago | Keywords: iran",
+      "urgency": "MEDIUM",
+      "keywords": "iran",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116420484827577347",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 3h 53m ago. Matched: iran",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "47fd0f06b413",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 4h 0m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"now that the hormuz strait situation is over, i received a call from nato asking\"",
+      "detail": "now that the hormuz strait situation is over, i received a call from nato asking if we would need some help. i told them to stay away, unless they just want to load up their ships with oil. they were ",
+      "urgency": "MEDIUM",
+      "keywords": "nato, oil",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "IEO",
+          "iShares U.S. Oil & Gas E&P ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116420456436213944",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 4h 0m ago. Matched: nato, oil",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b698fe4a17d2",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 4h 15m ago",
+      "direction": "BEARISH",
+      "title": "Trump: \"the u.s.a. will get all nuclear \"dust,\" created by our great b2 bombers - no mon\"",
+      "detail": "the u.s.a. will get all nuclear \"dust,\" created by our great b2 bombers - no money will exchange hands in any way, shape, or form. this deal is in no way subject to lebanon, either, but the usa will, ",
+      "urgency": "MEDIUM",
+      "keywords": "deal",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116420395293904982",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 4h 15m ago. Matched: deal",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1678c8c092e0",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 4h 46m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"the strait of hormuz is completely open and ready for business and full passage,\"",
+      "detail": "the strait of hormuz is completely open and ready for business and full passage, but the naval blockade will remain in full force and effect as it pertains to iran, only, until such time as our transa",
+      "urgency": "MEDIUM",
+      "keywords": "iran, negotiat",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116420275523158052",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 4h 46m ago. Matched: iran, negotiat",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b0ec811419ad",
+      "date": "17/04/2026 18:13 UTC",
+      "date_be": "17/04/2026 20:13 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 5h 6m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"iran has just announced that the strait of iran is fully open and ready for full\"",
+      "detail": "iran has just announced that the strait of iran is fully open and ready for full passage. thank you! | Posted: 5h 6m ago | Keywords: iran",
+      "urgency": "MEDIUM",
+      "keywords": "iran",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116420194853200133",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 5h 6m ago. Matched: iran",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -3035,14 +3503,18 @@
       "date": "2026-04-16T15:33:15.773040+00:00",
       "price_at_signal": 441.06,
       "check_4h": "2026-04-16T19:37:09.330038+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:47.733661+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.24,
         "hit": false,
         "price": 440.02
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.23,
+        "hit": false,
+        "price": 446.49
+      },
       "result_5d": null
     },
     {
@@ -3059,14 +3531,18 @@
       "date": "2026-04-16T15:33:16.403477+00:00",
       "price_at_signal": 230.41,
       "check_4h": "2026-04-16T19:37:09.508161+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:47.960742+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.34,
         "hit": null,
         "price": 229.63
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.17,
+        "hit": null,
+        "price": 233.11
+      },
       "result_5d": null
     },
     {
@@ -3083,14 +3559,18 @@
       "date": "2026-04-16T15:33:16.759262+00:00",
       "price_at_signal": 640.01,
       "check_4h": "2026-04-16T19:37:09.684680+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:48.193261+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.03,
         "hit": null,
         "price": 639.81
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.17,
+        "hit": null,
+        "price": 647.5
+      },
       "result_5d": null
     },
     {
@@ -3107,14 +3587,18 @@
       "date": "2026-04-16T15:33:16.989270+00:00",
       "price_at_signal": 700.95,
       "check_4h": "2026-04-16T19:37:09.853357+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:48.409449+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.04,
         "hit": null,
         "price": 701.21
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.25,
+        "hit": null,
+        "price": 709.68
+      },
       "result_5d": null
     },
     {
@@ -3131,14 +3615,18 @@
       "date": "2026-04-16T16:08:52.505668+00:00",
       "price_at_signal": 56.59,
       "check_4h": "2026-04-16T20:45:45.325597+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:48.626766+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.02,
         "hit": null,
         "price": 56.6
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -3.03,
+        "hit": null,
+        "price": 54.875
+      },
       "result_5d": null
     },
     {
@@ -3155,14 +3643,18 @@
       "date": "2026-04-16T16:08:52.684687+00:00",
       "price_at_signal": 702.46,
       "check_4h": "2026-04-16T20:45:45.500290+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:48.847895+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.13,
         "hit": null,
         "price": 701.53
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.03,
+        "hit": null,
+        "price": 709.68
+      },
       "result_5d": null
     },
     {
@@ -3179,14 +3671,18 @@
       "date": "2026-04-16T16:08:52.863232+00:00",
       "price_at_signal": 702.46,
       "check_4h": "2026-04-16T20:45:45.681286+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:49.071978+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.13,
         "hit": false,
         "price": 701.53
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.03,
+        "hit": false,
+        "price": 709.68
+      },
       "result_5d": null
     },
     {
@@ -3203,14 +3699,18 @@
       "date": "2026-04-16T16:08:53.027681+00:00",
       "price_at_signal": 641.78,
       "check_4h": "2026-04-16T20:45:45.841718+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:49.298724+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.21,
         "hit": false,
         "price": 640.41
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 0.89,
+        "hit": false,
+        "price": 647.5
+      },
       "result_5d": null
     },
     {
@@ -3229,14 +3729,18 @@
       "date": "2026-04-16T17:54:55.901033+00:00",
       "price_at_signal": 701.32,
       "check_4h": "2026-04-17T06:39:15.587036+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:49.596724+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.05,
         "hit": false,
         "price": 701.66
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.18,
+        "hit": false,
+        "price": 709.59
+      },
       "result_5d": null
     },
     {
@@ -3254,14 +3758,18 @@
       "date": "2026-04-16T17:54:56.128980+00:00",
       "price_at_signal": 640.58,
       "check_4h": "2026-04-17T06:39:15.802757+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:49.863893+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.02,
         "hit": false,
         "price": 640.47
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.07,
+        "hit": false,
+        "price": 647.46
+      },
       "result_5d": null
     },
     {
@@ -3279,14 +3787,18 @@
       "date": "2026-04-16T17:54:56.297983+00:00",
       "price_at_signal": 701.32,
       "check_4h": "2026-04-17T06:39:15.966584+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:50.144738+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.05,
         "hit": false,
         "price": 701.66
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.18,
+        "hit": false,
+        "price": 709.59
+      },
       "result_5d": null
     },
     {
@@ -3304,14 +3816,18 @@
       "date": "2026-04-16T17:54:56.443121+00:00",
       "price_at_signal": 439.64,
       "check_4h": "2026-04-17T06:39:16.117974+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:50.431053+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.1,
         "hit": false,
         "price": 440.08
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.57,
+        "hit": false,
+        "price": 446.56
+      },
       "result_5d": null
     },
     {
@@ -3348,14 +3864,18 @@
       "date": "2026-04-16T17:54:56.815811+00:00",
       "price_at_signal": 229.16,
       "check_4h": "2026-04-17T06:39:16.665165+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:12:51.070342+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.06,
         "hit": false,
         "price": 229.03
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.73,
+        "hit": false,
+        "price": 233.12
+      },
       "result_5d": null
     },
     {
@@ -3817,42 +4337,173 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "bbfd2e3c5f89",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 41,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Truth Social"
+      ],
+      "date": "2026-04-17T18:13:34.072010+00:00",
+      "price_at_signal": 446.56,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "4b687e660580",
+      "theme": "energy",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "XLE",
+      "score": 41,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Truth Social"
+      ],
+      "date": "2026-04-17T18:13:34.301456+00:00",
+      "price_at_signal": 54.9,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "c46d27e77bbe",
+      "theme": "fed",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "TLT",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-17T18:13:34.519676+00:00",
+      "price_at_signal": 86.99,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "841da09eedad",
+      "theme": "tech",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "QQQ",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-17T18:13:34.737644+00:00",
+      "price_at_signal": 647.6,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "244ecdded709",
+      "theme": "commodities",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "GLD",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-17T18:13:34.960176+00:00",
+      "price_at_signal": 446.59,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "943d117977cc",
+      "theme": "defense",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "ITA",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-17T18:13:35.186072+00:00",
+      "price_at_signal": 233.11,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 0,
-    "misses": 21,
-    "watches": 9,
+    "misses": 29,
+    "watches": 14,
     "by_window": {
       "4h": {
-        "hits": 0,
-        "misses": 21
+        "hits": 1,
+        "misses": 38,
+        "pnl": 41.42999999999999
       },
       "24h": {
         "hits": 0,
-        "misses": 0
+        "misses": 13,
+        "pnl": -20.01
       },
       "5d": {
         "hits": 0,
-        "misses": 0
+        "misses": 0,
+        "pnl": 0.0
       }
     },
     "by_theme": {
       "risk_off": {
         "hits": 0,
-        "misses": 4
+        "misses": 10,
+        "pnl": -61.57
       },
       "defense": {
         "hits": 0,
-        "misses": 4
+        "misses": 10,
+        "pnl": -15.280000000000001
       },
       "tech": {
         "hits": 0,
-        "misses": 4
+        "misses": 10,
+        "pnl": 2.5999999999999996
       },
       "macro": {
         "hits": 0,
-        "misses": 2
+        "misses": 6,
+        "pnl": 35.75
       },
       "energy": {
         "hits": 0,
@@ -3860,24 +4511,28 @@
       },
       "risk_on": {
         "hits": 0,
-        "misses": 4
+        "misses": 10,
+        "pnl": 48.78
       },
       "crypto": {
-        "hits": 0,
-        "misses": 1
+        "hits": 1,
+        "misses": 1,
+        "pnl": 33.5
       },
       "commodities": {
         "hits": 0,
-        "misses": 1
+        "misses": 2,
+        "pnl": -14.95
       },
       "fed": {
         "hits": 0,
-        "misses": 1
+        "misses": 2,
+        "pnl": -7.41
       }
     },
-    "total_hits": 0,
-    "total_misses": 0,
-    "total_pnl": 0.0,
+    "total_hits": 1,
+    "total_misses": 22,
+    "total_pnl": 21.42,
     "rolling": []
   },
   "portfolio": [
@@ -3898,8 +4553,20 @@
         "Truth Social"
       ],
       "n_sources": 3,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": {
+        "price": 709.79,
+        "pct": 1.21,
+        "pnl": 12.08,
+        "hit": false,
+        "date": "2026-04-17T18:13:35.891788+00:00"
+      },
+      "check_24h": {
+        "price": 709.79,
+        "pct": 1.21,
+        "pnl": 12.08,
+        "hit": false,
+        "date": "2026-04-17T18:13:35.891823+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,
@@ -3922,8 +4589,20 @@
         "Truth Social"
       ],
       "n_sources": 2,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": {
+        "price": 647.63,
+        "pct": -1.1,
+        "pnl": -11.01,
+        "hit": false,
+        "date": "2026-04-17T18:13:36.175872+00:00"
+      },
+      "check_24h": {
+        "price": 647.63,
+        "pct": -1.1,
+        "pnl": -11.01,
+        "hit": false,
+        "date": "2026-04-17T18:13:36.175907+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,
@@ -3946,8 +4625,20 @@
         "Truth Social"
       ],
       "n_sources": 2,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": {
+        "price": 709.79,
+        "pct": 1.21,
+        "pnl": 12.08,
+        "hit": false,
+        "date": "2026-04-17T18:13:36.459263+00:00"
+      },
+      "check_24h": {
+        "price": 709.79,
+        "pct": 1.21,
+        "pnl": 12.08,
+        "hit": false,
+        "date": "2026-04-17T18:13:36.459300+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,
@@ -3970,8 +4661,20 @@
         "Truth Social"
       ],
       "n_sources": 2,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": {
+        "price": 446.62,
+        "pct": -1.59,
+        "pnl": -15.88,
+        "hit": false,
+        "date": "2026-04-17T18:13:36.810224+00:00"
+      },
+      "check_24h": {
+        "price": 446.62,
+        "pct": -1.59,
+        "pnl": -15.88,
+        "hit": false,
+        "date": "2026-04-17T18:13:36.810260+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,
@@ -3993,8 +4696,20 @@
         "Truth Social"
       ],
       "n_sources": 1,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": {
+        "price": 233.12,
+        "pct": -1.73,
+        "pnl": -17.28,
+        "hit": false,
+        "date": "2026-04-17T18:13:37.159424+00:00"
+      },
+      "check_24h": {
+        "price": 233.12,
+        "pct": -1.73,
+        "pnl": -17.28,
+        "hit": false,
+        "date": "2026-04-17T18:13:37.159461+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,
@@ -4016,7 +4731,13 @@
         "Macro RSS"
       ],
       "n_sources": 1,
-      "check_4h": null,
+      "check_4h": {
+        "price": 43.81,
+        "pct": 3.35,
+        "pnl": 33.5,
+        "hit": true,
+        "date": "2026-04-17T18:13:37.477221+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4039,7 +4760,13 @@
         "Macro RSS"
       ],
       "n_sources": 1,
-      "check_4h": null,
+      "check_4h": {
+        "price": 709.79,
+        "pct": 1.3,
+        "pnl": 13.03,
+        "hit": false,
+        "date": "2026-04-17T18:13:37.760138+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4062,7 +4789,13 @@
         "Macro RSS"
       ],
       "n_sources": 1,
-      "check_4h": null,
+      "check_4h": {
+        "price": 647.63,
+        "pct": 1.34,
+        "pnl": 13.44,
+        "hit": false,
+        "date": "2026-04-17T18:13:38.033831+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4085,7 +4818,13 @@
         "Macro RSS"
       ],
       "n_sources": 1,
-      "check_4h": null,
+      "check_4h": {
+        "price": 233.12,
+        "pct": 1.69,
+        "pnl": 16.93,
+        "hit": false,
+        "date": "2026-04-17T18:13:38.304234+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4108,7 +4847,13 @@
         "Truth Social"
       ],
       "n_sources": 1,
-      "check_4h": null,
+      "check_4h": {
+        "price": 233.12,
+        "pct": -1.55,
+        "pnl": -15.51,
+        "hit": false,
+        "date": "2026-04-17T18:13:38.644029+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4131,7 +4876,13 @@
         "Truth Social"
       ],
       "n_sources": 1,
-      "check_4h": null,
+      "check_4h": {
+        "price": 446.62,
+        "pct": -1.5,
+        "pnl": -14.95,
+        "hit": false,
+        "date": "2026-04-17T18:13:38.926546+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4154,7 +4905,13 @@
         "Truth Social"
       ],
       "n_sources": 1,
-      "check_4h": null,
+      "check_4h": {
+        "price": 446.62,
+        "pct": -1.5,
+        "pnl": -14.95,
+        "hit": false,
+        "date": "2026-04-17T18:13:39.208310+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4177,7 +4934,13 @@
         "Truth Social"
       ],
       "n_sources": 1,
-      "check_4h": null,
+      "check_4h": {
+        "price": 87.01,
+        "pct": -0.74,
+        "pnl": -7.41,
+        "hit": false,
+        "date": "2026-04-17T18:13:39.518599+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4203,7 +4966,13 @@
         "Macro RSS"
       ],
       "n_sources": 4,
-      "check_4h": null,
+      "check_4h": {
+        "price": 709.79,
+        "pct": 1.16,
+        "pnl": 11.59,
+        "hit": false,
+        "date": "2026-04-17T18:13:39.884626+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4229,7 +4998,13 @@
         "Macro RSS"
       ],
       "n_sources": 4,
-      "check_4h": null,
+      "check_4h": {
+        "price": 233.12,
+        "pct": 1.79,
+        "pnl": 17.86,
+        "hit": false,
+        "date": "2026-04-17T18:13:40.211050+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4255,7 +5030,13 @@
         "Macro RSS"
       ],
       "n_sources": 4,
-      "check_4h": null,
+      "check_4h": {
+        "price": 647.63,
+        "pct": 1.12,
+        "pnl": 11.18,
+        "hit": false,
+        "date": "2026-04-17T18:13:40.538591+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4280,7 +5061,13 @@
         "Truth Social"
       ],
       "n_sources": 3,
-      "check_4h": null,
+      "check_4h": {
+        "price": 709.79,
+        "pct": 1.16,
+        "pnl": 11.59,
+        "hit": false,
+        "date": "2026-04-17T18:13:40.850946+00:00"
+      },
       "check_24h": null,
       "check_5d": null,
       "status": "open",
@@ -4304,6 +5091,62 @@
         "Truth Social"
       ],
       "n_sources": 2,
+      "check_4h": {
+        "price": 446.62,
+        "pct": -1.49,
+        "pnl": -14.86,
+        "hit": false,
+        "date": "2026-04-17T18:13:41.122123+00:00"
+      },
+      "check_24h": null,
+      "check_5d": null,
+      "status": "open",
+      "final_pnl": null,
+      "final_pct": null,
+      "closed_date": null
+    },
+    {
+      "uid": "bbfd2e3c5f89",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "side": "SELL",
+      "ticker": "GLD",
+      "entry_price": 446.59,
+      "entry_date": "2026-04-17T18:13:35.404189+00:00",
+      "entry_be": "17/04/2026 20:13 CEST",
+      "stake_eur": 1000.0,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Truth Social"
+      ],
+      "n_sources": 3,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "status": "open",
+      "final_pnl": null,
+      "final_pct": null,
+      "closed_date": null
+    },
+    {
+      "uid": "4b687e660580",
+      "theme": "energy",
+      "action": "REDUCE / HEDGE",
+      "side": "SELL",
+      "ticker": "XLE",
+      "entry_price": 54.9,
+      "entry_date": "2026-04-17T18:13:35.620071+00:00",
+      "entry_be": "17/04/2026 20:13 CEST",
+      "stake_eur": 1000.0,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Truth Social"
+      ],
+      "n_sources": 3,
       "check_4h": null,
       "check_24h": null,
       "check_5d": null,

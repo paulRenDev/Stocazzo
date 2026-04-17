@@ -72,7 +72,7 @@ def _scan_insider_transactions(seen_data):
                 r = requests.get(
                     f"{FINNHUB_BASE}/stock/insider-transactions",
                     params={"symbol": symbol, "from": from_date, "to": to_date, "token": FINNHUB_KEY},
-                    timeout=6,
+                    timeout=4,
                 )
                 if r.status_code == 200:
                     txs = r.json().get("data", [])
@@ -157,13 +157,18 @@ def _scan_lobbying(seen_data):
         # Check a focused list of high-value lobbying sectors
         lobby_tickers = ["LMT", "RTX", "NVDA", "MSFT", "COIN", "AMZN", "META", "XOM"]
 
+        _timeout_strikes = 0
         for symbol in lobby_tickers:
+            if _timeout_strikes >= 2:
+                print("  Lobbying: 2 consecutive timeouts — skipping remaining tickers")
+                break
             try:
                 r = requests.get(
                     f"{FINNHUB_BASE}/stock/lobbying",
                     params={"symbol": symbol, "from": from_date, "to": to_date, "token": FINNHUB_KEY},
-                    timeout=8,
+                    timeout=4,
                 )
+                _timeout_strikes = 0  # reset on success
                 if r.status_code != 200:
                     continue
 
@@ -213,8 +218,12 @@ def _scan_lobbying(seen_data):
                 })
                 mark_seen(uid, seen_data)
 
+            except requests.exceptions.Timeout:
+                print(f"  Lobbying {symbol}: timeout")
+                _timeout_strikes += 1
+                continue
             except Exception as e:
-                print(f"Lobbying {symbol} error: {e}")
+                print(f"  Lobbying {symbol} error: {e}")
                 continue
 
     except Exception as e:
@@ -234,13 +243,18 @@ def _scan_usa_spending(seen_data):
         from_date = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%Y-%m-%d")
         to_date   = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
+        _timeout_strikes_usa = 0
         for symbol in DEFENSE_TICKERS[:6]:  # limit API calls
+            if _timeout_strikes_usa >= 2:
+                print("  USA Spending: 2 consecutive timeouts — skipping remaining tickers")
+                break
             try:
                 r = requests.get(
                     f"{FINNHUB_BASE}/stock/usa-spending",
                     params={"symbol": symbol, "from": from_date, "to": to_date, "token": FINNHUB_KEY},
-                    timeout=8,
+                    timeout=4,
                 )
+                _timeout_strikes_usa = 0  # reset on success
                 if r.status_code != 200:
                     continue
 
@@ -289,8 +303,12 @@ def _scan_usa_spending(seen_data):
                 })
                 mark_seen(uid, seen_data)
 
+            except requests.exceptions.Timeout:
+                print(f"  USA Spending {symbol}: timeout")
+                _timeout_strikes_usa += 1
+                continue
             except Exception as e:
-                print(f"USA Spending {symbol} error: {e}")
+                print(f"  USA Spending {symbol} error: {e}")
                 continue
 
     except Exception as e:
