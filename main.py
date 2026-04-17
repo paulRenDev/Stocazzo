@@ -84,11 +84,27 @@ def main():
     active = sum(1 for v in analyst_verdicts if v["verdict"] != "NEUTRAL")
     print(f"Analyst panel: {active}/5 analysts with verdict — {panel_advice['direction']} ({panel_advice['confidence']}%)")
 
-    # 5. Log advice + open virtual positions
+    # 5. Open virtual positions based on PANEL verdict (not individual advice cards)
+    # Panel verdict must have direction BUY/SELL and confidence >= 40 to open a position
+    panel_dir  = panel_advice.get("direction", "NEUTRAL")
+    panel_conf = panel_advice.get("confidence", 0)
+    panel_etfs = panel_advice.get("top_etfs", [])
+
+    if panel_dir in ("BULLISH", "BEARISH") and panel_conf >= 40 and panel_etfs:
+        # Build a synthetic advice card from the panel verdict
+        for ticker in panel_etfs[:2]:   # open up to 2 ETF positions per verdict
+            panel_card = {
+                "direction":   "BUY" if panel_dir == "BULLISH" else "SELL",
+                "etfs":        [(ticker, ticker, None)],
+                "confidence":  panel_conf,
+                "theme":       panel_advice.get("summary", "")[:40],
+                "uid":         f"panel-{ticker}-{panel_advice.get('generated_be','')[:10]}",
+            }
+            open_position(panel_card, seen_data)
+
+    # Also log old advice cards for historical scoring (but don't open positions from them)
     if advice_cards:
         log_advice_for_scoring(advice_cards, seen_data)
-        for card in advice_cards:
-            open_position(card, seen_data)
 
     # 5b. Update existing portfolio positions
     portfolio_checks = update_positions(seen_data)
