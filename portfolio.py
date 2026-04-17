@@ -239,7 +239,7 @@ def _update_platform_score(seen_data, new_checks):
                 score["by_window"][window]["hits"]   += 1
             else:
                 score["by_window"][window]["misses"] += 1
-            score["by_window"][window]["pnl"] += pnl
+            score["by_window"][window]["pnl"] = score["by_window"][window].get("pnl", 0.0) + pnl
 
         # By theme
         if theme not in score["by_theme"]:
@@ -275,8 +275,14 @@ def _ensure_score(seen_data):
     score = seen_data.setdefault("platform_score", {})
     for k, v in defaults.items():
         score.setdefault(k, v)
-    for w in ["4h","24h","5d"]:
-        score["by_window"].setdefault(w, {"hits":0,"misses":0,"pnl":0.0})
+    # Deep-merge by_window — existing entries may be missing keys (e.g. "pnl")
+    window_default = {"hits": 0, "misses": 0, "pnl": 0.0}
+    for w in ["4h", "24h", "5d"]:
+        if w not in score["by_window"]:
+            score["by_window"][w] = dict(window_default)
+        else:
+            for wk, wv in window_default.items():
+                score["by_window"][w].setdefault(wk, wv)
     return score
 
 
