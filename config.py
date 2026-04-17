@@ -224,4 +224,4 @@ REDDIT_TICKER_KEYWORDS = [
 ]
 
 # ── SITE URL ──────────────────────────────────────────────────────────────────
-SITE_URL = "https://paulrendev.github.io/stocazzo"
+SITE_URL = "https://paulrendev.github.io/Stocazzo"
