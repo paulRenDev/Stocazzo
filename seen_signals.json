@@ -1,88 +1,88 @@
 {
   "ids": [
-    "af68940ec1e0",
-    "7aeaaa602ba5",
-    "50ff7c2d8ffe",
+    "3e9307dee462",
+    "39a94e2128a3",
+    "3bfcff9e1160",
+    "8f9b844b1ff6",
+    "312fe7511d0b",
+    "2e469813dd1c",
+    "1431412201ef",
     "5f23b9a680d2",
+    "9c5e7c4556c7",
+    "51045d443f94",
+    "b5af3579ee95",
+    "81c7d996ca75",
+    "889bec77b208",
+    "85c4730b886c",
+    "63c86818a1fd",
+    "500615d0f735",
+    "6cb05f24f18c",
+    "eff4ba5df193",
+    "2bd8b6a7de86",
+    "47fd0f06b413",
+    "7a2691723cce",
+    "17ba5e679fa6",
+    "943a2fc41358",
+    "8a06a3214a28",
+    "1ede72cc1fa0",
+    "2763e2fd180a",
+    "af68940ec1e0",
+    "aabbc8a157d5",
+    "169ebe479f0f",
+    "1de84568c6f2",
+    "50ff7c2d8ffe",
+    "7b1420f5d653",
+    "36ac56b06e2b",
+    "14812c35cbe0",
+    "f1288e8da16d",
+    "060828854bf6",
+    "ecc0ec2d9067",
+    "994fb09849c9",
+    "624842d27583",
+    "d56a5cdfbb96",
+    "9b3073f18896",
+    "acefd863227a",
+    "0d4041a7fae2",
+    "045f55b844a4",
+    "a6ab397cf266",
+    "ca2188a90354",
+    "7013b47db36c",
+    "67908201a79d",
     "dd9d19a9c5a4",
     "23ab136875d6",
-    "d56a5cdfbb96",
-    "2925e4685dcf",
-    "6268e160a599",
-    "b698fe4a17d2",
-    "7a2691723cce",
-    "b0ec811419ad",
-    "e990de2f3299",
-    "ff9000f9e899",
-    "acefd863227a",
-    "943a2fc41358",
-    "ca2188a90354",
-    "3e9307dee462",
-    "81c7d996ca75",
-    "ecc0ec2d9067",
-    "cfdcae65b396",
-    "1431412201ef",
-    "624842d27583",
-    "36ac56b06e2b",
-    "b421c50e856a",
-    "2bd8b6a7de86",
-    "f4e705fed31d",
-    "7013b47db36c",
-    "4115620504a4",
-    "85c4730b886c",
-    "169ebe479f0f",
-    "eff4ba5df193",
-    "b83922ad5cd6",
-    "17ba5e679fa6",
-    "31843a5643ef",
-    "1ede72cc1fa0",
-    "7045bde3dbe3",
-    "a6ab397cf266",
-    "ec40e3cfacb3",
-    "1678c8c092e0",
-    "2e469813dd1c",
-    "0d4041a7fae2",
-    "7b1420f5d653",
-    "39a94e2128a3",
-    "65485aaaed6b",
-    "318f368c76b5",
-    "6cb05f24f18c",
-    "9c5e7c4556c7",
-    "a75e66a206d2",
-    "14812c35cbe0",
-    "9b3073f18896",
-    "8f9b844b1ff6",
-    "8a06a3214a28",
-    "40c4233b088c",
-    "312fe7511d0b",
-    "63c86818a1fd",
-    "67908201a79d",
-    "f1288e8da16d",
-    "500615d0f735",
-    "045f55b844a4",
-    "51045d443f94",
-    "28cc4ad9c612",
-    "b5af3579ee95",
-    "889bec77b208",
-    "e5a2151f14c5",
-    "47fd0f06b413",
-    "2763e2fd180a",
-    "343d17b3e17a",
-    "aabbc8a157d5",
-    "e87b4da2717b",
-    "994fb09849c9",
-    "9d7f440c781e",
-    "1de84568c6f2",
-    "3bb58e487f35",
-    "734a420b9235",
-    "556f276c2cb7",
-    "2fb60ff4a3bf",
     "dfa924e4f13d",
-    "92ac1f18e228",
-    "74e38c979ed6",
+    "1678c8c092e0",
     "1d6b86fe014c",
-    "3bfcff9e1160",
-    "060828854bf6"
+    "b421c50e856a",
+    "b83922ad5cd6",
+    "343d17b3e17a",
+    "74e38c979ed6",
+    "e87b4da2717b",
+    "31843a5643ef",
+    "40c4233b088c",
+    "ff9000f9e899",
+    "2fb60ff4a3bf",
+    "4115620504a4",
+    "a75e66a206d2",
+    "28cc4ad9c612",
+    "cfdcae65b396",
+    "b698fe4a17d2",
+    "7045bde3dbe3",
+    "ec40e3cfacb3",
+    "9d7f440c781e",
+    "e5a2151f14c5",
+    "318f368c76b5",
+    "556f276c2cb7",
+    "6268e160a599",
+    "b0ec811419ad",
+    "3bb58e487f35",
+    "e990de2f3299",
+    "f4e705fed31d",
+    "7aeaaa602ba5",
+    "2925e4685dcf",
+    "92ac1f18e228",
+    "65485aaaed6b",
+    "734a420b9235"
   ],
   "stats": {},
   "pending_checks": [
@@ -3892,14 +3892,18 @@
       "date": "2026-04-16T18:51:19.172896+00:00",
       "price_at_signal": 42.39,
       "check_4h": "2026-04-17T06:39:16.797122+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:57:00.718320+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.8,
         "hit": false,
         "price": 42.73
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 3.21,
+        "hit": true,
+        "price": 43.75
+      },
       "result_5d": null
     },
     {
@@ -3916,14 +3920,18 @@
       "date": "2026-04-16T18:51:19.469811+00:00",
       "price_at_signal": 700.66,
       "check_4h": "2026-04-17T06:39:16.926634+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:57:00.889686+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.14,
         "hit": false,
         "price": 701.66
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.3,
+        "hit": false,
+        "price": 709.79
+      },
       "result_5d": null
     },
     {
@@ -3940,14 +3948,18 @@
       "date": "2026-04-16T18:51:19.733568+00:00",
       "price_at_signal": 639.04,
       "check_4h": "2026-04-17T06:39:17.062264+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:57:01.163117+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.22,
         "hit": false,
         "price": 640.47
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.37,
+        "hit": false,
+        "price": 647.8
+      },
       "result_5d": null
     },
     {
@@ -3964,14 +3976,18 @@
       "date": "2026-04-16T18:51:19.908369+00:00",
       "price_at_signal": 229.24,
       "check_4h": "2026-04-17T06:39:17.179253+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-17T18:57:01.564673+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.09,
         "hit": false,
         "price": 229.03
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.53,
+        "hit": false,
+        "price": 232.74
+      },
       "result_5d": null
     },
     {
@@ -4464,8 +4480,8 @@
     }
   ],
   "platform_score": {
-    "hits": 0,
-    "misses": 29,
+    "hits": 1,
+    "misses": 32,
     "watches": 14,
     "by_window": {
       "4h": {
@@ -4474,9 +4490,9 @@
         "pnl": 41.42999999999999
       },
       "24h": {
-        "hits": 0,
-        "misses": 13,
-        "pnl": -20.01
+        "hits": 2,
+        "misses": 19,
+        "pnl": 54.239999999999995
       },
       "5d": {
         "hits": 0,
@@ -4492,13 +4508,13 @@
       },
       "defense": {
         "hits": 0,
-        "misses": 10,
-        "pnl": -15.280000000000001
+        "misses": 12,
+        "pnl": -0.23000000000000043
       },
       "tech": {
         "hits": 0,
-        "misses": 10,
-        "pnl": 2.5999999999999996
+        "misses": 12,
+        "pnl": 16.32
       },
       "macro": {
         "hits": 0,
@@ -4511,13 +4527,13 @@
       },
       "risk_on": {
         "hits": 0,
-        "misses": 10,
-        "pnl": 48.78
+        "misses": 12,
+        "pnl": 61.71
       },
       "crypto": {
-        "hits": 1,
+        "hits": 3,
         "misses": 1,
-        "pnl": 33.5
+        "pnl": 66.05
       },
       "commodities": {
         "hits": 0,
@@ -4530,9 +4546,9 @@
         "pnl": -7.41
       }
     },
-    "total_hits": 1,
-    "total_misses": 22,
-    "total_pnl": 21.42,
+    "total_hits": 2,
+    "total_misses": 25,
+    "total_pnl": 95.67,
     "rolling": []
   },
   "portfolio": [
@@ -4738,7 +4754,13 @@
         "hit": true,
         "date": "2026-04-17T18:13:37.477221+00:00"
       },
-      "check_24h": null,
+      "check_24h": {
+        "price": 43.77,
+        "pct": 3.26,
+        "pnl": 32.55,
+        "hit": true,
+        "date": "2026-04-17T18:57:41.774015+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,
@@ -4767,7 +4789,13 @@
         "hit": false,
         "date": "2026-04-17T18:13:37.760138+00:00"
       },
-      "check_24h": null,
+      "check_24h": {
+        "price": 709.72,
+        "pct": 1.29,
+        "pnl": 12.93,
+        "hit": false,
+        "date": "2026-04-17T18:57:42.082519+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,
@@ -4796,7 +4824,13 @@
         "hit": false,
         "date": "2026-04-17T18:13:38.033831+00:00"
       },
-      "check_24h": null,
+      "check_24h": {
+        "price": 647.81,
+        "pct": 1.37,
+        "pnl": 13.72,
+        "hit": false,
+        "date": "2026-04-17T18:57:42.298942+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,
@@ -4825,7 +4859,13 @@
         "hit": false,
         "date": "2026-04-17T18:13:38.304234+00:00"
       },
-      "check_24h": null,
+      "check_24h": {
+        "price": 232.69,
+        "pct": 1.5,
+        "pnl": 15.05,
+        "hit": false,
+        "date": "2026-04-17T18:57:42.438418+00:00"
+      },
       "check_5d": null,
       "status": "open",
       "final_pnl": null,

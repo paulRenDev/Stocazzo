@@ -178,10 +178,80 @@ URGENCY_DEFS = {
 }
 
 # ── KEYWORDS ──────────────────────────────────────────────────────────────────
+# ── POLYMARKET / KALSHI FINANCIAL RELEVANCE FILTER ───────────────────────────
+# A contract must match at least ONE keyword from POLYMARKET_KEYWORDS
+# AND must NOT match any keyword from POLYMARKET_NOISE_KEYWORDS.
+# This prevents sports, entertainment and celebrity contracts from leaking through.
+
+# POLYMARKET_KEYWORDS: contract must match at least one of these
+# IMPORTANT: these are checked as WORD-BOUNDARY matches (see polymarket.py)
+# to prevent false positives like "Oilers" matching "oil", "billion" matching "bill"
 POLYMARKET_KEYWORDS = [
-    "trump", "tariff", "fed", "rate", "iran", "crypto", "bitcoin",
-    "china", "trade", "sanction", "ceasefire", "oil", "energy",
-    "defense", "ukraine", "recession", "inflation", "gdp",
+    # Macro / geopolitical — use multi-word phrases where ambiguity exists
+    "tariff", "trade war", "trade deal", "sanction", "ceasefire",
+    "invasion", "nato", "ukraine", "russia", "iran", "israel",
+    "china", "taiwan", "north korea",
+    "opec", "oil price", "crude oil", "energy price", "natural gas", "lng", "pipeline",
+    "recession", "inflation", "gdp", "unemployment", "cpi", "pce",
+    # Political / presidential — specific enough to avoid substring issues
+    "trump", "executive order", "president signs", "federal election",
+    "congress votes", "senate bill", "house vote", "legislation passes",
+    "debt ceiling", "government shutdown", "federal budget",
+    # Fed / rates / macro finance
+    "federal reserve", "rate cut", "rate hike", "interest rate",
+    "fomc", "jerome powell", "ecb rate", "bank of england",
+    "yield curve", "us treasury", "us dollar", "currency crisis",
+    # Crypto / digital assets
+    "bitcoin", "ethereum", "crypto regulation", "stablecoin",
+    "btc price", "eth price", "crypto etf",
+    # Equities / sectors
+    "stock market", "s&p 500", "nasdaq", "market crash",
+    "semiconductor", "nvidia", "chip shortage", "ai regulation",
+    "defense spending", "military budget", "arms deal",
+    # Commodities / critical minerals
+    "gold price", "silver price", "copper price", "lithium",
+    "cobalt", "uranium", "commodity", "mineral export", "mining",
+    # Climate / energy transition
+    "solar energy", "wind energy", "renewable energy", "carbon tax",
+    "climate deal", "green deal", "carbon border",
+    # Africa / emerging markets (blue ocean)
+    "africa", "congo", "drc", "zambia", "zimbabwe", "nigeria",
+    "saudi arabia", "gulf state", "uae investment", "sovereign fund",
+    "critical mineral", "export ban",
+]
+
+# Contracts containing ANY of these are noise — skip regardless of volume
+# These override any keyword match — a contract with "oil" AND "nhl" is still noise
+POLYMARKET_NOISE_KEYWORDS = [
+    # Sports leagues and competitions
+    "nhl", "nba", "nfl", "mlb", "nascar", "ufc", "mma", "boxing",
+    "stanley cup", "super bowl", "world series", "world cup",
+    "premier league", "champions league", "la liga", "bundesliga",
+    "ncaa", "march madness", "olympic", "wimbledon", "french open",
+    "grand slam", "formula 1", "f1 race",
+    # Sports teams and events
+    "championship", "playoffs", "tournament bracket",
+    "win the series", "win the cup", "win the bowl",
+    "oilers", "maple leafs", "rangers", "bruins", "penguins",  # NHL teams
+    "chiefs", "eagles", "cowboys", "patriots",                 # NFL teams
+    "lakers", "celtics", "warriors", "bulls",                  # NBA teams
+    # Sports actions (only as standalone concepts)
+    "score a goal", "win the game", "win the match",
+    "home run", "touchdown pass",
+    # Entertainment / celebrity
+    "oscar", "grammy", "emmy", "golden globe",
+    "album release", "movie release", "box office",
+    "actor", "actress", "singer", "rapper",
+    "kardashian", "taylor swift", "beyonce", "drake",
+    "reality show", "reality tv", "tv show", "streamer",
+    # Gaming / esports
+    "esports", "gaming tournament", "fortnite", "minecraft",
+    "video game",
+    # Trivia / novelty / non-market
+    "alien", "ufo", "bigfoot", "supernatural",
+    "asteroid", "comet",
+    # Geography that could false-positive (cities/regions not related to markets)
+    "world cup host", "olympic host",
 ]
 
 CONGRESS_KEYWORDS = [
@@ -224,4 +294,4 @@ REDDIT_TICKER_KEYWORDS = [
 ]
 
 # ── SITE URL ──────────────────────────────────────────────────────────────────
-SITE_URL = "https://paulrendev.github.io/stocazzo"
+SITE_URL = "https://paulrendev.github.io/Stocazzo"

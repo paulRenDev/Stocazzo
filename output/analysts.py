@@ -194,26 +194,43 @@ def _analyst_verdict(analyst_id, analyst, signals, seen_data):
 
 
 def _build_rationale(analyst_id, signals, verdict, bull, bear, top):
-    """Build a plain-English rationale for the verdict."""
-    count = len(signals)
+    """
+    Build a plain-English rationale for the analyst's verdict.
+    Tells the user WHAT the signal is about, not just counts.
+    """
     if not signals:
-        return "No signals."
+        return "No signals from my sources in this run."
 
     bull_sigs = [s for s in signals if any(x in s.get("direction","").upper() for x in ["BUY","YES","BULLISH"])]
     bear_sigs = [s for s in signals if any(x in s.get("direction","").upper() for x in ["SELL","NO","BEARISH"])]
 
-    top_title = top.get("title", "")[:80] if top else ""
-    top_src   = top.get("source", "") if top else ""
+    # Extract the meaningful content from the top signal
+    top_title  = top.get("title", "")[:80] if top else ""
+    top_src    = top.get("source", "") if top else ""
+    top_etfs   = [t for t, _, _ in (top.get("etfs") or [])][:2] if top else []
+    top_urgency = top.get("urgency", "") if top else ""
+    etf_str    = ", ".join(top_etfs) if top_etfs else ""
 
+    # Build direction sentence
     if verdict == "BULLISH":
-        base = f"Seeing {len(bull_sigs)} bullish signal{'s' if len(bull_sigs)!=1 else ''} vs {len(bear_sigs)} bearish out of {count} total."
+        direction_str = f"{len(bull_sigs)} bullish signal{'s' if len(bull_sigs)!=1 else ''}"
+        if bear_sigs:
+            direction_str += f" vs {len(bear_sigs)} bearish"
     elif verdict == "BEARISH":
-        base = f"Seeing {len(bear_sigs)} bearish signal{'s' if len(bear_sigs)!=1 else ''} vs {len(bull_sigs)} bullish out of {count} total."
+        direction_str = f"{len(bear_sigs)} bearish signal{'s' if len(bear_sigs)!=1 else ''}"
+        if bull_sigs:
+            direction_str += f" vs {len(bull_sigs)} bullish"
     else:
-        base = f"Mixed signals — {len(bull_sigs)} bullish, {len(bear_sigs)} bearish, {count-len(bull_sigs)-len(bear_sigs)} neutral."
+        direction_str = f"mixed signals ({len(bull_sigs)} up, {len(bear_sigs)} down)"
 
-    if top_title:
-        base += f" Strongest: [{top_src}] {top_title}"
+    base = direction_str + "."
+
+    # Add meaningful content about what the signal is actually about
+    if top_title and top_src:
+        # Don't just quote the title — explain what it means
+        urgency_note = f" [{top_urgency} urgency]" if top_urgency == "HIGH" else ""
+        etf_note     = f" — watch {etf_str}" if etf_str else ""
+        base += f" Strongest signal: {top_src}: \"{top_title}\"{urgency_note}{etf_note}."
 
     return base
 
@@ -261,20 +278,72 @@ def _panel_vote(verdicts, all_alerts):
                 etf_votes[t] += v["weight"]
     top_etfs = [t for t, _ in sorted(etf_votes.items(), key=lambda x: -x[1])[:4]]
 
-    # Summary sentence
-    bull_names = [n for n, d, _ in voting if d == "BULLISH"]
-    bear_names = [n for n, d, _ in voting if d == "BEARISH"]
+    # Build panel summary — explicit: WHAT, WHY, ACTION, RISK
+    active_analysts  = [v for v in verdicts if v["verdict"] in ("BULLISH","BEARISH") and v["conviction"] >= MEDIUM_CONVICTION]
+    abstained        = [v["name"] for v in verdicts if v["verdict"] == "NEUTRAL" and v["signal_count"] == 0]
+    active_count     = len(active_analysts)
+    total_count      = len(verdicts)
 
-    if direction == "BULLISH":
-        summary = f"{len(bull_names)} analyst{'s' if len(bull_names)!=1 else ''} bullish: {', '.join(bull_names)}."
-        if bear_names:
-            summary += f" {len(bear_names)} bearish: {', '.join(bear_names)}."
-    elif direction == "BEARISH":
-        summary = f"{len(bear_names)} analyst{'s' if len(bear_names)!=1 else ''} bearish: {', '.join(bear_names)}."
-        if bull_names:
-            summary += f" {len(bull_names)} bullish: {', '.join(bull_names)}."
+    # Collect thesis signals from active analysts — the real content
+    thesis_signals = []
+    for v in verdicts:
+        if v["verdict"] == direction and v.get("top_signal"):
+            t     = v["top_signal"]
+            src   = t.get("source", "")
+            title = t.get("title", "")[:70]
+            if title:
+                thesis_signals.append(f"{src}: {title}")
+
+    # Sector focus from ETFs
+    etf_to_sector = {
+        "XLE": "energy", "IEO": "energy", "XOM": "energy", "CVX": "energy",
+        "ITA": "defense", "LMT": "defense", "RTX": "defense",
+        "GLD": "gold/safe-haven", "IGLN": "gold/safe-haven",
+        "QQQ": "tech", "SOXX": "semiconductors",
+        "TLT": "bonds/rates", "LIT": "critical minerals",
+        "COPX": "critical minerals", "IBIT": "crypto",
+        "SPY": "broad market", "EEM": "emerging markets",
+    }
+    sectors = list(dict.fromkeys(
+        etf_to_sector.get(e, e) for e in top_etfs if e in etf_to_sector
+    ))
+    sector_str   = " + ".join(sectors[:2]) if sectors else "mixed"
+    etf_str      = ", ".join(top_etfs[:3]) if top_etfs else "no specific ETF"
+    bull_names   = [n for n, d, _ in voting if d == "BULLISH"]
+    bear_names   = [n for n, d, _ in voting if d == "BEARISH"]
+
+    # Confidence correction: penalise low panel participation
+    active_voting = len(active_analysts)
+    if active_voting < 2:
+        confidence = min(confidence, 40)
+    elif active_voting < 3:
+        confidence = min(confidence, 65)
+
+    # Participation note
+    if abstained:
+        participation = f"{active_count}/{total_count} analysts active ({', '.join(abstained[:3])} had no data)."
     else:
-        summary = "Panel is split or has no strong conviction. No action recommended."
+        participation = f"{active_count}/{total_count} analysts active."
+
+    # Build structured summary
+    if direction == "BULLISH":
+        action_line = f"Action: BUY / accumulate {sector_str} exposure. Consider: {etf_str}."
+        who_line    = f"{len(bull_names)} analyst{'s' if len(bull_names)!=1 else ''} bullish: {', '.join(bull_names)}."
+    elif direction == "BEARISH":
+        action_line = f"Action: REDUCE / hedge {sector_str} exposure. Consider: {etf_str}."
+        who_line    = f"{len(bear_names)} analyst{'s' if len(bear_names)!=1 else ''} bearish: {', '.join(bear_names)}."
+    else:
+        action_line = "Action: WATCH. No clear direction — wait for confirmation."
+        who_line    = "No analyst has strong conviction."
+
+    why_line = ""
+    if thesis_signals:
+        why_line = "Driven by: " + " · ".join(thesis_signals[:2]) + "."
+
+    summary = f"{who_line} {action_line}"
+    if why_line:
+        summary += f" {why_line}"
+    summary += f" {participation}"
 
     return {
         "direction":    direction,
@@ -317,7 +386,8 @@ def format_panel_html(verdicts, panel_advice):
         f"<span style='font-family:monospace;font-size:11px;color:var(--muted);margin-left:auto;'>"
         f"{panel_advice['generated_be'][:16]}</span>"
         f"</div>"
-        f"<div style='font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.6;'>"
+        f"<div style='font-size:13px;color:var(--text);margin-bottom:10px;line-height:1.7;"
+        f"border-left:3px solid {ac};padding-left:10px;'>"
         f"{panel_advice['summary']}</div>"
         f"<div style='display:flex;align-items:center;gap:10px;margin-bottom:10px;'>"
         f"<div style='background:#e0e0d8;border-radius:2px;height:6px;flex:1;'>"
@@ -375,7 +445,7 @@ def format_panel_html(verdicts, panel_advice):
             f"<div style='background:{conv_c};height:3px;border-radius:2px;width:{conv_bar}%;'></div></div>"
             f"<span style='font-family:monospace;font-size:10px;color:{conv_c};'>{v['conviction_label']}</span>"
             f"</div>"
-            f"<div style='font-size:11px;color:var(--muted);line-height:1.5;margin-bottom:6px;'>{v['rationale'][:120]}</div>"
+            f"<div style='font-size:13px;color:var(--muted);margin-bottom:10px;line-height:1.6;'>{v['rationale']}</div>"
             f"{top_snippet}"
             f"<div style='margin-top:6px;'>{analyst_etfs}</div>"
             f"<div style='font-size:10px;color:var(--dim);font-family:monospace;margin-top:6px;'>"
