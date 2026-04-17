@@ -373,3 +373,142 @@ def get_platform_score(seen_data):
 def _update_platform_score(seen_data, checks):
     """Legacy: called by old main.py. Now a no-op — score updated inline."""
     pass
+
+
+# ── PAGE_BUILDER SHIMS ────────────────────────────────────────────────────────
+# page_builder.py expects these three functions with specific return formats.
+# They bridge the new position_book structure to the existing HTML renderer.
+
+def get_open_positions(seen_data):
+    """
+    Return open positions in the format page_builder expects:
+    list of dicts with current_pct, current_pnl, side, ticker, theme, etc.
+    """
+    book    = _get_book(seen_data)
+    pos_map = book["positions"]
+    market  = _market_is_open()
+    result  = []
+
+    for ticker, pos in pos_map.items():
+        if market:
+            price = get_price(ticker) or pos["avg_entry"]
+        else:
+            price = pos["avg_entry"]
+
+        if pos["side"] == "LONG":
+            pct = (price - pos["avg_entry"]) / pos["avg_entry"] * 100
+        else:
+            pct = (pos["avg_entry"] - price) / pos["avg_entry"] * 100
+        pnl = round(pos["invested_eur"] * pct / 100, 2)
+
+        # Age string
+        try:
+            open_dt   = datetime.fromisoformat(pos["open_date"].replace("Z","+00:00"))
+            hours_ago = (datetime.now(timezone.utc) - open_dt).total_seconds() / 3600
+            if hours_ago < 1:
+                age_str = f"{int(hours_ago*60)}m ago"
+            elif hours_ago < 48:
+                age_str = f"{int(hours_ago)}h ago"
+            else:
+                age_str = f"{int(hours_ago/24)}d ago"
+        except Exception:
+            age_str = ""
+
+        result.append({
+            # New keys
+            "ticker":        ticker,
+            "side":          "BUY" if pos["side"] == "LONG" else "SELL",
+            "avg_entry":     pos["avg_entry"],
+            "current_price": price,
+            "invested_eur":  pos["invested_eur"],
+            "pnl_pct":       round(pct, 2),
+            "pnl_eur":       pnl,
+            "themes":        pos.get("themes", []),
+            "confidence":    pos.get("confidence", 50),
+            # Legacy keys page_builder uses
+            "current_pct":   round(pct, 2),
+            "current_pnl":   pnl,
+            "theme":         (pos.get("themes") or [""])[0],
+            "entry_price":   pos["avg_entry"],
+            "stake_eur":     pos["invested_eur"],
+            "entry_be":      pos.get("open_be", ""),
+            "age":           age_str,
+            "check_4h":      pos.get("check_4h"),
+            "check_24h":     pos.get("check_24h"),
+        })
+
+    return result
+
+
+def get_closed_positions(seen_data, limit=10):
+    """Return last N closed positions in page_builder format."""
+    book   = _get_book(seen_data)
+    closed = book.get("closed", [])[-limit:]
+    result = []
+    for c in reversed(closed):
+        result.append({
+            # New keys
+            "ticker":       c["ticker"],
+            "side":         "BUY" if c["side"] == "LONG" else "SELL",
+            "avg_entry":    c["avg_entry"],
+            "close_price":  c["close_price"],
+            "pnl_eur":      c["pnl_eur"],
+            "pnl_pct":      c["pnl_pct"],
+            "themes":       c.get("themes", []),
+            "hold_hours":   c.get("hold_hours", 0),
+            # Legacy keys
+            "hit":          c["hit"],
+            "theme":        (c.get("themes") or [""])[0],
+            "final_pct":    c["pnl_pct"],
+            "final_pnl":    c["pnl_eur"],
+            "entry_price":  c["avg_entry"],
+            "stake_eur":    c["invested_eur"],
+            "closed_date":  c.get("close_be", c.get("close_date", "")),
+            "close_reason": c.get("close_reason", ""),
+        })
+    return result
+
+
+def get_platform_score(seen_data):
+    """
+    Return platform score in the format page_builder expects.
+    Legacy format used rolling_rate, rolling_hits, rolling_total etc.
+    """
+    book = _get_book(seen_data)
+    ps   = book["platform_score"]
+
+    rolling     = ps.get("rolling", [])
+    roll_hits   = sum(1 for r in rolling if r["hit"])
+    roll_total  = len(rolling)
+    roll_rate   = (roll_hits / roll_total) if roll_total > 0 else None
+
+    by_theme    = ps.get("by_theme", {})
+    best_theme  = None
+    best_rate   = 0.0
+    for theme, stats in by_theme.items():
+        h = stats.get("hits", 0)
+        m = stats.get("misses", 0)
+        if h + m > 0:
+            rate = h / (h + m)
+            if rate > best_rate:
+                best_rate  = rate
+                best_theme = theme
+
+    # Also expose new-style keys for future use
+    return {
+        # Legacy keys
+        "rolling_rate":       roll_rate,
+        "rolling_hits":       roll_hits,
+        "rolling_total":      roll_total,
+        "total_pnl":          ps.get("total_pnl", 0.0),
+        "best_theme":         best_theme,
+        "best_theme_rate":    best_rate,
+        "total_hits":         ps.get("total_hits", 0),
+        "total_misses":       ps.get("total_misses", 0),
+        # New keys
+        "by_window":          ps.get("by_window", {}),
+        "by_theme":           by_theme,
+        "cash":               book.get("cash", TOTAL_CAPITAL),
+        "invested":           sum(p["invested_eur"] for p in book["positions"].values()),
+        "realised_pnl":       book.get("realised_pnl", 0.0),
+    }
