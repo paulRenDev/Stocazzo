@@ -108,6 +108,18 @@ def open_position(advice_card, seen_data):
 
 
 # ── UPDATE POSITIONS ──────────────────────────────────────────────────────────
+def _market_is_open():
+    """Returns True if US markets are currently open (rough check)."""
+    now_utc = datetime.now(timezone.utc)
+    # Weekend
+    if now_utc.weekday() >= 5:
+        return False
+    # Market hours: 13:30–20:00 UTC (09:30–16:00 EST)
+    # Allow 30 min buffer each side for pre/after hours data
+    hour_utc = now_utc.hour + now_utc.minute / 60
+    return 13.0 <= hour_utc <= 20.5
+
+
 def update_positions(seen_data):
     """
     Checks all open positions against current prices.
@@ -117,6 +129,10 @@ def update_positions(seen_data):
     """
     positions = seen_data.get("portfolio", [])
     if not positions:
+        return []
+
+    if not _market_is_open():
+        print("  Portfolio: market closed — skipping price checks")
         return []
 
     now       = datetime.now(timezone.utc)
@@ -201,18 +217,8 @@ def update_positions(seen_data):
 # ── PLATFORM SCORE ────────────────────────────────────────────────────────────
 def _update_platform_score(seen_data, new_checks):
     """Maintains adaptive confidence score based on rolling hit rate."""
-    score = seen_data.setdefault("platform_score", {
-        "total_hits":   0,
-        "total_misses": 0,
-        "total_pnl":    0.0,
-        "by_window": {
-            "4h":  {"hits": 0, "misses": 0, "pnl": 0.0},
-            "24h": {"hits": 0, "misses": 0, "pnl": 0.0},
-            "5d":  {"hits": 0, "misses": 0, "pnl": 0.0},
-        },
-        "by_theme": {},
-        "rolling":  [],   # last ROLLING_WINDOW results for rolling hit rate
-    })
+    # Defensive init — merge missing keys in case schema evolved
+    score = _ensure_score(seen_data)
 
     for chk in new_checks:
         window  = chk.get("window", "5d")
@@ -257,12 +263,29 @@ def _update_platform_score(seen_data, new_checks):
             score["rolling"] = score["rolling"][-ROLLING_WINDOW:]
 
 
+def _ensure_score(seen_data):
+    """Ensure platform_score has all required keys — safe to call anywhere."""
+    defaults = {
+        "total_hits": 0, "total_misses": 0, "total_pnl": 0.0,
+        "by_window": {"4h": {"hits":0,"misses":0,"pnl":0.0},
+                      "24h":{"hits":0,"misses":0,"pnl":0.0},
+                      "5d": {"hits":0,"misses":0,"pnl":0.0}},
+        "by_theme": {}, "rolling": [],
+    }
+    score = seen_data.setdefault("platform_score", {})
+    for k, v in defaults.items():
+        score.setdefault(k, v)
+    for w in ["4h","24h","5d"]:
+        score["by_window"].setdefault(w, {"hits":0,"misses":0,"pnl":0.0})
+    return score
+
+
 def get_platform_score(seen_data):
     """
     Returns current platform performance metrics.
     Rolling hit rate = last ROLLING_WINDOW 5d results.
     """
-    score    = seen_data.get("platform_score", {})
+    score    = _ensure_score(seen_data)
     rolling  = score.get("rolling", [])
     total    = score.get("total_hits", 0) + score.get("total_misses", 0)
 
