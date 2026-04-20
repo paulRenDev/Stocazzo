@@ -489,7 +489,7 @@ def generate_live_html(seen_data, all_alerts, advice_cards=None, analyst_verdict
         alert_cards = (
             "<div style='text-align:center;color:var(--dim);font-family:var(--mono);font-size:12px;"
             "padding:2rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;'>"
-            "No new signals in this run — scanner active every 30 min</div>"
+            "No new signals in this run — scanner active every 12 min · 24/7</div>"
         )
 
     html = f"""<!DOCTYPE html>
