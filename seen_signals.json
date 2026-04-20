@@ -1,94 +1,121 @@
 {
   "ids": [
-    "7045bde3dbe3",
-    "b698fe4a17d2",
-    "fc1a21193f87",
-    "51045d443f94",
-    "17ba5e679fa6",
-    "e990de2f3299",
-    "74e38c979ed6",
-    "ecc0ec2d9067",
-    "b5af3579ee95",
-    "2763e2fd180a",
-    "889bec77b208",
-    "39a94e2128a3",
-    "45a67124f3bb",
-    "6cb05f24f18c",
-    "31843a5643ef",
-    "ca2188a90354",
-    "af68940ec1e0",
-    "318f368c76b5",
-    "312fe7511d0b",
-    "1ede72cc1fa0",
-    "acefd863227a",
-    "cfdcae65b396",
-    "7aeaaa602ba5",
-    "b0ec811419ad",
-    "a75e66a206d2",
-    "8a06a3214a28",
-    "060828854bf6",
-    "81c7d996ca75",
-    "3e9307dee462",
-    "734a420b9235",
-    "6268e160a599",
-    "045f55b844a4",
-    "67908201a79d",
-    "2bd8b6a7de86",
-    "7a2691723cce",
-    "ff9000f9e899",
-    "85c4730b886c",
-    "5f23b9a680d2",
-    "4115620504a4",
-    "23ab136875d6",
-    "3bb58e487f35",
-    "d56a5cdfbb96",
-    "e87b4da2717b",
-    "aabbc8a157d5",
-    "0eb7d59f6afd",
-    "40c4233b088c",
-    "943a2fc41358",
-    "8f9b844b1ff6",
-    "dfa924e4f13d",
-    "92ac1f18e228",
     "14812c35cbe0",
-    "36ac56b06e2b",
-    "2925e4685dcf",
-    "9b3073f18896",
-    "65485aaaed6b",
-    "63c86818a1fd",
-    "2e469813dd1c",
-    "1de84568c6f2",
-    "fe03774bbb0a",
-    "343d17b3e17a",
-    "28cc4ad9c612",
-    "500615d0f735",
-    "3bfcff9e1160",
-    "994fb09849c9",
-    "169ebe479f0f",
-    "624842d27583",
-    "47fd0f06b413",
-    "dd9d19a9c5a4",
-    "2fb60ff4a3bf",
-    "1678c8c092e0",
-    "a6ab397cf266",
     "b421c50e856a",
-    "50ff7c2d8ffe",
-    "eff4ba5df193",
     "1d6b86fe014c",
-    "f4e705fed31d",
-    "1431412201ef",
-    "7013b47db36c",
-    "9d7f440c781e",
-    "e5a2151f14c5",
-    "f1288e8da16d",
-    "0d4041a7fae2",
+    "eff4ba5df193",
+    "74e38c979ed6",
+    "23ab136875d6",
+    "2ae5e11a0d48",
+    "b698fe4a17d2",
+    "17ba5e679fa6",
+    "28cc4ad9c612",
     "7b1420f5d653",
+    "50ff7c2d8ffe",
+    "a4c90bf5261d",
+    "d56a5cdfbb96",
+    "0eb7d59f6afd",
+    "fe03774bbb0a",
+    "7013b47db36c",
+    "cfdcae65b396",
+    "9d7f440c781e",
+    "ff9000f9e899",
+    "943a2fc41358",
+    "0d4041a7fae2",
+    "045f55b844a4",
+    "65485aaaed6b",
+    "1678c8c092e0",
+    "83790aaeee8f",
+    "aabbc8a157d5",
+    "40c4233b088c",
+    "994fb09849c9",
+    "711e86e945ab",
+    "624842d27583",
+    "e87b4da2717b",
+    "2bd8b6a7de86",
+    "ca2188a90354",
+    "a75e66a206d2",
+    "556f276c2cb7",
+    "e990de2f3299",
+    "a6ab397cf266",
+    "acefd863227a",
+    "7045bde3dbe3",
+    "fc1a21193f87",
+    "47b320b8e362",
+    "67908201a79d",
+    "1de84568c6f2",
+    "343d17b3e17a",
+    "7aeaaa602ba5",
+    "2fb60ff4a3bf",
+    "e5a2151f14c5",
+    "5f23b9a680d2",
+    "734a420b9235",
+    "f1288e8da16d",
+    "312fe7511d0b",
+    "209003425473",
+    "31a210b9e499",
+    "46bb0ca0fde5",
+    "1016c48d066c",
+    "9e539a681c0a",
+    "f4e705fed31d",
+    "8f9b844b1ff6",
+    "81c7d996ca75",
+    "500615d0f735",
+    "47fd0f06b413",
+    "3bfcff9e1160",
+    "92ac1f18e228",
+    "a0b3b1f93467",
+    "63c86818a1fd",
+    "830fe33f7920",
+    "51045d443f94",
+    "4115620504a4",
+    "85c4730b886c",
+    "9b3073f18896",
+    "ecc0ec2d9067",
+    "45a67124f3bb",
+    "07c82ac17438",
+    "39a94e2128a3",
+    "f3dabdf7fcdc",
+    "2e469813dd1c",
+    "36ac56b06e2b",
+    "3e9307dee462",
+    "30de0d34d3d8",
+    "b2e74d6ff27c",
+    "8a06a3214a28",
+    "1ede72cc1fa0",
+    "6268e160a599",
     "b83922ad5cd6",
+    "2763e2fd180a",
     "ec40e3cfacb3",
+    "de373710bd9b",
+    "31843a5643ef",
+    "1431412201ef",
+    "169ebe479f0f",
+    "dfa924e4f13d",
+    "2bf37231db1f",
+    "889bec77b208",
+    "7a2691723cce",
+    "f68ef795b10a",
+    "6cb05f24f18c",
+    "95875c5a02da",
+    "318f368c76b5",
+    "49ecd59bb8e6",
     "9c5e7c4556c7",
-    "556f276c2cb7"
+    "b0ec811419ad",
+    "b5af3579ee95",
+    "060828854bf6",
+    "3bb58e487f35",
+    "2925e4685dcf",
+    "af68940ec1e0",
+    "dd9d19a9c5a4"
   ],
-  "stats": {},
+  "stats": {
+    "Polymarket": {
+      "hits": 0,
+      "misses": 1,
+      "pending": 0
+    }
+  },
   "pending_checks": [
     {
       "uid": "7b1420f5d653",
@@ -424,15 +451,6 @@
       "title": "Israel-Lebanon ceasefire takes effect"
     },
     {
-      "uid": "17ba5e679fa6",
-      "source": "Polymarket",
-      "ticker": "XLE",
-      "direction": "NO (92%)",
-      "date": "2026-04-17T18:13:41.956323+00:00",
-      "price_at_signal": 54.86,
-      "title": "Will the Edmonton Oilers win the 2026 NHL Stanley Cup?"
-    },
-    {
       "uid": "b5af3579ee95",
       "source": "Truth Social",
       "ticker": "XLE",
@@ -512,6 +530,105 @@
       "date": "2026-04-17T19:55:03.988534+00:00",
       "price_at_signal": 648.19,
       "title": "Trump: \"trump effect: apple expands american manufacturing program with 4 partne"
+    },
+    {
+      "uid": "f3dabdf7fcdc",
+      "source": "Dark Pool",
+      "ticker": "NVDA",
+      "direction": "ACCUMULATION",
+      "date": "2026-04-20T07:24:48.090713+00:00",
+      "price_at_signal": 201.68,
+      "title": "Dark pool: SPY, QQQ, IWM, NVDA, HYG"
+    },
+    {
+      "uid": "b2e74d6ff27c",
+      "source": "Lobbying",
+      "ticker": "LMT",
+      "direction": "WATCH",
+      "date": "2026-04-20T07:24:48.192836+00:00",
+      "price_at_signal": 592.19,
+      "title": "LMT lobbying: $4,230,000 in last 90 days"
+    },
+    {
+      "uid": "07c82ac17438",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "BEARISH",
+      "date": "2026-04-20T07:24:48.301307+00:00",
+      "price_at_signal": 231.94,
+      "title": "Trump: \"ruddy: trump already won the war with 9 victories: https://www.newsmax.c"
+    },
+    {
+      "uid": "49ecd59bb8e6",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-20T07:24:48.402332+00:00",
+      "price_at_signal": 55.02,
+      "title": "Trump: \"mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mcla"
+    },
+    {
+      "uid": "1016c48d066c",
+      "source": "Truth Social",
+      "ticker": "IWDA",
+      "direction": "BEARISH",
+      "date": "2026-04-20T07:24:48.627498+00:00",
+      "price_at_signal": 0,
+      "title": "Trump: \"tariffs are a discipline, not a press release: https://www.wsj.com/opini"
+    },
+    {
+      "uid": "a0b3b1f93467",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "BEARISH",
+      "date": "2026-04-20T07:24:48.734851+00:00",
+      "price_at_signal": 231.94,
+      "title": "Trump: \"today, an iranian-flagged cargo ship named touska, nearly 900 feet long "
+    },
+    {
+      "uid": "47b320b8e362",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-20T07:24:48.831280+00:00",
+      "price_at_signal": 55.02,
+      "title": "Trump: \"mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mcla"
+    },
+    {
+      "uid": "9e539a681c0a",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-20T07:24:48.928134+00:00",
+      "price_at_signal": 0,
+      "title": "Trump: \"trump, iran and the bottom line for american interests: https://www.real"
+    },
+    {
+      "uid": "f68ef795b10a",
+      "source": "Truth Social",
+      "ticker": "IWDA",
+      "direction": "BULLISH",
+      "date": "2026-04-20T07:24:49.029586+00:00",
+      "price_at_signal": 0,
+      "title": "Trump: \"iran decided to fire bullets yesterday in the strait of hormuz \u2014 a total"
+    },
+    {
+      "uid": "a4c90bf5261d",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "WATCH",
+      "date": "2026-04-20T07:24:49.122916+00:00",
+      "price_at_signal": 0,
+      "title": "Trump: \"has anybody looked at how badly the country of spain is doing. their fin"
+    },
+    {
+      "uid": "31a210b9e499",
+      "source": "Macro RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-20T07:24:49.223904+00:00",
+      "price_at_signal": 0,
+      "title": "US navy seizes Iranian ship after it breaches blockade"
     }
   ],
   "history": [
@@ -3214,11 +3331,11 @@
         "hit_rate": "80% (historical baseline)",
         "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail"
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": 0.3,
+      "verified_date": "20/04/2026 07:24 UTC",
+      "price_entry": 54.86,
+      "price_now": 55.02
     },
     {
       "uid": "b5af3579ee95",
@@ -3636,6 +3753,793 @@
         "source_weight": 4,
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "0a6d94022bcf",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "CONVERGENCE",
+      "type": "3 sources \u00b7 score 17",
+      "direction": "BUY",
+      "title": "[3x CONVERGENCE] ITA \u2014 BUY",
+      "detail": "Score: 17pts across 3 independent sources: Lobbying, Truth Social, Macro RSS",
+      "urgency": "HIGH",
+      "keywords": "ITA",
+      "etfs": [
+        [
+          "LMT",
+          "Lockheed Martin",
+          "NYSE"
+        ],
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "1/3 sources bullish on ITA",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Lobbying",
+            "direction": "WATCH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=50%x2 = 4pts",
+            "signal": "LMT lobbying: $4,230,000 in last 90 days"
+          },
+          {
+            "source": "Truth Social",
+            "direction": "BEARISH",
+            "urgency": "MEDIUM",
+            "points": 8,
+            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
+            "signal": "Trump: \"ruddy: trump already won the war with 9 victories: h"
+          },
+          {
+            "source": "Macro RSS",
+            "direction": "BULLISH",
+            "urgency": "MEDIUM",
+            "points": 5,
+            "reasoning": "weight=2 + urgency=2 + hit_rate=50%x2 = 5pts",
+            "signal": "US navy seizes Iranian ship after it breaches blockade"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "f3dabdf7fcdc",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Dark Pool",
+      "type": "Institutional Flow",
+      "direction": "ACCUMULATION",
+      "title": "Dark pool: SPY, QQQ, IWM, NVDA, HYG",
+      "detail": "Institutional dark pool activity. Total volume: 9.42B. Broad market = possible accumulation before announcement.",
+      "urgency": "MEDIUM",
+      "keywords": "SPY, QQQ, IWM, NVDA, HYG, LQD",
+      "etfs": [
+        [
+          "NVDA",
+          "NVIDIA Corporation",
+          "NASDAQ"
+        ],
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "TSLA",
+          "Tesla Inc",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://www.whalestream.com/market-data/top-dark-pool-flow",
+      "confidence": 60,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Broad market tickers (SPY, QQQ, IWM) in dark pool = institutions buying ahead of announcement",
+        "signal_type": "Dark pool = trades hidden from public order books, typically institutional",
+        "confidence": 60,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "No directional info \u2014 dark pools can be buy OR sell. Needs confirmation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "209003425473",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider",
+      "direction": "SELL",
+      "title": "Parekh Kevan \u2014 SELL 5,111 shares of AAPL",
+      "detail": "AAPL insider SELL. Shares changed: -5,111 | Total held: 15,331 | Filed: 2026-04-17",
+      "urgency": "LOW",
+      "keywords": "AAPL, insider, sell",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-insider-transactions/AAPL",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Parekh Kevan filed SELL of 5,111 AAPL shares.  ",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 35,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "95875c5a02da",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider",
+      "direction": "SELL",
+      "title": "Parekh Kevan \u2014 SELL 5,817 shares of AAPL",
+      "detail": "AAPL insider SELL. Shares changed: -5,817 | Total held: 5,816 | Filed: 2026-04-17",
+      "urgency": "LOW",
+      "keywords": "AAPL, insider, sell",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-insider-transactions/AAPL",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Parekh Kevan filed SELL of 5,817 AAPL shares.  ",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 35,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "30de0d34d3d8",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider",
+      "direction": "BUY",
+      "title": "Parekh Kevan \u2014 BUY 10,928 shares of AAPL",
+      "detail": "AAPL insider BUY. Shares changed: +10,928 | Total held: 19,693 | Filed: 2026-04-17",
+      "urgency": "LOW",
+      "keywords": "AAPL, insider, buy",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-insider-transactions/AAPL",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Parekh Kevan filed BUY of 10,928 AAPL shares.  ",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 35,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "2ae5e11a0d48",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider",
+      "direction": "SELL",
+      "title": "Papermaster Mark D \u2014 SELL 27,109 shares of AMD",
+      "detail": "AMD insider SELL. Shares changed: -27,109 | Total held: 1,267,357 | Filed: 2026-04-17",
+      "urgency": "LOW",
+      "keywords": "AMD, insider, sell",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-insider-transactions/AMD",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Papermaster Mark D filed SELL of 27,109 AMD shares.  ",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 35,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "83790aaeee8f",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider",
+      "direction": "SELL",
+      "title": "Papermaster Mark D \u2014 SELL 6,000 shares of AMD",
+      "detail": "AMD insider SELL. Shares changed: -6,000 | Total held: 25,369 | Filed: 2026-04-17",
+      "urgency": "LOW",
+      "keywords": "AMD, insider, sell",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-insider-transactions/AMD",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Papermaster Mark D filed SELL of 6,000 AMD shares.  ",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 35,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "2bf37231db1f",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider",
+      "direction": "BUY",
+      "title": "Papermaster Mark D \u2014 BUY 6,000 shares of AMD",
+      "detail": "AMD insider BUY. Shares changed: +6,000 | Total held: 1,300,466 | Filed: 2026-04-17",
+      "urgency": "LOW",
+      "keywords": "AMD, insider, buy",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-insider-transactions/AMD",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Papermaster Mark D filed BUY of 6,000 AMD shares.  ",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 35,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b2e74d6ff27c",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Lobbying",
+      "type": "Senate/House \u00b7 LMT",
+      "direction": "WATCH",
+      "title": "LMT lobbying: $4,230,000 in last 90 days",
+      "detail": "8 lobbying filings. Latest: Defense and aerospace technology company. Period: Q4",
+      "urgency": "LOW",
+      "keywords": "LMT, lobbying, regulation",
+      "etfs": [
+        [
+          "LMT",
+          "Lockheed Martin",
+          "NYSE"
+        ],
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finnhub.io/stock-lobbying/LMT",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "LMT spent $4,230,000 lobbying in 90 days \u2014 8 filings. Large lobbying spend precedes regulatory changes or contract wins.",
+        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
+        "confidence": 35,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "711e86e945ab",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Lobbying",
+      "type": "Senate/House \u00b7 MSFT",
+      "direction": "WATCH",
+      "title": "MSFT lobbying: $3,212,500 in last 90 days",
+      "detail": "13 lobbying filings. Latest: Platform that enables professional networking & development, hiring, marketing & learning.. Period: Q4",
+      "urgency": "LOW",
+      "keywords": "MSFT, lobbying, regulation",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-lobbying/MSFT",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "MSFT spent $3,212,500 lobbying in 90 days \u2014 13 filings. Large lobbying spend precedes regulatory changes or contract wins.",
+        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
+        "confidence": 35,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "de373710bd9b",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Lobbying",
+      "type": "Senate/House \u00b7 XOM",
+      "direction": "WATCH",
+      "title": "XOM lobbying: $2,050,000 in last 90 days",
+      "detail": "4 lobbying filings. Latest: Oil and Gas Company.. Period: Q4",
+      "urgency": "LOW",
+      "keywords": "XOM, lobbying, regulation",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-lobbying/XOM",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "XOM spent $2,050,000 lobbying in 90 days \u2014 4 filings. Large lobbying spend precedes regulatory changes or contract wins.",
+        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
+        "confidence": 35,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "07c82ac17438",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 4h 29m ago",
+      "direction": "BEARISH",
+      "title": "Trump: \"ruddy: trump already won the war with 9 victories: https://www.newsmax.com/ruddy\"",
+      "detail": "ruddy: trump already won the war with 9 victories: https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/ | Posted: 4h 29m ago | Keywords: iran, war",
+      "urgency": "MEDIUM",
+      "keywords": "iran, war",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116434776225677515",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 4h 29m ago. Matched: iran, war",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "49ecd59bb8e6",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 4h 30m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mclaughlin/m\"",
+      "detail": "mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/ | Posted: 4h 30m ago | Keywords: iran",
+      "urgency": "MEDIUM",
+      "keywords": "iran",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116434773211303526",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 4h 30m ago. Matched: iran",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1016c48d066c",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 11h 52m ago",
+      "direction": "BEARISH",
+      "title": "Trump: \"tariffs are a discipline, not a press release: https://www.wsj.com/opinion/tarif\"",
+      "detail": "tariffs are a discipline, not a press release: https://www.wsj.com/opinion/tariffs-are-a-discipline-not-a-press-release-4022e09e | Posted: 11h 52m ago | Keywords: tariff",
+      "urgency": "MEDIUM",
+      "keywords": "tariff",
+      "etfs": [
+        [
+          "IWDA",
+          "iShares Core MSCI World UCITS ETF",
+          "AMS"
+        ],
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116433033991904343",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 11h 52m ago. Matched: tariff",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "a0b3b1f93467",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 12h 1m ago",
+      "direction": "BEARISH",
+      "title": "Trump: \"today, an iranian-flagged cargo ship named touska, nearly 900 feet long and weig\"",
+      "detail": "today, an iranian-flagged cargo ship named touska, nearly 900 feet long and weighing almost as much as an aircraft carrier, tried to get past our naval blockade, and it did not go well for them. the u",
+      "urgency": "MEDIUM",
+      "keywords": "sanctions, iran, war, sanction",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116433000897070863",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 12h 1m ago. Matched: sanctions, iran, war",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "47b320b8e362",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 12h 37m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mclaughlin/m\"",
+      "detail": "mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/ | Posted: 12h 37m ago | Keywords: iran",
+      "urgency": "MEDIUM",
+      "keywords": "iran",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116432860421226752",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 12h 37m ago. Matched: iran",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "9e539a681c0a",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 12h 37m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"trump, iran and the bottom line for american interests: https://www.realclearpol\"",
+      "detail": "trump, iran and the bottom line for american interests: https://www.realclearpolitics.com/articles/2026/04/17/trump_iran_and_the_bottom_line_for_american_interests.html | Posted: 12h 37m ago | Keyword",
+      "urgency": "MEDIUM",
+      "keywords": "iran",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116432859604499088",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 12h 37m ago. Matched: iran",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "f68ef795b10a",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 19h 14m ago",
+      "direction": "BULLISH",
+      "title": "Trump: \"iran decided to fire bullets yesterday in the strait of hormuz \u2014 a total violati\"",
+      "detail": "iran decided to fire bullets yesterday in the strait of hormuz \u2014 a total violation of our ceasefire agreement! many of them were aimed at a french ship, and a freighter from the united kingdom. that w",
+      "urgency": "HIGH",
+      "keywords": "ceasefire",
+      "etfs": [
+        [
+          "IWDA",
+          "iShares Core MSCI World UCITS ETF",
+          "AMS"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116431297579272777",
+      "confidence": 85,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 19h 14m ago. Matched: ceasefire",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 85,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "830fe33f7920",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 30h 17m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"whether people like israel or not, they have proven to be a great ally of the un\"",
+      "detail": "whether people like israel or not, they have proven to be a great ally of the united states of america. they are courageous, bold, loyal, and smart and, unlike others that have shown their true colors",
+      "urgency": "LOW",
+      "keywords": "america",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116428690626427742",
+      "confidence": 35,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 30h 17m ago. Matched: america",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 35,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "a4c90bf5261d",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 43h 9m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"has anybody looked at how badly the country of spain is doing. their financial n\"",
+      "detail": "has anybody looked at how badly the country of spain is doing. their financial numbers, despite contributing almost nothing to nato and their military defense, are absolutely horrendous. sad to watch!",
+      "urgency": "MEDIUM",
+      "keywords": "nato, defense, military",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116425653087220924",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 43h 9m ago. Matched: nato, defense, military",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "31a210b9e499",
+      "date": "20/04/2026 07:24 UTC",
+      "date_be": "20/04/2026 09:24 CEST",
+      "source": "Macro RSS",
+      "type": "Financial Times \u00b7 energy, defense",
+      "direction": "BULLISH",
+      "title": "US navy seizes Iranian ship after it breaches blockade",
+      "detail": "Oil price jumps as Washington and Tehran give conflicting accounts of whether new peace talks are set to begin",
+      "urgency": "MEDIUM",
+      "keywords": "energy, defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.ft.com/content/0e51cdea-99df-4913-8c71-03396c4a6faf",
+      "confidence": 40,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Financial Times reports on energy, defense. 1 bullish / 0 bearish signals in text.",
+        "signal_type": "News RSS \u2014 Financial Times. Macro context signal.",
+        "confidence": 40,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "News follows events \u2014 not predictive. Use to confirm crony signals or set macro context."
       },
       "verified": null,
       "pct_change": null,
@@ -4407,14 +5311,18 @@
       "date": "2026-04-17T06:39:30.834833+00:00",
       "price_at_signal": 701.66,
       "check_4h": "2026-04-17T11:51:21.090693+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:31.914902+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.0,
         "hit": false,
         "price": 701.66
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.21,
+        "hit": false,
+        "price": 710.14
+      },
       "result_5d": null
     },
     {
@@ -4434,14 +5342,18 @@
       "date": "2026-04-17T06:39:31.168198+00:00",
       "price_at_signal": 229.03,
       "check_4h": "2026-04-17T11:51:21.239337+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:32.125622+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.0,
         "hit": false,
         "price": 229.03
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.27,
+        "hit": false,
+        "price": 231.94
+      },
       "result_5d": null
     },
     {
@@ -4461,14 +5373,18 @@
       "date": "2026-04-17T06:39:31.361898+00:00",
       "price_at_signal": 640.47,
       "check_4h": "2026-04-17T11:51:21.371036+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:32.229059+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.0,
         "hit": false,
         "price": 640.47
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.31,
+        "hit": false,
+        "price": 648.85
+      },
       "result_5d": null
     },
     {
@@ -4487,14 +5403,18 @@
       "date": "2026-04-17T06:39:31.552276+00:00",
       "price_at_signal": 701.66,
       "check_4h": "2026-04-17T11:51:21.499902+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:32.346436+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.0,
         "hit": false,
         "price": 701.66
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.21,
+        "hit": false,
+        "price": 710.14
+      },
       "result_5d": null
     },
     {
@@ -4512,14 +5432,18 @@
       "date": "2026-04-17T06:39:31.747780+00:00",
       "price_at_signal": 440.08,
       "check_4h": "2026-04-17T11:51:21.638525+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:32.478661+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.0,
         "hit": false,
         "price": 440.08
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 1.33,
+        "hit": false,
+        "price": 445.93
+      },
       "result_5d": null
     },
     {
@@ -4558,14 +5482,18 @@
       "date": "2026-04-17T18:13:34.072010+00:00",
       "price_at_signal": 446.56,
       "check_4h": "2026-04-17T22:37:01.030537+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:32.802221+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.14,
         "hit": false,
         "price": 445.93
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.14,
+        "hit": false,
+        "price": 445.93
+      },
       "result_5d": null
     },
     {
@@ -4584,14 +5512,18 @@
       "date": "2026-04-17T18:13:34.301456+00:00",
       "price_at_signal": 54.9,
       "check_4h": "2026-04-17T22:37:01.144836+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:32.926677+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.22,
         "hit": false,
         "price": 55.02
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 0.22,
+        "hit": false,
+        "price": 55.02
+      },
       "result_5d": null
     },
     {
@@ -4608,14 +5540,18 @@
       "date": "2026-04-17T18:13:34.519676+00:00",
       "price_at_signal": 86.99,
       "check_4h": "2026-04-17T22:37:01.278285+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:33.022138+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.09,
         "hit": null,
         "price": 87.07
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 0.09,
+        "hit": null,
+        "price": 87.07
+      },
       "result_5d": null
     },
     {
@@ -4632,14 +5568,18 @@
       "date": "2026-04-17T18:13:34.737644+00:00",
       "price_at_signal": 647.6,
       "check_4h": "2026-04-17T22:37:01.407448+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:33.153479+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.19,
         "hit": null,
         "price": 648.85
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 0.19,
+        "hit": null,
+        "price": 648.85
+      },
       "result_5d": null
     },
     {
@@ -4656,14 +5596,18 @@
       "date": "2026-04-17T18:13:34.960176+00:00",
       "price_at_signal": 446.59,
       "check_4h": "2026-04-17T22:37:01.556973+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:33.263751+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.15,
         "hit": null,
         "price": 445.93
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.15,
+        "hit": null,
+        "price": 445.93
+      },
       "result_5d": null
     },
     {
@@ -4680,14 +5624,18 @@
       "date": "2026-04-17T18:13:35.186072+00:00",
       "price_at_signal": 233.11,
       "check_4h": "2026-04-17T22:37:01.806721+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-20T07:24:33.360782+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.5,
         "hit": null,
         "price": 231.94
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.5,
+        "hit": null,
+        "price": 231.94
+      },
       "result_5d": null
     },
     {
@@ -4703,11 +5651,19 @@
       ],
       "date": "2026-04-17T19:33:31.525048+00:00",
       "price_at_signal": 709.52,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-20T07:24:33.466863+00:00",
+      "check_24h": "2026-04-20T07:24:33.466889+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": 0.09,
+        "hit": false,
+        "price": 710.14
+      },
+      "result_24h": {
+        "pct": 0.09,
+        "hit": false,
+        "price": 710.14
+      },
       "result_5d": null
     },
     {
@@ -4723,11 +5679,19 @@
       ],
       "date": "2026-04-17T19:33:31.686052+00:00",
       "price_at_signal": 647.76,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-20T07:24:33.606626+00:00",
+      "check_24h": "2026-04-20T07:24:33.606652+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": 0.17,
+        "hit": false,
+        "price": 648.85
+      },
+      "result_24h": {
+        "pct": 0.17,
+        "hit": false,
+        "price": 648.85
+      },
       "result_5d": null
     },
     {
@@ -4743,11 +5707,19 @@
       ],
       "date": "2026-04-17T19:33:31.796472+00:00",
       "price_at_signal": 709.52,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-20T07:24:33.752503+00:00",
+      "check_24h": "2026-04-20T07:24:33.752530+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": 0.09,
+        "hit": false,
+        "price": 710.14
+      },
+      "result_24h": {
+        "pct": 0.09,
+        "hit": false,
+        "price": 710.14
+      },
       "result_5d": null
     },
     {
@@ -4763,11 +5735,19 @@
       ],
       "date": "2026-04-17T19:55:02.745828+00:00",
       "price_at_signal": 231.91,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-20T07:24:33.867027+00:00",
+      "check_24h": "2026-04-20T07:24:33.867051+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": 0.01,
+        "hit": null,
+        "price": 231.94
+      },
+      "result_24h": {
+        "pct": 0.01,
+        "hit": null,
+        "price": 231.94
+      },
       "result_5d": null
     },
     {
@@ -4783,6 +5763,148 @@
       ],
       "date": "2026-04-17T19:55:03.023422+00:00",
       "price_at_signal": 445.96,
+      "check_4h": "2026-04-20T07:24:34.001273+00:00",
+      "check_24h": "2026-04-20T07:24:34.001300+00:00",
+      "check_5d": null,
+      "result_4h": {
+        "pct": -0.01,
+        "hit": null,
+        "price": 445.93
+      },
+      "result_24h": {
+        "pct": -0.01,
+        "hit": null,
+        "price": 445.93
+      },
+      "result_5d": null
+    },
+    {
+      "uid": "b4002edc2cdd",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 51,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Dark Pool",
+        "SEC EDGAR",
+        "Truth Social",
+        "Macro RSS"
+      ],
+      "date": "2026-04-20T07:24:47.511973+00:00",
+      "price_at_signal": 710.14,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "4d7945eac019",
+      "theme": "defense",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "ITA",
+      "score": 37,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Lobbying",
+        "Truth Social",
+        "Macro RSS"
+      ],
+      "date": "2026-04-20T07:24:47.618289+00:00",
+      "price_at_signal": 231.94,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "5f4bd2829c80",
+      "theme": "macro",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "SPY",
+      "score": 21,
+      "confidence": 90,
+      "sources": [
+        "Dark Pool",
+        "Lobbying",
+        "Truth Social"
+      ],
+      "date": "2026-04-20T07:24:47.711084+00:00",
+      "price_at_signal": 710.14,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "47506509dd77",
+      "theme": "tech",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "QQQ",
+      "score": 21,
+      "confidence": 90,
+      "sources": [
+        "Dark Pool",
+        "Lobbying",
+        "Truth Social"
+      ],
+      "date": "2026-04-20T07:24:47.805547+00:00",
+      "price_at_signal": 648.85,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "0b2d1778747c",
+      "theme": "energy",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "XLE",
+      "score": 18,
+      "confidence": 90,
+      "sources": [
+        "Lobbying",
+        "Truth Social",
+        "Macro RSS"
+      ],
+      "date": "2026-04-20T07:24:47.903757+00:00",
+      "price_at_signal": 55.02,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "d8744ab5ed2a",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 15,
+      "confidence": 90,
+      "sources": [
+        "SEC EDGAR",
+        "Truth Social"
+      ],
+      "date": "2026-04-20T07:24:48.000095+00:00",
+      "price_at_signal": 445.93,
       "check_4h": null,
       "check_24h": null,
       "check_5d": null,
@@ -4793,17 +5915,17 @@
   ],
   "platform_score": {
     "hits": 1,
-    "misses": 38,
-    "watches": 22,
+    "misses": 51,
+    "watches": 30,
     "by_window": {
       "4h": {
         "hits": 1,
-        "misses": 40,
+        "misses": 43,
         "pnl": 41.42999999999999
       },
       "24h": {
         "hits": 2,
-        "misses": 23,
+        "misses": 33,
         "pnl": 54.239999999999995
       },
       "5d": {
@@ -4815,31 +5937,31 @@
     "by_theme": {
       "risk_off": {
         "hits": 0,
-        "misses": 12,
+        "misses": 14,
         "pnl": -61.57
       },
       "defense": {
         "hits": 0,
-        "misses": 13,
+        "misses": 14,
         "pnl": -0.23000000000000043
       },
       "tech": {
         "hits": 0,
-        "misses": 12,
+        "misses": 15,
         "pnl": 16.32
       },
       "macro": {
         "hits": 0,
-        "misses": 6,
+        "misses": 9,
         "pnl": 35.75
       },
       "energy": {
         "hits": 0,
-        "misses": 1
+        "misses": 2
       },
       "risk_on": {
         "hits": 0,
-        "misses": 12,
+        "misses": 15,
         "pnl": 61.71
       },
       "crypto": {
@@ -5509,7 +6631,7 @@
     }
   ],
   "position_book": {
-    "cash": 98000.0,
+    "cash": 96000.0,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -5543,6 +6665,42 @@
         ],
         "themes": [
           "1 analyst bullish: The Insider. Consider"
+        ],
+        "confidence": 40,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "ITA": {
+        "side": "LONG",
+        "ticker": "ITA",
+        "shares": 4.31146,
+        "avg_entry": 231.94,
+        "invested_eur": 1000.0,
+        "open_date": "2026-04-20T07:24:47.299083+00:00",
+        "open_be": "20/04/2026 09:24 CEST",
+        "signals": [
+          "panel-ITA-20/04/2026"
+        ],
+        "themes": [
+          "1 analyst bullish: The Macro Man. Consid"
+        ],
+        "confidence": 40,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "XAR": {
+        "side": "LONG",
+        "ticker": "XAR",
+        "shares": 3.618207,
+        "avg_entry": 276.38,
+        "invested_eur": 1000.0,
+        "open_date": "2026-04-20T07:24:47.410453+00:00",
+        "open_be": "20/04/2026 09:24 CEST",
+        "signals": [
+          "panel-XAR-20/04/2026"
+        ],
+        "themes": [
+          "1 analyst bullish: The Macro Man. Consid"
         ],
         "confidence": 40,
         "check_4h": null,
