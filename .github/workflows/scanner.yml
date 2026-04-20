@@ -44,6 +44,8 @@ jobs:
           cp history.html dist/
           cp sources.html dist/
           cp index.html dist/
+          # Keep-alive: update timestamp so GitHub doesn't pause scheduled workflows
+          echo "$(date -u +%Y-%m-%dT%H:%M:%SZ)" > dist/.last_run
 
       - name: Deploy HTML to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
