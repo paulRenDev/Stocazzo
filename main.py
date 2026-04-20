@@ -1,33 +1,37 @@
 """
-main.py — Stocazzo v7.1
+main.py — Stocazzo v7.2
 Orchestrator. Calls everything, does nothing else itself.
 v7.1: Stock enrichment — yfinance technical context passed to analyst panel.
+v7.2: New scanners — Capitol Trades, OpenInsider, Benzinga RSS.
+      Dropped: scan_congress (403), scan_pelosi (broken), scan_dark_pool (blocked),
+               scan_unusual_whales (blocked from cloud IPs).
 """
 from helpers import now_utc
 from state import load_seen, add_to_history, commit_seen
 from scoring import run_backcheck, queue_for_backcheck, update_history_backcheck
 
 # Crony scanners
-from scanners.polymarket import scan_polymarket
-from scanners.kalshi     import scan_kalshi
-from scanners.congress   import scan_congress, scan_pelosi
-from scanners.darkpool   import scan_dark_pool
-from scanners.options    import scan_unusual_whales
-from scanners.social     import scan_reddit
-from scanners.edgar      import scan_edgar
+from scanners.polymarket  import scan_polymarket
+from scanners.kalshi      import scan_kalshi
+from scanners.edgar       import scan_edgar
 from scanners.truthsocial import scan_truthsocial
+from scanners.social      import scan_reddit
+
+# New reliable scanners (v7.2)
+from scanners.capitol_trades_and_openinsider import scan_capitol_trades, scan_openinsider
+from scanners.benzinga_rss                   import scan_benzinga
 
 # Macro scanners
-from scanners.macro      import scan_macro
+from scanners.macro import scan_macro
 
-# Stock enrichment
+# Stock enrichment (v7.1)
 from scanners.stock_analyzer import enrich_with_stock_data
 
 # Core engines
-from convergence         import build_convergence
-from output.advice       import build_advice, log_advice_for_scoring, run_advice_backcheck
-from output.analysts     import build_analyst_panel
-from portfolio           import open_position, update_positions
+from convergence     import build_convergence
+from output.advice   import build_advice, log_advice_for_scoring, run_advice_backcheck
+from output.analysts import build_analyst_panel
+from portfolio       import open_position, update_positions
 
 # Output
 from output.page_builder import generate_live_html, generate_history_html, generate_index_html, generate_sources_html
@@ -35,7 +39,7 @@ from output.mail_builder import send_email
 
 
 def main():
-    print(f"=== Stocazzo v7.1 started: {now_utc()} ===")
+    print(f"=== Stocazzo v7.2 started: {now_utc()} ===")
 
     seen_data = load_seen()
     print(f"Previously seen: {len(seen_data.get('ids', []))} items | "
@@ -58,18 +62,17 @@ def main():
     # Crony signals (pre-news, higher weight)
     all_alerts += scan_polymarket(seen_data)
     all_alerts += scan_kalshi(seen_data)
-    all_alerts += scan_congress(seen_data)
-    all_alerts += scan_pelosi(seen_data)
-    all_alerts += scan_dark_pool(seen_data)
-    all_alerts += scan_unusual_whales(seen_data)
     all_alerts += scan_edgar(seen_data)
-    all_alerts += scan_reddit(seen_data)
+    all_alerts += scan_capitol_trades(seen_data)   # replaces congress + pelosi
+    all_alerts += scan_openinsider(seen_data)       # replaces dark pool
 
     # Real-time social
     all_alerts += scan_truthsocial(seen_data)
+    all_alerts += scan_reddit(seen_data)
 
-    # Macro signals (post-news, lower weight but broader context)
+    # Macro + sentiment signals
     all_alerts += scan_macro(seen_data)
+    all_alerts += scan_benzinga(seen_data)          # replaces options flow
 
     # 3. Enrich detected tickers with technical analysis (yfinance)
     stock_data = enrich_with_stock_data(all_alerts)
@@ -92,8 +95,7 @@ def main():
     active = sum(1 for v in analyst_verdicts if v["verdict"] != "NEUTRAL")
     print(f"Analyst panel: {active}/5 analysts with verdict — {panel_advice['direction']} ({panel_advice['confidence']}%)")
 
-    # 6. Open virtual positions based on PANEL verdict (not individual advice cards)
-    # Panel verdict must have direction BUY/SELL and confidence >= 40 to open a position
+    # 6. Open virtual positions based on PANEL verdict
     panel_dir  = panel_advice.get("direction", "NEUTRAL")
     panel_conf = panel_advice.get("confidence", 0)
     panel_etfs = panel_advice.get("top_etfs", [])
@@ -111,20 +113,19 @@ def main():
             "XAR":"Defense/Aerospace","INRG":"Renewables","TAN":"Renewables",
         }
         active_analysts = [v["name"] for v in (analyst_verdicts or [])
-                           if v.get("verdict") == panel_dir and v.get("conviction",0) >= 40]
+                           if v.get("verdict") == panel_dir and v.get("conviction", 0) >= 40]
         analyst_str = " + ".join(active_analysts[:2]) if active_analysts else "Panel"
         for ticker in panel_etfs[:2]:
             sector = etf_to_sector.get(ticker, ticker)
             panel_card = {
-                "direction":   "BUY" if panel_dir == "BULLISH" else "SELL",
-                "etfs":        [(ticker, ticker, None)],
-                "confidence":  panel_conf,
-                "theme":       f"{sector} — {analyst_str}",
-                "uid":         f"panel-{ticker}-{panel_advice.get('generated_be','')[:10]}",
+                "direction":  "BUY" if panel_dir == "BULLISH" else "SELL",
+                "etfs":       [(ticker, ticker, None)],
+                "confidence": panel_conf,
+                "theme":      f"{sector} — {analyst_str}",
+                "uid":        f"panel-{ticker}-{panel_advice.get('generated_be','')[:10]}",
             }
             open_position(panel_card, seen_data)
 
-    # Also log old advice cards for historical scoring (but don't open positions from them)
     if advice_cards:
         log_advice_for_scoring(advice_cards, seen_data)
 
@@ -145,18 +146,13 @@ def main():
     generate_sources_html(seen_data)
     generate_index_html()
 
-    # 9. Send email — only on meaningful events, not every run
+    # 9. Send email — only on meaningful events
     priority = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
     all_alerts.sort(key=lambda x: (
         0 if x["source"] == "CONVERGENCE"
         else priority.get(x.get("urgency", "LOW"), 2)
     ))
 
-    # Mail triggers:
-    # - Any HIGH urgency signal
-    # - CONVERGENCE alert
-    # - Backcheck/portfolio results (position closed)
-    # - At least 5 MEDIUM signals in same run (= multiple sources agree)
     high_alerts        = [a for a in all_alerts if a.get("urgency") == "HIGH" or a.get("source") == "CONVERGENCE"]
     medium_alerts      = [a for a in all_alerts if a.get("urgency") == "MEDIUM"]
     portfolio_closings = [c for c in portfolio_checks if c.get("window") == "5d"]
