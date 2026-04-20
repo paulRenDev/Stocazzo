@@ -326,10 +326,8 @@ def get_portfolio_summary(seen_data):
     unrealised    = 0.0
 
     for ticker, pos in pos_map.items():
-        if market:
-            price = get_price(ticker) or pos["avg_entry"]
-        else:
-            price = pos["avg_entry"]
+        # Always fetch latest price — yfinance returns last close outside market hours
+        price = get_price(ticker) or pos["avg_entry"]
 
         if pos["side"] == "LONG":
             pct = (price - pos["avg_entry"]) / pos["avg_entry"] * 100
@@ -408,10 +406,8 @@ def get_open_positions(seen_data):
     result  = []
 
     for ticker, pos in pos_map.items():
-        if market:
-            price = get_price(ticker) or pos["avg_entry"]
-        else:
-            price = pos["avg_entry"]
+        # Always fetch latest price — yfinance returns last close outside market hours
+        price = get_price(ticker) or pos["avg_entry"]
 
         if pos["side"] == "LONG":
             pct = (price - pos["avg_entry"]) / pos["avg_entry"] * 100
