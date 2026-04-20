@@ -159,11 +159,15 @@ def _portfolio_html(seen_data):
     )
     unreal_pnl = s["unrealised_pnl"]
     unreal_sub  = "market closed" if not s["market_open"] else f"{'+'if unreal_pnl>=0 else ''}€{unreal_pnl:.0f} unrealised"
-    unreal_card = metric_card(
-        "Unrealised P&amp;L",
-        f"{'+'if unreal_pnl>=0 else ''}€{unreal_pnl:.0f}",
-        unreal_sub,
-        "var(--green)" if unreal_pnl >= 0 else "var(--red)"
+    unreal_vc   = "var(--green)" if unreal_pnl >= 0 else "var(--red)"
+    unreal_card = (
+        f"<div style='background:var(--surface);border:1px solid var(--border);"
+        f"border-radius:4px;padding:14px 16px;'>"
+        f"<div style='font-size:10px;font-family:var(--mono);color:var(--muted);"
+        f"text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;'>Unrealised P&amp;L</div>"
+        f"<div id='portfolio-unrealised-val' style='font-size:22px;font-weight:600;font-family:var(--mono);color:{unreal_vc};'>{'+'if unreal_pnl>=0 else ''}€{unreal_pnl:.0f}</div>"
+        f"<div id='portfolio-unrealised-sub' style='font-size:11px;color:var(--muted);margin-top:3px;'>{unreal_sub}</div>"
+        f"</div>"
     )
     real_pnl  = s["realised_pnl"]
     real_card = metric_card(
@@ -261,7 +265,8 @@ def _portfolio_html(seen_data):
             invested  = p.get("invested_eur", 0)
             pnl_pct   = p.get("pnl_pct", 0)
             pnl_eur   = p.get("pnl_eur", 0)
-            market_open = s["market_open"]
+            raw_side  = p.get("side", "LONG")
+            is_long   = raw_side in ("LONG", "BUY")
 
             # Age
             from datetime import datetime, timezone
@@ -272,16 +277,17 @@ def _portfolio_html(seen_data):
             except Exception:
                 age_str = p.get("age", "—")
 
-            # P&L cell
-            if not market_open:
-                pnl_cell = "<span style='color:var(--muted);font-size:11px;'>— market closed</span>"
-            else:
-                pc = "var(--green)" if pnl_pct >= 0 else "var(--red)"
-                pnl_cell = (
-                    f"<span style='color:{pc};font-weight:600;font-family:var(--mono);'>"
-                    f"{'+'if pnl_pct>=0 else ''}{pnl_pct:.1f}% · {'+'if pnl_eur>=0 else ''}€{pnl_eur:.0f}"
-                    f"</span>"
-                )
+            # P&L cell — always render a live-updatable span
+            # JS will update it when market is open; shows "market closed" otherwise
+            side_flag = "long" if is_long else "short"
+            pnl_cell = (
+                f"<span class='live-pnl' "
+                f"data-ticker='{ticker}' "
+                f"data-side='{side_flag}' "
+                f"data-entry='{avg_entry}' "
+                f"data-invested='{invested}' "
+                f"style='color:var(--muted);font-size:11px;'>— market closed</span>"
+            )
 
             # Check badges
             check_html = ""
@@ -389,6 +395,79 @@ def _portfolio_html(seen_data):
     else:
         closed_html = ""
 
+    # Live P&L JavaScript — fetches prices every 60s via Twelve Data
+    # Updates all .live-pnl spans with current price vs avg entry
+    live_pnl_js = f"""
+<script>
+(function() {{
+  var TD_KEY = document.getElementById('td-key') ? document.getElementById('td-key').dataset.key : '';
+  function isMarketOpen() {{
+    var now = new Date();
+    var day = now.getUTCDay();
+    if (day === 0 || day === 6) return false;
+    var h = now.getUTCHours() + now.getUTCMinutes() / 60;
+    return h >= 13.0 && h <= 20.5;
+  }}
+  function fmt(n, decimals) {{ return (n >= 0 ? '+' : '') + n.toFixed(decimals); }}
+  function updatePnL() {{
+    if (!TD_KEY) return;
+    var spans = document.querySelectorAll('.live-pnl');
+    if (!spans.length) return;
+    var open = isMarketOpen();
+    var byTicker = {{}};
+    spans.forEach(function(s) {{
+      var t = s.dataset.ticker;
+      if (!byTicker[t]) byTicker[t] = [];
+      byTicker[t].push(s);
+    }});
+    var totalEur = 0;
+    var resolved = 0;
+    var total = Object.keys(byTicker).length;
+    Object.keys(byTicker).forEach(function(ticker) {{
+      fetch('https://api.twelvedata.com/price?symbol=' + ticker + '&apikey=' + TD_KEY)
+        .then(function(r) {{ return r.json(); }})
+        .then(function(d) {{
+          var price = parseFloat(d.price);
+          if (!price) {{ resolved++; return; }}
+          byTicker[ticker].forEach(function(span) {{
+            var entry    = parseFloat(span.dataset.entry);
+            var invested = parseFloat(span.dataset.invested);
+            var isLong   = span.dataset.side === 'long';
+            var pct      = isLong ? (price - entry) / entry * 100 : (entry - price) / entry * 100;
+            var eur      = invested * pct / 100;
+            totalEur    += eur;
+            var color    = pct >= 0 ? 'var(--green)' : 'var(--red)';
+            if (!open) {{
+              span.style.color = 'var(--muted)';
+              span.style.fontWeight = '';
+              span.textContent = '— market closed';
+            }} else {{
+              span.style.color = color;
+              span.style.fontWeight = '600';
+              span.style.fontFamily = 'var(--mono)';
+              span.textContent = fmt(pct, 1) + '% · ' + (eur >= 0 ? '+' : '') + '\\u20ac' + Math.round(eur);
+            }}
+          }});
+          resolved++;
+          if (resolved === total) {{
+            var val = document.getElementById('portfolio-unrealised-val');
+            var sub = document.getElementById('portfolio-unrealised-sub');
+            if (val) {{
+              val.style.color = totalEur >= 0 ? 'var(--green)' : 'var(--red)';
+              val.textContent = (totalEur >= 0 ? '+' : '') + '\\u20ac' + Math.round(totalEur);
+            }}
+            if (sub) {{
+              sub.textContent = open ? 'live' : 'market closed';
+            }}
+          }}
+        }}).catch(function() {{ resolved++; }});
+    }});
+  }}
+  updatePnL();
+  setInterval(updatePnL, 60000);
+}})();
+</script>"""
+
     return (
         f"<div style='background:var(--surface);border:1px solid var(--border);"
         f"border-radius:4px;padding:16px;'>"
@@ -396,6 +475,7 @@ def _portfolio_html(seen_data):
         f"{stats_row}"
         f"{open_html}"
         f"{closed_html}"
+        f"{live_pnl_js}"
         f"</div>"
     )
 
