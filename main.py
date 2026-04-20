@@ -1,6 +1,7 @@
 """
-main.py — Stocazzo v7
+main.py — Stocazzo v7.1
 Orchestrator. Calls everything, does nothing else itself.
+v7.1: Stock enrichment — yfinance technical context passed to analyst panel.
 """
 from helpers import now_utc
 from state import load_seen, add_to_history, commit_seen
@@ -19,6 +20,9 @@ from scanners.truthsocial import scan_truthsocial
 # Macro scanners
 from scanners.macro      import scan_macro
 
+# Stock enrichment
+from scanners.stock_analyzer import enrich_with_stock_data
+
 # Core engines
 from convergence         import build_convergence
 from output.advice       import build_advice, log_advice_for_scoring, run_advice_backcheck
@@ -31,7 +35,7 @@ from output.mail_builder import send_email
 
 
 def main():
-    print(f"=== Stocazzo v7 started: {now_utc()} ===")
+    print(f"=== Stocazzo v7.1 started: {now_utc()} ===")
 
     seen_data = load_seen()
     print(f"Previously seen: {len(seen_data.get('ids', []))} items | "
@@ -67,7 +71,11 @@ def main():
     # Macro signals (post-news, lower weight but broader context)
     all_alerts += scan_macro(seen_data)
 
-    # 3. Convergence analysis (multi-source signal overlap)
+    # 3. Enrich detected tickers with technical analysis (yfinance)
+    stock_data = enrich_with_stock_data(all_alerts)
+    print(f"Stock enrichment: {len(stock_data)} tickers analysed")
+
+    # 4. Convergence analysis (multi-source signal overlap)
     convergence = build_convergence(all_alerts, seen_data)
     if convergence:
         all_alerts = [convergence] + all_alerts
@@ -75,16 +83,16 @@ def main():
 
     print(f"Total signals: {len(all_alerts)}")
 
-    # 4. Build cumulative advice from ALL signals
+    # 5. Build cumulative advice from ALL signals
     advice_cards = build_advice(all_alerts, seen_data)
     print(f"Advice cards generated: {len(advice_cards)}")
 
-    # 4b. Build analyst panel verdict
-    analyst_verdicts, panel_advice = build_analyst_panel(all_alerts, seen_data)
+    # 5b. Build analyst panel verdict (with stock enrichment context)
+    analyst_verdicts, panel_advice = build_analyst_panel(all_alerts, seen_data, stock_data)
     active = sum(1 for v in analyst_verdicts if v["verdict"] != "NEUTRAL")
     print(f"Analyst panel: {active}/5 analysts with verdict — {panel_advice['direction']} ({panel_advice['confidence']}%)")
 
-    # 5. Open virtual positions based on PANEL verdict (not individual advice cards)
+    # 6. Open virtual positions based on PANEL verdict (not individual advice cards)
     # Panel verdict must have direction BUY/SELL and confidence >= 40 to open a position
     panel_dir  = panel_advice.get("direction", "NEUTRAL")
     panel_conf = panel_advice.get("confidence", 0)
@@ -120,24 +128,24 @@ def main():
     if advice_cards:
         log_advice_for_scoring(advice_cards, seen_data)
 
-    # 5b. Update existing portfolio positions
+    # 6b. Update existing portfolio positions
     portfolio_checks = update_positions(seen_data)
     if portfolio_checks:
         print(f"Portfolio checks: {len(portfolio_checks)} position updates")
 
-    # 6. Queue signals for backcheck + add to history
+    # 7. Queue signals for backcheck + add to history
     for a in all_alerts:
         if a["source"] != "CONVERGENCE":
             queue_for_backcheck(a, seen_data)
         add_to_history(a, seen_data)
 
-    # 7. Generate HTML pages
+    # 8. Generate HTML pages
     generate_history_html(seen_data)
     generate_live_html(seen_data, all_alerts, advice_cards, analyst_verdicts, panel_advice)
     generate_sources_html(seen_data)
     generate_index_html()
 
-    # 8. Send email — only on meaningful events, not every run
+    # 9. Send email — only on meaningful events, not every run
     priority = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
     all_alerts.sort(key=lambda x: (
         0 if x["source"] == "CONVERGENCE"
@@ -148,14 +156,14 @@ def main():
     # - Any HIGH urgency signal
     # - CONVERGENCE alert
     # - Backcheck/portfolio results (position closed)
-    # - At least 2 MEDIUM signals in same run (= multiple sources agree)
-    high_alerts  = [a for a in all_alerts if a.get("urgency") == "HIGH" or a.get("source") == "CONVERGENCE"]
-    medium_alerts = [a for a in all_alerts if a.get("urgency") == "MEDIUM"]
+    # - At least 5 MEDIUM signals in same run (= multiple sources agree)
+    high_alerts        = [a for a in all_alerts if a.get("urgency") == "HIGH" or a.get("source") == "CONVERGENCE"]
+    medium_alerts      = [a for a in all_alerts if a.get("urgency") == "MEDIUM"]
     portfolio_closings = [c for c in portfolio_checks if c.get("window") == "5d"]
 
     should_mail = (
         len(high_alerts) > 0 or
-        len(medium_alerts) >= 5 or   # at least 5 medium = meaningful cluster
+        len(medium_alerts) >= 5 or
         len(backcheck_results) > 0 or
         len(portfolio_closings) > 0
     )
@@ -167,7 +175,7 @@ def main():
     else:
         print(f"No email — {len(all_alerts)} low-priority signals only")
 
-    # 9. Save and commit
+    # 10. Save and commit
     commit_seen(seen_data)
     print("=== Done ===")
 
