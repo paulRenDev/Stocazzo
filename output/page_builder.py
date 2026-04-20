@@ -157,16 +157,16 @@ def _portfolio_html(seen_data):
         f"€{s['invested']:,.0f}",
         f"{s['n_open']} position{'s' if s['n_open']!=1 else ''} open"
     )
-    unreal_pnl = s["unrealised_pnl"]
-    unreal_sub  = "market closed" if not s["market_open"] else f"as of last scan"
+    unreal_pnl  = s["unrealised_pnl"]
     unreal_vc   = "var(--green)" if unreal_pnl >= 0 else "var(--red)"
+    market_lbl  = "market open · last scan" if s["market_open"] else "market closed · last scan"
     unreal_card = (
         f"<div style='background:var(--surface);border:1px solid var(--border);"
         f"border-radius:4px;padding:14px 16px;'>"
         f"<div style='font-size:10px;font-family:var(--mono);color:var(--muted);"
         f"text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;'>Unrealised P&amp;L</div>"
         f"<div style='font-size:22px;font-weight:600;font-family:var(--mono);color:{unreal_vc};'>{'+'if unreal_pnl>=0 else ''}€{unreal_pnl:.0f}</div>"
-        f"<div style='font-size:11px;color:var(--muted);margin-top:3px;'>{unreal_sub}</div>"
+        f"<div style='font-size:11px;color:var(--muted);margin-top:3px;'>{market_lbl}</div>"
         f"</div>"
     )
     real_pnl  = s["realised_pnl"]
@@ -277,17 +277,19 @@ def _portfolio_html(seen_data):
             except Exception:
                 age_str = p.get("age", "—")
 
-            # P&L cell — server-side rendered at scan time (prices fetched via yfinance)
-            if not s["market_open"]:
-                pnl_cell = "<span style='color:var(--muted);font-size:11px;'>— market closed</span>"
-            else:
-                pnl_c = "var(--green)" if pnl_pct >= 0 else "var(--red)"
-                pnl_cell = (
-                    f"<span style='color:{pnl_c};font-family:var(--mono);font-size:12px;font-weight:600;'>"
-                    f"{'+'if pnl_pct>=0 else ''}{pnl_pct:.1f}% · "
-                    f"{'+'if pnl_eur>=0 else ''}€{pnl_eur:.0f}"
-                    f"</span>"
-                )
+            # P&L cell — always show latest price vs entry (yfinance = last close outside hours)
+            current_price = p.get("current_price", avg_entry)
+            pnl_c  = "var(--green)" if pnl_pct >= 0 else "var(--red)"
+            muted  = "" if s["market_open"] else " opacity:.75;"
+            pnl_cell = (
+                f"<span style='color:{pnl_c};font-family:var(--mono);font-size:12px;"
+                f"font-weight:600;{muted}'>"
+                f"{'+'if pnl_pct>=0 else ''}{pnl_pct:.1f}% · "
+                f"{'+'if pnl_eur>=0 else ''}€{pnl_eur:.0f}"
+                f"<span style='font-size:10px;color:var(--muted);font-weight:400;margin-left:4px;'>"
+                f"@ ${current_price:.2f}</span>"
+                f"</span>"
+            )
 
             # Check badges
             check_html = ""
