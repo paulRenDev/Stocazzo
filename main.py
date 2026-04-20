@@ -91,13 +91,27 @@ def main():
     panel_etfs = panel_advice.get("top_etfs", [])
 
     if panel_dir in ("BULLISH", "BEARISH") and panel_conf >= 40 and panel_etfs:
-        # Build a synthetic advice card from the panel verdict
-        for ticker in panel_etfs[:2]:   # open up to 2 ETF positions per verdict
+        etf_to_sector = {
+            "XLE":"Energy","IEO":"Energy","XOM":"Energy",
+            "ITA":"Defense","LMT":"Defense","RTX":"Defense",
+            "GLD":"Gold","IGLN":"Gold",
+            "QQQ":"Tech","SOXX":"Semiconductors","NVDA":"Semiconductors",
+            "TLT":"Bonds/Rates","LIT":"Critical Minerals",
+            "COPX":"Critical Minerals","SETM":"Critical Minerals",
+            "IBIT":"Crypto","SPY":"Broad Market",
+            "EEM":"Emerging Markets","AFK":"Africa","MCHI":"China",
+            "XAR":"Defense/Aerospace","INRG":"Renewables","TAN":"Renewables",
+        }
+        active_analysts = [v["name"] for v in (analyst_verdicts or [])
+                           if v.get("verdict") == panel_dir and v.get("conviction",0) >= 40]
+        analyst_str = " + ".join(active_analysts[:2]) if active_analysts else "Panel"
+        for ticker in panel_etfs[:2]:
+            sector = etf_to_sector.get(ticker, ticker)
             panel_card = {
                 "direction":   "BUY" if panel_dir == "BULLISH" else "SELL",
                 "etfs":        [(ticker, ticker, None)],
                 "confidence":  panel_conf,
-                "theme":       panel_advice.get("summary", "")[:40],
+                "theme":       f"{sector} — {analyst_str}",
                 "uid":         f"panel-{ticker}-{panel_advice.get('generated_be','')[:10]}",
             }
             open_position(panel_card, seen_data)
