@@ -1,13 +1,15 @@
 """
-output/analysts.py — Stocazzo v7
+output/analysts.py — Stocazzo v7.2
 The analyst panel: 5 virtual analysts, each with their own lens.
-Each analyst aggregates signals from their assigned sources,
-produces a verdict (BULLISH/BEARISH/NEUTRAL) with conviction level,
-and votes on the final advice.
 
-v7.1: Stock enrichment — analysts receive yfinance technical context
-(RSI, MACD, trend, recommendation) for tickers in their signals.
-Conviction adjusts ±15 points based on technical confirmation.
+v7.1: Stock enrichment — yfinance technical context fed into conviction scoring.
+v7.2: Source cleanup — dropped dead sources (Congress 403, Pelosi broken regex,
+      Dark Pool cloud-blocked, Options Flow blocked). Replaced with:
+      - Capitol Trades RSS (real congressional trades, free, reliable)
+      - OpenInsider RSS (CEO/CFO buys, free, reliable)
+      - Reuters RSS, AP RSS, MarketWatch RSS (fast breaking news)
+      - Benzinga RSS (market-moving news, free tier)
+      Labels standardised to BUY / SELL throughout.
 """
 from collections import defaultdict
 from helpers import now_utc, now_be, make_id, urgency_color
@@ -20,11 +22,11 @@ ANALYSTS = {
         "name":        "The Insider",
         "emoji":       "🕵",
         "tagline":     "Follows the money before the news",
-        "sources":     ["Polymarket", "Kalshi", "Dark Pool", "SEC EDGAR", "Options Flow", "Lobbying", "Gov Contracts"],
+        "sources":     ["Polymarket", "Kalshi", "SEC EDGAR", "OpenInsider", "Lobbying", "Gov Contracts"],
         "weight":      5,
-        "description": "Watches prediction markets, dark pool flow and insider filings. If something is moving before the news — he sees it first.",
+        "description": "Watches prediction markets, SEC Form 4 filings and CEO/CFO insider buys. If money is moving before the news — he sees it first.",
     },
-    "trump":  {
+    "trump": {
         "name":        "The Trump Whisperer",
         "emoji":       "📢",
         "tagline":     "Reads the president's posts in real time",
@@ -35,54 +37,42 @@ ANALYSTS = {
     "congress": {
         "name":        "The Congresswatcher",
         "emoji":       "🏛",
-        "tagline":     "Tracks political trades and lobbying",
-        "sources":     ["Congress", "Pelosi Tracker"],
+        "tagline":     "Tracks political trades and insider filings",
+        "sources":     ["Capitol Trades", "OpenInsider"],
         "weight":      3,
-        "description": "Follows STOCK Act disclosures and Pelosi trades. Always 45 days delayed but reveals sector conviction.",
+        "description": "Follows Capitol Trades RSS for congressional disclosures and OpenInsider for C-suite buys. Delayed but reveals where informed money is going.",
     },
     "macro": {
         "name":        "The Macro Man",
         "emoji":       "🌍",
-        "tagline":     "Geopolitics, rates and economic trends",
-        "sources":     ["Macro RSS", "GDELT", "Social Signal"],
+        "tagline":     "Geopolitics, rates and breaking economic news",
+        "sources":     ["Macro RSS", "Reuters RSS", "AP RSS", "MarketWatch RSS", "GDELT", "Social Signal"],
         "weight":      3,
-        "description": "Aggregates Reuters, FT, ECB, Fed and geopolitical news. Slower but broader context.",
+        "description": "Aggregates Reuters, AP, MarketWatch, FT, ECB and Fed feeds. Fast on rate decisions, geopolitical shocks and macro surprises.",
     },
     "sentiment": {
         "name":        "The Tape Reader",
         "emoji":       "📊",
         "tagline":     "Market mood and crowd psychology",
-        "sources":     ["Fear & Greed", "Options Flow", "Social Signal"],
+        "sources":     ["Fear & Greed", "Benzinga RSS", "Social Signal"],
         "weight":      2,
-        "description": "Reads market sentiment, options flow and Fear & Greed. Contrarian at extremes.",
+        "description": "Reads Fear & Greed, Benzinga market-moving news and Reddit sentiment. Contrarian at extremes — Fear <25 is a buy signal.",
     },
 }
 
-# Conviction thresholds
 HIGH_CONVICTION   = 65
 MEDIUM_CONVICTION = 40
-
-# Verdict weights for final advice
-VERDICT_WEIGHTS = {"BULLISH": 1, "NEUTRAL": 0, "BEARISH": -1}
+VERDICT_WEIGHTS   = {"BULLISH": 1, "NEUTRAL": 0, "BEARISH": -1}
 
 
 # ── BUILD ANALYST VERDICTS ────────────────────────────────────────────────────
 def build_analyst_panel(all_alerts, seen_data, stock_data=None):
-    """
-    Each analyst reviews signals from their sources and forms a verdict.
-    stock_data: optional {ticker: stock_context} from stock_analyzer enrichment.
-    Returns list of analyst verdict dicts + final panel advice.
-    """
-    verdicts = []
+    verdicts   = []
     stock_data = stock_data or {}
 
     for analyst_id, analyst in ANALYSTS.items():
-        my_signals = [
-            a for a in all_alerts
-            if a.get("source", "") in analyst["sources"]
-        ]
+        my_signals = [a for a in all_alerts if a.get("source", "") in analyst["sources"]]
 
-        # Pass only the stock contexts relevant to this analyst's signals
         my_tickers = set()
         for sig in my_signals:
             for etf_tuple in sig.get("etfs", []):
@@ -99,37 +89,24 @@ def build_analyst_panel(all_alerts, seen_data, stock_data=None):
 
 
 def _analyst_verdict(analyst_id, analyst, signals, seen_data, stock_data=None):
-    """One analyst reviews their signals and forms a verdict."""
     stock_data = stock_data or {}
 
     if not signals:
         return {
-            "id":               analyst_id,
-            "name":             analyst["name"],
-            "emoji":            analyst["emoji"],
-            "tagline":          analyst["tagline"],
-            "description":      analyst["description"],
-            "weight":           analyst["weight"],
-            "verdict":          "NEUTRAL",
-            "conviction":       0,
-            "conviction_label": "No data",
-            "top_signal":       None,
-            "signal_count":     0,
-            "etfs":             [],
-            "rationale":        "No signals from my sources in this run.",
-            "sources_used":     [],
-            "bull_score":       0,
-            "bear_score":       0,
-            "stock_context":    {},
+            "id": analyst_id, "name": analyst["name"], "emoji": analyst["emoji"],
+            "tagline": analyst["tagline"], "description": analyst["description"],
+            "weight": analyst["weight"], "verdict": "NEUTRAL", "conviction": 0,
+            "conviction_label": "No data", "top_signal": None, "signal_count": 0,
+            "etfs": [], "rationale": "No signals from my sources in this run.",
+            "sources_used": [], "bull_score": 0, "bear_score": 0, "stock_context": {},
         }
 
-    # Score signals
-    bull_score = 0
-    bear_score = 0
-    top_signal = None
-    top_score  = 0
+    bull_score   = 0
+    bear_score   = 0
+    top_signal   = None
+    top_score    = 0
     sources_used = set()
-    etf_votes  = defaultdict(int)
+    etf_votes    = defaultdict(int)
 
     for sig in signals:
         src       = sig.get("source", "")
@@ -143,38 +120,28 @@ def _analyst_verdict(analyst_id, analyst, signals, seen_data, stock_data=None):
         is_bull = any(x in direction for x in ["BUY", "YES", "BULLISH", "ACCUM"])
         is_bear = any(x in direction for x in ["SELL", "NO", "BEARISH", "REDUCE"])
 
-        if is_bull:
-            bull_score += points
-        elif is_bear:
-            bear_score += points
+        if is_bull:   bull_score += points
+        elif is_bear: bear_score += points
 
         sources_used.add(src)
-
         if points > top_score:
             top_score  = points
             top_signal = sig
-
         for t, n, e in sig.get("etfs", []):
             etf_votes[t] += points
 
-    total = bull_score + bear_score
+    total   = bull_score + bear_score
     net_pct = int((bull_score - bear_score) / total * 100) if total else 0
 
-    # Determine verdict
-    if bull_score > bear_score * 1.5:
-        verdict = "BULLISH"
-    elif bear_score > bull_score * 1.5:
-        verdict = "BEARISH"
-    else:
-        verdict = "NEUTRAL"
+    if bull_score > bear_score * 1.5:   verdict = "BULLISH"
+    elif bear_score > bull_score * 1.5: verdict = "BEARISH"
+    else:                               verdict = "NEUTRAL"
 
-    # Base conviction
     conviction = min(95, abs(net_pct))
 
-    # ── Stock enrichment: adjust conviction based on technical confirmation ──
+    # ── Stock enrichment ──────────────────────────────────────────────────────
     tech_boost = 0
     tech_notes = []
-
     for ticker, ctx in stock_data.items():
         rec    = ctx.get("recommendation", "hold")
         rsi    = ctx.get("rsi")
@@ -185,11 +152,9 @@ def _analyst_verdict(analyst_id, analyst, signals, seen_data, stock_data=None):
         if verdict == "BULLISH":
             if rec in ("buy", "strong_buy"):
                 tech_boost += 8
-                tech_notes.append(f"{ticker} tech: {rec.replace('_', ' ').upper()}")
-            if trend == "uptrend":
-                tech_boost += 4
-            if macd == "bullish":
-                tech_boost += 3
+                tech_notes.append(f"{ticker} tech: {rec.replace('_',' ').upper()}")
+            if trend == "uptrend":  tech_boost += 4
+            if macd == "bullish":   tech_boost += 3
             if rsi and rsi < 35:
                 tech_boost += 5
                 tech_notes.append(f"{ticker} RSI {rsi} — oversold, buy dip")
@@ -199,72 +164,45 @@ def _analyst_verdict(analyst_id, analyst, signals, seen_data, stock_data=None):
         elif verdict == "BEARISH":
             if rec in ("sell", "strong_sell"):
                 tech_boost += 8
-                tech_notes.append(f"{ticker} tech: {rec.replace('_', ' ').upper()}")
-            if trend == "downtrend":
-                tech_boost += 4
-            if macd == "bearish":
-                tech_boost += 3
+                tech_notes.append(f"{ticker} tech: {rec.replace('_',' ').upper()}")
+            if trend == "downtrend": tech_boost += 4
+            if macd == "bearish":    tech_boost += 3
             if rsi and rsi > 65:
                 tech_boost += 5
                 tech_notes.append(f"{ticker} RSI {rsi} — overbought, sell signal")
 
         if abs(change) > 2:
-            direction_word = "up" if change > 0 else "down"
-            tech_notes.append(f"{ticker} {direction_word} {abs(change):.1f}% today")
+            tech_notes.append(f"{ticker} {'up' if change > 0 else 'down'} {abs(change):.1f}% today")
 
-    # Cap boost at ±15: technicals confirm or temper, never override
     conviction = min(95, max(0, conviction + max(-15, min(15, tech_boost))))
 
-    if conviction >= HIGH_CONVICTION:
-        conviction_label = "HIGH conviction"
-    elif conviction >= MEDIUM_CONVICTION:
-        conviction_label = "MEDIUM conviction"
-    else:
-        conviction_label = "LOW conviction"
+    if conviction >= HIGH_CONVICTION:   conviction_label = "HIGH conviction"
+    elif conviction >= MEDIUM_CONVICTION: conviction_label = "MEDIUM conviction"
+    else:                               conviction_label = "LOW conviction"
 
-    # Top ETFs
-    top_etfs = sorted(etf_votes.items(), key=lambda x: -x[1])[:3]
-
-    # Rationale
+    top_etfs  = sorted(etf_votes.items(), key=lambda x: -x[1])[:3]
     rationale = _build_rationale(analyst_id, signals, verdict, bull_score, bear_score, top_signal)
     if tech_notes:
         rationale += " Technical: " + " · ".join(tech_notes[:2]) + "."
 
-    # Compact stock context for HTML rendering
     compact_stock = {
-        t: {
-            "price":          ctx["price"],
-            "change_pct":     ctx.get("change_pct", 0),
-            "recommendation": ctx["recommendation"],
-            "rsi":            ctx["rsi"],
-            "trend":          ctx["trend"],
-        }
+        t: {"price": ctx["price"], "change_pct": ctx.get("change_pct", 0),
+            "recommendation": ctx["recommendation"], "rsi": ctx["rsi"], "trend": ctx["trend"]}
         for t, ctx in stock_data.items()
     }
 
     return {
-        "id":               analyst_id,
-        "name":             analyst["name"],
-        "emoji":            analyst["emoji"],
-        "tagline":          analyst["tagline"],
-        "description":      analyst["description"],
-        "weight":           analyst["weight"],
-        "verdict":          verdict,
-        "conviction":       conviction,
-        "conviction_label": conviction_label,
-        "top_signal":       top_signal,
-        "signal_count":     len(signals),
-        "etfs":             [t for t, _ in top_etfs],
-        "rationale":        rationale,
-        "sources_used":     list(sources_used),
-        "bull_score":       bull_score,
-        "bear_score":       bear_score,
-        "stock_context":    compact_stock,
+        "id": analyst_id, "name": analyst["name"], "emoji": analyst["emoji"],
+        "tagline": analyst["tagline"], "description": analyst["description"],
+        "weight": analyst["weight"], "verdict": verdict, "conviction": conviction,
+        "conviction_label": conviction_label, "top_signal": top_signal,
+        "signal_count": len(signals), "etfs": [t for t, _ in top_etfs],
+        "rationale": rationale, "sources_used": list(sources_used),
+        "bull_score": bull_score, "bear_score": bear_score, "stock_context": compact_stock,
     }
 
 
 def _build_rationale(analyst_id, signals, verdict, bull, bear, top):
-    """Build plain-English rationale. Unchanged from v7."""
     if not signals:
         return "No signals from my sources in this run."
 
@@ -279,28 +217,23 @@ def _build_rationale(analyst_id, signals, verdict, bull, bear, top):
 
     if verdict == "BULLISH":
         direction_str = f"{len(bull_sigs)} bullish signal{'s' if len(bull_sigs)!=1 else ''}"
-        if bear_sigs:
-            direction_str += f" vs {len(bear_sigs)} bearish"
+        if bear_sigs: direction_str += f" vs {len(bear_sigs)} bearish"
     elif verdict == "BEARISH":
         direction_str = f"{len(bear_sigs)} bearish signal{'s' if len(bear_sigs)!=1 else ''}"
-        if bull_sigs:
-            direction_str += f" vs {len(bull_sigs)} bullish"
+        if bull_sigs: direction_str += f" vs {len(bull_sigs)} bullish"
     else:
         direction_str = f"mixed signals ({len(bull_sigs)} up, {len(bear_sigs)} down)"
 
     base = direction_str + "."
-
     if top_title and top_src:
         urgency_note = f" [{top_urgency} urgency]" if top_urgency == "HIGH" else ""
         etf_note     = f" — watch {etf_str}" if etf_str else ""
         base += f" Strongest signal: {top_src}: \"{top_title}\"{urgency_note}{etf_note}."
-
     return base
 
 
 # ── PANEL VOTE ────────────────────────────────────────────────────────────────
 def _panel_vote(verdicts, all_alerts):
-    """Weighted vote across all analysts. Unchanged from v7."""
     bull_weight = 0
     bear_weight = 0
     voting      = []
@@ -315,10 +248,7 @@ def _panel_vote(verdicts, all_alerts):
 
     total_weight = bull_weight + bear_weight
     if total_weight == 0:
-        direction    = "NEUTRAL"
-        confidence   = 0
-        action       = "WATCH"
-        action_color = "#b06000"
+        direction, confidence, action, action_color = "NEUTRAL", 0, "WATCH", "#b06000"
     elif bull_weight > bear_weight:
         direction    = "BULLISH"
         confidence   = min(90, int(bull_weight / total_weight * 100))
@@ -327,7 +257,7 @@ def _panel_vote(verdicts, all_alerts):
     else:
         direction    = "BEARISH"
         confidence   = min(90, int(bear_weight / total_weight * 100))
-        action       = "REDUCE / HEDGE"
+        action       = "SELL / REDUCE"
         action_color = "#cc2222"
 
     etf_votes = defaultdict(int)
@@ -337,28 +267,27 @@ def _panel_vote(verdicts, all_alerts):
                 etf_votes[t] += v["weight"]
     top_etfs = [t for t, _ in sorted(etf_votes.items(), key=lambda x: -x[1])[:4]]
 
-    active_analysts  = [v for v in verdicts if v["verdict"] in ("BULLISH","BEARISH") and v["conviction"] >= MEDIUM_CONVICTION]
-    abstained        = [v["name"] for v in verdicts if v["verdict"] == "NEUTRAL" and v["signal_count"] == 0]
-    active_count     = len(active_analysts)
-    total_count      = len(verdicts)
+    active_analysts = [v for v in verdicts if v["verdict"] in ("BULLISH","BEARISH") and v["conviction"] >= MEDIUM_CONVICTION]
+    abstained       = [v["name"] for v in verdicts if v["verdict"] == "NEUTRAL" and v["signal_count"] == 0]
+    active_count    = len(active_analysts)
+    total_count     = len(verdicts)
 
     thesis_signals = []
     for v in verdicts:
         if v["verdict"] == direction and v.get("top_signal"):
-            t     = v["top_signal"]
-            src   = t.get("source", "")
+            t = v["top_signal"]
             title = t.get("title", "")[:70]
             if title:
-                thesis_signals.append(f"{src}: {title}")
+                thesis_signals.append(f"{t.get('source','')}: {title}")
 
     etf_to_sector = {
-        "XLE": "energy", "IEO": "energy", "XOM": "energy", "CVX": "energy",
-        "ITA": "defense", "LMT": "defense", "RTX": "defense",
-        "GLD": "gold/safe-haven", "IGLN": "gold/safe-haven",
-        "QQQ": "tech", "SOXX": "semiconductors",
-        "TLT": "bonds/rates", "LIT": "critical minerals",
-        "COPX": "critical minerals", "IBIT": "crypto",
-        "SPY": "broad market", "EEM": "emerging markets",
+        "XLE":"energy","IEO":"energy","XOM":"energy","CVX":"energy",
+        "ITA":"defense","LMT":"defense","RTX":"defense",
+        "GLD":"gold/safe-haven","IGLN":"gold/safe-haven",
+        "QQQ":"tech","SOXX":"semiconductors",
+        "TLT":"bonds/rates","LIT":"critical minerals",
+        "COPX":"critical minerals","IBIT":"crypto",
+        "SPY":"broad market","EEM":"emerging markets",
     }
     sectors    = list(dict.fromkeys(etf_to_sector.get(e, e) for e in top_etfs if e in etf_to_sector))
     sector_str = " + ".join(sectors[:2]) if sectors else "mixed"
@@ -366,60 +295,45 @@ def _panel_vote(verdicts, all_alerts):
     bull_names = [n for n, d, _ in voting if d == "BULLISH"]
     bear_names = [n for n, d, _ in voting if d == "BEARISH"]
 
-    active_voting = len(active_analysts)
-    if active_voting < 2:
-        confidence = min(confidence, 40)
-    elif active_voting < 3:
-        confidence = min(confidence, 65)
+    if len(active_analysts) < 2:   confidence = min(confidence, 40)
+    elif len(active_analysts) < 3: confidence = min(confidence, 65)
 
-    all_quiet = active_count == 0
-
-    if all_quiet:
+    if active_count == 0:
         summary = "All sources quiet this scan. No position changes."
     elif direction == "BULLISH":
-        who_line    = f"{len(bull_names)} analyst{'s' if len(bull_names)!=1 else ''} bullish: {', '.join(bull_names)}."
-        action_line = f"Consider: BUY {etf_str} ({sector_str})."
-        why_line    = ("Driven by: " + " · ".join(thesis_signals[:2]) + ".") if thesis_signals else ""
-        parts = [who_line, action_line]
-        if why_line: parts.append(why_line)
+        parts = [
+            f"{len(bull_names)} analyst{'s' if len(bull_names)!=1 else ''} bullish: {', '.join(bull_names)}.",
+            f"Consider: BUY {etf_str} ({sector_str}).",
+        ]
+        if thesis_signals: parts.append("Driven by: " + " · ".join(thesis_signals[:2]) + ".")
         if abstained: parts.append(f"{active_count}/{total_count} analysts active — {', '.join(abstained[:2])} had no data.")
         summary = " ".join(parts)
     elif direction == "BEARISH":
-        who_line    = f"{len(bear_names)} analyst{'s' if len(bear_names)!=1 else ''} bearish: {', '.join(bear_names)}."
-        action_line = f"Consider: REDUCE / hedge {sector_str}. Watch: {etf_str}."
-        why_line    = ("Driven by: " + " · ".join(thesis_signals[:2]) + ".") if thesis_signals else ""
-        parts = [who_line, action_line]
-        if why_line: parts.append(why_line)
+        parts = [
+            f"{len(bear_names)} analyst{'s' if len(bear_names)!=1 else ''} bearish: {', '.join(bear_names)}.",
+            f"Consider: SELL / hedge {sector_str}. Watch: {etf_str}.",
+        ]
+        if thesis_signals: parts.append("Driven by: " + " · ".join(thesis_signals[:2]) + ".")
         if abstained: parts.append(f"{active_count}/{total_count} analysts active — {', '.join(abstained[:2])} had no data.")
         summary = " ".join(parts)
     else:
-        if abstained and active_count < 3:
-            summary = f"Conflicting signals — no clear direction. {active_count}/{total_count} analysts had data."
-        else:
-            summary = "Mixed signals across sources — no actionable conviction. Monitor for confirmation."
+        summary = (f"Conflicting signals — no clear direction. {active_count}/{total_count} analysts had data."
+                   if abstained and active_count < 3
+                   else "Mixed signals across sources — no actionable conviction. Monitor for confirmation.")
 
     return {
-        "direction":    direction,
-        "action":       action,
-        "action_color": action_color,
-        "confidence":   confidence,
-        "summary":      summary,
-        "top_etfs":     top_etfs,
-        "bull_weight":  round(bull_weight, 1),
-        "bear_weight":  round(bear_weight, 1),
-        "voting":       voting,
-        "generated_be": now_be(),
+        "direction": direction, "action": action, "action_color": action_color,
+        "confidence": confidence, "summary": summary, "top_etfs": top_etfs,
+        "bull_weight": round(bull_weight, 1), "bear_weight": round(bear_weight, 1),
+        "voting": voting, "generated_be": now_be(),
     }
 
 
 # ── HTML RENDERING ────────────────────────────────────────────────────────────
 def format_panel_html(verdicts, panel_advice):
-    """Renders the full analyst panel as HTML for live.html."""
-
     ac   = panel_advice["action_color"]
     conf = panel_advice["confidence"]
     cc   = "#007a5e" if conf >= 65 else "#b06000" if conf >= 45 else "#888"
-    bar  = conf
 
     etf_badges = "".join(
         f'<a href="https://finance.yahoo.com/quote/{t}" target="_blank" '
@@ -439,11 +353,10 @@ def format_panel_html(verdicts, panel_advice):
         f"{panel_advice['generated_be'][:16]}</span>"
         f"</div>"
         f"<div style='font-size:13px;color:var(--text);margin-bottom:10px;line-height:1.7;"
-        f"border-left:3px solid {ac};padding-left:10px;'>"
-        f"{panel_advice['summary']}</div>"
+        f"border-left:3px solid {ac};padding-left:10px;'>{panel_advice['summary']}</div>"
         f"<div style='display:flex;align-items:center;gap:10px;margin-bottom:10px;'>"
         f"<div style='background:#e0e0d8;border-radius:2px;height:6px;flex:1;'>"
-        f"<div style='background:{cc};height:6px;border-radius:2px;width:{bar}%;'></div></div>"
+        f"<div style='background:{cc};height:6px;border-radius:2px;width:{conf}%;'></div></div>"
         f"<span style='font-family:monospace;font-size:12px;color:{cc};font-weight:600;'>{conf}%</span>"
         f"</div>"
         f"<div>{etf_badges}</div>"
@@ -453,12 +366,11 @@ def format_panel_html(verdicts, panel_advice):
     cards_html = "<div style='display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:0;'>"
 
     for v in verdicts:
-        verdict   = v["verdict"]
-        conv      = v["conviction"]
-        vc        = "#007a5e" if verdict == "BULLISH" else "#cc2222" if verdict == "BEARISH" else "#888"
-        vbg       = "#e8f4f0" if verdict == "BULLISH" else "#fce8e8" if verdict == "BEARISH" else "#f5f5f0"
-        conv_bar  = conv
-        conv_c    = "#007a5e" if conv >= HIGH_CONVICTION else "#b06000" if conv >= MEDIUM_CONVICTION else "#aaa"
+        verdict  = v["verdict"]
+        conv     = v["conviction"]
+        vc       = "#007a5e" if verdict == "BULLISH" else "#cc2222" if verdict == "BEARISH" else "#888"
+        vbg      = "#e8f4f0" if verdict == "BULLISH" else "#fce8e8" if verdict == "BEARISH" else "#f5f5f0"
+        conv_c   = "#007a5e" if conv >= HIGH_CONVICTION else "#b06000" if conv >= MEDIUM_CONVICTION else "#aaa"
 
         analyst_etfs = "".join(
             f'<a href="https://finance.yahoo.com/quote/{t}" target="_blank" '
@@ -467,7 +379,7 @@ def format_panel_html(verdicts, panel_advice):
             for t in v["etfs"][:3]
         ) if v["etfs"] else ""
 
-        top = v.get("top_signal")
+        top         = v.get("top_signal")
         top_snippet = ""
         if top:
             src   = top.get("source", "")
@@ -478,17 +390,16 @@ def format_panel_html(verdicts, panel_advice):
                 f"[{src}] {title}</div>"
             )
 
-        # ── Stock context badges (new in v7.1) ─────────────────────────────
         stock_lines = ""
         for ticker, ctx in v.get("stock_context", {}).items():
-            rec    = ctx.get("recommendation", "hold")
-            rsi    = ctx.get("rsi", "—")
-            trend  = ctx.get("trend", "")
-            price  = ctx.get("price", "")
-            change = ctx.get("change_pct", 0)
-            rec_color = "#007a5e" if "buy" in rec else "#cc2222" if "sell" in rec else "#888"
+            rec          = ctx.get("recommendation", "hold")
+            rsi          = ctx.get("rsi", "—")
+            trend        = ctx.get("trend", "")
+            price        = ctx.get("price", "")
+            change       = ctx.get("change_pct", 0)
+            rec_color    = "#007a5e" if "buy" in rec else "#cc2222" if "sell" in rec else "#888"
             change_color = "#007a5e" if change >= 0 else "#cc2222"
-            change_str = f"{change:+.1f}%" if change else ""
+            change_str   = f"{change:+.1f}%" if change else ""
             stock_lines += (
                 f"<div style='font-size:10px;color:var(--muted);font-family:monospace;"
                 f"margin-top:4px;padding:2px 0;border-top:1px solid var(--border);'>"
@@ -514,12 +425,11 @@ def format_panel_html(verdicts, panel_advice):
             f"</div>"
             f"<div style='display:flex;align-items:center;gap:6px;margin-bottom:6px;'>"
             f"<div style='background:#e0e0d8;border-radius:2px;height:3px;flex:1;'>"
-            f"<div style='background:{conv_c};height:3px;border-radius:2px;width:{conv_bar}%;'></div></div>"
+            f"<div style='background:{conv_c};height:3px;border-radius:2px;width:{conv}%;'></div></div>"
             f"<span style='font-family:monospace;font-size:10px;color:{conv_c};'>{v['conviction_label']}</span>"
             f"</div>"
             f"<div style='font-size:13px;color:var(--muted);margin-bottom:6px;line-height:1.6;'>{v['rationale']}</div>"
-            f"{top_snippet}"
-            f"{stock_lines}"
+            f"{top_snippet}{stock_lines}"
             f"<div style='margin-top:6px;'>{analyst_etfs}</div>"
             f"<div style='font-size:10px;color:var(--dim);font-family:monospace;margin-top:6px;'>"
             f"{v['signal_count']} signals · {', '.join(v['sources_used'][:3])}</div>"
