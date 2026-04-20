@@ -39,7 +39,13 @@ def scan_kalshi(seen_data):
         for m in markets:
             title    = m.get("title", "")
             subtitle = m.get("subtitle", "")
-            uid      = make_id(m.get("ticker_name", title))
+
+            # UID includes price bucket (10% steps) so significant moves re-alert
+            yes_bid = m.get("yes_bid", 0) or 0
+            yes_ask = m.get("yes_ask", 0) or 0
+            _p = (yes_bid + yes_ask) / 2 if yes_bid and yes_ask else yes_bid or yes_ask or 0.5
+            _bucket = int(float(_p) * 10)
+            uid = make_id(f"{m.get('ticker_name', title)}|{_bucket}")
 
             if is_seen(uid, seen_data):
                 continue
