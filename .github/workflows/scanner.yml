@@ -2,12 +2,11 @@ name: Stocazzo Scanner
 
 on:
   schedule:
-    # Elke 12 min, ma-vr 7:00-22:00 UTC (= 9:00-00:00 CEST)
-    - cron: '0,12 7-22 * * 1-5'
-  workflow_dispatch:  # manueel starten via GitHub UI
+    - cron: '*/12 * * * *'
+  workflow_dispatch:
 
 permissions:
-  contents: write  # nodig voor git push
+  contents: write
 
 jobs:
   scan:
@@ -25,7 +24,7 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
-      - name: Installeer dependencies
+      - name: Install dependencies
         run: pip install -r requirements.txt
 
       - name: Run scanner
@@ -38,13 +37,18 @@ jobs:
           GOVGREED_KEY:    ${{ secrets.GOVGREED_KEY }}
         run: python main.py
 
-      - name: Deploy naar GitHub Pages
+      - name: Prepare HTML for deploy
+        run: |
+          mkdir -p dist
+          cp live.html dist/
+          cp history.html dist/
+          cp sources.html dist/
+          cp index.html dist/
+
+      - name: Deploy HTML to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./dist
           publish_branch: gh-pages
-          include_files: |
-            live.html
-            history.html
-            index.html
+          force_orphan: true
