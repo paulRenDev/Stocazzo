@@ -1,116 +1,118 @@
 {
   "ids": [
-    "711e86e945ab",
-    "67908201a79d",
-    "a75e66a206d2",
     "500615d0f735",
-    "31843a5643ef",
-    "47b320b8e362",
-    "0eb7d59f6afd",
-    "4115620504a4",
-    "7a2691723cce",
-    "b2e74d6ff27c",
+    "1431412201ef",
+    "0d4041a7fae2",
+    "85c4730b886c",
+    "31a210b9e499",
+    "711e86e945ab",
+    "1678c8c092e0",
+    "e87b4da2717b",
+    "7b1420f5d653",
     "312fe7511d0b",
-    "6268e160a599",
-    "b698fe4a17d2",
-    "39a94e2128a3",
-    "b0ec811419ad",
+    "acefd863227a",
+    "b83922ad5cd6",
+    "67908201a79d",
+    "e990de2f3299",
+    "f4e705fed31d",
+    "e5a2151f14c5",
+    "f3dabdf7fcdc",
+    "50ff7c2d8ffe",
+    "209003425473",
+    "734a420b9235",
+    "1ede72cc1fa0",
+    "b5af3579ee95",
+    "1016c48d066c",
+    "2763e2fd180a",
+    "e4e4235ed083",
+    "23ab136875d6",
+    "318f368c76b5",
+    "2bd8b6a7de86",
+    "8a06a3214a28",
+    "7a2691723cce",
+    "0eb7d59f6afd",
+    "31843a5643ef",
+    "2bf37231db1f",
+    "994fb09849c9",
+    "46bb0ca0fde5",
+    "d56a5cdfbb96",
+    "9e539a681c0a",
     "060828854bf6",
+    "556f276c2cb7",
+    "8f9b844b1ff6",
+    "26d06aeb7fcc",
+    "1de84568c6f2",
+    "aabbc8a157d5",
+    "cfdcae65b396",
+    "a4c90bf5261d",
+    "07c82ac17438",
+    "b2e74d6ff27c",
+    "045f55b844a4",
+    "92ac1f18e228",
+    "47b320b8e362",
+    "63c86818a1fd",
+    "14812c35cbe0",
+    "3bfcff9e1160",
+    "7045bde3dbe3",
+    "af68940ec1e0",
+    "830fe33f7920",
+    "6268e160a599",
+    "169ebe479f0f",
+    "5f23b9a680d2",
+    "b698fe4a17d2",
+    "17ba5e679fa6",
+    "fe03774bbb0a",
+    "6cb05f24f18c",
+    "3bb58e487f35",
+    "3e9307dee462",
+    "47fd0f06b413",
+    "7013b47db36c",
+    "9c5e7c4556c7",
+    "65485aaaed6b",
     "943a2fc41358",
+    "95875c5a02da",
+    "74e38c979ed6",
+    "51045d443f94",
+    "343d17b3e17a",
+    "b0ec811419ad",
+    "4115620504a4",
+    "dd9d19a9c5a4",
+    "b421c50e856a",
+    "81c7d996ca75",
     "f68ef795b10a",
     "ff9000f9e899",
-    "28cc4ad9c612",
-    "83790aaeee8f",
-    "b83922ad5cd6",
-    "169ebe479f0f",
-    "31a210b9e499",
-    "dfa924e4f13d",
-    "cfdcae65b396",
-    "e5a2151f14c5",
-    "d56a5cdfbb96",
-    "e990de2f3299",
-    "2bd8b6a7de86",
-    "6cb05f24f18c",
-    "ec40e3cfacb3",
-    "50ff7c2d8ffe",
-    "ca2188a90354",
-    "5f23b9a680d2",
-    "343d17b3e17a",
-    "49ecd59bb8e6",
-    "7aeaaa602ba5",
-    "e4e4235ed083",
-    "f4e705fed31d",
-    "40c4233b088c",
-    "92ac1f18e228",
     "de373710bd9b",
-    "23ab136875d6",
-    "7b1420f5d653",
-    "f3dabdf7fcdc",
-    "2fb60ff4a3bf",
-    "36ac56b06e2b",
-    "63c86818a1fd",
-    "47fd0f06b413",
-    "81c7d996ca75",
-    "0d4041a7fae2",
-    "30de0d34d3d8",
-    "a4c90bf5261d",
-    "eff4ba5df193",
-    "045f55b844a4",
-    "9c5e7c4556c7",
-    "1431412201ef",
-    "45a67124f3bb",
-    "556f276c2cb7",
-    "51045d443f94",
-    "209003425473",
-    "fe03774bbb0a",
-    "2bf37231db1f",
-    "07c82ac17438",
-    "2925e4685dcf",
-    "b5af3579ee95",
-    "8f9b844b1ff6",
-    "1016c48d066c",
-    "acefd863227a",
-    "9b3073f18896",
-    "318f368c76b5",
-    "f1288e8da16d",
-    "9e539a681c0a",
-    "734a420b9235",
-    "46bb0ca0fde5",
-    "dd9d19a9c5a4",
-    "af68940ec1e0",
-    "aabbc8a157d5",
-    "2763e2fd180a",
-    "2ae5e11a0d48",
-    "3bb58e487f35",
-    "624842d27583",
-    "1de84568c6f2",
-    "3bfcff9e1160",
-    "b421c50e856a",
-    "3e9307dee462",
-    "45cbe6e728da",
-    "1678c8c092e0",
-    "1ede72cc1fa0",
-    "85c4730b886c",
-    "994fb09849c9",
-    "65485aaaed6b",
-    "830fe33f7920",
-    "a0b3b1f93467",
-    "6f3f5d987825",
-    "95875c5a02da",
-    "fc1a21193f87",
-    "2e469813dd1c",
     "889bec77b208",
+    "2fb60ff4a3bf",
+    "0de684b7c379",
     "1d6b86fe014c",
+    "6f3f5d987825",
+    "49ecd59bb8e6",
+    "eff4ba5df193",
+    "7aeaaa602ba5",
+    "9b3073f18896",
+    "40c4233b088c",
+    "a75e66a206d2",
+    "2e469813dd1c",
+    "30de0d34d3d8",
+    "f1288e8da16d",
+    "624842d27583",
+    "dfa924e4f13d",
+    "2ae5e11a0d48",
+    "39a94e2128a3",
+    "83790aaeee8f",
     "a6ab397cf266",
-    "e87b4da2717b",
-    "7013b47db36c",
-    "74e38c979ed6",
     "9d7f440c781e",
-    "ecc0ec2d9067",
-    "17ba5e679fa6",
-    "7045bde3dbe3",
-    "14812c35cbe0",
-    "8a06a3214a28"
+    "28cc4ad9c612",
+    "a0b3b1f93467",
+    "45cbe6e728da",
+    "ec40e3cfacb3",
+    "ca2188a90354",
+    "36ac56b06e2b",
+    "2925e4685dcf",
+    "45a67124f3bb",
+    "fc1a21193f87",
+    "ecc0ec2d9067"
   ],
   "stats": {
     "Polymarket": {
@@ -650,6 +652,24 @@
       "date": "2026-04-20T14:18:07.376435+00:00",
       "price_at_signal": 199.2,
       "title": "Dark pool: SPY, QQQ, NVDA, AMD, TSM"
+    },
+    {
+      "uid": "26d06aeb7fcc",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "BEARISH",
+      "date": "2026-04-20T15:49:41.099184+00:00",
+      "price_at_signal": 0,
+      "title": "Trump: \"israel never talked me into the war with iran, the results of oct. 7th, "
+    },
+    {
+      "uid": "0de684b7c379",
+      "source": "Macro RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-20T15:49:41.266992+00:00",
+      "price_at_signal": 0,
+      "title": "Gaza reconstruction to cost more than $70bn, officials say"
     }
   ],
   "history": [
@@ -4686,6 +4706,154 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "24ec6fb9165d",
+      "date": "20/04/2026 15:49 UTC",
+      "date_be": "20/04/2026 17:49 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 14",
+      "direction": "MIXED",
+      "title": "[2x CONVERGENCE] ITA \u2014 MIXED",
+      "detail": "Score: 14pts across 2 independent sources: Truth Social, Macro RSS",
+      "urgency": "HIGH",
+      "keywords": "ITA",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "Sources split on ITA \u2014 no clear direction",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Truth Social",
+            "direction": "BEARISH",
+            "urgency": "MEDIUM",
+            "points": 8,
+            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
+            "signal": "Trump: \"israel never talked me into the war with iran, the r"
+          },
+          {
+            "source": "Macro RSS",
+            "direction": "BULLISH",
+            "urgency": "HIGH",
+            "points": 6,
+            "reasoning": "weight=2 + urgency=3 + hit_rate=50%x2 = 6pts",
+            "signal": "Gaza reconstruction to cost more than $70bn, officials say"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "26d06aeb7fcc",
+      "date": "20/04/2026 15:49 UTC",
+      "date_be": "20/04/2026 17:49 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 1h 32m ago",
+      "direction": "BEARISH",
+      "title": "Trump: \"israel never talked me into the war with iran, the results of oct. 7th, added to\"",
+      "detail": "israel never talked me into the war with iran, the results of oct. 7th, added to my lifelong opinion that iran can never have a nuclear weapon, did. i watch and read the fake news pundits and polls in",
+      "urgency": "MEDIUM",
+      "keywords": "iran, war",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116437457191403164",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 1h 32m ago. Matched: iran, war",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "0de684b7c379",
+      "date": "20/04/2026 15:49 UTC",
+      "date_be": "20/04/2026 17:49 CEST",
+      "source": "Macro RSS",
+      "type": "Financial Times \u00b7 defense",
+      "direction": "BULLISH",
+      "title": "Gaza reconstruction to cost more than $70bn, officials say",
+      "detail": "First damage assessment since US-backed ceasefire comes as progress on peace plan stalls during Iran war",
+      "urgency": "HIGH",
+      "keywords": "defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.ft.com/content/9bc43c2f-cb41-498d-bb8c-8ea756e04a82",
+      "confidence": 55,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Financial Times reports on defense. 2 bullish / 0 bearish signals in text.",
+        "signal_type": "News RSS \u2014 Financial Times. Macro context signal.",
+        "confidence": 55,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "News follows events \u2014 not predictive. Use to confirm crony signals or set macro context."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -6271,6 +6439,110 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "fac5f36e30bf",
+      "theme": "defense",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "ITA",
+      "score": 36,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Truth Social",
+        "Macro RSS"
+      ],
+      "date": "2026-04-20T15:49:36.112981+00:00",
+      "price_at_signal": 231.63,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "77f8ff031860",
+      "theme": "energy",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "XLE",
+      "score": 29,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Truth Social"
+      ],
+      "date": "2026-04-20T15:49:36.283511+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "d3a1771e5880",
+      "theme": "commodities",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 29,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Truth Social"
+      ],
+      "date": "2026-04-20T15:49:36.426671+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "f06f584449e7",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-20T15:49:36.570801+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "395c3c6f818f",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 7,
+      "confidence": 47,
+      "sources": [
+        "Macro RSS"
+      ],
+      "date": "2026-04-20T15:49:36.792688+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
@@ -6991,7 +7263,7 @@
     }
   ],
   "position_book": {
-    "cash": 92000.0,
+    "cash": 88995.78,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -7058,32 +7330,6 @@
           "hit": false
         }
       },
-      "ITA": {
-        "side": "LONG",
-        "ticker": "ITA",
-        "shares": 8.62069,
-        "avg_entry": 232.0,
-        "invested_eur": 2000.0,
-        "open_date": "2026-04-20T07:24:47.299083+00:00",
-        "open_be": "20/04/2026 09:24 CEST",
-        "signals": [
-          "panel-ITA-20/04/2026",
-          "panel-ITA-20/04/2026"
-        ],
-        "themes": [
-          "1 analyst bullish: The Macro Man. Consid",
-          "Defense \u2014 The Macro Man"
-        ],
-        "confidence": 40,
-        "check_4h": {
-          "price": 232.1,
-          "pct": 0.04,
-          "pnl_eur": 0.86,
-          "date": "2026-04-20T14:18:06.950235+00:00",
-          "hit": false
-        },
-        "check_24h": null
-      },
       "XAR": {
         "side": "LONG",
         "ticker": "XAR",
@@ -7109,10 +7355,72 @@
           "hit": false
         },
         "check_24h": null
+      },
+      "ITA": {
+        "side": "SHORT",
+        "ticker": "ITA",
+        "shares": 10.79867,
+        "avg_entry": 231.51,
+        "invested_eur": 2500.0,
+        "open_date": "2026-04-20T15:49:35.796206+00:00",
+        "open_be": "20/04/2026 17:49 CEST",
+        "signals": [
+          "panel-ITA-20/04/2026"
+        ],
+        "themes": [
+          "Defense \u2014 The Trump Whisperer"
+        ],
+        "confidence": 57,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "GLD": {
+        "side": "SHORT",
+        "ticker": "GLD",
+        "shares": 5.670863,
+        "avg_entry": 440.85,
+        "invested_eur": 2500.0,
+        "open_date": "2026-04-20T15:49:35.935636+00:00",
+        "open_be": "20/04/2026 17:49 CEST",
+        "signals": [
+          "panel-GLD-20/04/2026"
+        ],
+        "themes": [
+          "Gold \u2014 The Trump Whisperer"
+        ],
+        "confidence": 57,
+        "check_4h": null,
+        "check_24h": null
       }
     },
-    "closed": [],
-    "realised_pnl": 0.0,
+    "closed": [
+      {
+        "ticker": "ITA",
+        "side": "LONG",
+        "shares": 8.62069,
+        "avg_entry": 232.0,
+        "close_price": 231.51,
+        "invested_eur": 2000.0,
+        "pnl_eur": -4.22,
+        "pnl_pct": -0.21,
+        "open_date": "2026-04-20T07:24:47.299083+00:00",
+        "open_be": "20/04/2026 09:24 CEST",
+        "close_date": "2026-04-20T15:49:35.796161+00:00",
+        "close_be": "20/04/2026 17:49 CEST",
+        "hold_hours": 8.4,
+        "signals": [
+          "panel-ITA-20/04/2026",
+          "panel-ITA-20/04/2026"
+        ],
+        "themes": [
+          "1 analyst bullish: The Macro Man. Consid",
+          "Defense \u2014 The Macro Man"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
+      }
+    ],
+    "realised_pnl": -4.22,
     "platform_score": {
       "total_hits": 0,
       "total_misses": 6,
