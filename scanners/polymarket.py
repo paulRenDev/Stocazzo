@@ -64,7 +64,15 @@ def scan_polymarket(seen_data):
 
         for m in markets:
             question = m.get("question", "")
-            uid      = make_id(question)
+
+            # UID includes price bucket (10% steps) so significant moves re-alert
+            try:
+                _op = json.loads(m.get("outcomePrices", "[]") or "[]")
+                _p  = float(_op[0]) if _op else 0.5
+                _bucket = int(_p * 10)  # 0-10, changes every ~10%
+            except Exception:
+                _bucket = 5
+            uid = make_id(f"{question}|{_bucket}")
 
             if is_seen(uid, seen_data):
                 continue
