@@ -17,6 +17,12 @@ from datetime import datetime, timezone
 from config import TWELVEDATA_KEY, FINNHUB_KEY
 from helpers import now_utc_iso, now_be
 
+try:
+    import yfinance as yf
+    _YFINANCE = True
+except ImportError:
+    _YFINANCE = False
+
 # ── CONSTANTS ─────────────────────────────────────────────────────────────────
 TOTAL_CAPITAL  = 100_000.0  # EUR, never changes
 BASE_STAKE     = 1_000.0    # low confidence position size
@@ -29,7 +35,18 @@ CHECK_WINDOWS  = [4, 24, 120]
 
 # ── PRICE FETCH ───────────────────────────────────────────────────────────────
 def get_price(ticker):
-    """Fetch live price — Twelve Data primary, Finnhub fallback."""
+    """Fetch live price — yfinance primary (free, no limits), Twelve Data + Finnhub fallback."""
+    # Primary: yfinance (free, works on GitHub Actions, no credit cost)
+    if _YFINANCE:
+        try:
+            t = yf.Ticker(ticker)
+            info = t.fast_info
+            p = float(getattr(info, "last_price", 0) or 0)
+            if p:
+                return round(p, 4)
+        except Exception:
+            pass
+    # Fallback: Twelve Data
     if TWELVEDATA_KEY:
         try:
             r = requests.get(
@@ -42,6 +59,7 @@ def get_price(ticker):
                 if p: return round(p, 4)
         except Exception:
             pass
+    # Last resort: Finnhub
     if FINNHUB_KEY:
         try:
             r = requests.get(
