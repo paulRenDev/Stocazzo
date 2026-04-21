@@ -1,120 +1,129 @@
 {
   "ids": [
-    "de373710bd9b",
-    "83790aaeee8f",
-    "2925e4685dcf",
-    "51045d443f94",
-    "ff9000f9e899",
-    "31843a5643ef",
-    "46bb0ca0fde5",
-    "2bf37231db1f",
-    "af68940ec1e0",
-    "07c82ac17438",
-    "d56a5cdfbb96",
-    "a4c90bf5261d",
-    "e990de2f3299",
-    "6268e160a599",
-    "39a94e2128a3",
-    "0d4041a7fae2",
-    "2ae5e11a0d48",
-    "060828854bf6",
-    "a75e66a206d2",
-    "1431412201ef",
-    "36ac56b06e2b",
-    "6f3f5d987825",
-    "40c4233b088c",
-    "5f23b9a680d2",
-    "209003425473",
-    "3e9307dee462",
-    "b0ec811419ad",
-    "f1288e8da16d",
     "85c4730b886c",
-    "169ebe479f0f",
-    "50ff7c2d8ffe",
-    "1de84568c6f2",
-    "74e38c979ed6",
-    "1678c8c092e0",
-    "1ede72cc1fa0",
-    "14812c35cbe0",
-    "aabbc8a157d5",
-    "8a06a3214a28",
-    "1d6b86fe014c",
-    "9b3073f18896",
-    "624842d27583",
-    "3bb58e487f35",
-    "47fd0f06b413",
-    "b5af3579ee95",
-    "9d7f440c781e",
+    "a6ab397cf266",
     "7b1420f5d653",
-    "dd9d19a9c5a4",
-    "e87b4da2717b",
+    "500615d0f735",
+    "dfa924e4f13d",
+    "2e469813dd1c",
+    "f3dabdf7fcdc",
+    "ca2188a90354",
+    "de373710bd9b",
+    "060828854bf6",
+    "711e86e945ab",
+    "ff9000f9e899",
+    "95875c5a02da",
+    "aabbc8a157d5",
+    "a75e66a206d2",
+    "5f23b9a680d2",
+    "4115620504a4",
+    "23ab136875d6",
+    "46bb0ca0fde5",
     "7aeaaa602ba5",
     "8f9b844b1ff6",
-    "67908201a79d",
-    "ec40e3cfacb3",
-    "556f276c2cb7",
-    "47b320b8e362",
-    "65485aaaed6b",
-    "ecc0ec2d9067",
-    "2763e2fd180a",
-    "92ac1f18e228",
-    "23ab136875d6",
-    "63c86818a1fd",
-    "ca2188a90354",
-    "e4e4235ed083",
-    "eff4ba5df193",
-    "acefd863227a",
-    "dfa924e4f13d",
-    "889bec77b208",
-    "9c5e7c4556c7",
-    "343d17b3e17a",
-    "49ecd59bb8e6",
-    "17ba5e679fa6",
     "312fe7511d0b",
-    "f4e705fed31d",
-    "45a67124f3bb",
-    "4115620504a4",
-    "1016c48d066c",
-    "fb29376bd25f",
-    "3bfcff9e1160",
-    "b698fe4a17d2",
-    "9e539a681c0a",
-    "30de0d34d3d8",
-    "31a210b9e499",
-    "734a420b9235",
-    "0eb7d59f6afd",
-    "45cbe6e728da",
-    "6cb05f24f18c",
-    "7a2691723cce",
-    "711e86e945ab",
-    "7045bde3dbe3",
-    "045f55b844a4",
-    "b83922ad5cd6",
-    "f3dabdf7fcdc",
-    "318f368c76b5",
-    "994fb09849c9",
-    "b2e74d6ff27c",
-    "2bd8b6a7de86",
-    "81c7d996ca75",
-    "a0b3b1f93467",
-    "2e469813dd1c",
-    "28cc4ad9c612",
-    "2fb60ff4a3bf",
-    "b421c50e856a",
-    "7013b47db36c",
-    "fe03774bbb0a",
-    "95875c5a02da",
-    "0de684b7c379",
-    "500615d0f735",
-    "f68ef795b10a",
-    "943a2fc41358",
-    "fc1a21193f87",
-    "26d06aeb7fcc",
     "cfdcae65b396",
     "b3e5f5faf150",
+    "c11c7edd721e",
+    "2ae5e11a0d48",
+    "2bf37231db1f",
+    "9b3073f18896",
+    "9d7f440c781e",
     "830fe33f7920",
+    "2bd8b6a7de86",
+    "1678c8c092e0",
+    "f4e705fed31d",
+    "6f3f5d987825",
+    "31843a5643ef",
+    "8f759a104cf6",
+    "31a210b9e499",
+    "b0ec811419ad",
+    "b5af3579ee95",
+    "a0b3b1f93467",
+    "14812c35cbe0",
+    "6cb05f24f18c",
     "e5a2151f14c5",
-    "a6ab397cf266"
+    "1d6b86fe014c",
+    "3e9307dee462",
+    "10da3fb8b1fa",
+    "1ede72cc1fa0",
+    "b83922ad5cd6",
+    "81c7d996ca75",
+    "734a420b9235",
+    "65485aaaed6b",
+    "30de0d34d3d8",
+    "9977641bddad",
+    "02bece6829ac",
+    "8a06a3214a28",
+    "8c333349babe",
+    "9e539a681c0a",
+    "fc1a21193f87",
+    "40c4233b088c",
+    "26d06aeb7fcc",
+    "994fb09849c9",
+    "b2e74d6ff27c",
+    "83790aaeee8f",
+    "943a2fc41358",
+    "28cc4ad9c612",
+    "07c82ac17438",
+    "2fb60ff4a3bf",
+    "889bec77b208",
+    "1431412201ef",
+    "286e8c696110",
+    "a4c90bf5261d",
+    "6268e160a599",
+    "e4e4235ed083",
+    "47b320b8e362",
+    "45a67124f3bb",
+    "b4c46499d37a",
+    "045f55b844a4",
+    "e990de2f3299",
+    "17ba5e679fa6",
+    "dd9d19a9c5a4",
+    "0d4041a7fae2",
+    "ec40e3cfacb3",
+    "2763e2fd180a",
+    "f68ef795b10a",
+    "1de84568c6f2",
+    "74e38c979ed6",
+    "343d17b3e17a",
+    "50ff7c2d8ffe",
+    "49ecd59bb8e6",
+    "0de684b7c379",
+    "92ac1f18e228",
+    "b698fe4a17d2",
+    "fb29376bd25f",
+    "1016c48d066c",
+    "7013b47db36c",
+    "209003425473",
+    "8610b6e43b2d",
+    "45cbe6e728da",
+    "556f276c2cb7",
+    "67908201a79d",
+    "47fd0f06b413",
+    "169ebe479f0f",
+    "7045bde3dbe3",
+    "624842d27583",
+    "2925e4685dcf",
+    "e87b4da2717b",
+    "fe03774bbb0a",
+    "b421c50e856a",
+    "36ac56b06e2b",
+    "0eb7d59f6afd",
+    "3bb58e487f35",
+    "9c5e7c4556c7",
+    "3bfcff9e1160",
+    "318f368c76b5",
+    "af68940ec1e0",
+    "51045d443f94",
+    "d56a5cdfbb96",
+    "f1288e8da16d",
+    "7a2691723cce",
+    "acefd863227a",
+    "eff4ba5df193",
+    "39a94e2128a3",
+    "ecc0ec2d9067",
+    "63c86818a1fd"
   ],
   "stats": {
     "Polymarket": {
@@ -690,6 +699,60 @@
       "date": "2026-04-20T18:12:49.036571+00:00",
       "price_at_signal": 0,
       "title": "Trump: \"the deal that we are making with iran will be far better than the jcpoa,"
+    },
+    {
+      "uid": "10da3fb8b1fa",
+      "source": "Truth Social",
+      "ticker": "XLE",
+      "direction": "WATCH",
+      "date": "2026-04-21T04:22:03.198180+00:00",
+      "price_at_signal": 55.080002,
+      "title": "Trump: \"operation midnight hammer was a complete and total obliteration of the n"
+    },
+    {
+      "uid": "8610b6e43b2d",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "WATCH",
+      "date": "2026-04-21T04:22:03.365284+00:00",
+      "price_at_signal": 231.73,
+      "title": "Trump: \"treason!!! president djthttps://justthenews.com/accountability/political"
+    },
+    {
+      "uid": "8c333349babe",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "BEARISH",
+      "date": "2026-04-21T04:22:03.521559+00:00",
+      "price_at_signal": 0,
+      "title": "Trump: \"the iranian leadership has forced hundreds of ships toward the united st"
+    },
+    {
+      "uid": "c11c7edd721e",
+      "source": "Truth Social",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-21T04:22:03.672670+00:00",
+      "price_at_signal": 0,
+      "title": "Trump: \"i'm winning a war, by a lot, things are going very well, our military ha"
+    },
+    {
+      "uid": "02bece6829ac",
+      "source": "Macro RSS",
+      "ticker": "QQQ",
+      "direction": "NEUTRAL",
+      "date": "2026-04-21T04:22:03.834714+00:00",
+      "price_at_signal": 0,
+      "title": "Trump\u2019s \u2018Board of Peace\u2019 held talks with DP World over Gaza reconstruction"
+    },
+    {
+      "uid": "b4c46499d37a",
+      "source": "Macro RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-21T04:22:03.998228+00:00",
+      "price_at_signal": 0,
+      "title": "\u2018Highly unlikely\u2019 Iran ceasefire will be extended if no deal reached, Trump says"
     }
   ],
   "history": [
@@ -4964,6 +5027,387 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "b970cb3d27d8",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 14",
+      "direction": "BUY",
+      "title": "[2x CONVERGENCE] ITA \u2014 BUY",
+      "detail": "Score: 14pts across 2 independent sources: Truth Social, Macro RSS",
+      "urgency": "HIGH",
+      "keywords": "ITA",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "BOTZ",
+          "Global X Robotics & AI ETF",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "1/2 sources bullish on ITA",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Truth Social",
+            "direction": "WATCH",
+            "urgency": "MEDIUM",
+            "points": 8,
+            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
+            "signal": "Trump: \"treason!!! president djthttps://justthenews.com/acco"
+          },
+          {
+            "source": "Macro RSS",
+            "direction": "BULLISH",
+            "urgency": "HIGH",
+            "points": 6,
+            "reasoning": "weight=2 + urgency=3 + hit_rate=50%x2 = 6pts",
+            "signal": "\u2018Highly unlikely\u2019 Iran ceasefire will be extended if no deal"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "10da3fb8b1fa",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 59m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"operation midnight hammer was a complete and total obliteration of the nuclear d\"",
+      "detail": "operation midnight hammer was a complete and total obliteration of the nuclear dust sites in iran. therefore, digging it out will be a long and difficult process. fake news cnn, and other corrupt medi",
+      "urgency": "MEDIUM",
+      "keywords": "iran",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116440547673226976",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 59m ago. Matched: iran",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "286e8c696110",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 2h 46m ago",
+      "direction": "BULLISH",
+      "title": "Trump: \"trump's historic rating with seniors boosted by tax deductions: https://justthen\"",
+      "detail": "trump's historic rating with seniors boosted by tax deductions: https://justthenews.com/government/white-house/trumps-historic-high-rating-seniors-sweetened-tax-deductions | Posted: 2h 46m ago | Keywo",
+      "urgency": "MEDIUM",
+      "keywords": "tax",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116440126689763629",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 2h 46m ago. Matched: tax",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "9977641bddad",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 2h 46m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"trump economy: retail sales and housing suggest a resilient consumer: https://ju\"",
+      "detail": "trump economy: retail sales and housing suggest a resilient consumer: https://justthenews.com/nation/states/center-square/everyday-economics-retail-sales-and-housing-suggest-resilient-consumer | Poste",
+      "urgency": "MEDIUM",
+      "keywords": "economy",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116440125310523388",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 2h 46m ago. Matched: economy",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "8610b6e43b2d",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 2h 47m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"treason!!! president djthttps://justthenews.com/accountability/political-ethics/\"",
+      "detail": "treason!!! president djthttps://justthenews.com/accountability/political-ethics/democrats-ukraine-narrative-has-gone-reverse-gop-seeks-expunge | Posted: 2h 47m ago | Keywords: ukraine",
+      "urgency": "MEDIUM",
+      "keywords": "ukraine",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "BOTZ",
+          "Global X Robotics & AI ETF",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116440123694064271",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 2h 47m ago. Matched: ukraine",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "8c333349babe",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 9h 53m ago",
+      "direction": "BEARISH",
+      "title": "Trump: \"the iranian leadership has forced hundreds of ships toward the united states, mo\"",
+      "detail": "the iranian leadership has forced hundreds of ships toward the united states, mostly texas, louisiana, and alaska, to get their oil \u2014 thank you very much! president donald j. trump | Posted: 9h 53m ag",
+      "urgency": "MEDIUM",
+      "keywords": "iran, oil, war",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116438448094769480",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 9h 53m ago. Matched: iran, oil, war",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "c11c7edd721e",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 10h 10m ago",
+      "direction": "BULLISH",
+      "title": "Trump: \"i'm winning a war, by a lot, things are going very well, our military has been a\"",
+      "detail": "i'm winning a war, by a lot, things are going very well, our military has been amazing and, if you read the fake news, like the failing new york times, the absolutely horrendous and disgusting wall st",
+      "urgency": "MEDIUM",
+      "keywords": "iran, wall street, military, war, deal",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116438381520104888",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 10h 10m ago. Matched: iran, wall street, military",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "02bece6829ac",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "Macro RSS",
+      "type": "Financial Times \u00b7 tech",
+      "direction": "NEUTRAL",
+      "title": "Trump\u2019s \u2018Board of Peace\u2019 held talks with DP World over Gaza reconstruction",
+      "detail": "Proposal examined having Emirati company manage supply chains and logistics as part of US plan for devastated enclave",
+      "urgency": "MEDIUM",
+      "keywords": "tech",
+      "etfs": [
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "EQQQ",
+          "Invesco EQQQ Nasdaq-100 UCITS ETF",
+          "AMS"
+        ]
+      ],
+      "link": "https://www.ft.com/content/873b866b-fd17-426d-8cb1-a34566e2e1d4",
+      "confidence": 40,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Financial Times reports on tech. 1 bullish / 1 bearish signals in text.",
+        "signal_type": "News RSS \u2014 Financial Times. Macro context signal.",
+        "confidence": 40,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "News follows events \u2014 not predictive. Use to confirm crony signals or set macro context."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b4c46499d37a",
+      "date": "21/04/2026 04:22 UTC",
+      "date_be": "21/04/2026 06:22 CEST",
+      "source": "Macro RSS",
+      "type": "Financial Times \u00b7 defense, tech",
+      "direction": "BULLISH",
+      "title": "\u2018Highly unlikely\u2019 Iran ceasefire will be extended if no deal reached, Trump says",
+      "detail": "US delegation expected to leave \u2018soon\u2019 for Pakistan peace talks even as Tehran\u2019s attendance remains unclear",
+      "urgency": "HIGH",
+      "keywords": "defense, tech",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://www.ft.com/content/18c234e2-019a-448d-bf17-35bb2c146add",
+      "confidence": 55,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Financial Times reports on defense, tech. 2 bullish / 0 bearish signals in text.",
+        "signal_type": "News RSS \u2014 Financial Times. Macro context signal.",
+        "confidence": 55,
+        "source_weight": 2,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "News follows events \u2014 not predictive. Use to confirm crony signals or set macro context."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -6777,6 +7221,132 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "1412b8e19d61",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 36,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Truth Social",
+        "Macro RSS"
+      ],
+      "date": "2026-04-21T04:22:02.147927+00:00",
+      "price_at_signal": 708.69,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "cbfb7dfd054e",
+      "theme": "defense",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "ITA",
+      "score": 36,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Truth Social",
+        "Macro RSS"
+      ],
+      "date": "2026-04-21T04:22:02.329992+00:00",
+      "price_at_signal": 231.73,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "03a4ed931a85",
+      "theme": "commodities",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "GLD",
+      "score": 29,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Truth Social"
+      ],
+      "date": "2026-04-21T04:22:02.521745+00:00",
+      "price_at_signal": 442.16989,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "961affbf9982",
+      "theme": "tech",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "QQQ",
+      "score": 15,
+      "confidence": 90,
+      "sources": [
+        "Truth Social",
+        "Macro RSS"
+      ],
+      "date": "2026-04-21T04:22:02.692508+00:00",
+      "price_at_signal": 646.77002,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "4fcfe9532b97",
+      "theme": "energy",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "XLE",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-21T04:22:02.868524+00:00",
+      "price_at_signal": 55.080002,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "3ba194530726",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-21T04:22:03.030609+00:00",
+      "price_at_signal": 442.16989,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
@@ -7497,7 +8067,7 @@
     }
   ],
   "position_book": {
-    "cash": 88995.78,
+    "cash": 88985.08,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -7591,51 +8161,39 @@
         "check_24h": null
       },
       "ITA": {
-        "side": "SHORT",
+        "side": "LONG",
         "ticker": "ITA",
-        "shares": 10.79867,
-        "avg_entry": 231.51,
+        "shares": 10.782834,
+        "avg_entry": 231.85,
         "invested_eur": 2500.0,
-        "open_date": "2026-04-20T15:49:35.796206+00:00",
-        "open_be": "20/04/2026 17:49 CEST",
+        "open_date": "2026-04-21T04:22:01.856003+00:00",
+        "open_be": "21/04/2026 06:22 CEST",
         "signals": [
-          "panel-ITA-20/04/2026"
+          "panel-ITA-21/04/2026"
         ],
         "themes": [
-          "Defense \u2014 The Trump Whisperer"
+          "Defense \u2014 The Trump Whisperer + The Macro Man"
         ],
-        "confidence": 57,
-        "check_4h": {
-          "price": 231.85,
-          "pct": -0.15,
-          "pnl_eur": -3.67,
-          "date": "2026-04-20T20:24:12.254057+00:00",
-          "hit": false
-        },
+        "confidence": 65,
+        "check_4h": null,
         "check_24h": null
       },
       "GLD": {
-        "side": "SHORT",
+        "side": "LONG",
         "ticker": "GLD",
-        "shares": 5.670863,
-        "avg_entry": 440.85,
+        "shares": 5.654957,
+        "avg_entry": 442.09,
         "invested_eur": 2500.0,
-        "open_date": "2026-04-20T15:49:35.935636+00:00",
-        "open_be": "20/04/2026 17:49 CEST",
+        "open_date": "2026-04-21T04:22:01.975089+00:00",
+        "open_be": "21/04/2026 06:22 CEST",
         "signals": [
-          "panel-GLD-20/04/2026"
+          "panel-GLD-21/04/2026"
         ],
         "themes": [
-          "Gold \u2014 The Trump Whisperer"
+          "Gold \u2014 The Trump Whisperer + The Macro Man"
         ],
-        "confidence": 57,
-        "check_4h": {
-          "price": 442.09,
-          "pct": -0.28,
-          "pnl_eur": -7.03,
-          "date": "2026-04-20T20:24:12.410348+00:00",
-          "hit": false
-        },
+        "confidence": 65,
+        "check_4h": null,
         "check_24h": null
       }
     },
@@ -7664,9 +8222,55 @@
         ],
         "close_reason": "opposite_signal",
         "hit": false
+      },
+      {
+        "ticker": "ITA",
+        "side": "SHORT",
+        "shares": 10.79867,
+        "avg_entry": 231.51,
+        "close_price": 231.85,
+        "invested_eur": 2500.0,
+        "pnl_eur": -3.67,
+        "pnl_pct": -0.15,
+        "open_date": "2026-04-20T15:49:35.796206+00:00",
+        "open_be": "20/04/2026 17:49 CEST",
+        "close_date": "2026-04-21T04:22:01.855962+00:00",
+        "close_be": "21/04/2026 06:22 CEST",
+        "hold_hours": 12.5,
+        "signals": [
+          "panel-ITA-20/04/2026"
+        ],
+        "themes": [
+          "Defense \u2014 The Trump Whisperer"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
+      },
+      {
+        "ticker": "GLD",
+        "side": "SHORT",
+        "shares": 5.670863,
+        "avg_entry": 440.85,
+        "close_price": 442.09,
+        "invested_eur": 2500.0,
+        "pnl_eur": -7.03,
+        "pnl_pct": -0.28,
+        "open_date": "2026-04-20T15:49:35.935636+00:00",
+        "open_be": "20/04/2026 17:49 CEST",
+        "close_date": "2026-04-21T04:22:01.975047+00:00",
+        "close_be": "21/04/2026 06:22 CEST",
+        "hold_hours": 12.5,
+        "signals": [
+          "panel-GLD-20/04/2026"
+        ],
+        "themes": [
+          "Gold \u2014 The Trump Whisperer"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
       }
     ],
-    "realised_pnl": -4.22,
+    "realised_pnl": -14.92,
     "platform_score": {
       "total_hits": 0,
       "total_misses": 8,
