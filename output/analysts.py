@@ -306,7 +306,7 @@ def _panel_vote(verdicts, all_alerts):
             f"Consider: BUY {etf_str} ({sector_str}).",
         ]
         if thesis_signals: parts.append("Driven by: " + " · ".join(thesis_signals[:2]) + ".")
-        if abstained: parts.append(f"{active_count}/{total_count} analysts active — {', '.join(abstained[:2])} had no data.")
+        if abstained: parts.append(f"{active_count}/{total_count} analysts had signals this scan — {', '.join(abstained[:2])} had no data this run.")
         summary = " ".join(parts)
     elif direction == "BEARISH":
         parts = [
@@ -314,7 +314,7 @@ def _panel_vote(verdicts, all_alerts):
             f"Consider: SELL / hedge {sector_str}. Watch: {etf_str}.",
         ]
         if thesis_signals: parts.append("Driven by: " + " · ".join(thesis_signals[:2]) + ".")
-        if abstained: parts.append(f"{active_count}/{total_count} analysts active — {', '.join(abstained[:2])} had no data.")
+        if abstained: parts.append(f"{active_count}/{total_count} analysts had signals this scan — {', '.join(abstained[:2])} had no data this run.")
         summary = " ".join(parts)
     else:
         summary = (f"Conflicting signals — no clear direction. {active_count}/{total_count} analysts had data."
@@ -432,7 +432,7 @@ def format_panel_html(verdicts, panel_advice):
             f"{top_snippet}{stock_lines}"
             f"<div style='margin-top:6px;'>{analyst_etfs}</div>"
             f"<div style='font-size:10px;color:var(--dim);font-family:monospace;margin-top:6px;'>"
-            f"{v['signal_count']} signals · {', '.join(v['sources_used'][:3])}</div>"
+            f"{v['signal_count']} signals this scan · {', '.join(v['sources_used'][:3])}</div>"
             f"</div>"
         )
 
