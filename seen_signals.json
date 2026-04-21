@@ -291,7 +291,15 @@
     "862ad7e1672c",
     "ce06dcf2b71d",
     "88bc9efc8d1f",
-    "91fd383f86d3"
+    "91fd383f86d3",
+    "2f668a235418",
+    "0fd1415b5f30",
+    "ebc4bd434b89",
+    "0e9f0ff64495",
+    "cc55ab0ef3e4",
+    "0906af592367",
+    "9e8699c95b67",
+    "c3177b7186c1"
   ],
   "stats": {
     "Polymarket": {
@@ -1292,368 +1300,54 @@
       "date": "2026-04-21T20:51:31.942746+00:00",
       "price_at_signal": 420.7,
       "title": "American Airlines Has Denied Rumors of a Merger With United. Here Are 2 Others F"
+    },
+    {
+      "uid": "2f668a235418",
+      "source": "Polymarket",
+      "ticker": "XLE",
+      "direction": "BULLISH",
+      "date": "2026-04-21T21:44:10.456125+00:00",
+      "price_at_signal": 0,
+      "title": "US x Iran ceasefire extended by April 22, 2026?"
+    },
+    {
+      "uid": "0fd1415b5f30",
+      "source": "Yahoo Finance RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-21T21:44:10.710153+00:00",
+      "price_at_signal": 0,
+      "title": "Dow Jones Futures Rise As Trump Extends Iran Ceasefire; Tesla Earnings Due"
+    },
+    {
+      "uid": "ebc4bd434b89",
+      "source": "Yahoo Finance RSS",
+      "ticker": "SOXX",
+      "direction": "BULLISH",
+      "date": "2026-04-21T21:44:10.815590+00:00",
+      "price_at_signal": 0,
+      "title": "Stock Market Today, April 21: SoundHound AI Falls After Announcing All-Stock Liv"
+    },
+    {
+      "uid": "0e9f0ff64495",
+      "source": "Yahoo Finance RSS",
+      "ticker": "SPY",
+      "direction": "BULLISH",
+      "date": "2026-04-21T21:44:10.933806+00:00",
+      "price_at_signal": 0,
+      "title": "Tractor Supply Is Today\u2019s Worst S&P 500 Stock. Here\u2019s Why."
+    },
+    {
+      "uid": "0906af592367",
+      "source": "Motley Fool RSS",
+      "ticker": "XLF",
+      "direction": "BEARISH",
+      "date": "2026-04-21T21:44:11.036949+00:00",
+      "price_at_signal": 0,
+      "title": "OneAscent Bets $20.8 Million on New Position in iShares Treasury ETF"
     }
   ],
   "history": [
-    {
-      "uid": "07c82ac17438",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 4h 29m ago",
-      "direction": "BEARISH",
-      "title": "Trump: \"ruddy: trump already won the war with 9 victories: https://www.newsmax.com/ruddy\"",
-      "detail": "ruddy: trump already won the war with 9 victories: https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/ | Posted: 4h 29m ago | Keywords: iran, war",
-      "urgency": "MEDIUM",
-      "keywords": "iran, war",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116434776225677515",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 4h 29m ago. Matched: iran, war",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "49ecd59bb8e6",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 4h 30m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mclaughlin/m\"",
-      "detail": "mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/ | Posted: 4h 30m ago | Keywords: iran",
-      "urgency": "MEDIUM",
-      "keywords": "iran",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116434773211303526",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 4h 30m ago. Matched: iran",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "1016c48d066c",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 11h 52m ago",
-      "direction": "BEARISH",
-      "title": "Trump: \"tariffs are a discipline, not a press release: https://www.wsj.com/opinion/tarif\"",
-      "detail": "tariffs are a discipline, not a press release: https://www.wsj.com/opinion/tariffs-are-a-discipline-not-a-press-release-4022e09e | Posted: 11h 52m ago | Keywords: tariff",
-      "urgency": "MEDIUM",
-      "keywords": "tariff",
-      "etfs": [
-        [
-          "IWDA",
-          "iShares Core MSCI World UCITS ETF",
-          "AMS"
-        ],
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116433033991904343",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 11h 52m ago. Matched: tariff",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "a0b3b1f93467",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 12h 1m ago",
-      "direction": "BEARISH",
-      "title": "Trump: \"today, an iranian-flagged cargo ship named touska, nearly 900 feet long and weig\"",
-      "detail": "today, an iranian-flagged cargo ship named touska, nearly 900 feet long and weighing almost as much as an aircraft carrier, tried to get past our naval blockade, and it did not go well for them. the u",
-      "urgency": "MEDIUM",
-      "keywords": "sanctions, iran, war, sanction",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116433000897070863",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 12h 1m ago. Matched: sanctions, iran, war",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "47b320b8e362",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 12h 37m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mclaughlin/m\"",
-      "detail": "mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/ | Posted: 12h 37m ago | Keywords: iran",
-      "urgency": "MEDIUM",
-      "keywords": "iran",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116432860421226752",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 12h 37m ago. Matched: iran",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "9e539a681c0a",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 12h 37m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"trump, iran and the bottom line for american interests: https://www.realclearpol\"",
-      "detail": "trump, iran and the bottom line for american interests: https://www.realclearpolitics.com/articles/2026/04/17/trump_iran_and_the_bottom_line_for_american_interests.html | Posted: 12h 37m ago | Keyword",
-      "urgency": "MEDIUM",
-      "keywords": "iran",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116432859604499088",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 12h 37m ago. Matched: iran",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "f68ef795b10a",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 19h 14m ago",
-      "direction": "BULLISH",
-      "title": "Trump: \"iran decided to fire bullets yesterday in the strait of hormuz \u2014 a total violati\"",
-      "detail": "iran decided to fire bullets yesterday in the strait of hormuz \u2014 a total violation of our ceasefire agreement! many of them were aimed at a french ship, and a freighter from the united kingdom. that w",
-      "urgency": "HIGH",
-      "keywords": "ceasefire",
-      "etfs": [
-        [
-          "IWDA",
-          "iShares Core MSCI World UCITS ETF",
-          "AMS"
-        ],
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116431297579272777",
-      "confidence": 85,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 19h 14m ago. Matched: ceasefire",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 85,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "830fe33f7920",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 30h 17m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"whether people like israel or not, they have proven to be a great ally of the un\"",
-      "detail": "whether people like israel or not, they have proven to be a great ally of the united states of america. they are courageous, bold, loyal, and smart and, unlike others that have shown their true colors",
-      "urgency": "LOW",
-      "keywords": "america",
-      "etfs": [],
-      "link": "https://truthsocial.com/@realDonaldTrump/116428690626427742",
-      "confidence": 35,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 30h 17m ago. Matched: america",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 35,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "a4c90bf5261d",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 43h 9m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"has anybody looked at how badly the country of spain is doing. their financial n\"",
-      "detail": "has anybody looked at how badly the country of spain is doing. their financial numbers, despite contributing almost nothing to nato and their military defense, are absolutely horrendous. sad to watch!",
-      "urgency": "MEDIUM",
-      "keywords": "nato, defense, military",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "XAR",
-          "SPDR S&P Aerospace & Defense ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116425653087220924",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 43h 9m ago. Matched: nato, defense, military",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "31a210b9e499",
       "date": "20/04/2026 07:24 UTC",
@@ -10230,6 +9924,445 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "560422e905dc",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "CONVERGENCE",
+      "type": "3 sources \u00b7 score 18",
+      "direction": "MIXED",
+      "title": "[3x CONVERGENCE] SPY \u2014 MIXED",
+      "detail": "Score: 18pts across 3 independent sources: Polymarket, Yahoo Finance RSS, Google News RSS",
+      "urgency": "HIGH",
+      "keywords": "SPY",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "Sources split on SPY \u2014 no clear direction",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Polymarket",
+            "direction": "BULLISH",
+            "urgency": "HIGH",
+            "points": 10,
+            "reasoning": "weight=5 + urgency=3 + hit_rate=80%x2 = 10pts",
+            "signal": "US x Iran ceasefire extended by April 22, 2026?"
+          },
+          {
+            "source": "Yahoo Finance RSS",
+            "direction": "BULLISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=42%x2 = 4pts",
+            "signal": "Tractor Supply Is Today\u2019s Worst S&P 500 Stock. Here\u2019s Why."
+          },
+          {
+            "source": "Google News RSS",
+            "direction": "BEARISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=43%x2 = 4pts",
+            "signal": "EQT CORP (NYSE:EQT) Reports Q1 2026 Earnings: EPS Beat Overs"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "2f668a235418",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "US x Iran ceasefire extended by April 22, 2026?",
+      "detail": "Market pricing YES at 66% | 24h vol: $534,659 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=66%, vol=$534,659",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-ceasefire-extended-by-april-22-2026",
+      "confidence": 66,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 66% with $534,659 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 66,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "0fd1415b5f30",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense, macro",
+      "direction": "BULLISH",
+      "title": "Dow Jones Futures Rise As Trump Extends Iran Ceasefire; Tesla Earnings Due",
+      "detail": "president trump extended an iran ceasefire after the stock market fell on canceled talks. tesla earnings are on deck.",
+      "urgency": "LOW",
+      "keywords": "defense, macro",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/m/f46ecdb3-fa89-3d35-b084-1638a1ef6475/dow-jones-futures-rise-as.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Dow Jones Futures Rise As Trump Extends Iran Ceasefire; Tesla Earnings Due. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "ebc4bd434b89",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 tech, merger",
+      "direction": "BULLISH",
+      "title": "Stock Market Today, April 21: SoundHound AI Falls After Announcing All-Stock LivePerson Acquisition",
+      "detail": "today, april 21, 2026, investors dissect an all-stock liveperson deal that reshapes soundhound\u2019s growth path and capital structure.",
+      "urgency": "LOW",
+      "keywords": "tech, merger",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.fool.com/coverage/stock-market-today/2026/04/21/stock-market-today-april-21-soundhound-ai-falls-after-announcing-all-stock-liveperson-acquisition/?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Stock Market Today, April 21: SoundHound AI Falls After Announcing All-Stock Liv. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "0e9f0ff64495",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 macro",
+      "direction": "BULLISH",
+      "title": "Tractor Supply Is Today\u2019s Worst S&P 500 Stock. Here\u2019s Why.",
+      "detail": "shares of tractor supply sank on tuesday, making it the worst performing s&amp;p 500 component in the session, after the farm supplier missed wall street\u2019s expectations for the first quarter on weaker",
+      "urgency": "LOW",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/m/e6a6f5e1-1700-3ae2-a5d2-42e43936210f/tractor-supply-is-today%E2%80%99s.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Tractor Supply Is Today\u2019s Worst S&P 500 Stock. Here\u2019s Why.. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "cc55ab0ef3e4",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 energy, defense",
+      "direction": "BULLISH",
+      "title": "US Equity Indexes Fall as Vance's Trip to Pakistan on Hold Ahead of Iran Ceasefire Deadline",
+      "detail": "us equity indexes fell on tuesday, while crude oil futures jumped as president donald trump reported",
+      "urgency": "LOW",
+      "keywords": "energy, defense",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ],
+        [
+          "OIH",
+          "VanEck Oil Services ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/articles/us-equity-indexes-fall-vance-210530947.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: US Equity Indexes Fall as Vance's Trip to Pakistan on Hold Ahead of Iran Ceasefi. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "0906af592367",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "Motley Fool RSS",
+      "type": "Motley Fool \u00b7 finance",
+      "direction": "BEARISH",
+      "title": "OneAscent Bets $20.8 Million on New Position in iShares Treasury ETF",
+      "detail": "this etf targets u.s. treasury bonds maturing in 2026, providing defined cash flow and a transparent approach to fixed income exposure.",
+      "urgency": "LOW",
+      "keywords": "finance",
+      "etfs": [
+        [
+          "XLF",
+          "Financial Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "KBE",
+          "SPDR S&P Bank ETF",
+          "NYSE"
+        ],
+        [
+          "KRE",
+          "SPDR S&P Regional Banking ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.fool.com/coverage/filings/2026/04/21/oneascent-bets-usd20-8-million-on-new-position-in-ishares-treasury-etf/?source=iedfolrf0000001",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Motley Fool: OneAscent Bets $20.8 Million on New Position in iShares Treasury ETF. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Motley Fool",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "9e8699c95b67",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BEARISH",
+      "title": "EQT CORP (NYSE:EQT) Reports Q1 2026 Earnings: EPS Beat Overshadows Revenue Miss - ChartMill",
+      "detail": "eqt corp (nyse:eqt) reports q1 2026 earnings: eps beat overshadows revenue miss &nbsp;&nbsp; chartmill",
+      "urgency": "LOW",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOdS1lcWlxbG9ob2ZTSEN4WngtYjk2NnBrZUo3M016YkY3bHhkZktSbnpPMmotUGF5V3JFX29hREkySmV0YWhMaS1SMndpSFVBakZab2wyTlJVd2VSSXYxTlRsZ0lmYk5ralhPU0lSdmF5eFh6Y2hkUndwZVdrUmZnNzdRcGhkTHlYQXFGS0pPMnJQMnYtWi1IU3VzckJRdGtJZGl5ZnlZbnYtUXhmUTBmZlN2VUtNZ1BRN0VCak9VV3c1MkMx?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: EQT CORP (NYSE:EQT) Reports Q1 2026 Earnings: EPS Beat Overshadows Revenue Miss . 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "c3177b7186c1",
+      "date": "21/04/2026 21:44 UTC",
+      "date_be": "21/04/2026 23:44 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BULLISH",
+      "title": "Hanmi Financial Corporation (NASDAQ:HAFC) Reports Q1 2026 Earnings Beat on EPS, Miss on Revenue - ChartMill",
+      "detail": "hanmi financial corporation (nasdaq:hafc) reports q1 2026 earnings beat on eps, miss on revenue &nbsp;&nbsp; chartmill",
+      "urgency": "LOW",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPbXpIbkQtdVVwdnR3M01Kb0ptaU8yeXhxSGpDRHdiSmhER0hIbWE4czdyNTVMYUVsWkRBa2xDUUN2S05nellmRWg1Wk1wOUxvdk0tbGF4WHZrcUhOTnRMcU5KckdLejJiZlc4QXFuQnFmSy1qSjBHNm96U3NBMWtlZVgyeTNEOG5FWmx2MlZ3LXhOU01BeXFOcVVUZGZROWhwX1Frc1hHTW90MFIxVUQyb1JnN3dNQTl3azEyZ0U1WjVfdTVETEJCUFh3VTNlQjJBWEMzMzMwSUNQbHc?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Hanmi Financial Corporation (NASDAQ:HAFC) Reports Q1 2026 Earnings Beat on EPS, . 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -13121,6 +13254,136 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "3f613afbe412",
+      "theme": "macro",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 40,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Yahoo Finance RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-21T21:44:09.552648+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "922831d76858",
+      "theme": "energy",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "XLE",
+      "score": 38,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Yahoo Finance RSS"
+      ],
+      "date": "2026-04-21T21:44:09.729935+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "6cb9641be5a9",
+      "theme": "commodities",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "GLD",
+      "score": 36,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket"
+      ],
+      "date": "2026-04-21T21:44:09.897340+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "c6fafc47f28c",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 21,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "Yahoo Finance RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-21T21:44:10.082673+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "522efcfc1080",
+      "theme": "tech",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "QQQ",
+      "score": 4,
+      "confidence": 34,
+      "sources": [
+        "Yahoo Finance RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-21T21:44:10.205624+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "8264b6a97ace",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 4,
+      "confidence": 34,
+      "sources": [
+        "Motley Fool RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-21T21:44:10.308937+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
@@ -13841,7 +14104,7 @@
     }
   ],
   "position_book": {
-    "cash": 61427.4,
+    "cash": 72439.02,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -14038,28 +14301,6 @@
         "check_4h": null,
         "check_24h": null
       },
-      "XLE": {
-        "side": "SHORT",
-        "ticker": "XLE",
-        "shares": 152.221179,
-        "avg_entry": 55.8398,
-        "invested_eur": 8500.0,
-        "open_date": "2026-04-21T17:56:44.270980+00:00",
-        "open_be": "21/04/2026 19:56 CEST",
-        "signals": [
-          "panel-XLE-21/04/2026",
-          "panel-XLE-21/04/2026",
-          "panel-XLE-21/04/2026",
-          "panel-XLE-21/04/2026"
-        ],
-        "themes": [
-          "Energy \u2014 The Macro Man",
-          "Energy \u2014 The Insider"
-        ],
-        "confidence": 40,
-        "check_4h": null,
-        "check_24h": null
-      },
       "USO": {
         "side": "SHORT",
         "ticker": "USO",
@@ -14078,23 +14319,39 @@
         "check_4h": null,
         "check_24h": null
       },
-      "GLD": {
-        "side": "SHORT",
-        "ticker": "GLD",
-        "shares": 17.421562,
-        "avg_entry": 430.501,
-        "invested_eur": 7500.0,
-        "open_date": "2026-04-21T18:48:03.264705+00:00",
-        "open_be": "21/04/2026 20:48 CEST",
+      "XLE": {
+        "side": "LONG",
+        "ticker": "XLE",
+        "shares": 44.746733,
+        "avg_entry": 55.87,
+        "invested_eur": 2500.0,
+        "open_date": "2026-04-21T21:44:09.323606+00:00",
+        "open_be": "21/04/2026 23:44 CEST",
         "signals": [
-          "panel-GLD-21/04/2026",
-          "panel-GLD-21/04/2026",
+          "panel-XLE-21/04/2026"
+        ],
+        "themes": [
+          "Energy \u2014 The Insider + The Macro Man"
+        ],
+        "confidence": 65,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "GLD": {
+        "side": "LONG",
+        "ticker": "GLD",
+        "shares": 5.819773,
+        "avg_entry": 429.57,
+        "invested_eur": 2500.0,
+        "open_date": "2026-04-21T21:44:09.447140+00:00",
+        "open_be": "21/04/2026 23:44 CEST",
+        "signals": [
           "panel-GLD-21/04/2026"
         ],
         "themes": [
-          "Gold \u2014 The Insider"
+          "Gold \u2014 The Insider + The Macro Man"
         ],
-        "confidence": 62,
+        "confidence": 65,
         "check_4h": null,
         "check_24h": null
       }
@@ -14193,9 +14450,61 @@
         ],
         "close_reason": "opposite_signal",
         "hit": false
+      },
+      {
+        "ticker": "XLE",
+        "side": "SHORT",
+        "shares": 152.221179,
+        "avg_entry": 55.8398,
+        "close_price": 55.87,
+        "invested_eur": 8500.0,
+        "pnl_eur": -4.6,
+        "pnl_pct": -0.05,
+        "open_date": "2026-04-21T17:56:44.270980+00:00",
+        "open_be": "21/04/2026 19:56 CEST",
+        "close_date": "2026-04-21T21:44:09.323560+00:00",
+        "close_be": "21/04/2026 23:44 CEST",
+        "hold_hours": 3.8,
+        "signals": [
+          "panel-XLE-21/04/2026",
+          "panel-XLE-21/04/2026",
+          "panel-XLE-21/04/2026",
+          "panel-XLE-21/04/2026"
+        ],
+        "themes": [
+          "Energy \u2014 The Macro Man",
+          "Energy \u2014 The Insider"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
+      },
+      {
+        "ticker": "GLD",
+        "side": "SHORT",
+        "shares": 17.421562,
+        "avg_entry": 430.501,
+        "close_price": 429.57,
+        "invested_eur": 7500.0,
+        "pnl_eur": 16.22,
+        "pnl_pct": 0.22,
+        "open_date": "2026-04-21T18:48:03.264705+00:00",
+        "open_be": "21/04/2026 20:48 CEST",
+        "close_date": "2026-04-21T21:44:09.447093+00:00",
+        "close_be": "21/04/2026 23:44 CEST",
+        "hold_hours": 2.9,
+        "signals": [
+          "panel-GLD-21/04/2026",
+          "panel-GLD-21/04/2026",
+          "panel-GLD-21/04/2026"
+        ],
+        "themes": [
+          "Gold \u2014 The Insider"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
       }
     ],
-    "realised_pnl": -72.6,
+    "realised_pnl": -60.98,
     "platform_score": {
       "total_hits": 0,
       "total_misses": 12,
