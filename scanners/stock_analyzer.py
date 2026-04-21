@@ -186,6 +186,9 @@ def extract_tickers(all_alerts: list) -> list:
     """
     # Skip ultra-broad tickers that would dominate enrichment without adding signal
     SKIP = {"SPY", "QQQ", "TLT", "IEF", "SHY", "BND", "AGG", "VXX",
+            # Leveraged & inverse ETFs — unreliable for technical analysis
+            "SOXS", "SOXL", "TQQQ", "SQQQ", "SPXU", "SPXL", "TBT", "TMF",
+            "DFEN", "LABD", "LABU", "UVXY", "SVXY", "VIXY", "FAZ", "FAS",
             "VOO", "VTI", "IWDA", "EQQQ"}  # European broad-market also skipped
 
     try:
