@@ -1,134 +1,135 @@
 {
   "ids": [
-    "dfa924e4f13d",
-    "c11c7edd721e",
-    "a0b3b1f93467",
-    "2bd8b6a7de86",
-    "286e8c696110",
-    "7045bde3dbe3",
-    "556f276c2cb7",
-    "b0ec811419ad",
-    "b421c50e856a",
-    "fb29376bd25f",
-    "fe03774bbb0a",
-    "8a06a3214a28",
-    "a4c90bf5261d",
-    "9977641bddad",
-    "045f55b844a4",
-    "fc1a21193f87",
-    "50ff7c2d8ffe",
-    "31a210b9e499",
-    "81c7d996ca75",
-    "312fe7511d0b",
-    "dd9d19a9c5a4",
-    "2ae5e11a0d48",
-    "30de0d34d3d8",
+    "9e539a681c0a",
     "2e469813dd1c",
-    "b2e74d6ff27c",
-    "45cbe6e728da",
-    "1431412201ef",
+    "fc1a21193f87",
+    "b5af3579ee95",
+    "1de84568c6f2",
+    "81c7d996ca75",
+    "830fe33f7920",
+    "7a2691723cce",
+    "8f759a104cf6",
+    "ff9000f9e899",
+    "7aeaaa602ba5",
     "51045d443f94",
-    "6f3f5d987825",
-    "209003425473",
-    "40c4233b088c",
-    "26d06aeb7fcc",
-    "5f23b9a680d2",
-    "0d4041a7fae2",
-    "500615d0f735",
-    "e4e4235ed083",
-    "2bf37231db1f",
-    "ca2188a90354",
-    "711e86e945ab",
-    "02bece6829ac",
+    "994fb09849c9",
+    "9d7f440c781e",
+    "7013b47db36c",
+    "cfdcae65b396",
+    "3e9307dee462",
+    "b3e5f5faf150",
+    "b698fe4a17d2",
+    "45a67124f3bb",
     "74e38c979ed6",
-    "f1288e8da16d",
-    "26057d503d43",
+    "31a210b9e499",
+    "286e8c696110",
+    "aabbc8a157d5",
+    "9977641bddad",
+    "734a420b9235",
+    "47fd0f06b413",
+    "b83922ad5cd6",
+    "a4c90bf5261d",
+    "65485aaaed6b",
+    "95875c5a02da",
+    "6cb05f24f18c",
+    "6268e160a599",
+    "f3dabdf7fcdc",
+    "6f3f5d987825",
+    "40c4233b088c",
     "eff4ba5df193",
+    "7663e05b220e",
+    "0d4041a7fae2",
+    "23ab136875d6",
+    "8610b6e43b2d",
+    "169ebe479f0f",
     "af68940ec1e0",
     "39a94e2128a3",
-    "e87b4da2717b",
-    "e5a2151f14c5",
-    "8f9b844b1ff6",
-    "2763e2fd180a",
-    "10da3fb8b1fa",
-    "e990de2f3299",
-    "1bf2c5a1c3c1",
-    "28cc4ad9c612",
-    "6268e160a599",
-    "f4e705fed31d",
-    "4115620504a4",
-    "1de84568c6f2",
-    "b83922ad5cd6",
-    "14812c35cbe0",
-    "ecc0ec2d9067",
-    "67908201a79d",
-    "318f368c76b5",
-    "7b1420f5d653",
-    "994fb09849c9",
-    "cfdcae65b396",
-    "a6ab397cf266",
-    "acefd863227a",
-    "3bfcff9e1160",
-    "169ebe479f0f",
-    "3e9307dee462",
-    "060828854bf6",
-    "07c82ac17438",
-    "a75e66a206d2",
-    "b4c46499d37a",
-    "63c86818a1fd",
-    "9d7f440c781e",
-    "31843a5643ef",
-    "343d17b3e17a",
-    "38eece107c96",
-    "624842d27583",
-    "8a6885280b66",
-    "8610b6e43b2d",
+    "2ae5e11a0d48",
+    "f1288e8da16d",
     "d56a5cdfbb96",
-    "92e38ea5412b",
-    "46bb0ca0fde5",
-    "ec40e3cfacb3",
-    "8f759a104cf6",
-    "830fe33f7920",
-    "b698fe4a17d2",
-    "6cb05f24f18c",
-    "8c333349babe",
+    "07c82ac17438",
+    "dd9d19a9c5a4",
     "2fb60ff4a3bf",
-    "9e539a681c0a",
-    "49ecd59bb8e6",
-    "ff9000f9e899",
-    "36ac56b06e2b",
-    "734a420b9235",
-    "83790aaeee8f",
-    "2925e4685dcf",
-    "95875c5a02da",
-    "0de684b7c379",
-    "92ac1f18e228",
-    "943a2fc41358",
-    "7013b47db36c",
+    "624842d27583",
     "de373710bd9b",
-    "47b320b8e362",
-    "47fd0f06b413",
-    "1ede72cc1fa0",
-    "f3dabdf7fcdc",
-    "9c5e7c4556c7",
+    "26d06aeb7fcc",
+    "b2e74d6ff27c",
+    "1431412201ef",
     "85c4730b886c",
-    "1d6b86fe014c",
-    "b3e5f5faf150",
-    "aabbc8a157d5",
-    "1016c48d066c",
+    "2bf37231db1f",
+    "46bb0ca0fde5",
+    "7045bde3dbe3",
+    "3bfcff9e1160",
+    "63c86818a1fd",
+    "acefd863227a",
+    "fe03774bbb0a",
+    "14812c35cbe0",
+    "e5a2151f14c5",
+    "209003425473",
+    "28cc4ad9c612",
+    "f4e705fed31d",
+    "9c5e7c4556c7",
+    "10da3fb8b1fa",
+    "943a2fc41358",
+    "dfa924e4f13d",
+    "fb29376bd25f",
     "3bb58e487f35",
-    "7a2691723cce",
-    "0eb7d59f6afd",
+    "0de684b7c379",
+    "343d17b3e17a",
+    "50ff7c2d8ffe",
+    "312fe7511d0b",
+    "31843a5643ef",
+    "8c333349babe",
+    "500615d0f735",
+    "8a6885280b66",
+    "318f368c76b5",
+    "83790aaeee8f",
+    "26057d503d43",
+    "2763e2fd180a",
+    "2925e4685dcf",
+    "b0ec811419ad",
+    "30de0d34d3d8",
+    "7b1420f5d653",
+    "49ecd59bb8e6",
+    "1ede72cc1fa0",
     "17ba5e679fa6",
-    "45a67124f3bb",
+    "e990de2f3299",
+    "47b320b8e362",
+    "45cbe6e728da",
+    "8f9b844b1ff6",
+    "ec40e3cfacb3",
+    "c11c7edd721e",
+    "e87b4da2717b",
+    "045f55b844a4",
+    "1bf2c5a1c3c1",
+    "b421c50e856a",
+    "92ac1f18e228",
+    "e4e4235ed083",
+    "92e38ea5412b",
+    "4115620504a4",
+    "02bece6829ac",
     "f68ef795b10a",
-    "1678c8c092e0",
-    "7aeaaa602ba5",
+    "060828854bf6",
+    "ecc0ec2d9067",
+    "a6ab397cf266",
+    "5f23b9a680d2",
+    "556f276c2cb7",
+    "67908201a79d",
+    "1d6b86fe014c",
     "889bec77b208",
-    "b5af3579ee95",
-    "65485aaaed6b",
+    "1016c48d066c",
+    "38eece107c96",
     "9b3073f18896",
-    "23ab136875d6"
+    "a75e66a206d2",
+    "a0b3b1f93467",
+    "36ac56b06e2b",
+    "0eb7d59f6afd",
+    "711e86e945ab",
+    "2bd8b6a7de86",
+    "ca2188a90354",
+    "8a06a3214a28",
+    "b4c46499d37a",
+    "1678c8c092e0"
   ],
   "stats": {
     "Polymarket": {
@@ -139,6 +140,11 @@
     "Lobbying": {
       "hits": 0,
       "misses": 0,
+      "pending": 0
+    },
+    "Macro RSS": {
+      "hits": 0,
+      "misses": 1,
       "pending": 0
     }
   },
@@ -151,15 +157,6 @@
       "date": "2026-04-16T16:08:53.207205+00:00",
       "price_at_signal": 0,
       "title": "Trump: \"i just had excellent conversations with the highly respected president j"
-    },
-    {
-      "uid": "943a2fc41358",
-      "source": "Macro RSS",
-      "ticker": "QQQ",
-      "direction": "BULLISH",
-      "date": "2026-04-16T16:08:53.424124+00:00",
-      "price_at_signal": 641.78,
-      "title": "Israel and Lebanon agree ceasefire, Trump says"
     },
     {
       "uid": "6268e160a599",
@@ -1054,11 +1051,11 @@
         "hit_rate": "50% (historical baseline)",
         "caveat": "News follows events \u2014 not predictive. Use to confirm crony signals or set macro context."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": 0.6,
+      "verified_date": "21/04/2026 16:41 UTC",
+      "price_entry": 641.78,
+      "price_now": 645.86
     },
     {
       "uid": "3bb58e487f35",
@@ -5618,6 +5615,35 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "7663e05b220e",
+      "date": "21/04/2026 16:44 UTC",
+      "date_be": "21/04/2026 18:44 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 22m ago",
+      "direction": "BULLISH",
+      "title": "Trump: \"my friend, congresswoman elise stefanik, of new york, has written a new book, \"p\"",
+      "detail": "my friend, congresswoman elise stefanik, of new york, has written a new book, \"poisoned ivies: the inside account of the academic and moral rot at america's elite universities.\" there is nobody more q",
+      "urgency": "MEDIUM",
+      "keywords": "import",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116443610885264454",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 22m ago. Matched: import",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -5764,7 +5790,7 @@
       "price_at_signal": 56.59,
       "check_4h": "2026-04-16T20:45:45.325597+00:00",
       "check_24h": "2026-04-17T18:12:48.626766+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T16:41:45.258410+00:00",
       "result_4h": {
         "pct": 0.02,
         "hit": null,
@@ -5775,7 +5801,11 @@
         "hit": null,
         "price": 54.875
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": -1.81,
+        "hit": null,
+        "price": 55.565
+      }
     },
     {
       "uid": "e568bb805c0b",
@@ -5792,7 +5822,7 @@
       "price_at_signal": 702.46,
       "check_4h": "2026-04-16T20:45:45.500290+00:00",
       "check_24h": "2026-04-17T18:12:48.847895+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T16:41:45.458107+00:00",
       "result_4h": {
         "pct": -0.13,
         "hit": null,
@@ -5803,7 +5833,11 @@
         "hit": null,
         "price": 709.68
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.56,
+        "hit": null,
+        "price": 706.41
+      }
     },
     {
       "uid": "24d8935ca1cc",
@@ -5820,7 +5854,7 @@
       "price_at_signal": 702.46,
       "check_4h": "2026-04-16T20:45:45.681286+00:00",
       "check_24h": "2026-04-17T18:12:49.071978+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T16:41:45.656575+00:00",
       "result_4h": {
         "pct": -0.13,
         "hit": false,
@@ -5831,7 +5865,11 @@
         "hit": false,
         "price": 709.68
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.56,
+        "hit": false,
+        "price": 706.41
+      }
     },
     {
       "uid": "6dbcc510940f",
@@ -5848,7 +5886,7 @@
       "price_at_signal": 641.78,
       "check_4h": "2026-04-16T20:45:45.841718+00:00",
       "check_24h": "2026-04-17T18:12:49.298724+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T16:41:46.110345+00:00",
       "result_4h": {
         "pct": -0.21,
         "hit": false,
@@ -5859,7 +5897,11 @@
         "hit": false,
         "price": 647.5
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.66,
+        "hit": false,
+        "price": 646.0
+      }
     },
     {
       "uid": "ec07cab313a2",
@@ -7316,14 +7358,18 @@
       "date": "2026-04-20T15:49:36.112981+00:00",
       "price_at_signal": 231.63,
       "check_4h": "2026-04-20T20:23:59.282708+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-21T16:42:31.602359+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.09,
         "hit": false,
         "price": 231.85
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -3.31,
+        "hit": true,
+        "price": 223.96
+      },
       "result_5d": null
     },
     {
@@ -7672,10 +7718,14 @@
       ],
       "date": "2026-04-21T12:09:39.413017+00:00",
       "price_at_signal": 708.72,
-      "check_4h": null,
+      "check_4h": "2026-04-21T16:42:49.370035+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.34,
+        "hit": false,
+        "price": 706.29
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -7778,26 +7828,66 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "468e66267ec8",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-21T16:44:08.972323+00:00",
+      "price_at_signal": 705.82,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "406eb774effa",
+      "theme": "trade",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "IWDA",
+      "score": 10,
+      "confidence": 65,
+      "sources": [
+        "Truth Social"
+      ],
+      "date": "2026-04-21T16:44:09.459789+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
-    "hits": 1,
-    "misses": 85,
-    "watches": 37,
+    "hits": 2,
+    "misses": 88,
+    "watches": 39,
     "by_window": {
       "4h": {
         "hits": 1,
-        "misses": 62,
+        "misses": 63,
         "pnl": 41.42999999999999
       },
       "24h": {
-        "hits": 2,
+        "hits": 3,
         "misses": 47,
         "pnl": 54.239999999999995
       },
       "5d": {
         "hits": 0,
-        "misses": 1,
+        "misses": 3,
         "pnl": 0.0
       }
     },
@@ -7808,18 +7898,18 @@
         "pnl": -61.57
       },
       "defense": {
-        "hits": 0,
+        "hits": 1,
         "misses": 20,
         "pnl": -0.23000000000000043
       },
       "tech": {
         "hits": 0,
-        "misses": 21,
+        "misses": 22,
         "pnl": 16.32
       },
       "macro": {
         "hits": 0,
-        "misses": 13,
+        "misses": 14,
         "pnl": 35.75
       },
       "energy": {
@@ -7828,7 +7918,7 @@
       },
       "risk_on": {
         "hits": 0,
-        "misses": 22,
+        "misses": 23,
         "pnl": 61.71
       },
       "crypto": {
@@ -8660,7 +8750,13 @@
           "Broad Market \u2014 The Tape Reader"
         ],
         "confidence": 40,
-        "check_4h": null,
+        "check_4h": {
+          "price": 705.77,
+          "pct": -0.42,
+          "pnl_eur": -4.16,
+          "date": "2026-04-21T16:44:10.909823+00:00",
+          "hit": false
+        },
         "check_24h": null
       }
     },
@@ -8740,13 +8836,13 @@
     "realised_pnl": -14.92,
     "platform_score": {
       "total_hits": 0,
-      "total_misses": 11,
-      "total_pnl": -111.43,
+      "total_misses": 12,
+      "total_pnl": -115.59,
       "by_window": {
         "4h": {
           "hits": 0,
-          "misses": 8,
-          "pnl": -89.89
+          "misses": 9,
+          "pnl": -94.05
         },
         "24h": {
           "hits": 0,
@@ -8804,6 +8900,11 @@
           "hits": 0,
           "misses": 1,
           "pnl": -16.74
+        },
+        "Broad Market \u2014 The Tape Reader": {
+          "hits": 0,
+          "misses": 1,
+          "pnl": -4.16
         }
       },
       "rolling": []
