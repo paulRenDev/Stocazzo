@@ -1,161 +1,148 @@
 {
   "ids": [
-    "ec40e3cfacb3",
-    "3bb58e487f35",
-    "8a6885280b66",
-    "e990de2f3299",
-    "8610b6e43b2d",
-    "1016c48d066c",
-    "26d06aeb7fcc",
-    "a4c90bf5261d",
-    "95875c5a02da",
-    "3bfcff9e1160",
-    "26057d503d43",
-    "b0ec811419ad",
-    "92ac1f18e228",
-    "1d6b86fe014c",
-    "dd9d19a9c5a4",
-    "7013b47db36c",
-    "5f23b9a680d2",
-    "8f9b844b1ff6",
-    "343d17b3e17a",
-    "eff4ba5df193",
-    "6268e160a599",
-    "23ab136875d6",
-    "a75e66a206d2",
-    "31843a5643ef",
-    "7a2691723cce",
-    "711e86e945ab",
-    "b5af3579ee95",
-    "fc1a21193f87",
-    "02bece6829ac",
-    "ff9000f9e899",
-    "830fe33f7920",
-    "17ba5e679fa6",
-    "312fe7511d0b",
-    "3e9307dee462",
-    "50ff7c2d8ffe",
-    "9c5e7c4556c7",
-    "8f759a104cf6",
-    "b421c50e856a",
-    "f1288e8da16d",
-    "2ae5e11a0d48",
-    "8c333349babe",
-    "ca2188a90354",
-    "38eece107c96",
-    "45a67124f3bb",
-    "74e38c979ed6",
-    "7045bde3dbe3",
-    "9977641bddad",
-    "af68940ec1e0",
-    "9d7f440c781e",
-    "d56a5cdfbb96",
-    "40c4233b088c",
-    "de373710bd9b",
-    "2fb60ff4a3bf",
-    "65485aaaed6b",
-    "889bec77b208",
-    "39a94e2128a3",
-    "fe03774bbb0a",
-    "30de0d34d3d8",
     "dfa924e4f13d",
-    "2bf37231db1f",
-    "e5a2151f14c5",
-    "cfdcae65b396",
-    "46bb0ca0fde5",
-    "060828854bf6",
-    "2925e4685dcf",
-    "0eb7d59f6afd",
-    "7aeaaa602ba5",
-    "e87b4da2717b",
-    "734a420b9235",
-    "b83922ad5cd6",
-    "14812c35cbe0",
-    "7b1420f5d653",
-    "ecc0ec2d9067",
-    "1bf2c5a1c3c1",
-    "045f55b844a4",
-    "85c4730b886c",
-    "1de84568c6f2",
-    "b4c46499d37a",
-    "b698fe4a17d2",
-    "31a210b9e499",
-    "9e539a681c0a",
-    "9b3073f18896",
-    "2bd8b6a7de86",
-    "63c86818a1fd",
-    "2763e2fd180a",
-    "2e469813dd1c",
-    "4115620504a4",
-    "fb29376bd25f",
-    "83790aaeee8f",
-    "556f276c2cb7",
-    "36ac56b06e2b",
-    "1678c8c092e0",
-    "45cbe6e728da",
-    "f68ef795b10a",
-    "07c82ac17438",
-    "943a2fc41358",
-    "1ede72cc1fa0",
+    "c11c7edd721e",
     "a0b3b1f93467",
+    "2bd8b6a7de86",
+    "286e8c696110",
+    "7045bde3dbe3",
+    "556f276c2cb7",
+    "b0ec811419ad",
+    "b421c50e856a",
+    "fb29376bd25f",
+    "fe03774bbb0a",
+    "8a06a3214a28",
+    "a4c90bf5261d",
+    "9977641bddad",
+    "045f55b844a4",
+    "fc1a21193f87",
+    "50ff7c2d8ffe",
+    "31a210b9e499",
     "81c7d996ca75",
-    "47fd0f06b413",
-    "e4e4235ed083",
+    "312fe7511d0b",
+    "dd9d19a9c5a4",
+    "2ae5e11a0d48",
+    "30de0d34d3d8",
+    "2e469813dd1c",
+    "b2e74d6ff27c",
+    "45cbe6e728da",
+    "1431412201ef",
+    "51045d443f94",
     "6f3f5d987825",
     "209003425473",
-    "169ebe479f0f",
-    "b3e5f5faf150",
-    "a6ab397cf266",
-    "49ecd59bb8e6",
-    "10da3fb8b1fa",
-    "1431412201ef",
-    "0de684b7c379",
-    "500615d0f735",
-    "f4e705fed31d",
-    "67908201a79d",
-    "c11c7edd721e",
-    "6cb05f24f18c",
-    "47b320b8e362",
-    "acefd863227a",
-    "994fb09849c9",
-    "aabbc8a157d5",
-    "286e8c696110",
+    "40c4233b088c",
+    "26d06aeb7fcc",
+    "5f23b9a680d2",
     "0d4041a7fae2",
+    "500615d0f735",
+    "e4e4235ed083",
+    "2bf37231db1f",
+    "ca2188a90354",
+    "711e86e945ab",
+    "02bece6829ac",
+    "74e38c979ed6",
+    "f1288e8da16d",
+    "26057d503d43",
+    "eff4ba5df193",
+    "af68940ec1e0",
+    "39a94e2128a3",
+    "e87b4da2717b",
+    "e5a2151f14c5",
+    "8f9b844b1ff6",
+    "2763e2fd180a",
+    "10da3fb8b1fa",
+    "e990de2f3299",
+    "1bf2c5a1c3c1",
+    "28cc4ad9c612",
+    "6268e160a599",
+    "f4e705fed31d",
+    "4115620504a4",
+    "1de84568c6f2",
+    "b83922ad5cd6",
+    "14812c35cbe0",
+    "ecc0ec2d9067",
+    "67908201a79d",
     "318f368c76b5",
-    "f3dabdf7fcdc",
-    "8a06a3214a28",
-    "92e38ea5412b",
-    "b2e74d6ff27c",
-    "51045d443f94",
+    "7b1420f5d653",
+    "994fb09849c9",
+    "cfdcae65b396",
+    "a6ab397cf266",
+    "acefd863227a",
+    "3bfcff9e1160",
+    "169ebe479f0f",
+    "3e9307dee462",
+    "060828854bf6",
+    "07c82ac17438",
+    "a75e66a206d2",
+    "b4c46499d37a",
+    "63c86818a1fd",
+    "9d7f440c781e",
+    "31843a5643ef",
+    "343d17b3e17a",
+    "38eece107c96",
     "624842d27583",
-    "28cc4ad9c612"
+    "8a6885280b66",
+    "8610b6e43b2d",
+    "d56a5cdfbb96",
+    "92e38ea5412b",
+    "46bb0ca0fde5",
+    "ec40e3cfacb3",
+    "8f759a104cf6",
+    "830fe33f7920",
+    "b698fe4a17d2",
+    "6cb05f24f18c",
+    "8c333349babe",
+    "2fb60ff4a3bf",
+    "9e539a681c0a",
+    "49ecd59bb8e6",
+    "ff9000f9e899",
+    "36ac56b06e2b",
+    "734a420b9235",
+    "83790aaeee8f",
+    "2925e4685dcf",
+    "95875c5a02da",
+    "0de684b7c379",
+    "92ac1f18e228",
+    "943a2fc41358",
+    "7013b47db36c",
+    "de373710bd9b",
+    "47b320b8e362",
+    "47fd0f06b413",
+    "1ede72cc1fa0",
+    "f3dabdf7fcdc",
+    "9c5e7c4556c7",
+    "85c4730b886c",
+    "1d6b86fe014c",
+    "b3e5f5faf150",
+    "aabbc8a157d5",
+    "1016c48d066c",
+    "3bb58e487f35",
+    "7a2691723cce",
+    "0eb7d59f6afd",
+    "17ba5e679fa6",
+    "45a67124f3bb",
+    "f68ef795b10a",
+    "1678c8c092e0",
+    "7aeaaa602ba5",
+    "889bec77b208",
+    "b5af3579ee95",
+    "65485aaaed6b",
+    "9b3073f18896",
+    "23ab136875d6"
   ],
   "stats": {
     "Polymarket": {
       "hits": 0,
       "misses": 1,
       "pending": 0
+    },
+    "Lobbying": {
+      "hits": 0,
+      "misses": 0,
+      "pending": 0
     }
   },
   "pending_checks": [
-    {
-      "uid": "7b1420f5d653",
-      "source": "Lobbying",
-      "ticker": "LMT",
-      "direction": "WATCH",
-      "date": "2026-04-16T15:33:17.649366+00:00",
-      "price_at_signal": 604.62,
-      "title": "LMT lobbying: $4,300,000 in last 90 days"
-    },
-    {
-      "uid": "acefd863227a",
-      "source": "Lobbying",
-      "ticker": "NVDA",
-      "direction": "WATCH",
-      "date": "2026-04-16T15:33:18.090789+00:00",
-      "price_at_signal": 199.11,
-      "title": "NVDA lobbying: $1,700,000 in last 90 days"
-    },
     {
       "uid": "ecc0ec2d9067",
       "source": "Truth Social",
@@ -861,10 +848,10 @@
         "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
       },
       "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "pct_change": -5.8,
+      "verified_date": "21/04/2026 15:41 UTC",
+      "price_entry": 604.62,
+      "price_now": 569.37
     },
     {
       "uid": "acefd863227a",
@@ -901,10 +888,10 @@
         "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
       },
       "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "pct_change": 1.0,
+      "verified_date": "21/04/2026 15:41 UTC",
+      "price_entry": 199.11,
+      "price_now": 201.13
     },
     {
       "uid": "f4e705fed31d",
@@ -5649,7 +5636,7 @@
       "price_at_signal": 441.06,
       "check_4h": "2026-04-16T19:37:09.330038+00:00",
       "check_24h": "2026-04-17T18:12:47.733661+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T15:41:33.733778+00:00",
       "result_4h": {
         "pct": -0.24,
         "hit": false,
@@ -5660,7 +5647,11 @@
         "hit": false,
         "price": 446.49
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": -1.29,
+        "hit": false,
+        "price": 435.37
+      }
     },
     {
       "uid": "78eb02d1ffc2",
@@ -5677,7 +5668,7 @@
       "price_at_signal": 230.41,
       "check_4h": "2026-04-16T19:37:09.508161+00:00",
       "check_24h": "2026-04-17T18:12:47.960742+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T15:41:33.966200+00:00",
       "result_4h": {
         "pct": -0.34,
         "hit": null,
@@ -5688,7 +5679,11 @@
         "hit": null,
         "price": 233.11
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": -3.13,
+        "hit": null,
+        "price": 223.2
+      }
     },
     {
       "uid": "7500e08debfa",
@@ -5705,7 +5700,7 @@
       "price_at_signal": 640.01,
       "check_4h": "2026-04-16T19:37:09.684680+00:00",
       "check_24h": "2026-04-17T18:12:48.193261+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T15:41:34.184570+00:00",
       "result_4h": {
         "pct": -0.03,
         "hit": null,
@@ -5716,7 +5711,11 @@
         "hit": null,
         "price": 647.5
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.97,
+        "hit": null,
+        "price": 646.19
+      }
     },
     {
       "uid": "b5c694734f40",
@@ -5733,7 +5732,7 @@
       "price_at_signal": 700.95,
       "check_4h": "2026-04-16T19:37:09.853357+00:00",
       "check_24h": "2026-04-17T18:12:48.409449+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T15:41:34.404819+00:00",
       "result_4h": {
         "pct": 0.04,
         "hit": null,
@@ -5744,7 +5743,11 @@
         "hit": null,
         "price": 709.68
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.78,
+        "hit": null,
+        "price": 706.43
+      }
     },
     {
       "uid": "699f27e7d665",
@@ -7199,14 +7202,18 @@
       "date": "2026-04-20T14:18:05.455852+00:00",
       "price_at_signal": 709.0,
       "check_4h": "2026-04-20T19:34:35.133228+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-21T15:41:50.296642+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.16,
         "hit": false,
         "price": 707.89
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.34,
+        "hit": false,
+        "price": 706.6
+      },
       "result_5d": null
     },
     {
@@ -7223,14 +7230,18 @@
       "date": "2026-04-20T14:18:05.745507+00:00",
       "price_at_signal": 709.0,
       "check_4h": "2026-04-20T19:34:35.328607+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-21T15:41:50.605483+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.16,
         "hit": false,
         "price": 707.89
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.34,
+        "hit": false,
+        "price": 706.6
+      },
       "result_5d": null
     },
     {
@@ -7247,14 +7258,18 @@
       "date": "2026-04-20T14:18:06.481360+00:00",
       "price_at_signal": 646.52,
       "check_4h": "2026-04-20T19:34:35.536786+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-21T15:41:50.919827+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.03,
         "hit": false,
         "price": 646.33
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.05,
+        "hit": false,
+        "price": 646.22
+      },
       "result_5d": null
     },
     {
@@ -7271,14 +7286,18 @@
       "date": "2026-04-20T14:18:06.629427+00:00",
       "price_at_signal": 442.42,
       "check_4h": "2026-04-20T19:34:35.727673+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-21T15:41:51.285194+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.04,
         "hit": false,
         "price": 442.26
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -1.57,
+        "hit": false,
+        "price": 435.47
+      },
       "result_5d": null
     },
     {
@@ -7763,8 +7782,8 @@
   ],
   "platform_score": {
     "hits": 1,
-    "misses": 80,
-    "watches": 34,
+    "misses": 85,
+    "watches": 37,
     "by_window": {
       "4h": {
         "hits": 1,
@@ -7773,19 +7792,19 @@
       },
       "24h": {
         "hits": 2,
-        "misses": 43,
+        "misses": 47,
         "pnl": 54.239999999999995
       },
       "5d": {
         "hits": 0,
-        "misses": 0,
+        "misses": 1,
         "pnl": 0.0
       }
     },
     "by_theme": {
       "risk_off": {
         "hits": 0,
-        "misses": 17,
+        "misses": 18,
         "pnl": -61.57
       },
       "defense": {
@@ -7795,12 +7814,12 @@
       },
       "tech": {
         "hits": 0,
-        "misses": 20,
+        "misses": 21,
         "pnl": 16.32
       },
       "macro": {
         "hits": 0,
-        "misses": 12,
+        "misses": 13,
         "pnl": 35.75
       },
       "energy": {
@@ -7809,7 +7828,7 @@
       },
       "risk_on": {
         "hits": 0,
-        "misses": 21,
+        "misses": 22,
         "pnl": 61.71
       },
       "crypto": {
@@ -7819,7 +7838,7 @@
       },
       "commodities": {
         "hits": 0,
-        "misses": 5,
+        "misses": 6,
         "pnl": -14.95
       },
       "fed": {
