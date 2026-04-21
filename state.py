@@ -1,7 +1,12 @@
 """
-state.py — CronyPony v7
+state.py — Stocazzo v7.2
 Manages persistent state in seen_signals.json.
 Read, write and commit only. No business logic.
+
+v7.2: Fixed save_seen — was using set() which randomizes order before slicing,
+      causing random UIDs to drop on each save. Now uses dict.fromkeys to
+      preserve insertion order while deduplicating.
+      MAX_SEEN_IDS bumped to 2000 to handle date-based UIDs.
 """
 import json
 import os
@@ -20,7 +25,6 @@ def load_seen():
         with open(SEEN_FILE) as f:
             data = json.load(f)
             if isinstance(data, list):
-                # old format: was just a list of IDs
                 return {
                     "ids": data,
                     "stats": DEFAULT_STATS.copy(),
@@ -42,8 +46,13 @@ def load_seen():
 
 
 def save_seen(seen_data):
-    """Save seen_signals.json. Limits IDs to MAX_SEEN_IDS."""
-    seen_data["ids"] = list(set(seen_data.get("ids", [])))[-MAX_SEEN_IDS:]
+    """
+    Save seen_signals.json.
+    Uses dict.fromkeys to deduplicate while preserving insertion order,
+    then keeps the most recent MAX_SEEN_IDS entries.
+    """
+    ids = list(dict.fromkeys(seen_data.get("ids", [])))
+    seen_data["ids"] = ids[-MAX_SEEN_IDS:]
     with open(SEEN_FILE, "w") as f:
         json.dump(seen_data, f, indent=2)
 
