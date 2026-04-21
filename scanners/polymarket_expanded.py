@@ -80,6 +80,7 @@ def scan_polymarket_expanded(seen_data):
 
             print(f"Polymarket [{tag}]: {len(markets)} markets")
             total_markets += len(markets)
+            _dbg = {"seen": 0, "dup_run": 0, "noise": 0, "no_kw": 0, "no_vol": 0, "pass": 0}
 
             for m in markets:
                 question = m.get("question", "")
@@ -89,6 +90,7 @@ def scan_polymarket_expanded(seen_data):
                 # Skip if same question already processed this run
                 q_key = question.lower().strip()[:80]
                 if q_key in seen_questions_this_run:
+                    _dbg["dup_run"] += 1
                     continue
                 seen_questions_this_run.add(q_key)
 
@@ -104,16 +106,19 @@ def scan_polymarket_expanded(seen_data):
                 _today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
                 uid = make_id(f"{question}|{_bucket}|{_today}")
                 if uid in seen_ids:
+                    _dbg["seen"] += 1
                     continue
 
                 q_lower = question.lower()
 
                 # Gate 1: noise filter
                 if _word_match(q_lower, POLYMARKET_NOISE_KEYWORDS):
+                    _dbg["noise"] += 1
                     continue
 
                 # Gate 2: financial relevance
                 if not _word_match(q_lower, POLYMARKET_KEYWORDS):
+                    _dbg["no_kw"] += 1
                     continue
 
                 try:
@@ -130,6 +135,7 @@ def scan_polymarket_expanded(seen_data):
                     ) or volume > POLYMARKET_HIGH_VOLUME
 
                     if not significant:
+                        _dbg["no_vol"] += 1
                         continue
 
                     direction  = "YES" if price > 0.5 else "NO"
@@ -143,6 +149,7 @@ def scan_polymarket_expanded(seen_data):
 
                     slug = m.get("slug", "")
 
+                    _dbg["pass"] += 1
                     alerts.append({
                         "source":       "Polymarket",
                         "type":         f"Prediction Market · {tag}",
@@ -177,6 +184,8 @@ def scan_polymarket_expanded(seen_data):
         except Exception as e:
             print(f"Polymarket [{tag}] error: {e}")
             continue
+        else:
+            print(f"  [{tag}] seen={_dbg['seen']} dup={_dbg['dup_run']} noise={_dbg['noise']} no_kw={_dbg['no_kw']} no_vol={_dbg['no_vol']} pass={_dbg['pass']}")
 
     print(f"Polymarket expanded: {len(alerts)} new signals from {total_markets} markets across {len(POLYMARKET_TAGS)} categories")
     return alerts
