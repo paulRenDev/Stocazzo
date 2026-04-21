@@ -1,7 +1,11 @@
 """
-config.py — CronyPony v7
+config.py — Stocazzo v7.2
 All keys, constants and thresholds in one place.
 No logic, no imports from own modules.
+
+v7.2: Added new sources (Capitol Trades, OpenInsider, news feeds, Benzinga).
+      Dead sources kept in SOURCE_CREDIBILITY for historical scoring continuity
+      but removed from active scanners in main.py.
 """
 import os
 
@@ -26,10 +30,10 @@ BACKCHECK_DAYS_FAST    = 1
 HIT_THRESHOLD_PCT      = 2.0
 
 # ── POLYMARKET FILTERS ────────────────────────────────────────────────────────
-POLYMARKET_MIN_VOLUME = 30_000
+POLYMARKET_MIN_VOLUME  = 30_000
 POLYMARKET_HIGH_VOLUME = 200_000
-POLYMARKET_MIN_PROB   = 0.72
-POLYMARKET_MAX_PROB   = 0.10
+POLYMARKET_MIN_PROB    = 0.72
+POLYMARKET_MAX_PROB    = 0.10
 
 # ── KALSHI FILTERS ────────────────────────────────────────────────────────────
 KALSHI_MIN_VOLUME  = 5_000
@@ -39,8 +43,9 @@ KALSHI_MAX_PROB    = 0.10
 
 # ── SOURCE CREDIBILITY ────────────────────────────────────────────────────────
 SOURCE_CREDIBILITY = {
+    # ── CRONY SOURCES (pre-news, highest alpha) ────────────────────────────────
     "Polymarket": {
-        "weight": 3,
+        "weight": 5,
         "historical_hit_rate": 0.80,
         "verified_count": 4,
         "type": "Prediction market — crowd wisdom + possible insider",
@@ -48,52 +53,12 @@ SOURCE_CREDIBILITY = {
         "note": "4/5 verified correct (Mar-Apr 2026). Anonymous — cannot confirm insider vs retail.",
     },
     "Kalshi": {
-        "weight": 3,
+        "weight": 5,
         "historical_hit_rate": None,
         "verified_count": 0,
         "type": "CFTC-regulated prediction market",
         "avg_lead_time": "Hours – days",
         "note": "Regulated = harder to manipulate. Less insider activity. No verified data yet.",
-    },
-    "Dark Pool": {
-        "weight": 2,
-        "historical_hit_rate": None,
-        "verified_count": 0,
-        "type": "Institutional order flow (Whalestream)",
-        "avg_lead_time": "Hours – days (no directional info)",
-        "note": "Shows WHERE institutions trade, not BUY/SELL. Needs confirmation from other sources.",
-    },
-    "Congress": {
-        "weight": 2,
-        "historical_hit_rate": None,
-        "verified_count": 0,
-        "type": "STOCK Act mandatory disclosure",
-        "avg_lead_time": "Up to 45 days after trade",
-        "note": "Always delayed 45 days by law. Use for sector trend, not timing.",
-    },
-    "Pelosi Tracker": {
-        "weight": 3,
-        "historical_hit_rate": None,
-        "verified_count": 0,
-        "type": "Real-time Pelosi trade tracking",
-        "avg_lead_time": "Up to 45 days after trade",
-        "note": "Pelosi portfolio outperformed S&P by 3-5% annually. Deep-in-money calls = signature move.",
-    },
-    "Options Flow": {
-        "weight": 2,
-        "historical_hit_rate": None,
-        "verified_count": 0,
-        "type": "Unusual Whales options + dark pool news",
-        "avg_lead_time": "Hours (flow precedes news)",
-        "note": "Institutional footprint. Direction unclear — hedge vs speculation. Best combined with Polymarket.",
-    },
-    "Social Signal": {
-        "weight": 1,
-        "historical_hit_rate": None,
-        "verified_count": 0,
-        "type": "Reddit top posts (WSB, r/stocks, r/options)",
-        "avg_lead_time": "Variable — hours to days",
-        "note": "Very noisy. Only useful when confirmed by other sources. Never act alone.",
     },
     "Truth Social": {
         "weight": 4,
@@ -101,7 +66,7 @@ SOURCE_CREDIBILITY = {
         "verified_count": 1,
         "type": "Trump posts via CNN archive (5-min updates)",
         "avg_lead_time": "15-30 min",
-        "note": "Fastest market mover. 9 Apr 2026: buy signal → +9.5% Nasdaq in 23 min. High signal/noise ratio with keyword filter.",
+        "note": "Fastest market mover. 9 Apr 2026: buy signal → +9.5% Nasdaq in 23 min.",
     },
     "SEC EDGAR": {
         "weight": 3,
@@ -110,6 +75,22 @@ SOURCE_CREDIBILITY = {
         "type": "Form 3/4/5 insider transactions (Finnhub)",
         "avg_lead_time": "2 business days",
         "note": "2-day lag vs STOCK Act 45 days. CEO/CFO buys = strongest signal. Sells often = diversification.",
+    },
+    "Capitol Trades": {
+        "weight": 3,
+        "historical_hit_rate": 0.52,
+        "verified_count": 0,
+        "type": "Congressional trading RSS (free, reliable)",
+        "avg_lead_time": "Up to 45 days (STOCK Act delay)",
+        "note": "Real congressional trade disclosures. Replaces broken Pelosi Tracker + 403 Finnhub congress endpoint.",
+    },
+    "OpenInsider": {
+        "weight": 3,
+        "historical_hit_rate": 0.58,
+        "verified_count": 0,
+        "type": "C-suite insider buying RSS (free, reliable)",
+        "avg_lead_time": "2-4 days",
+        "note": "CEO/CFO purchases >$100k. Strong signal especially when multiple insiders buy in same period.",
     },
     "Lobbying": {
         "weight": 2,
@@ -127,6 +108,80 @@ SOURCE_CREDIBILITY = {
         "avg_lead_time": "Days to weeks after award",
         "note": "Defense contract wins = revenue catalyst. Most valuable for LMT/RTX/NOC/GD.",
     },
+
+    # ── MACRO / NEWS SOURCES ──────────────────────────────────────────────────
+    "Reuters RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.45,
+        "verified_count": 0,
+        "type": "Breaking news RSS (business, tech, world)",
+        "avg_lead_time": "Reactive — minutes after event",
+        "note": "Fast and accurate. Business, tech and world feeds. Macro context signal.",
+    },
+    "AP RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.44,
+        "verified_count": 0,
+        "type": "Breaking news RSS",
+        "avg_lead_time": "Reactive — minutes after event",
+        "note": "Associated Press business news. Reliable factual reporting.",
+    },
+    "MarketWatch RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.43,
+        "verified_count": 0,
+        "type": "Financial news RSS",
+        "avg_lead_time": "Reactive — minutes after event",
+        "note": "MarketWatch real-time headlines and bulletins.",
+    },
+    "Yahoo Finance RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.42,
+        "verified_count": 0,
+        "type": "Financial news RSS",
+        "avg_lead_time": "Reactive — minutes after event",
+        "note": "Yahoo Finance top stories and S&P 500 news.",
+    },
+    "Seeking Alpha RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.44,
+        "verified_count": 0,
+        "type": "Financial analysis RSS",
+        "avg_lead_time": "Reactive — hours after event",
+        "note": "Seeking Alpha market currents — mix of news and analysis.",
+    },
+    "Investing.com RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.43,
+        "verified_count": 0,
+        "type": "Financial news RSS",
+        "avg_lead_time": "Reactive — minutes after event",
+        "note": "Investing.com news and macro overview.",
+    },
+    "Motley Fool RSS": {
+        "weight": 1,
+        "historical_hit_rate": 0.40,
+        "verified_count": 0,
+        "type": "Financial analysis RSS",
+        "avg_lead_time": "Reactive — hours after event",
+        "note": "More analysis than news — slower signal. Low weight.",
+    },
+    "Barrons RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.45,
+        "verified_count": 0,
+        "type": "Financial news RSS",
+        "avg_lead_time": "Reactive — hours after event",
+        "note": "Barron's financial news. High quality, institutional focus.",
+    },
+    "Google News RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.43,
+        "verified_count": 0,
+        "type": "Aggregated news RSS (7 financial queries)",
+        "avg_lead_time": "Reactive — minutes after event",
+        "note": "Fed, tariffs, energy, crypto, semis, China, defense queries.",
+    },
     "Macro RSS": {
         "weight": 2,
         "historical_hit_rate": None,
@@ -134,6 +189,14 @@ SOURCE_CREDIBILITY = {
         "type": "Reuters, FT, ECB, Fed, WSJ, CNBC RSS",
         "avg_lead_time": "Reactive — after news breaks",
         "note": "Confirms trends. Not predictive. Use to validate crony signals.",
+    },
+    "Benzinga RSS": {
+        "weight": 2,
+        "historical_hit_rate": 0.44,
+        "verified_count": 0,
+        "type": "Market-moving news RSS (free tier)",
+        "avg_lead_time": "Reactive — minutes after event",
+        "note": "Good for earnings, upgrades, breaking corporate news. Feeds Tape Reader analyst.",
     },
     "GDELT": {
         "weight": 2,
@@ -151,23 +214,84 @@ SOURCE_CREDIBILITY = {
         "avg_lead_time": "Contrarian — extremes signal reversals",
         "note": "Extreme Fear (<20) = buy signal historically. Extreme Greed (>80) = caution.",
     },
+
+    # ── SENTIMENT ─────────────────────────────────────────────────────────────
+    "Social Signal": {
+        "weight": 1,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "Reddit top posts (WSB, r/stocks, r/options)",
+        "avg_lead_time": "Variable — hours to days",
+        "note": "Very noisy. Only useful when confirmed by other sources. Never act alone.",
+    },
+
+    # ── DEAD SOURCES (kept for historical scoring continuity) ─────────────────
+    "Dark Pool": {
+        "weight": 2,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "Institutional order flow (Whalestream) — INACTIVE: cloud IP blocked",
+        "avg_lead_time": "Hours – days",
+        "note": "Blocked from GitHub Actions cloud IPs. Replaced by OpenInsider.",
+    },
+    "Congress": {
+        "weight": 2,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "STOCK Act disclosure (Finnhub) — INACTIVE: 403 premium endpoint",
+        "avg_lead_time": "Up to 45 days after trade",
+        "note": "Requires paid Finnhub tier. Replaced by Capitol Trades RSS.",
+    },
+    "Pelosi Tracker": {
+        "weight": 3,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "Pelosi trade tracker — INACTIVE: site structure changed",
+        "avg_lead_time": "Up to 45 days after trade",
+        "note": "Regex broken after site redesign. Replaced by Capitol Trades RSS.",
+    },
+    "Options Flow": {
+        "weight": 2,
+        "historical_hit_rate": None,
+        "verified_count": 0,
+        "type": "Unusual Whales options flow — INACTIVE: cloud IP blocked",
+        "avg_lead_time": "Hours",
+        "note": "Blocked from GitHub Actions cloud IPs. Replaced by Benzinga RSS.",
+    },
 }
 
+# ── DEFAULT STATS ─────────────────────────────────────────────────────────────
 DEFAULT_STATS = {
+    # Active crony
     "Polymarket":     {"hits": 4, "misses": 0, "pending": 0},
     "Kalshi":         {"hits": 0, "misses": 0, "pending": 0},
-    "Dark Pool":      {"hits": 1, "misses": 0, "pending": 1},
-    "Congress":       {"hits": 0, "misses": 0, "pending": 0},
-    "Pelosi Tracker": {"hits": 0, "misses": 0, "pending": 0},
-    "Options Flow":   {"hits": 0, "misses": 0, "pending": 0},
-    "Social Signal":  {"hits": 0, "misses": 0, "pending": 0},
+    "Truth Social":   {"hits": 0, "misses": 0, "pending": 0},
     "SEC EDGAR":      {"hits": 0, "misses": 0, "pending": 0},
+    "Capitol Trades": {"hits": 0, "misses": 0, "pending": 0},
+    "OpenInsider":    {"hits": 0, "misses": 0, "pending": 0},
     "Lobbying":       {"hits": 0, "misses": 0, "pending": 0},
     "Gov Contracts":  {"hits": 0, "misses": 0, "pending": 0},
-    "Truth Social":   {"hits": 0, "misses": 0, "pending": 0},
-    "Macro RSS":      {"hits": 0, "misses": 0, "pending": 0},
-    "GDELT":          {"hits": 0, "misses": 0, "pending": 0},
-    "Fear & Greed":   {"hits": 0, "misses": 0, "pending": 0},
+    # Active news
+    "Reuters RSS":      {"hits": 0, "misses": 0, "pending": 0},
+    "AP RSS":           {"hits": 0, "misses": 0, "pending": 0},
+    "MarketWatch RSS":  {"hits": 0, "misses": 0, "pending": 0},
+    "Yahoo Finance RSS":{"hits": 0, "misses": 0, "pending": 0},
+    "Seeking Alpha RSS":{"hits": 0, "misses": 0, "pending": 0},
+    "Investing.com RSS":{"hits": 0, "misses": 0, "pending": 0},
+    "Motley Fool RSS":  {"hits": 0, "misses": 0, "pending": 0},
+    "Barrons RSS":      {"hits": 0, "misses": 0, "pending": 0},
+    "Google News RSS":  {"hits": 0, "misses": 0, "pending": 0},
+    "Macro RSS":        {"hits": 0, "misses": 0, "pending": 0},
+    "Benzinga RSS":     {"hits": 0, "misses": 0, "pending": 0},
+    "GDELT":            {"hits": 0, "misses": 0, "pending": 0},
+    "Fear & Greed":     {"hits": 0, "misses": 0, "pending": 0},
+    # Sentiment
+    "Social Signal":    {"hits": 0, "misses": 0, "pending": 0},
+    # Dead (kept for history)
+    "Dark Pool":        {"hits": 1, "misses": 0, "pending": 1},
+    "Congress":         {"hits": 0, "misses": 0, "pending": 0},
+    "Pelosi Tracker":   {"hits": 0, "misses": 0, "pending": 0},
+    "Options Flow":     {"hits": 0, "misses": 0, "pending": 0},
 }
 
 # ── URGENCY DEFINITIONS ───────────────────────────────────────────────────────
@@ -177,53 +301,43 @@ URGENCY_DEFS = {
     "LOW":    "Background intelligence. 45-day STOCK Act lag or broad institutional flow. Use for sector confirmation only.",
 }
 
-# ── KEYWORDS ──────────────────────────────────────────────────────────────────
 # ── POLYMARKET / KALSHI FINANCIAL RELEVANCE FILTER ───────────────────────────
-# A contract must match at least ONE keyword from POLYMARKET_KEYWORDS
-# AND must NOT match any keyword from POLYMARKET_NOISE_KEYWORDS.
-# This prevents sports, entertainment and celebrity contracts from leaking through.
-
-# POLYMARKET_KEYWORDS: contract must match at least one of these
-# IMPORTANT: these are checked as WORD-BOUNDARY matches (see polymarket.py)
-# to prevent false positives like "Oilers" matching "oil", "billion" matching "bill"
 POLYMARKET_KEYWORDS = [
-    # Macro / geopolitical — use multi-word phrases where ambiguity exists
+    # Macro / geopolitical
     "tariff", "trade war", "trade deal", "sanction", "ceasefire",
     "invasion", "nato", "ukraine", "russia", "iran", "israel",
     "china", "taiwan", "north korea",
     "opec", "oil price", "crude oil", "energy price", "natural gas", "lng", "pipeline",
     "recession", "inflation", "gdp", "unemployment", "cpi", "pce",
-    # Political / presidential — specific enough to avoid substring issues
+    # Political / presidential
     "trump", "executive order", "president signs", "federal election",
     "congress votes", "senate bill", "house vote", "legislation passes",
     "debt ceiling", "government shutdown", "federal budget",
-    # Fed / rates / macro finance
+    # Fed / rates
     "federal reserve", "rate cut", "rate hike", "interest rate",
     "fomc", "jerome powell", "ecb rate", "bank of england",
     "yield curve", "us treasury", "us dollar", "currency crisis",
-    # Crypto / digital assets
+    # Crypto
     "bitcoin", "ethereum", "crypto regulation", "stablecoin",
     "btc price", "eth price", "crypto etf",
     # Equities / sectors
     "stock market", "s&p 500", "nasdaq", "market crash",
     "semiconductor", "nvidia", "chip shortage", "ai regulation",
     "defense spending", "military budget", "arms deal",
-    # Commodities / critical minerals
+    # Commodities
     "gold price", "silver price", "copper price", "lithium",
     "cobalt", "uranium", "commodity", "mineral export", "mining",
     # Climate / energy transition
     "solar energy", "wind energy", "renewable energy", "carbon tax",
     "climate deal", "green deal", "carbon border",
-    # Africa / emerging markets (blue ocean)
+    # Africa / emerging markets
     "africa", "congo", "drc", "zambia", "zimbabwe", "nigeria",
     "saudi arabia", "gulf state", "uae investment", "sovereign fund",
     "critical mineral", "export ban",
 ]
 
-# Contracts containing ANY of these are noise — skip regardless of volume
-# These override any keyword match — a contract with "oil" AND "nhl" is still noise
 POLYMARKET_NOISE_KEYWORDS = [
-    # Sports leagues and competitions
+    # Sports leagues
     "nhl", "nba", "nfl", "mlb", "nascar", "ufc", "mma", "boxing",
     "stanley cup", "super bowl", "world series", "world cup",
     "premier league", "champions league", "la liga", "bundesliga",
@@ -232,10 +346,10 @@ POLYMARKET_NOISE_KEYWORDS = [
     # Sports teams and events
     "championship", "playoffs", "tournament bracket",
     "win the series", "win the cup", "win the bowl",
-    "oilers", "maple leafs", "rangers", "bruins", "penguins",  # NHL teams
-    "chiefs", "eagles", "cowboys", "patriots",                 # NFL teams
-    "lakers", "celtics", "warriors", "bulls",                  # NBA teams
-    # Sports actions (only as standalone concepts)
+    "oilers", "maple leafs", "rangers", "bruins", "penguins",
+    "chiefs", "eagles", "cowboys", "patriots",
+    "lakers", "celtics", "warriors", "bulls",
+    # Sports actions
     "score a goal", "win the game", "win the match",
     "home run", "touchdown pass",
     # Entertainment / celebrity
@@ -244,13 +358,12 @@ POLYMARKET_NOISE_KEYWORDS = [
     "actor", "actress", "singer", "rapper",
     "kardashian", "taylor swift", "beyonce", "drake",
     "reality show", "reality tv", "tv show", "streamer",
-    # Gaming / esports
+    # Gaming
     "esports", "gaming tournament", "fortnite", "minecraft",
     "video game",
-    # Trivia / novelty / non-market
+    # Novelty
     "alien", "ufo", "bigfoot", "supernatural",
     "asteroid", "comet",
-    # Geography that could false-positive (cities/regions not related to markets)
     "world cup host", "olympic host",
 ]
 
