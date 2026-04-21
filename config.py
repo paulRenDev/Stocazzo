@@ -20,7 +20,7 @@ GOVGREED_KEY   = os.environ.get("GOVGREED_KEY", "")
 # ── FILES ─────────────────────────────────────────────────────────────────────
 SEEN_FILE    = "seen_signals.json"
 MAX_HISTORY  = 200
-MAX_SEEN_IDS = 500
+MAX_SEEN_IDS = 2000  # increased — date-based UIDs multiply faster
 
 # ── SCORING THRESHOLDS ────────────────────────────────────────────────────────
 CONVERGENCE_MIN_SCORE  = 5
