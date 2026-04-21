@@ -278,7 +278,20 @@
     "9588d83b181f",
     "c30b164bb794",
     "59ed21526945",
-    "0600e6031cb6"
+    "0600e6031cb6",
+    "4d2e5d221d5e",
+    "55602f01ee56",
+    "ebff8f9dcf0b",
+    "d53b758989ea",
+    "56b83c54de5e",
+    "8ddf09384cf4",
+    "a4026bbb9b85",
+    "31effc1fe764",
+    "c002e9604cf8",
+    "862ad7e1672c",
+    "ce06dcf2b71d",
+    "88bc9efc8d1f",
+    "91fd383f86d3"
   ],
   "stats": {
     "Polymarket": {
@@ -325,15 +338,6 @@
       "date": "2026-04-16T19:37:55.034534+00:00",
       "price_at_signal": 0,
       "title": "Trump: \"i just had excellent conversations with the highly respected president j"
-    },
-    {
-      "uid": "d56a5cdfbb96",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "WATCH",
-      "date": "2026-04-16T20:46:29.512234+00:00",
-      "price_at_signal": 229.03,
-      "title": "Trump: \"the out of control trump hating, washington, d.c. district court judge, "
     },
     {
       "uid": "92ac1f18e228",
@@ -1243,517 +1247,54 @@
       "date": "2026-04-21T19:55:58.720363+00:00",
       "price_at_signal": 703.88,
       "title": "Will Donald Trump announce that the United States blockade of the Strait of Horm"
+    },
+    {
+      "uid": "4d2e5d221d5e",
+      "source": "Polymarket",
+      "ticker": "XLE",
+      "direction": "BEARISH",
+      "date": "2026-04-21T20:51:31.199423+00:00",
+      "price_at_signal": 55.87,
+      "title": "US x Iran ceasefire extended by April 21, 2026?"
+    },
+    {
+      "uid": "c002e9604cf8",
+      "source": "Polymarket",
+      "ticker": "IBIT",
+      "direction": "BEARISH",
+      "date": "2026-04-21T20:51:31.425152+00:00",
+      "price_at_signal": 42.51,
+      "title": "Will Bitcoin reach $85,000 in April?"
+    },
+    {
+      "uid": "862ad7e1672c",
+      "source": "Truth Social",
+      "ticker": "SPY",
+      "direction": "WATCH",
+      "date": "2026-04-21T20:51:31.584568+00:00",
+      "price_at_signal": 704.08,
+      "title": "Trump: \"statement of president donald j. trump:based on the fact that the govern"
+    },
+    {
+      "uid": "ce06dcf2b71d",
+      "source": "Yahoo Finance RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-21T20:51:31.753636+00:00",
+      "price_at_signal": 223.09,
+      "title": "How major US stock indexes fared Tuesday 4/21/2026"
+    },
+    {
+      "uid": "88bc9efc8d1f",
+      "source": "Motley Fool RSS",
+      "ticker": "SOXX",
+      "direction": "BULLISH",
+      "date": "2026-04-21T20:51:31.942746+00:00",
+      "price_at_signal": 420.7,
+      "title": "American Airlines Has Denied Rumors of a Merger With United. Here Are 2 Others F"
     }
   ],
   "history": [
-    {
-      "uid": "fc1a21193f87",
-      "date": "17/04/2026 19:33 UTC",
-      "date_be": "17/04/2026 21:33 CEST",
-      "source": "Dark Pool",
-      "type": "Institutional Flow",
-      "direction": "ACCUMULATION",
-      "title": "Dark pool: SPY, QQQ, IWM, NVDA, HYG",
-      "detail": "Institutional dark pool activity. Total volume: 6.4B. Broad market = possible accumulation before announcement.",
-      "urgency": "MEDIUM",
-      "keywords": "SPY, QQQ, IWM, NVDA, HYG, LQD",
-      "etfs": [
-        [
-          "NVDA",
-          "NVIDIA Corporation",
-          "NASDAQ"
-        ],
-        [
-          "SOXX",
-          "iShares Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "TSLA",
-          "Tesla Inc",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://www.whalestream.com/market-data/top-dark-pool-flow",
-      "confidence": 60,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "Broad market tickers (SPY, QQQ, IWM) in dark pool = institutions buying ahead of announcement",
-        "signal_type": "Dark pool = trades hidden from public order books, typically institutional",
-        "confidence": 60,
-        "source_weight": 2,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "No directional info \u2014 dark pools can be buy OR sell. Needs confirmation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "45a67124f3bb",
-      "date": "17/04/2026 19:55 UTC",
-      "date_be": "17/04/2026 21:55 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 32m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"senate confirms doj's new 'war on fraud' prosecutor colin mcdonald \u2014 with vp van\"",
-      "detail": "senate confirms doj's new 'war on fraud' prosecutor colin mcdonald \u2014 with vp vance's backing: https://nypost.com/2026/03/24/us-news/senate-confirms-dojs-new-top-fraud-prosecutor-colin-mcdonald/ | Post",
-      "urgency": "MEDIUM",
-      "keywords": "war, cut",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116421671494376872",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 32m ago. Matched: war, cut",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "fe03774bbb0a",
-      "date": "17/04/2026 19:55 UTC",
-      "date_be": "17/04/2026 21:55 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 33m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"trump effect: apple expands american manufacturing program with 4 partners: http\"",
-      "detail": "trump effect: apple expands american manufacturing program with 4 partners: https://www.breitbart.com/tech/2026/03/26/trump-effect-apple-expands-american-manufacturing-program-with-4-partners/ | Poste",
-      "urgency": "MEDIUM",
-      "keywords": "tech",
-      "etfs": [
-        [
-          "QQQ",
-          "Invesco QQQ Trust",
-          "NASDAQ"
-        ],
-        [
-          "EQQQ",
-          "Invesco EQQQ Nasdaq-100 UCITS ETF",
-          "AMS"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116421668823698549",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 33m ago. Matched: tech",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "0a6d94022bcf",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "CONVERGENCE",
-      "type": "3 sources \u00b7 score 17",
-      "direction": "BUY",
-      "title": "[3x CONVERGENCE] ITA \u2014 BUY",
-      "detail": "Score: 17pts across 3 independent sources: Lobbying, Truth Social, Macro RSS",
-      "urgency": "HIGH",
-      "keywords": "ITA",
-      "etfs": [
-        [
-          "LMT",
-          "Lockheed Martin",
-          "NYSE"
-        ],
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://paulrendev.github.io/Stocazzo",
-      "confidence": 95,
-      "hit_rate": "No historical data yet for convergence signals",
-      "reasoning_stored": {
-        "why": "1/3 sources bullish on ITA",
-        "signal_type": "Multi-source convergence \u2014 strongest signal type",
-        "confidence": 95,
-        "source_weight": 5,
-        "hit_rate": "No historical data yet for convergence signals",
-        "caveat": "Convergence != certainty. Check macro context before acting.",
-        "breakdown": [
-          {
-            "source": "Lobbying",
-            "direction": "WATCH",
-            "urgency": "LOW",
-            "points": 4,
-            "reasoning": "weight=2 + urgency=1 + hit_rate=50%x2 = 4pts",
-            "signal": "LMT lobbying: $4,230,000 in last 90 days"
-          },
-          {
-            "source": "Truth Social",
-            "direction": "BEARISH",
-            "urgency": "MEDIUM",
-            "points": 8,
-            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
-            "signal": "Trump: \"ruddy: trump already won the war with 9 victories: h"
-          },
-          {
-            "source": "Macro RSS",
-            "direction": "BULLISH",
-            "urgency": "MEDIUM",
-            "points": 5,
-            "reasoning": "weight=2 + urgency=2 + hit_rate=50%x2 = 5pts",
-            "signal": "US navy seizes Iranian ship after it breaches blockade"
-          }
-        ]
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "f3dabdf7fcdc",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Dark Pool",
-      "type": "Institutional Flow",
-      "direction": "ACCUMULATION",
-      "title": "Dark pool: SPY, QQQ, IWM, NVDA, HYG",
-      "detail": "Institutional dark pool activity. Total volume: 9.42B. Broad market = possible accumulation before announcement.",
-      "urgency": "MEDIUM",
-      "keywords": "SPY, QQQ, IWM, NVDA, HYG, LQD",
-      "etfs": [
-        [
-          "NVDA",
-          "NVIDIA Corporation",
-          "NASDAQ"
-        ],
-        [
-          "SOXX",
-          "iShares Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "TSLA",
-          "Tesla Inc",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://www.whalestream.com/market-data/top-dark-pool-flow",
-      "confidence": 60,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "Broad market tickers (SPY, QQQ, IWM) in dark pool = institutions buying ahead of announcement",
-        "signal_type": "Dark pool = trades hidden from public order books, typically institutional",
-        "confidence": 60,
-        "source_weight": 2,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "No directional info \u2014 dark pools can be buy OR sell. Needs confirmation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "209003425473",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "SEC EDGAR",
-      "type": "Form 4 \u00b7 Insider",
-      "direction": "SELL",
-      "title": "Parekh Kevan \u2014 SELL 5,111 shares of AAPL",
-      "detail": "AAPL insider SELL. Shares changed: -5,111 | Total held: 15,331 | Filed: 2026-04-17",
-      "urgency": "LOW",
-      "keywords": "AAPL, insider, sell",
-      "etfs": [],
-      "link": "https://finnhub.io/stock-insider-transactions/AAPL",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "Parekh Kevan filed SELL of 5,111 AAPL shares.  ",
-        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
-        "confidence": 35,
-        "source_weight": 3,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "95875c5a02da",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "SEC EDGAR",
-      "type": "Form 4 \u00b7 Insider",
-      "direction": "SELL",
-      "title": "Parekh Kevan \u2014 SELL 5,817 shares of AAPL",
-      "detail": "AAPL insider SELL. Shares changed: -5,817 | Total held: 5,816 | Filed: 2026-04-17",
-      "urgency": "LOW",
-      "keywords": "AAPL, insider, sell",
-      "etfs": [],
-      "link": "https://finnhub.io/stock-insider-transactions/AAPL",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "Parekh Kevan filed SELL of 5,817 AAPL shares.  ",
-        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
-        "confidence": 35,
-        "source_weight": 3,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "30de0d34d3d8",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "SEC EDGAR",
-      "type": "Form 4 \u00b7 Insider",
-      "direction": "BUY",
-      "title": "Parekh Kevan \u2014 BUY 10,928 shares of AAPL",
-      "detail": "AAPL insider BUY. Shares changed: +10,928 | Total held: 19,693 | Filed: 2026-04-17",
-      "urgency": "LOW",
-      "keywords": "AAPL, insider, buy",
-      "etfs": [],
-      "link": "https://finnhub.io/stock-insider-transactions/AAPL",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "Parekh Kevan filed BUY of 10,928 AAPL shares.  ",
-        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
-        "confidence": 35,
-        "source_weight": 3,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "2ae5e11a0d48",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "SEC EDGAR",
-      "type": "Form 4 \u00b7 Insider",
-      "direction": "SELL",
-      "title": "Papermaster Mark D \u2014 SELL 27,109 shares of AMD",
-      "detail": "AMD insider SELL. Shares changed: -27,109 | Total held: 1,267,357 | Filed: 2026-04-17",
-      "urgency": "LOW",
-      "keywords": "AMD, insider, sell",
-      "etfs": [],
-      "link": "https://finnhub.io/stock-insider-transactions/AMD",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "Papermaster Mark D filed SELL of 27,109 AMD shares.  ",
-        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
-        "confidence": 35,
-        "source_weight": 3,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "83790aaeee8f",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "SEC EDGAR",
-      "type": "Form 4 \u00b7 Insider",
-      "direction": "SELL",
-      "title": "Papermaster Mark D \u2014 SELL 6,000 shares of AMD",
-      "detail": "AMD insider SELL. Shares changed: -6,000 | Total held: 25,369 | Filed: 2026-04-17",
-      "urgency": "LOW",
-      "keywords": "AMD, insider, sell",
-      "etfs": [],
-      "link": "https://finnhub.io/stock-insider-transactions/AMD",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "Papermaster Mark D filed SELL of 6,000 AMD shares.  ",
-        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
-        "confidence": 35,
-        "source_weight": 3,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "2bf37231db1f",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "SEC EDGAR",
-      "type": "Form 4 \u00b7 Insider",
-      "direction": "BUY",
-      "title": "Papermaster Mark D \u2014 BUY 6,000 shares of AMD",
-      "detail": "AMD insider BUY. Shares changed: +6,000 | Total held: 1,300,466 | Filed: 2026-04-17",
-      "urgency": "LOW",
-      "keywords": "AMD, insider, buy",
-      "etfs": [],
-      "link": "https://finnhub.io/stock-insider-transactions/AMD",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "Papermaster Mark D filed BUY of 6,000 AMD shares.  ",
-        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
-        "confidence": 35,
-        "source_weight": 3,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "b2e74d6ff27c",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Lobbying",
-      "type": "Senate/House \u00b7 LMT",
-      "direction": "WATCH",
-      "title": "LMT lobbying: $4,230,000 in last 90 days",
-      "detail": "8 lobbying filings. Latest: Defense and aerospace technology company. Period: Q4",
-      "urgency": "LOW",
-      "keywords": "LMT, lobbying, regulation",
-      "etfs": [
-        [
-          "LMT",
-          "Lockheed Martin",
-          "NYSE"
-        ],
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://finnhub.io/stock-lobbying/LMT",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "LMT spent $4,230,000 lobbying in 90 days \u2014 8 filings. Large lobbying spend precedes regulatory changes or contract wins.",
-        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
-        "confidence": 35,
-        "source_weight": 2,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "711e86e945ab",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Lobbying",
-      "type": "Senate/House \u00b7 MSFT",
-      "direction": "WATCH",
-      "title": "MSFT lobbying: $3,212,500 in last 90 days",
-      "detail": "13 lobbying filings. Latest: Platform that enables professional networking & development, hiring, marketing & learning.. Period: Q4",
-      "urgency": "LOW",
-      "keywords": "MSFT, lobbying, regulation",
-      "etfs": [],
-      "link": "https://finnhub.io/stock-lobbying/MSFT",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "MSFT spent $3,212,500 lobbying in 90 days \u2014 13 filings. Large lobbying spend precedes regulatory changes or contract wins.",
-        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
-        "confidence": 35,
-        "source_weight": 2,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "de373710bd9b",
-      "date": "20/04/2026 07:24 UTC",
-      "date_be": "20/04/2026 09:24 CEST",
-      "source": "Lobbying",
-      "type": "Senate/House \u00b7 XOM",
-      "direction": "WATCH",
-      "title": "XOM lobbying: $2,050,000 in last 90 days",
-      "detail": "4 lobbying filings. Latest: Oil and Gas Company.. Period: Q4",
-      "urgency": "LOW",
-      "keywords": "XOM, lobbying, regulation",
-      "etfs": [],
-      "link": "https://finnhub.io/stock-lobbying/XOM",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "XOM spent $2,050,000 lobbying in 90 days \u2014 4 filings. Large lobbying spend precedes regulatory changes or contract wins.",
-        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
-        "confidence": 35,
-        "source_weight": 2,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "07c82ac17438",
       "date": "20/04/2026 07:24 UTC",
@@ -10029,6 +9570,666 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "9ca6e663c919",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 19",
+      "direction": "BUY",
+      "title": "[2x CONVERGENCE] XLE \u2014 BUY",
+      "detail": "Score: 19pts across 2 independent sources: Polymarket, Truth Social",
+      "urgency": "HIGH",
+      "keywords": "XLE",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "2/2 sources bullish on XLE",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Polymarket",
+            "direction": "BEARISH",
+            "urgency": "HIGH",
+            "points": 10,
+            "reasoning": "weight=5 + urgency=3 + hit_rate=80%x2 = 10pts",
+            "signal": "US x Iran ceasefire extended by April 21, 2026?"
+          },
+          {
+            "source": "Truth Social",
+            "direction": "WATCH",
+            "urgency": "HIGH",
+            "points": 9,
+            "reasoning": "weight=4 + urgency=3 + hit_rate=85%x2 = 9pts",
+            "signal": "Trump: \"statement of president donald j. trump:based on the "
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "4d2e5d221d5e",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran ceasefire extended by April 21, 2026?",
+      "detail": "Market pricing NO at 56% | 24h vol: $2,020,212 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=56%, vol=$2,020,212",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-the-us-x-iran-ceasefire-be-extended-by-april-21-2026-365",
+      "confidence": 56,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 56% with $2,020,212 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 56,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "55602f01ee56",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will the U.S. invade Iran before 2027?",
+      "detail": "Market pricing NO at 70% | 24h vol: $1,473,641 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=70%, vol=$1,473,641",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
+      "confidence": 70,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 70% with $1,473,641 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 70,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "ebff8f9dcf0b",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Iran agrees to surrender enriched uranium stockpile by April 30, 2026?",
+      "detail": "Market pricing NO at 92% | 24h vol: $757,229 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=92%, vol=$757,229",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/iran-agrees-to-surrender-enriched-uranium-stockpile-by-april-30-2026",
+      "confidence": 92,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 92% with $757,229 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 92,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "d53b758989ea",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "US x Iran diplomatic meeting by April 30, 2026?",
+      "detail": "Market pricing YES at 64% | 24h vol: $460,443 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=64%, vol=$460,443",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263",
+      "confidence": 64,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 64% with $460,443 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 64,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "56b83c54de5e",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran diplomatic meeting by April 23, 2026?",
+      "detail": "Market pricing NO at 82% | 24h vol: $443,254 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=82%, vol=$443,254",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-23-2026",
+      "confidence": 82,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 82% with $443,254 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 82,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "8ddf09384cf4",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "US x Iran ceasefire extended by April 22, 2026?",
+      "detail": "Market pricing YES at 72% | 24h vol: $429,945 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=72%, vol=$429,945",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-ceasefire-extended-by-april-22-2026",
+      "confidence": 72,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 72% with $429,945 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 72,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "a4026bbb9b85",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran diplomatic meeting by April 24, 2026?",
+      "detail": "Market pricing NO at 72% | 24h vol: $207,020 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=72%, vol=$207,020",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-24-2026",
+      "confidence": 72,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 72% with $207,020 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 72,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "31effc1fe764",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US-Iran nuclear deal by April 30?",
+      "detail": "Market pricing NO at 78% | 24h vol: $145,495 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=78%, vol=$145,495",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-iran-nuclear-deal-by-april-30",
+      "confidence": 78,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 78% with $145,495 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 78,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "c002e9604cf8",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will Bitcoin reach $85,000 in April?",
+      "detail": "Market pricing NO at 95% | 24h vol: $141,659 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=95%, vol=$141,659",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-bitcoin-reach-85k-in-april-2026",
+      "confidence": 95,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 95% with $141,659 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "862ad7e1672c",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 41m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"statement of president donald j. trump:based on the fact that the government of \"",
+      "detail": "statement of president donald j. trump:based on the fact that the government of iran is seriously fractured, not unexpectedly so and, upon the request of field marshal asim munir, and prime minister s",
+      "urgency": "HIGH",
+      "keywords": "ceasefire",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116444507618729432",
+      "confidence": 85,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 41m ago. Matched: ceasefire",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 85,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "ce06dcf2b71d",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense",
+      "direction": "BULLISH",
+      "title": "How major US stock indexes fared Tuesday 4/21/2026",
+      "detail": "the s&amp;p 500 erased an early rise and fell 0.6% tuesday after vice president jd vance called off a trip to pakistan, where he was expected to lead u.s. negotiators in talks with iran to extend the ",
+      "urgency": "LOW",
+      "keywords": "defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/world-indices/articles/major-us-stock-indexes-fared-201635979.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: How major US stock indexes fared Tuesday 4/21/2026. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "88bc9efc8d1f",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Motley Fool RSS",
+      "type": "Motley Fool \u00b7 tech, merger",
+      "direction": "BULLISH",
+      "title": "American Airlines Has Denied Rumors of a Merger With United. Here Are 2 Others Factors Dragging Down the Stock Right Now",
+      "detail": "american airlines issued a statement yesterday, refuting the idea of a potential merger with united airlines.",
+      "urgency": "LOW",
+      "keywords": "tech, merger",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.fool.com/investing/2026/04/21/american-airlines-has-denied-rumors-of-a-merger-wi/?source=iedfolrf0000001",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Motley Fool: American Airlines Has Denied Rumors of a Merger With United. Here Are 2 Others F. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Motley Fool",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "91fd383f86d3",
+      "date": "21/04/2026 20:51 UTC",
+      "date_be": "21/04/2026 22:51 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 tech, macro",
+      "direction": "BULLISH",
+      "title": "Travelers Q1 Earnings Beat, Revenues Miss, Dividend Raised - Yahoo Finance",
+      "detail": "travelers q1 earnings beat, revenues miss, dividend raised &nbsp;&nbsp; yahoo finance",
+      "urgency": "LOW",
+      "keywords": "tech, macro",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNRDF0UURuWGxZVEpiYVdxY1c2MndrcVd0eFR6Qm5mT0p0c1o1T0xVOGNuMGRHdlRBc0Jpd3gzai0zTU1nclJlTkZHbDl4NmFGdGsyWVJXaU1RRE5jZ29YNWtreVJlM0x0bWxJdEotaXJPSkF1aEhpRWFuY3ZrQlV4RHktUm9aRmFGaXdiVzE2c3ZUT1lwSlgtZUF4SmVXYmJ4SFE?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Travelers Q1 Earnings Beat, Revenues Miss, Dividend Raised - Yahoo Finance. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -10808,7 +11009,7 @@
       "price_at_signal": 228.99,
       "check_4h": "2026-04-17T06:39:18.108477+00:00",
       "check_24h": "2026-04-17T21:40:07.859360+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T20:50:29.992485+00:00",
       "result_4h": {
         "pct": 0.02,
         "hit": null,
@@ -10819,7 +11020,11 @@
         "hit": null,
         "price": 231.94
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": -2.58,
+        "hit": null,
+        "price": 223.09
+      }
     },
     {
       "uid": "fb279d84234f",
@@ -10836,7 +11041,7 @@
       "price_at_signal": 86.29,
       "check_4h": "2026-04-17T06:39:18.245211+00:00",
       "check_24h": "2026-04-17T21:40:08.011414+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T20:50:30.215256+00:00",
       "result_4h": {
         "pct": -0.01,
         "hit": null,
@@ -10847,7 +11052,11 @@
         "hit": null,
         "price": 87.07
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.32,
+        "hit": null,
+        "price": 86.57
+      }
     },
     {
       "uid": "9ac59b99a817",
@@ -12783,12 +12992,141 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "ee4dc482e497",
+      "theme": "macro",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 50,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Truth Social"
+      ],
+      "date": "2026-04-21T20:51:30.227492+00:00",
+      "price_at_signal": 704.08,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "acf3684c9a78",
+      "theme": "energy",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "XLE",
+      "score": 50,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Truth Social"
+      ],
+      "date": "2026-04-21T20:51:30.384240+00:00",
+      "price_at_signal": 55.87,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "d69cbf1ec855",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 42,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Yahoo Finance RSS",
+        "Motley Fool RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-21T20:51:30.534268+00:00",
+      "price_at_signal": 704.08,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "a246bbd85fc6",
+      "theme": "commodities",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "GLD",
+      "score": 36,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket"
+      ],
+      "date": "2026-04-21T20:51:30.704621+00:00",
+      "price_at_signal": 429.57,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "f4ed57b2d119",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-21T20:51:30.863559+00:00",
+      "price_at_signal": 429.57,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "82667a7bfc0a",
+      "theme": "crypto",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "IBIT",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-21T20:51:31.033168+00:00",
+      "price_at_signal": 42.51,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 6,
     "misses": 97,
-    "watches": 41,
+    "watches": 43,
     "by_window": {
       "4h": {
         "hits": 1,
@@ -13503,7 +13841,7 @@
     }
   ],
   "position_book": {
-    "cash": 66427.4,
+    "cash": 61427.4,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -13703,12 +14041,13 @@
       "XLE": {
         "side": "SHORT",
         "ticker": "XLE",
-        "shares": 107.474446,
-        "avg_entry": 55.8272,
-        "invested_eur": 6000.0,
+        "shares": 152.221179,
+        "avg_entry": 55.8398,
+        "invested_eur": 8500.0,
         "open_date": "2026-04-21T17:56:44.270980+00:00",
         "open_be": "21/04/2026 19:56 CEST",
         "signals": [
+          "panel-XLE-21/04/2026",
           "panel-XLE-21/04/2026",
           "panel-XLE-21/04/2026",
           "panel-XLE-21/04/2026"
@@ -13742,12 +14081,13 @@
       "GLD": {
         "side": "SHORT",
         "ticker": "GLD",
-        "shares": 11.601789,
-        "avg_entry": 430.968,
-        "invested_eur": 5000.0,
+        "shares": 17.421562,
+        "avg_entry": 430.501,
+        "invested_eur": 7500.0,
         "open_date": "2026-04-21T18:48:03.264705+00:00",
         "open_be": "21/04/2026 20:48 CEST",
         "signals": [
+          "panel-GLD-21/04/2026",
           "panel-GLD-21/04/2026",
           "panel-GLD-21/04/2026"
         ],
