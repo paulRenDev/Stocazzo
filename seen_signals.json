@@ -316,7 +316,11 @@
     "9709710eee4a",
     "a1f39ce23ece",
     "e3317c86830d",
-    "55f41c4b598c"
+    "55f41c4b598c",
+    "4f32dd857ee8",
+    "14165f1d7d23",
+    "1ffd7d3565f5",
+    "1e6a4de6bc5e"
   ],
   "stats": {
     "Polymarket": {
@@ -1425,180 +1429,36 @@
       "date": "2026-04-21T23:11:50.925349+00:00",
       "price_at_signal": 42.51,
       "title": "Will the price of Bitcoin be between $66,000 and $68,000 on April 22?"
+    },
+    {
+      "uid": "4f32dd857ee8",
+      "source": "Polymarket",
+      "ticker": "XLE",
+      "direction": "BEARISH",
+      "date": "2026-04-21T23:53:22.659783+00:00",
+      "price_at_signal": 0,
+      "title": "US-Iran nuclear deal by April 30?"
+    },
+    {
+      "uid": "14165f1d7d23",
+      "source": "Polymarket",
+      "ticker": "IBIT",
+      "direction": "BEARISH",
+      "date": "2026-04-21T23:53:22.788719+00:00",
+      "price_at_signal": 0,
+      "title": "Will the price of Bitcoin be above $84,000 on April 22?"
+    },
+    {
+      "uid": "1e6a4de6bc5e",
+      "source": "Yahoo Finance RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-21T23:53:22.919680+00:00",
+      "price_at_signal": 0,
+      "title": "Stock market today: Dow, S&P 500, Nasdaq futures rise after Trump extends US-Ira"
     }
   ],
   "history": [
-    {
-      "uid": "8a6885280b66",
-      "date": "21/04/2026 12:09 UTC",
-      "date_be": "21/04/2026 14:09 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 1h 26m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"i have always been a big fan of tim cook, and likewise, steve jobs, but if steve\"",
-      "detail": "i have always been a big fan of tim cook, and likewise, steve jobs, but if steve was not taken from the planet earth so young, and ran the company instead of tim, the company would have done well, but",
-      "urgency": "MEDIUM",
-      "keywords": "jobs",
-      "etfs": [],
-      "link": "https://truthsocial.com/@realDonaldTrump/116442276577696798",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 1h 26m ago. Matched: jobs",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "26057d503d43",
-      "date": "21/04/2026 12:09 UTC",
-      "date_be": "21/04/2026 14:09 CEST",
-      "source": "Benzinga RSS",
-      "type": "",
-      "direction": "BUY \u2014 Bullish news",
-      "title": "Best Auto and Truck Dealership Stocks Right Now",
-      "detail": "<p>The post <a href=\"https://www.benzinga.com/money/best-auto-truck-dealerships-stocks\" rel=\"nofollow\">Best Auto and Truck Dealership Stocks Right Now</a> by <a href=\"https://www.benzinga.com/money/au",
-      "urgency": "LOW",
-      "keywords": "",
-      "etfs": [
-        [
-          "SPY",
-          "SPY",
-          null
-        ]
-      ],
-      "link": "https://www.benzinga.com/money/best-auto-truck-dealerships-stocks",
-      "confidence": 35,
-      "hit_rate": "",
-      "reasoning_stored": {
-        "why": "Benzinga: Best Auto and Truck Dealership Stocks Right Now",
-        "caveat": "News-based signal \u2014 confirm with price action before acting.",
-        "confidence": 35,
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "38eece107c96",
-      "date": "21/04/2026 14:09 UTC",
-      "date_be": "21/04/2026 16:09 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 31m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"never allow the traitor democrats like low iq person hakeem jeffries, or cryin' \"",
-      "detail": "never allow the traitor democrats like low iq person hakeem jeffries, or cryin' chuck schumer, or the totally corrupt fake news media such as the phony and decaying wall street journal, the failing ne",
-      "urgency": "MEDIUM",
-      "keywords": "iran, wall street",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116442964943642737",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 31m ago. Matched: iran, wall street",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "1bf2c5a1c3c1",
-      "date": "21/04/2026 14:09 UTC",
-      "date_be": "21/04/2026 16:09 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 45m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"to the iranian leaders, who will soon be in negotiations with my representatives\"",
-      "detail": "to the iranian leaders, who will soon be in negotiations with my representatives: i would greatly appreciate the release of these women. i am sure that they will respect the fact that you did so. plea",
-      "urgency": "MEDIUM",
-      "keywords": "iran, negotiat",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116442908819175250",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 45m ago. Matched: iran, negotiat",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "7663e05b220e",
-      "date": "21/04/2026 16:44 UTC",
-      "date_be": "21/04/2026 18:44 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 22m ago",
-      "direction": "BULLISH",
-      "title": "Trump: \"my friend, congresswoman elise stefanik, of new york, has written a new book, \"p\"",
-      "detail": "my friend, congresswoman elise stefanik, of new york, has written a new book, \"poisoned ivies: the inside account of the academic and moral rot at america's elite universities.\" there is nobody more q",
-      "urgency": "MEDIUM",
-      "keywords": "import",
-      "etfs": [],
-      "link": "https://truthsocial.com/@realDonaldTrump/116443610885264454",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 22m ago. Matched: import",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "4f76f305db3e",
       "date": "21/04/2026 17:19 UTC",
@@ -10518,6 +10378,252 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "5a07ea61226a",
+      "date": "21/04/2026 23:53 UTC",
+      "date_be": "22/04/2026 01:53 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 18",
+      "direction": "SELL",
+      "title": "[2x CONVERGENCE] XLE \u2014 SELL",
+      "detail": "Score: 18pts across 2 independent sources: Polymarket, Truth Social",
+      "urgency": "HIGH",
+      "keywords": "XLE",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "2/2 sources bearish on XLE",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Polymarket",
+            "direction": "BEARISH",
+            "urgency": "HIGH",
+            "points": 10,
+            "reasoning": "weight=5 + urgency=3 + hit_rate=80%x2 = 10pts",
+            "signal": "US-Iran nuclear deal by April 30?"
+          },
+          {
+            "source": "Truth Social",
+            "direction": "BEARISH",
+            "urgency": "MEDIUM",
+            "points": 8,
+            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
+            "signal": "Trump: \"the wall street journal has lost its way!an idiot on"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "4f32dd857ee8",
+      "date": "21/04/2026 23:53 UTC",
+      "date_be": "22/04/2026 01:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US-Iran nuclear deal by April 30?",
+      "detail": "Market pricing NO at 81% | 24h vol: $139,002 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=81%, vol=$139,002",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-iran-nuclear-deal-by-april-30",
+      "confidence": 81,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 81% with $139,002 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 81,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "14165f1d7d23",
+      "date": "21/04/2026 23:53 UTC",
+      "date_be": "22/04/2026 01:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will the price of Bitcoin be above $84,000 on April 22?",
+      "detail": "Market pricing NO at 100% | 24h vol: $137,955 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$137,955",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-84k-on-april-22",
+      "confidence": 100,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 100% with $137,955 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1ffd7d3565f5",
+      "date": "21/04/2026 23:53 UTC",
+      "date_be": "22/04/2026 01:53 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 17m ago",
+      "direction": "BEARISH",
+      "title": "Trump: \"the wall street journal has lost its way!an idiot on the wall street journal's e\"",
+      "detail": "the wall street journal has lost its way!an idiot on the wall street journal's editorial board, named elliot kaufman, just wrote an op ed entitled, \"the iranians take trump for a sucker.\" really? for ",
+      "urgency": "MEDIUM",
+      "keywords": "iran, wall street",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116445317344745621",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 17m ago. Matched: iran, wall street",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1e6a4de6bc5e",
+      "date": "21/04/2026 23:53 UTC",
+      "date_be": "22/04/2026 01:53 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense",
+      "direction": "BULLISH",
+      "title": "Stock market today: Dow, S&P 500, Nasdaq futures rise after Trump extends US-Iran ceasefire",
+      "detail": "major gauges climbed after a fragile extension of the ceasefire between the us and iran was unilaterally announced.",
+      "urgency": "MEDIUM",
+      "keywords": "defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/live/stock-market-today-dow-sp-500-nasdaq-futures-rise-after-trump-extends-us-iran-ceasefire-230429647.html?.tsrc=rss",
+      "confidence": 41,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Stock market today: Dow, S&P 500, Nasdaq futures rise after Trump extends US-Ira. 2 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 41,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -13794,6 +13900,26 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "984128055403",
+      "theme": "crypto",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "IBIT",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-21T23:53:22.528860+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
@@ -14514,7 +14640,7 @@
     }
   ],
   "position_book": {
-    "cash": 67939.02,
+    "cash": 60439.02,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -14734,39 +14860,41 @@
         "check_4h": null,
         "check_24h": null
       },
-      "GLD": {
-        "side": "LONG",
-        "ticker": "GLD",
-        "shares": 5.819773,
-        "avg_entry": 429.57,
-        "invested_eur": 2500.0,
-        "open_date": "2026-04-21T21:44:09.447140+00:00",
-        "open_be": "21/04/2026 23:44 CEST",
-        "signals": [
-          "panel-GLD-21/04/2026"
-        ],
-        "themes": [
-          "Gold \u2014 The Insider + The Macro Man"
-        ],
-        "confidence": 65,
-        "check_4h": null,
-        "check_24h": null
-      },
       "XLE": {
         "side": "SHORT",
         "ticker": "XLE",
-        "shares": 17.898693,
+        "shares": 107.39216,
         "avg_entry": 55.87,
-        "invested_eur": 1000.0,
+        "invested_eur": 6000.0,
         "open_date": "2026-04-21T22:27:14.574014+00:00",
         "open_be": "22/04/2026 00:27 CEST",
         "signals": [
+          "panel-XLE-22/04/2026",
           "panel-XLE-22/04/2026"
         ],
         "themes": [
-          "Energy \u2014 The Insider"
+          "Energy \u2014 The Insider",
+          "Energy \u2014 The Insider + The Trump Whisperer"
         ],
         "confidence": 53,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "GLD": {
+        "side": "SHORT",
+        "ticker": "GLD",
+        "shares": 11.639547,
+        "avg_entry": 429.57,
+        "invested_eur": 5000.0,
+        "open_date": "2026-04-21T23:53:22.367608+00:00",
+        "open_be": "22/04/2026 01:53 CEST",
+        "signals": [
+          "panel-GLD-22/04/2026"
+        ],
+        "themes": [
+          "Gold \u2014 The Insider + The Trump Whisperer"
+        ],
+        "confidence": 75,
         "check_4h": null,
         "check_24h": null
       }
@@ -14937,6 +15065,29 @@
         ],
         "themes": [
           "Energy \u2014 The Insider + The Macro Man"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
+      },
+      {
+        "ticker": "GLD",
+        "side": "LONG",
+        "shares": 5.819773,
+        "avg_entry": 429.57,
+        "close_price": 429.57,
+        "invested_eur": 2500.0,
+        "pnl_eur": 0.0,
+        "pnl_pct": 0.0,
+        "open_date": "2026-04-21T21:44:09.447140+00:00",
+        "open_be": "21/04/2026 23:44 CEST",
+        "close_date": "2026-04-21T23:53:22.367563+00:00",
+        "close_be": "22/04/2026 01:53 CEST",
+        "hold_hours": 2.2,
+        "signals": [
+          "panel-GLD-21/04/2026"
+        ],
+        "themes": [
+          "Gold \u2014 The Insider + The Macro Man"
         ],
         "close_reason": "opposite_signal",
         "hit": false
