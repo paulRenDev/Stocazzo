@@ -1,148 +1,172 @@
 {
   "ids": [
-    "734a420b9235",
-    "465533aeda16",
-    "bc31c887e060",
-    "31843a5643ef",
-    "26d06aeb7fcc",
-    "1bf2c5a1c3c1",
-    "acefd863227a",
-    "ca2188a90354",
-    "435f6ddbce4c",
-    "1ede72cc1fa0",
-    "b698fe4a17d2",
-    "02bece6829ac",
-    "9d7f440c781e",
-    "7aeaaa602ba5",
+    "dd603ecf3e72",
     "83790aaeee8f",
-    "500615d0f735",
-    "f91d251e6a00",
-    "1016c48d066c",
-    "d56a5cdfbb96",
-    "14812c35cbe0",
-    "780040c51ef9",
-    "81c7d996ca75",
-    "7a2691723cce",
-    "2bf37231db1f",
-    "fc1a21193f87",
-    "31a210b9e499",
-    "b83922ad5cd6",
-    "6f3f5d987825",
-    "dfa924e4f13d",
-    "c15be49654c5",
-    "30de0d34d3d8",
-    "67908201a79d",
-    "40c4233b088c",
-    "85c4730b886c",
-    "1de84568c6f2",
-    "286e8c696110",
-    "9c5e7c4556c7",
-    "ff9000f9e899",
-    "2763e2fd180a",
-    "3bb58e487f35",
-    "2a0ee2042455",
-    "fd91dd5a89bf",
-    "209003425473",
-    "10da3fb8b1fa",
-    "a6ab397cf266",
-    "b0ec811419ad",
-    "943a2fc41358",
-    "46bb0ca0fde5",
-    "de373710bd9b",
-    "e5a2151f14c5",
-    "a4c90bf5261d",
-    "50ff7c2d8ffe",
-    "e87b4da2717b",
-    "cfdcae65b396",
-    "9e539a681c0a",
-    "2925e4685dcf",
-    "b86178c49e78",
-    "95875c5a02da",
-    "711e86e945ab",
-    "2fb60ff4a3bf",
-    "9977641bddad",
-    "8f759a104cf6",
-    "5f23b9a680d2",
-    "3bfcff9e1160",
-    "2bd8b6a7de86",
-    "45cbe6e728da",
-    "7045bde3dbe3",
-    "ba6194e737bb",
-    "7663e05b220e",
-    "312fe7511d0b",
-    "b5af3579ee95",
-    "92e38ea5412b",
-    "63c86818a1fd",
-    "7badf7b43bc0",
-    "556f276c2cb7",
-    "994fb09849c9",
-    "6cb05f24f18c",
-    "a0b3b1f93467",
-    "fb29376bd25f",
-    "f1288e8da16d",
-    "9b3073f18896",
-    "b421c50e856a",
-    "060828854bf6",
     "0d4041a7fae2",
-    "3e9307dee462",
-    "fe03774bbb0a",
-    "8f9b844b1ff6",
-    "1678c8c092e0",
-    "2e469813dd1c",
-    "a75e66a206d2",
-    "889bec77b208",
-    "4115620504a4",
-    "1d6b86fe014c",
-    "47b320b8e362",
-    "7b1420f5d653",
-    "c11c7edd721e",
-    "ecc0ec2d9067",
-    "b3e5f5faf150",
-    "92ac1f18e228",
-    "23ab136875d6",
-    "39a94e2128a3",
-    "318f368c76b5",
-    "0de684b7c379",
-    "b2e74d6ff27c",
-    "f4e705fed31d",
-    "dd9d19a9c5a4",
     "169ebe479f0f",
-    "17ba5e679fa6",
-    "38eece107c96",
-    "47fd0f06b413",
-    "8a6885280b66",
     "e990de2f3299",
-    "e4e4235ed083",
+    "dfa924e4f13d",
+    "672fae1371a5",
+    "21df39fc7b03",
+    "5bbecfb57691",
+    "286e8c696110",
+    "3aa06d041807",
+    "b86178c49e78",
+    "7b1420f5d653",
+    "40c4233b088c",
+    "26d06aeb7fcc",
+    "1431412201ef",
+    "31a210b9e499",
+    "2763e2fd180a",
     "45a67124f3bb",
+    "c15be49654c5",
+    "9b3073f18896",
+    "6f3f5d987825",
+    "10da3fb8b1fa",
+    "3e9307dee462",
+    "02bece6829ac",
+    "85c4730b886c",
+    "d83c6fdf5064",
+    "8c333349babe",
+    "b0ec811419ad",
+    "711e86e945ab",
+    "4115620504a4",
+    "624842d27583",
+    "064bf9f0231b",
+    "63c86818a1fd",
+    "fd91dd5a89bf",
+    "e4e4235ed083",
+    "1db3128f3ee2",
+    "d1a2b58417da",
+    "95875c5a02da",
+    "318f368c76b5",
+    "9c5e7c4556c7",
+    "f3dabdf7fcdc",
+    "943a2fc41358",
+    "8944eb2e656c",
+    "65485aaaed6b",
+    "50ff7c2d8ffe",
+    "8a06a3214a28",
+    "07c82ac17438",
+    "23ab136875d6",
+    "38eece107c96",
+    "045f55b844a4",
+    "46bb0ca0fde5",
+    "7badf7b43bc0",
+    "45cbe6e728da",
+    "31efc9556bd7",
+    "2bd8b6a7de86",
+    "9e539a681c0a",
+    "7663e05b220e",
+    "e5a2151f14c5",
     "697d3306271b",
+    "fb29376bd25f",
+    "7a2691723cce",
+    "2e469813dd1c",
+    "b5af3579ee95",
+    "f4e705fed31d",
+    "49ecd59bb8e6",
+    "5f23b9a680d2",
+    "f91d251e6a00",
+    "2bf37231db1f",
+    "1678c8c092e0",
+    "7013b47db36c",
+    "bc31c887e060",
+    "30de0d34d3d8",
+    "7045bde3dbe3",
+    "6cb05f24f18c",
+    "830fe33f7920",
+    "3bfcff9e1160",
+    "1bf2c5a1c3c1",
+    "81c7d996ca75",
+    "a6ab397cf266",
+    "92ac1f18e228",
+    "a75e66a206d2",
+    "36ac56b06e2b",
+    "8610b6e43b2d",
+    "500615d0f735",
+    "fe03774bbb0a",
+    "ff9000f9e899",
+    "67908201a79d",
+    "17ba5e679fa6",
+    "cfdcae65b396",
+    "dd9d19a9c5a4",
+    "31843a5643ef",
+    "f1288e8da16d",
+    "1016c48d066c",
+    "6da259d53b62",
+    "de373710bd9b",
+    "556f276c2cb7",
+    "060828854bf6",
+    "dc33adcd00fd",
+    "0eb7d59f6afd",
+    "28cc4ad9c612",
+    "8f759a104cf6",
+    "6ea3f66db8c9",
+    "2ae5e11a0d48",
+    "2a0ee2042455",
+    "b698fe4a17d2",
+    "465533aeda16",
+    "2fb60ff4a3bf",
+    "ba6194e737bb",
+    "d8f6da3f8898",
+    "51045d443f94",
+    "3bb58e487f35",
+    "26057d503d43",
+    "ec40e3cfacb3",
+    "39a94e2128a3",
+    "eb9405a50c19",
+    "5fcebda7dc5f",
+    "a7abf242788e",
+    "e87b4da2717b",
+    "1999b15191f2",
+    "47b320b8e362",
+    "b2e74d6ff27c",
+    "92e38ea5412b",
+    "b3e5f5faf150",
+    "aabbc8a157d5",
+    "af68940ec1e0",
     "74bc9a743605",
     "74e38c979ed6",
-    "b4c46499d37a",
-    "0eb7d59f6afd",
-    "36ac56b06e2b",
-    "28cc4ad9c612",
-    "6268e160a599",
-    "8a06a3214a28",
-    "7013b47db36c",
-    "8c333349babe",
+    "ca2188a90354",
+    "1d6b86fe014c",
     "f68ef795b10a",
-    "f3dabdf7fcdc",
-    "624842d27583",
-    "49ecd59bb8e6",
-    "aabbc8a157d5",
-    "1431412201ef",
-    "eff4ba5df193",
-    "045f55b844a4",
-    "8610b6e43b2d",
     "343d17b3e17a",
-    "26057d503d43",
-    "830fe33f7920",
-    "ec40e3cfacb3",
-    "2ae5e11a0d48",
-    "65485aaaed6b",
-    "51045d443f94",
-    "af68940ec1e0",
-    "07c82ac17438"
+    "b83922ad5cd6",
+    "7aeaaa602ba5",
+    "8a6885280b66",
+    "eff4ba5df193",
+    "5804f89e5e35",
+    "b4c46499d37a",
+    "1de84568c6f2",
+    "a4c90bf5261d",
+    "9d7f440c781e",
+    "8f9b844b1ff6",
+    "29efc4788663",
+    "b421c50e856a",
+    "994fb09849c9",
+    "0de684b7c379",
+    "b3d541b3ea56",
+    "312fe7511d0b",
+    "acefd863227a",
+    "fc1a21193f87",
+    "209003425473",
+    "889bec77b208",
+    "780040c51ef9",
+    "57d9cc9a6918",
+    "734a420b9235",
+    "ecc0ec2d9067",
+    "6268e160a599",
+    "14812c35cbe0",
+    "47fd0f06b413",
+    "2925e4685dcf",
+    "1ede72cc1fa0",
+    "6a41e7a2ade9",
+    "a0b3b1f93467",
+    "d56a5cdfbb96",
+    "c11c7edd721e",
+    "9977641bddad",
+    "435f6ddbce4c"
   ],
   "stats": {
     "Polymarket": {
@@ -881,6 +905,186 @@
       "date": "2026-04-21T17:19:09.396212+00:00",
       "price_at_signal": 0,
       "title": "China exports sharply beat expectations as trade surplus in the first two months"
+    },
+    {
+      "uid": "d8f6da3f8898",
+      "source": "Yahoo Finance RSS",
+      "ticker": "SOXX",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:31:58.934749+00:00",
+      "price_at_signal": 419.46,
+      "title": "JPMorgan Raises S&P 500 Target To 7,600, Sees 7% Upside On AI Strength"
+    },
+    {
+      "uid": "5bbecfb57691",
+      "source": "Motley Fool RSS",
+      "ticker": "XLE",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:31:59.265478+00:00",
+      "price_at_signal": 55.72,
+      "title": "ADP (ADP) Q4 2025 Earnings Call Transcript"
+    },
+    {
+      "uid": "31efc9556bd7",
+      "source": "Google News RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:31:59.508434+00:00",
+      "price_at_signal": 223.09,
+      "title": "Fed's Waller says rate cuts still possible this year if war ends quickly - Reute"
+    },
+    {
+      "uid": "064bf9f0231b",
+      "source": "Google News RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:31:59.733861+00:00",
+      "price_at_signal": 223.09,
+      "title": "Kevin Warsh Pitched a Case for Fed Rate Cuts. His Future Colleagues Are Skeptica"
+    },
+    {
+      "uid": "8944eb2e656c",
+      "source": "Google News RSS",
+      "ticker": "SOXX",
+      "direction": "BEARISH",
+      "date": "2026-04-21T17:32:00.003526+00:00",
+      "price_at_signal": 419.46,
+      "title": "Mercantile Bank Corp (NASDAQ:MBWM) Q1 2026 Earnings: EPS Beat Overshadowed by Re"
+    },
+    {
+      "uid": "1db3128f3ee2",
+      "source": "Google News RSS",
+      "ticker": "SOXX",
+      "direction": "BEARISH",
+      "date": "2026-04-21T17:32:00.251321+00:00",
+      "price_at_signal": 419.46,
+      "title": "Atlantic Union Bankshares Corp. (NYSE:AUB) Reports Mixed Q1 2026 Results with EP"
+    },
+    {
+      "uid": "b3d541b3ea56",
+      "source": "Google News RSS",
+      "ticker": "SPY",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:00.534851+00:00",
+      "price_at_signal": 704.98,
+      "title": "Wells Fargo earnings beat estimates despite revenue miss - Investing.com"
+    },
+    {
+      "uid": "6da259d53b62",
+      "source": "Google News RSS",
+      "ticker": "SOXX",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:00.790058+00:00",
+      "price_at_signal": 419.46,
+      "title": "ServisFirst Bancshares Inc (NYSE:SFBS) Reports Q1 2026 Earnings Beat on EPS, Mis"
+    },
+    {
+      "uid": "5804f89e5e35",
+      "source": "Google News RSS",
+      "ticker": "SPY",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:01.129994+00:00",
+      "price_at_signal": 704.98,
+      "title": "Labcorp Q4 Earnings Beat, Revenues Miss, Stock Down in Pre-Market - Yahoo Financ"
+    },
+    {
+      "uid": "d83c6fdf5064",
+      "source": "Google News RSS",
+      "ticker": "SPY",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:01.393360+00:00",
+      "price_at_signal": 704.98,
+      "title": "The Year in Trade: Trump\u2019s tariffs, UK trade deals and sanctions shifts - The Ch"
+    },
+    {
+      "uid": "6ea3f66db8c9",
+      "source": "Google News RSS",
+      "ticker": "SPY",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:01.694741+00:00",
+      "price_at_signal": 704.98,
+      "title": "EU parliament blocks US trade deal after Trump\u2019s tariff threat - The Guardian"
+    },
+    {
+      "uid": "3aa06d041807",
+      "source": "Google News RSS",
+      "ticker": "IBIT",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:02.058349+00:00",
+      "price_at_signal": 42.72,
+      "title": "Goldman Sachs Seeks SEC Approval for New Bitcoin ETF - PYMNTS.com"
+    },
+    {
+      "uid": "dc33adcd00fd",
+      "source": "Google News RSS",
+      "ticker": "IBIT",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:02.504450+00:00",
+      "price_at_signal": 42.72,
+      "title": "Goldman Sachs files to launch Bitcoin ETF as institutional demand surges - The B"
+    },
+    {
+      "uid": "672fae1371a5",
+      "source": "Google News RSS",
+      "ticker": "IBIT",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:02.852507+00:00",
+      "price_at_signal": 42.72,
+      "title": "Crypto ETFs set to flood US market as SEC streamlines approvals - Yahoo Finance"
+    },
+    {
+      "uid": "a7abf242788e",
+      "source": "Google News RSS",
+      "ticker": "GLD",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:03.208750+00:00",
+      "price_at_signal": 431.55,
+      "title": "Why gold prices are forecast to rise to new record highs - Goldman Sachs"
+    },
+    {
+      "uid": "d1a2b58417da",
+      "source": "Google News RSS",
+      "ticker": "SOXX",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:03.737691+00:00",
+      "price_at_signal": 419.46,
+      "title": "Commodity Currencies Falter Amidst Global Uncertainty, Propelling Gold and Silve"
+    },
+    {
+      "uid": "5fcebda7dc5f",
+      "source": "Google News RSS",
+      "ticker": "XLE",
+      "direction": "BEARISH",
+      "date": "2026-04-21T17:32:04.070112+00:00",
+      "price_at_signal": 55.72,
+      "title": "Top Fed official sees potential rate hike amid higher gas prices, inflation conc"
+    },
+    {
+      "uid": "eb9405a50c19",
+      "source": "Google News RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:04.490104+00:00",
+      "price_at_signal": 223.09,
+      "title": "Latest inflation data reinforce rate cuts would be on the table if not for Iran,"
+    },
+    {
+      "uid": "57d9cc9a6918",
+      "source": "Google News RSS",
+      "ticker": "SOXX",
+      "direction": "BEARISH",
+      "date": "2026-04-21T17:32:04.889257+00:00",
+      "price_at_signal": 419.46,
+      "title": "G10 FX Talking: Time to back the hawkish central banks - ING THINK economic and "
+    },
+    {
+      "uid": "29efc4788663",
+      "source": "Google News RSS",
+      "ticker": "SPY",
+      "direction": "BULLISH",
+      "date": "2026-04-21T17:32:05.300666+00:00",
+      "price_at_signal": 704.98,
+      "title": "Top 5 Largest Corporate Acquisitions Ever - Investopedia"
     }
   ],
   "history": [
@@ -6361,6 +6565,1087 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "ecc436d22a21",
+      "date": "21/04/2026 17:31 UTC",
+      "date_be": "21/04/2026 19:31 CEST",
+      "source": "CONVERGENCE",
+      "type": "3 sources \u00b7 score 12",
+      "direction": "MIXED",
+      "title": "[3x CONVERGENCE] TECH \u2014 MIXED",
+      "detail": "Score: 12pts across 3 independent sources: Yahoo Finance RSS, Motley Fool RSS, Google News RSS",
+      "urgency": "HIGH",
+      "keywords": "TECH",
+      "etfs": [
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "XLK",
+          "Technology Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "VGT",
+          "Vanguard Information Technology ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "Sources split on TECH \u2014 no clear direction",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Yahoo Finance RSS",
+            "direction": "BULLISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=42%x2 = 4pts",
+            "signal": "JPMorgan Raises S&P 500 Target To 7,600, Sees 7% Upside On A"
+          },
+          {
+            "source": "Motley Fool RSS",
+            "direction": "BULLISH",
+            "urgency": "MEDIUM",
+            "points": 4,
+            "reasoning": "weight=1 + urgency=2 + hit_rate=40%x2 = 4pts",
+            "signal": "ADP (ADP) Q4 2025 Earnings Call Transcript"
+          },
+          {
+            "source": "Google News RSS",
+            "direction": "BULLISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=43%x2 = 4pts",
+            "signal": "Treasury Secretary says Fed can wait on rate cuts, even as h"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "d8f6da3f8898",
+      "date": "21/04/2026 17:31 UTC",
+      "date_be": "21/04/2026 19:31 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 tech, macro",
+      "direction": "BULLISH",
+      "title": "JPMorgan Raises S&P 500 Target To 7,600, Sees 7% Upside On AI Strength",
+      "detail": "ai-driven earnings outlook and easing geopolitical concerns support higher market projections after recent volatility",
+      "urgency": "LOW",
+      "keywords": "tech, macro, finance",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/news/jpmorgan-raises-p-500-target-162127334.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: JPMorgan Raises S&P 500 Target To 7,600, Sees 7% Upside On AI Strength. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "5bbecfb57691",
+      "date": "21/04/2026 17:31 UTC",
+      "date_be": "21/04/2026 19:31 CEST",
+      "source": "Motley Fool RSS",
+      "type": "Motley Fool \u00b7 energy, defense",
+      "direction": "BULLISH",
+      "title": "ADP (ADP) Q4 2025 Earnings Call Transcript",
+      "detail": "image source: the motley fool. wednesday, july 30, 2025 at 8:30 a.m. et adp (nasdaq:adp) 's management stated that full-year revenue reached $20.6 billion with 7% growth, propelled by both employer se",
+      "urgency": "MEDIUM",
+      "keywords": "energy, defense, tech, macro",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ],
+        [
+          "OIH",
+          "VanEck Oil Services ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.fool.com/earnings/call-transcripts/2026/04/21/adp-adp-q4-2025-earnings-call-transcript/?source=iedfolrf0000001",
+      "confidence": 41,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Motley Fool: ADP (ADP) Q4 2025 Earnings Call Transcript. 2 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Motley Fool",
+        "confidence": 41,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "31efc9556bd7",
+      "date": "21/04/2026 17:31 UTC",
+      "date_be": "21/04/2026 19:31 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Fed \u00b7 defense, fed",
+      "direction": "BULLISH",
+      "title": "Fed's Waller says rate cuts still possible this year if war ends quickly - Reuters",
+      "detail": "fed's waller says rate cuts still possible this year if war ends quickly &nbsp;&nbsp; reuters",
+      "urgency": "LOW",
+      "keywords": "defense, fed",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcXpGTDNQU3BHZHJMbWNsRkgzdVRyQ1VXTDl3TnFwb2VKSGctSjgxS2l6RE8xU216ejNPOHItTHhRUnhYampXalNwdG15LXhzQWd2dk1BQ2tuVG1TOXJZV3RkYi1qNFd2cUlnanhtSVR3dHJ6WXl1eV9WZ3o0dW9IZHZ5cVhJSW5XbGFqVW5KQ3hHYVlfMUlzeHRXcTRrcVRLV1JRZ0tQMGFSSTg?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Fed: Fed's Waller says rate cuts still possible this year if war ends quickly - Reute. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Fed",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "064bf9f0231b",
+      "date": "21/04/2026 17:31 UTC",
+      "date_be": "21/04/2026 19:31 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Fed \u00b7 defense, fed",
+      "direction": "BULLISH",
+      "title": "Kevin Warsh Pitched a Case for Fed Rate Cuts. His Future Colleagues Are Skeptical. - WSJ",
+      "detail": "kevin warsh pitched a case for fed rate cuts. his future colleagues are skeptical. &nbsp;&nbsp; wsj",
+      "urgency": "LOW",
+      "keywords": "defense, fed",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPSVNXd2ZaY3g4TlRPQUtzZklSbno5U2VLb1Z3QmlITkpqUW1Hd01XYXVFQ1pYV2lCcFZmWHZwV2pYeVYwSFUzUFFnV2tQTUtWSTB5bXlCU0lkbzcxdm42eTZ2Wmptc1c3SllkakItREtaRkpTVEJXeXcxSkJ0anJtUnZjM2tic1k?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Fed: Kevin Warsh Pitched a Case for Fed Rate Cuts. His Future Colleagues Are Skeptica. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Fed",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "dd603ecf3e72",
+      "date": "21/04/2026 17:31 UTC",
+      "date_be": "21/04/2026 19:31 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Fed \u00b7 fed, tech",
+      "direction": "BULLISH",
+      "title": "Treasury Secretary says Fed can wait on rate cuts, even as he keeps pushing for them - thestreet.com",
+      "detail": "treasury secretary says fed can wait on rate cuts, even as he keeps pushing for them &nbsp;&nbsp; thestreet.com",
+      "urgency": "LOW",
+      "keywords": "fed, tech, finance",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOM3ViMnpWR2x4V29UQWRubTd5OE9Wa1liUGRJVklIQ1Y0SW9sQ2JROUltN3phTXNyU0hqMTVVbTVjVDMtR3BGcktNdE44Z1N1aFRWTGdhYzBvbE1Ja09UV0ZvRk5yS01wM1QyWlNnVlcycTlWOTRrWUhTTmg2YXc1b0dSNDdPTnIxczY5V2kxYVJEc0FP?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Fed: Treasury Secretary says Fed can wait on rate cuts, even as he keeps pushing for . 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Fed",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "8944eb2e656c",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 tech, macro",
+      "direction": "BEARISH",
+      "title": "Mercantile Bank Corp (NASDAQ:MBWM) Q1 2026 Earnings: EPS Beat Overshadowed by Revenue Miss, Shares Drop - ChartMill",
+      "detail": "mercantile bank corp (nasdaq:mbwm) q1 2026 earnings: eps beat overshadowed by revenue miss, shares drop &nbsp;&nbsp; chartmill",
+      "urgency": "LOW",
+      "keywords": "tech, macro, finance",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOQnAyejdfY2RtQXlXRWtJcmVPcE5sQzJNVEFSQzVfSFlpak1JRzNuUmxLcEhiT2pYV3RZYlhuaW5zUWoxYVlGUmNVQ1NvQTJRTmFZY3hOZmRzeHFrbTFlWWJjdWhTQkRHel9BU3c3Z3NhN3FTVVVabmpQZW9aTXotMkFfcjdPQWJZWU8yQlJYNjlxT0RNTUlJVGExSjR0ck9EeF91V1ZBTW1JdXpPckpaUlhMMUlJYWk0Q0hFVFhFQjBCWEoxVFpjdXpyNDdRZ0prazBuSTZEcmh4bU1xb3Q0ZUJycVY?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Mercantile Bank Corp (NASDAQ:MBWM) Q1 2026 Earnings: EPS Beat Overshadowed by Re. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1db3128f3ee2",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 tech, macro",
+      "direction": "BEARISH",
+      "title": "Atlantic Union Bankshares Corp. (NYSE:AUB) Reports Mixed Q1 2026 Results with EPS Beat, Revenue Miss - ChartMill",
+      "detail": "atlantic union bankshares corp. (nyse:aub) reports mixed q1 2026 results with eps beat, revenue miss &nbsp;&nbsp; chartmill",
+      "urgency": "LOW",
+      "keywords": "tech, macro, finance",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQeFc3TXl2eWloYk5ZQVFra0E1eWZ5MUE1WEgzLUJvdnphY3F0dXBmVTczaFg1b0ZHbl9oRXE0QlF0eDdBQmNhSndjZFlyeHl5S0RndzBEaFRtYXZZd05IZHRhdWVzbm9KT0RFZi1zV3JncE9MRDRwelpwUFNzcE9ZNG1UTEpYQ1hDOXRCaGpnZVU4Rk9VZFdjTUVNMnRyMXMzTTJsSG1VdkpiQ0JrbDNkMjRLeFAyam5WaWstRnRGSl9CVkdtcmtaZDdGc21VMUVlSmJZcEt1MlhKcEdzUldB?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Atlantic Union Bankshares Corp. (NYSE:AUB) Reports Mixed Q1 2026 Results with EP. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b3d541b3ea56",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BULLISH",
+      "title": "Wells Fargo earnings beat estimates despite revenue miss - Investing.com",
+      "detail": "wells fargo earnings beat estimates despite revenue miss &nbsp;&nbsp; investing.com",
+      "urgency": "MEDIUM",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRm5pUHVfeWxLVEhMdU81OUdxUlJUekhlcWFEUWVob1QxNzdIVENMMDBUZC1mM3dUOVpqM3lDcThjbkhvM3p6ZFE5cXZUX1VId3Q4YnEyT3UtYXFTZnhNaVlWcE5VRFNnMDdTWVRVVUZnbVpvNHNSUkpfaG1TUFo4Z1BKTklMUkg5YlE3X1hqcmtTdER3RWdFQTRqM2RFdDNqQ2dFdGtWbw?oc=5",
+      "confidence": 49,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Wells Fargo earnings beat estimates despite revenue miss - Investing.com. 2 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 49,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "6da259d53b62",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 tech, macro",
+      "direction": "BULLISH",
+      "title": "ServisFirst Bancshares Inc (NYSE:SFBS) Reports Q1 2026 Earnings Beat on EPS, Miss on Revenue - ChartMill",
+      "detail": "servisfirst bancshares inc (nyse:sfbs) reports q1 2026 earnings beat on eps, miss on revenue &nbsp;&nbsp; chartmill",
+      "urgency": "LOW",
+      "keywords": "tech, macro",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOODdhR21nb1BRelppU1IxYVVRcFNkb3p0eDVHMlFBa0Z5aDY0NEQ3OVZZZXYwTmQ1UGNDSVhVd3JpRkdYdi1iVWpSb09zZVJ0dEFxSl9uSGd5MUphSjNhS3ZIV2lXSUZLb3JLNUtJQUZpcnBGSGUwaDR4b1ptMWlUS1dlZDBSVG9MeXlwcG1mcFJuVjBlM254YjczZjRYeWdyUmxaX1huSHNaOEJXTzAyWkQtVWR0Tl95LThCWXo0VGdPcFB4MFlIeW01dzZUaEtTTjFrQm9XVQ?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: ServisFirst Bancshares Inc (NYSE:SFBS) Reports Q1 2026 Earnings Beat on EPS, Mis. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "5804f89e5e35",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BULLISH",
+      "title": "Labcorp Q4 Earnings Beat, Revenues Miss, Stock Down in Pre-Market - Yahoo Finance",
+      "detail": "labcorp q4 earnings beat, revenues miss, stock down in pre-market &nbsp;&nbsp; yahoo finance",
+      "urgency": "LOW",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQOWY2QTUwZDVNa0xpcUZXMkUzUW42VXgxWUNqUXUzUVRlMG5qYmx5ZC0tOENkeEVCSlJ3WE9Kc1J3TF9NSDlvV0UxTE1sbExreE5rWTh3bVVzd2g2aGpkV2tndXc5WFN5XzI3ZmlSei1WbzF2a3BsSk9YLVhZeU84M1JBSGRfUQ?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Labcorp Q4 Earnings Beat, Revenues Miss, Stock Down in Pre-Market - Yahoo Financ. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "d83c6fdf5064",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Tariffs \u00b7 trade",
+      "direction": "BULLISH",
+      "title": "The Year in Trade: Trump\u2019s tariffs, UK trade deals and sanctions shifts - The Chartered Institute of Export & Internatio",
+      "detail": "the year in trade: trump\u2019s tariffs, uk trade deals and sanctions shifts &nbsp;&nbsp; the chartered institute of export & international trade",
+      "urgency": "LOW",
+      "keywords": "trade",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "EEM",
+          "iShares MSCI Emerging Markets ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQN3J0alZHZWtLalF4RnpPcGMtMmN0SWdQVm83TmZSX3lSUHFCQVpvVEl5Sk9Tb0VaYU4tN1FtOS1mVTJpX2s0TWUtWTR2bXR3aU54T05LLXotT1I0V1VKcXFBN2EzbHNRelZkb0FwSmtibGxoSHdMZl9pajZNRFNsY0VTNnFHZDNBRGpCYnZucE5yLUM0eGdLTmRfS2RFWU1pdF9sYWtkOG5tVjVvLXFEcGZUWUV2YkU?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Tariffs: The Year in Trade: Trump\u2019s tariffs, UK trade deals and sanctions shifts - The Ch. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Tariffs",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "6ea3f66db8c9",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Tariffs \u00b7 trade",
+      "direction": "BULLISH",
+      "title": "EU parliament blocks US trade deal after Trump\u2019s tariff threat - The Guardian",
+      "detail": "eu parliament blocks us trade deal after trump\u2019s tariff threat &nbsp;&nbsp; the guardian",
+      "urgency": "LOW",
+      "keywords": "trade",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "EEM",
+          "iShares MSCI Emerging Markets ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUm1QV2FtelpCcTM5QTBBSnpTVXZTa0I3RzdSTndOZ1hPOXhhbWQyZUs4cTJKa05aMVh4UFJ2ZWpPblBwblNhUHFfMmctN1JpSXRVTWdzY3Jld0YzczdtM2dSME01a3QzZ09wMFRBbHQ2MUhKMjFUVVk3aUNrWGxOQTBHLWozTjhkY2tpSXZpWE4zdWVTdmVNVnRNYkFwNXZiU3c?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Tariffs: EU parliament blocks US trade deal after Trump\u2019s tariff threat - The Guardian. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Tariffs",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "3aa06d041807",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Crypto \u00b7 crypto, commodities",
+      "direction": "BULLISH",
+      "title": "Goldman Sachs Seeks SEC Approval for New Bitcoin ETF - PYMNTS.com",
+      "detail": "goldman sachs seeks sec approval for new bitcoin etf &nbsp;&nbsp; pymnts.com",
+      "urgency": "LOW",
+      "keywords": "crypto, commodities, finance",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "GBTC",
+          "Grayscale Bitcoin Trust",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQR2IxV1NrRGZoN2xJZHhwUFRodFNXX3lndWhfNm5BS0dJalNwaHgwMkI1OTJ1Q0lITmFqZkY5V0tPM0w3aHUwenRKc1ItM1RwMjNIdUdsdmJUWVg4S25OSFI4MU5WTU5qdjFfbGRQb0IxQWFZbHhlcFV5LTRfU21KUEN4QWlJUDFRWDIwUTFaa2xleDNaWHNLQ1Ixc0s?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Crypto: Goldman Sachs Seeks SEC Approval for New Bitcoin ETF - PYMNTS.com. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Crypto",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "dc33adcd00fd",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Crypto \u00b7 crypto, commodities",
+      "direction": "BULLISH",
+      "title": "Goldman Sachs files to launch Bitcoin ETF as institutional demand surges - The Business Journals",
+      "detail": "goldman sachs files to launch bitcoin etf as institutional demand surges &nbsp;&nbsp; the business journals",
+      "urgency": "LOW",
+      "keywords": "crypto, commodities, finance",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "GBTC",
+          "Grayscale Bitcoin Trust",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNakR4aG9yU3FiZFNldmdON3ZlX2gwMHdNc0VTNGdsOG5wdmZsS0VienN0Q19TRDE3NW5EVDRNVnN5blVGb0ptQTJJWmplaXpIcHp1ZzlFeEt4dG00V0l3SldvdmhWNTJJdjJLNzhhdHVGUG9xdmFjYjR5M1lnd0NaRG1acnNidnVING9VRlpUbDI0ZUlYSDFKRF80Wl9qM2Z1LTU4d1cyYkVIdw?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Crypto: Goldman Sachs files to launch Bitcoin ETF as institutional demand surges - The B. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Crypto",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "672fae1371a5",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Crypto \u00b7 crypto",
+      "direction": "BULLISH",
+      "title": "Crypto ETFs set to flood US market as SEC streamlines approvals - Yahoo Finance",
+      "detail": "crypto etfs set to flood us market as sec streamlines approvals &nbsp;&nbsp; yahoo finance",
+      "urgency": "LOW",
+      "keywords": "crypto",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "GBTC",
+          "Grayscale Bitcoin Trust",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5Qd2pwZ2hwejF5STBWVVpqLWxCcUFpRFNEa1QxTmY5b1VoaEpLaGRrcUlqd0c1TUVpVmtvU0JNVXdNb3ZsRjMtNDkyQkJKdnQ2VTUzZXFBLXJqUWJvQ2ZwTDFtMmFCQzBlZ2pZSDdJS3dxaWEtdklVZG5R?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Crypto: Crypto ETFs set to flood US market as SEC streamlines approvals - Yahoo Finance. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Crypto",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "a7abf242788e",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Macro \u00b7 commodities, finance",
+      "direction": "BULLISH",
+      "title": "Why gold prices are forecast to rise to new record highs - Goldman Sachs",
+      "detail": "why gold prices are forecast to rise to new record highs &nbsp;&nbsp; goldman sachs",
+      "urgency": "LOW",
+      "keywords": "commodities, finance",
+      "etfs": [
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "IAU",
+          "iShares Gold Trust",
+          "NYSE"
+        ],
+        [
+          "GDX",
+          "VanEck Gold Miners ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMmtoV0g0LUx4c2xmZGZ0dk5uUTZnb1k1WFVveTNqNC1DVGZUa1RnUTMwUk9xZVlrQnpFWGUta2x0bGx4ei0tN25TNkpXa0VOa0p4QVNuOFZQcmpHVUV0dU5ZMmVNZlBkVy1IaDZGcW5uYktfczR0ckdESENJSnFodjlqclRoRnN4ODVscVN1QTN5cTUxX29ySVp1VVdDY1hwZzJSQUln?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Macro: Why gold prices are forecast to rise to new record highs - Goldman Sachs. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Macro",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "d1a2b58417da",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Macro \u00b7 tech, commodities",
+      "direction": "BULLISH",
+      "title": "Commodity Currencies Falter Amidst Global Uncertainty, Propelling Gold and Silver to Record Highs - FinancialContent",
+      "detail": "commodity currencies falter amidst global uncertainty, propelling gold and silver to record highs &nbsp;&nbsp; financialcontent",
+      "urgency": "LOW",
+      "keywords": "tech, commodities",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNalNMT1BsQk8yamZ1S2tlelo2cHA1OU9MTU9uVDNNV2MxWVBKTi1RRllUaURESVRiWGYzOHNuNE9WNlR0OVZXQUxvWGRVcEtCRXhsQ1UyQ0N4bGEtVm1tV1JwY3BOSGV2al84VmprcHMxcWVoZFhVVHhVV1puOE1RVW9Ld2FBQUtUdUJMV2lLRjJPOHJmZ3M1a3pfZWx5dmJiUEc0UW5JTXhaWFhpUnFIVkkyN1VsY1BjN2tnemJJMmFUdkFoTFRyWFhzSXk4VjJBNmw3MlIyWTJBR2Z2cmlsQ0E0Wk1xOFotTWpTTnAwV3pEYVhvRXVlOE1nNkhiU1RxVkE?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Macro: Commodity Currencies Falter Amidst Global Uncertainty, Propelling Gold and Silve. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Macro",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "5fcebda7dc5f",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 energy, fed",
+      "direction": "BEARISH",
+      "title": "Top Fed official sees potential rate hike amid higher gas prices, inflation concerns - PBS",
+      "detail": "top fed official sees potential rate hike amid higher gas prices, inflation concerns &nbsp;&nbsp; pbs",
+      "urgency": "LOW",
+      "keywords": "energy, fed, macro",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ],
+        [
+          "OIH",
+          "VanEck Oil Services ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZFhWNF9JdEo0cThCUldFMkFHU2dyZTc4VDFSUDhXdFBWMFpPeDFYZHFwUFlfOWYyeFFFSS0ybXRqUDBSWUNmbXdqbmJEN1BGWExfTml2aktUNkdQTjh5SXctNDRyXzE3V2RJaVE4NEJ4LThLUzZCNjg2MkxGYW5qS2xYWHFXQm1xNlFhN0hGX0FySldsUF9rdGJrYlpyOWh4cllVN3NJVE1DX25uNVNNRFJpRW5OVTZsOVNVWtIBwgFBVV95cUxQazVKaG1GbUJERTFmRUU0b2FWQndRekctemh6azZ2UllDUFEwRC16MWtxOGxCVVpTWWpqZVIyRXU0cmxNMl9rdjBWYzJ6dmZ6b0RYLS1DZy04Q1JRbFJycjNkTlAtaUNlZkVKTDVTaUJQSXhaWVppQUhFeGZXRnNFU0VFMmZkR1M0XzZHWGUxNXRIQWtpeHBpNXU0MExuekE2ZmZwZkRGSTY5cXhIR0c4RFZCYkdCUUo1Q0ViY1JCY0FiQQ?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Top Fed official sees potential rate hike amid higher gas prices, inflation conc. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "eb9405a50c19",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 defense, fed",
+      "direction": "BULLISH",
+      "title": "Latest inflation data reinforce rate cuts would be on the table if not for Iran, says economist - Financial Post",
+      "detail": "latest inflation data reinforce rate cuts would be on the table if not for iran, says economist &nbsp;&nbsp; financial post",
+      "urgency": "LOW",
+      "keywords": "defense, fed, macro",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBRSkxOYmltcnd1N0VOWllKcEhFMnZMUklGNHBZMWthalQ4aWlEZng3YVhtaUw2UmJLLXNKRTJlLXMyMVNyRjJYSGdNRzQ3NmtUQVdSZlk2TVc5RHUtRVVacFhTTDdwejlCUnBmbjY1VFJUNGVZeEZzaQ?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Latest inflation data reinforce rate cuts would be on the table if not for Iran,. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "57d9cc9a6918",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 tech, finance",
+      "direction": "BEARISH",
+      "title": "G10 FX Talking: Time to back the hawkish central banks - ING THINK economic and financial analysis | ING THINK",
+      "detail": "g10 fx talking: time to back the hawkish central banks &nbsp;&nbsp; ing think economic and financial analysis | ing think",
+      "urgency": "LOW",
+      "keywords": "tech, finance",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBrN1ZkYVdXWWxuUXdzRmFaTGdQLWJIQzhMcUx6WmEtczdrQlBBY0VONG5BMmVTbWd6MmxSUUtuSWVFSUlCQjQzLUdFTXZ3Mm1GaVJlZy1ibVQ2ZDRfMjRqTEJ5SXppLV9L?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: G10 FX Talking: Time to back the hawkish central banks - ING THINK economic and . 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1999b15191f2",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 fed, commodities",
+      "direction": "BEARISH",
+      "title": "Goldman Sachs delivers blunt message on interest rate hike - thestreet.com",
+      "detail": "goldman sachs delivers blunt message on interest rate hike &nbsp;&nbsp; thestreet.com",
+      "urgency": "LOW",
+      "keywords": "fed, commodities, finance",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMUhoTGVFN2lUdkxteUtKMnd3Qk9NV3d5cm1fUzRVcXozTHRxbkhBX1ltOEYtNG5aN2FBU0lpdEVxWG5ibFpjMlNTbHdBXzZxb21jd1pXMkljWGZJR3BpemFpWUhpMEpaQ3JJQ1EtLUVBenVKaXVoS0ZLcHNIYlJXWm5oNFIwYUVzZ0tzUlRlYklOZw?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Goldman Sachs delivers blunt message on interest rate hike - thestreet.com. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "21df39fc7b03",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 fed, macro",
+      "direction": "BEARISH",
+      "title": "Markets now see the Fed's next move as a potential rate hike as inflation fears mount - CNBC",
+      "detail": "markets now see the fed's next move as a potential rate hike as inflation fears mount &nbsp;&nbsp; cnbc",
+      "urgency": "LOW",
+      "keywords": "fed, macro",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVGdLbTAzRjdrQ0lHT256dDg1eF9ydkF6RURjUzdqdDdrVjJ5MXlRWW4xdjQyb1RqQmcya3VfLUctTnNfSW83RWY2MVFFNE1hZlBVV3QxdHNGeTNnVllQeUhyV3l1bjcwenVqb3k2SDFhQy1kZ0JCMDN6c21sX0hGZHRHdUZ5YnJWQ1V3bnFpYUFreTBsN3FjYWxoeTBOeUx3NWtJeVF1U1M4YlJJM0c4UGNTQU90THIyWDBkSjVjb9IBxAFBVV95cUxOWVp6WDNrSWNwVk1Ya3RSQTJhV0l2dzY3c2JPc3Nhbnk1ZEVGNkVScWxNQTJUNEpram9CekZ4MW05OExmUUlaWnBucG1xTnVkaU1GN1hIVm84RlVWZ1k1bXlFSDljdzhqUUNQZzUxUDk0UERhTk83NjJMMHdicTRBaTBxdk5VejlYS1ZRZzAtbWVYcE44UkJYcU1iT2dSbHB1eTdFeWJmdURCcU1hcFFVa2dWMEJxWlpPTHVkS0FPRHdodllH?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Markets now see the Fed's next move as a potential rate hike as inflation fears . 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "29efc4788663",
+      "date": "21/04/2026 17:32 UTC",
+      "date_be": "21/04/2026 19:32 CEST",
+      "source": "Google News RSS",
+      "type": "Google News M&A \u00b7 merger",
+      "direction": "BULLISH",
+      "title": "Top 5 Largest Corporate Acquisitions Ever - Investopedia",
+      "detail": "top 5 largest corporate acquisitions ever &nbsp;&nbsp; investopedia",
+      "urgency": "LOW",
+      "keywords": "merger",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBCSUtfTzI5VXhtbGRKdThINTBnMU9rNHV4NzBNUEFiOVFMNm9nNFlwQlpZeXV5RlJJZ05GMFdVeE42NlZYaWw1ekZGYkJxWUhvbWNiZER4eWxRdk1jX1pxYi1uRGsyMndYaUxLZGNWM1VQODd1d0lxUHdkYw?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News M&A: Top 5 Largest Corporate Acquisitions Ever - Investopedia. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News M&A",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -8695,6 +9980,68 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "a8024c0e90ee",
+      "theme": "defense",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "ITA",
+      "score": 5,
+      "confidence": 40,
+      "sources": [
+        "Motley Fool RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-21T17:31:56.384002+00:00",
+      "price_at_signal": 223.09,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "146b451eddd6",
+      "theme": "energy",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "XLE",
+      "score": 5,
+      "confidence": 40,
+      "sources": [
+        "Motley Fool RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-21T17:31:56.747730+00:00",
+      "price_at_signal": 55.72,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "ba6ce75bd8bb",
+      "theme": "macro",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 3,
+      "confidence": 23,
+      "sources": [
+        "Google News RSS"
+      ],
+      "date": "2026-04-21T17:31:57.003779+00:00",
+      "price_at_signal": 704.98,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
@@ -9415,7 +10762,7 @@
     }
   ],
   "position_book": {
-    "cash": 85985.08,
+    "cash": 83985.08,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -9453,14 +10800,15 @@
       "SOXX": {
         "side": "LONG",
         "ticker": "SOXX",
-        "shares": 7.215704,
-        "avg_entry": 415.7599,
-        "invested_eur": 3000.0,
+        "shares": 9.599558,
+        "avg_entry": 416.6859,
+        "invested_eur": 4000.0,
         "open_date": "2026-04-17T19:33:31.386930+00:00",
         "open_be": "17/04/2026 21:33 CEST",
         "signals": [
           "panel-SOXX-17/04/2026",
           "panel-SOXX-20/04/2026",
+          "panel-SOXX-21/04/2026",
           "panel-SOXX-21/04/2026"
         ],
         "themes": [
@@ -9601,6 +10949,24 @@
         ],
         "themes": [
           "SMH \u2014 The Macro Man"
+        ],
+        "confidence": 40,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "QQQ": {
+        "side": "LONG",
+        "ticker": "QQQ",
+        "shares": 1.551662,
+        "avg_entry": 644.4701,
+        "invested_eur": 1000.0,
+        "open_date": "2026-04-21T17:31:55.938034+00:00",
+        "open_be": "21/04/2026 19:31 CEST",
+        "signals": [
+          "panel-QQQ-21/04/2026"
+        ],
+        "themes": [
+          "Tech \u2014 The Macro Man"
         ],
         "confidence": 40,
         "check_4h": null,
