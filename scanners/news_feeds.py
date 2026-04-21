@@ -1,68 +1,86 @@
 """
 scanners/news_feeds.py — Stocazzo v7.2
 High-volume financial news scanner. Feeds The Macro Man and The Tape Reader.
-Sources: Reuters, AP, MarketWatch, Yahoo Finance, Seeking Alpha, Investing.com,
-         Google News (5 queries), Motley Fool, Barron's.
-No API keys needed — all free RSS.
 
-Design:
-  - Each feed scanned for up to 15 entries
-  - Keyword scoring determines direction + urgency
-  - Deduplication via title hash (not URL — same story republished everywhere)
-  - Source label passed through so history page shows the actual outlet
+Status per feed (verified against actual GitHub Actions runs 21/04/2026):
+  ✅ ACTIVE:   MarketWatch, Motley Fool, Yahoo S&P500, Google News (10 queries)
+  ❌ BLOCKED:  Reuters (timeout), AP (403), Yahoo Finance top (403),
+               Seeking Alpha (403), Investing.com (403), Barrons (403),
+               Benzinga (403), Capitol Trades (403), OpenInsider (403)
+  ➡ ALREADY IN macro.py: FT, ECB, WSJ Markets, CNBC Markets (keep there, no dupe)
 """
 
 import re
 import hashlib
 import feedparser
-from helpers import now_be, make_id
+from helpers import now_be
 from etf_mapper import get_etfs
 from state import is_seen, mark_seen
 from scoring import format_hit_rate
 
-# ── FEED REGISTRY ─────────────────────────────────────────────────────────────
-# (url, label, source_tag, max_entries)
+# ── ACTIVE FEEDS (confirmed working on GitHub Actions) ────────────────────────
 FEEDS = [
-    # Reuters
-    ("https://feeds.reuters.com/reuters/businessNews",           "Reuters Business",   "Reuters RSS",     15),
-    ("https://feeds.reuters.com/reuters/technologyNews",         "Reuters Tech",       "Reuters RSS",     10),
-    ("https://feeds.reuters.com/reuters/worldNews",              "Reuters World",      "Reuters RSS",     10),
+    # MarketWatch — confirmed working
+    ("https://feeds.content.dowjones.io/public/rss/mw_realtimeheadlines", "MarketWatch Headlines",  "MarketWatch RSS", 15),
+    ("https://feeds.content.dowjones.io/public/rss/mw_bulletins",         "MarketWatch Bulletins",  "MarketWatch RSS", 10),
 
-    # AP
-    ("https://rsshub.app/apnews/topics/business-news",           "AP Business",        "AP RSS",          15),
-    ("https://feeds.apnews.com/rss/apf-business",                "AP Business (2)",    "AP RSS",          15),
-
-    # MarketWatch
-    ("https://feeds.content.dowjones.io/public/rss/mw_realtimeheadlines", "MarketWatch Headlines", "MarketWatch RSS", 15),
-    ("https://feeds.content.dowjones.io/public/rss/mw_bulletins",         "MarketWatch Bulletins", "MarketWatch RSS", 10),
-
-    # Yahoo Finance
-    ("https://finance.yahoo.com/rss/topstories",                 "Yahoo Finance",      "Yahoo Finance RSS", 15),
+    # Yahoo Finance S&P500 feed — confirmed working
     ("https://finance.yahoo.com/rss/2.0/headline?s=^GSPC&region=US&lang=en-US", "Yahoo S&P500", "Yahoo Finance RSS", 10),
 
-    # Seeking Alpha
-    ("https://seekingalpha.com/market_currents.xml",             "Seeking Alpha",      "Seeking Alpha RSS", 10),
+    # Motley Fool — confirmed working
+    ("https://www.fool.com/feeds/index.aspx", "Motley Fool", "Motley Fool RSS", 10),
 
-    # Investing.com
-    ("https://www.investing.com/rss/news.rss",                   "Investing.com",      "Investing.com RSS", 15),
-    ("https://www.investing.com/rss/market_overview.rss",        "Investing.com Macro","Investing.com RSS", 10),
-
-    # Motley Fool
-    ("https://www.fool.com/feeds/index.aspx",                    "Motley Fool",        "Motley Fool RSS",  10),
-
-    # Barron's
-    ("https://www.barrons.com/xml/rss/3_7510.xml",               "Barron's",           "Barrons RSS",     10),
-
-    # Google News financial queries
-    ("https://news.google.com/rss/search?q=federal+reserve+interest+rate&hl=en-US&gl=US&ceid=US:en", "Google News Fed",     "Google News RSS", 10),
-    ("https://news.google.com/rss/search?q=stock+market+earnings&hl=en-US&gl=US&ceid=US:en",         "Google News Earnings","Google News RSS", 10),
-    ("https://news.google.com/rss/search?q=trump+tariff+trade+war&hl=en-US&gl=US&ceid=US:en",        "Google News Tariffs", "Google News RSS", 10),
-    ("https://news.google.com/rss/search?q=oil+price+OPEC+energy&hl=en-US&gl=US&ceid=US:en",         "Google News Energy",  "Google News RSS", 10),
-    ("https://news.google.com/rss/search?q=cryptocurrency+bitcoin+SEC&hl=en-US&gl=US&ceid=US:en",    "Google News Crypto",  "Google News RSS", 10),
-    ("https://news.google.com/rss/search?q=semiconductor+nvidia+chip+export&hl=en-US&gl=US&ceid=US:en","Google News Semis", "Google News RSS", 10),
-    ("https://news.google.com/rss/search?q=china+economy+yuan+trade&hl=en-US&gl=US&ceid=US:en",      "Google News China",   "Google News RSS", 10),
-    ("https://news.google.com/rss/search?q=defense+military+spending+NATO&hl=en-US&gl=US&ceid=US:en","Google News Defense", "Google News RSS", 10),
+    # Google News — confirmed working, 10 targeted financial queries
+    ("https://news.google.com/rss/search?q=federal+reserve+interest+rate+FOMC&hl=en-US&gl=US&ceid=US:en",     "Google News Fed",     "Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=stock+market+earnings+beat+miss&hl=en-US&gl=US&ceid=US:en",         "Google News Earnings","Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=trump+tariff+trade+war+sanctions&hl=en-US&gl=US&ceid=US:en",        "Google News Tariffs", "Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=oil+price+OPEC+energy+crude&hl=en-US&gl=US&ceid=US:en",             "Google News Energy",  "Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=bitcoin+cryptocurrency+SEC+ETF&hl=en-US&gl=US&ceid=US:en",          "Google News Crypto",  "Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=semiconductor+nvidia+chip+export+ban&hl=en-US&gl=US&ceid=US:en",    "Google News Semis",   "Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=china+economy+yuan+trade+export&hl=en-US&gl=US&ceid=US:en",         "Google News China",   "Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=defense+military+spending+NATO+weapons&hl=en-US&gl=US&ceid=US:en",  "Google News Defense", "Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=gold+inflation+recession+commodity+forecast&hl=en-US&gl=US&ceid=US:en", "Google News Macro","Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=interest+rate+cut+hike+central+bank&hl=en-US&gl=US&ceid=US:en",     "Google News Rates",   "Google News RSS", 10),
+    ("https://news.google.com/rss/search?q=merger+acquisition+deal+buyout+billion&hl=en-US&gl=US&ceid=US:en",  "Google News M&A",     "Google News RSS", 10),
 ]
+
+# ── BLOCKED FEEDS (403 or timeout on GitHub Actions cloud IPs) ───────────────
+# Re-enable if using a proxy, self-hosted runner, or if access opens up.
+#
+# BLOCKED_FEEDS = [
+#     # Reuters — connection timeout from GitHub Actions IPs
+#     ("https://feeds.reuters.com/reuters/businessNews",    "Reuters Business", "Reuters RSS", 15),
+#     ("https://feeds.reuters.com/reuters/technologyNews",  "Reuters Tech",     "Reuters RSS", 10),
+#     ("https://feeds.reuters.com/reuters/worldNews",       "Reuters World",    "Reuters RSS", 10),
+#
+#     # AP News — 403
+#     ("https://rsshub.app/apnews/topics/business-news",   "AP Business",      "AP RSS", 15),
+#     ("https://feeds.apnews.com/rss/apf-business",         "AP Business (2)",  "AP RSS", 15),
+#
+#     # Yahoo Finance top stories — 403 (S&P500 feed above works, this one doesn't)
+#     ("https://finance.yahoo.com/rss/topstories",          "Yahoo Finance",    "Yahoo Finance RSS", 15),
+#
+#     # Seeking Alpha — 403
+#     ("https://seekingalpha.com/market_currents.xml",      "Seeking Alpha",    "Seeking Alpha RSS", 10),
+#
+#     # Investing.com — 403
+#     ("https://www.investing.com/rss/news.rss",            "Investing.com",    "Investing.com RSS", 15),
+#     ("https://www.investing.com/rss/market_overview.rss", "Investing.com Macro","Investing.com RSS", 10),
+#
+#     # Barron's — 403
+#     ("https://www.barrons.com/xml/rss/3_7510.xml",        "Barron's",         "Barrons RSS", 10),
+#
+#     # Benzinga — 403 from cloud IPs
+#     ("https://feeds.benzinga.com/benzinga/news",           "Benzinga",         "Benzinga RSS", 10),
+#     ("https://www.benzinga.com/feed",                      "Benzinga Alt",     "Benzinga RSS", 10),
+#
+#     # Capitol Trades RSS — 403
+#     ("https://www.capitoltrades.com/trades?pageSize=20&format=rss", "Capitol Trades", "Capitol Trades", 20),
+#
+#     # OpenInsider RSS — 403
+#     ("http://openinsider.com/rss?type=buys-only&minval=100000", "OpenInsider", "OpenInsider", 20),
+# ]
+
 
 # ── KEYWORD SCORING ───────────────────────────────────────────────────────────
 BULLISH_KEYWORDS = [
@@ -73,7 +91,8 @@ BULLISH_KEYWORDS = [
     "raised guidance", "upgrade", "strong buy", "buy rating", "outperform",
     "record high", "rally", "surge", "breakout", "approval", "partnership",
     "acquisition", "merger", "buyback", "dividend increase", "beat estimates",
-    "above expectations", "positive outlook", "growth", "expansion",
+    "above expectations", "positive outlook", "growth acceleration",
+    "easing", "dovish", "stimulus package", "rate reduction",
 ]
 
 BEARISH_KEYWORDS = [
@@ -85,19 +104,21 @@ BEARISH_KEYWORDS = [
     "sell rating", "underperform", "crash", "plunge", "collapse",
     "layoffs", "bankruptcy", "investigation", "fine", "penalty",
     "below expectations", "miss estimates", "profit warning", "writedown",
-    "debt crisis", "currency crisis", "market selloff",
+    "debt crisis", "currency crisis", "market selloff", "hawkish",
+    "rate increase", "tightening policy", "contraction",
 ]
 
 THEME_MAP = {
-    "energy":       ["oil", "gas", "opec", "energy", "crude", "lng", "pipeline", "exxon", "chevron"],
-    "defense":      ["war", "military", "nato", "ukraine", "russia", "iran", "strike", "missile", "defense", "lockheed", "raytheon"],
-    "fed":          ["fed", "federal reserve", "interest rate", "rate cut", "rate hike", "powell", "ecb", "lagarde", "boe", "monetary policy"],
-    "trade":        ["tariff", "trade war", "sanctions", "china", "import", "export", "wto", "customs"],
-    "tech":         ["semiconductor", "chip", "nvidia", "ai", "artificial intelligence", "tech", "ban", "huawei", "tsmc", "microsoft", "apple", "google", "meta"],
-    "crypto":       ["bitcoin", "crypto", "btc", "ethereum", "sec crypto", "coinbase", "binance", "stablecoin"],
-    "commodities":  ["gold", "silver", "copper", "wheat", "food prices", "commodity"],
-    "macro":        ["gdp", "inflation", "cpi", "pce", "jobs", "unemployment", "recession", "soft landing", "earnings", "revenue"],
-    "finance":      ["bank", "jpmorgan", "goldman", "morgan stanley", "fed funds", "treasury", "bond yield", "credit"],
+    "energy":      ["oil", "gas", "opec", "energy", "crude", "lng", "pipeline", "exxon", "chevron"],
+    "defense":     ["war", "military", "nato", "ukraine", "russia", "iran", "strike", "missile", "defense", "lockheed", "raytheon"],
+    "fed":         ["fed", "federal reserve", "interest rate", "rate cut", "rate hike", "powell", "ecb", "lagarde", "monetary policy", "fomc"],
+    "trade":       ["tariff", "trade war", "sanctions", "china", "import", "export", "wto", "customs", "trade deal"],
+    "tech":        ["semiconductor", "chip", "nvidia", "ai", "artificial intelligence", "tech", "ban", "huawei", "tsmc", "microsoft", "apple", "google", "meta"],
+    "crypto":      ["bitcoin", "crypto", "btc", "ethereum", "coinbase", "binance", "stablecoin"],
+    "commodities": ["gold", "silver", "copper", "wheat", "food prices", "commodity", "lithium"],
+    "macro":       ["gdp", "inflation", "cpi", "pce", "jobs", "unemployment", "recession", "soft landing", "earnings", "revenue"],
+    "finance":     ["bank", "jpmorgan", "goldman", "morgan stanley", "treasury", "bond yield", "credit", "debt"],
+    "merger":      ["merger", "acquisition", "takeover", "buyout", "billion deal"],
 }
 
 ETF_THEME_MAP = {
@@ -110,17 +131,17 @@ ETF_THEME_MAP = {
     "commodities": "gold commodities",
     "macro":       "market broad",
     "finance":     "finance banking",
+    "merger":      "market broad",
 }
 
 
 def _clean(text: str) -> str:
-    """Strip HTML tags and normalize whitespace."""
     text = re.sub(r'<[^>]+>', ' ', text)
     return re.sub(r'\s+', ' ', text).strip().lower()
 
 
 def _title_uid(title: str) -> str:
-    """Dedup by title content — same story republished has same hash."""
+    """Dedup by title content — same story on multiple feeds gets same hash."""
     normalized = re.sub(r'[^a-z0-9 ]', '', title.lower().strip())
     normalized = re.sub(r'\s+', ' ', normalized)[:80]
     return hashlib.md5(normalized.encode()).hexdigest()[:12]
@@ -138,10 +159,6 @@ def _themes(text: str) -> list:
 
 
 def scan_news_feeds(seen_data) -> list:
-    """
-    Scans all registered RSS feeds, scores each article,
-    and returns directional signals for the analyst panel.
-    """
     alerts   = []
     seen_ids = set(seen_data.get("ids", []))
     hit_rate = format_hit_rate("Macro RSS", seen_data)
@@ -164,7 +181,6 @@ def scan_news_feeds(seen_data) -> list:
                 if not title:
                     continue
 
-                # Dedup by title hash (not URL)
                 uid = _title_uid(title)
                 if uid in seen_ids:
                     continue
@@ -172,13 +188,11 @@ def scan_news_feeds(seen_data) -> list:
                 text   = _clean(title + " " + summary)
                 themes = _themes(text)
 
-                # Must be financially relevant
                 if not themes:
                     continue
 
                 bull, bear = _score(text)
 
-                # Must have at least one directional signal
                 if bull == 0 and bear == 0:
                     continue
 
@@ -186,11 +200,10 @@ def scan_news_feeds(seen_data) -> list:
                 if direction == "NEUTRAL":
                     continue
 
-                urgency = "HIGH" if (bull >= 3 or bear >= 3) else \
-                          "MEDIUM" if (bull + bear >= 2) else "LOW"
+                urgency = "HIGH"   if (bull >= 3 or bear >= 3) else \
+                          "MEDIUM" if (bull + bear >= 2)        else "LOW"
                 conf    = min(60, 25 + (bull + bear) * 8)
 
-                # Map themes to ETFs
                 primary_theme = themes[0]
                 etf_query     = ETF_THEME_MAP.get(primary_theme, primary_theme)
                 etfs          = get_etfs(etf_query)
