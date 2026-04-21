@@ -16,6 +16,7 @@ from config import (
     POLYMARKET_MIN_PROB, POLYMARKET_MAX_PROB, SOURCE_CREDIBILITY,
 )
 from helpers import safe_get, make_id
+from datetime import datetime, timezone
 from etf_mapper import get_etfs
 from state import is_seen, mark_seen
 from scoring import format_hit_rate
@@ -98,7 +99,10 @@ def scan_polymarket_expanded(seen_data):
                 except Exception:
                     _bucket = 5
 
-                uid = make_id(f"{question}|{_bucket}")
+                # UID includes date so active markets re-alert daily.
+                # Also re-alerts when probability bucket changes (10% move).
+                _today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                uid = make_id(f"{question}|{_bucket}|{_today}")
                 if uid in seen_ids:
                     continue
 
