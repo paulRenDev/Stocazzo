@@ -1,25 +1,32 @@
 """
 main.py — Stocazzo v7.2
 Orchestrator. Calls everything, does nothing else itself.
+
 v7.1: Stock enrichment — yfinance technical context passed to analyst panel.
-v7.2: New scanners — Capitol Trades, OpenInsider, Benzinga RSS.
-      Dropped: scan_congress (403), scan_pelosi (broken), scan_dark_pool (blocked),
-               scan_unusual_whales (blocked from cloud IPs).
+v7.2: Signal volume expansion:
+      - scan_news_feeds: 20+ RSS feeds (Reuters, AP, MarketWatch, Yahoo, Google News, etc.)
+      - scan_polymarket_expanded: all financial Polymarket categories (not just politics)
+      - scan_capitol_trades + scan_openinsider: replace dead congress/pelosi/darkpool
+      - scan_benzinga: replaces blocked options flow
+      Dropped: scan_congress (403), scan_pelosi (broken regex),
+               scan_dark_pool (cloud blocked), scan_unusual_whales (cloud blocked).
 """
 from helpers import now_utc
 from state import load_seen, add_to_history, commit_seen
 from scoring import run_backcheck, queue_for_backcheck, update_history_backcheck
 
 # Crony scanners
-from scanners.polymarket  import scan_polymarket
-from scanners.kalshi      import scan_kalshi
-from scanners.edgar       import scan_edgar
-from scanners.truthsocial import scan_truthsocial
-from scanners.social      import scan_reddit
+from scanners.polymarket_expanded import scan_polymarket_expanded   # expanded (all categories)
+from scanners.polymarket          import scan_polymarket             # original (politics, keep as fallback)
+from scanners.kalshi              import scan_kalshi
+from scanners.edgar               import scan_edgar
+from scanners.truthsocial         import scan_truthsocial
+from scanners.social              import scan_reddit
 
 # New reliable scanners (v7.2)
 from scanners.capitol_trades_and_openinsider import scan_capitol_trades, scan_openinsider
 from scanners.benzinga_rss                   import scan_benzinga
+from scanners.news_feeds                     import scan_news_feeds
 
 # Macro scanners
 from scanners.macro import scan_macro
@@ -59,20 +66,29 @@ def main():
     # 2. Run all scanners
     all_alerts = []
 
-    # Crony signals (pre-news, higher weight)
-    all_alerts += scan_polymarket(seen_data)
+    # ── Crony signals (pre-news, highest weight) ───────────────────────────────
+    pm_expanded = scan_polymarket_expanded(seen_data)
+    if pm_expanded:
+        all_alerts += pm_expanded
+    else:
+        # Fallback to original if expanded fails
+        all_alerts += scan_polymarket(seen_data)
+
     all_alerts += scan_kalshi(seen_data)
     all_alerts += scan_edgar(seen_data)
-    all_alerts += scan_capitol_trades(seen_data)   # replaces congress + pelosi
-    all_alerts += scan_openinsider(seen_data)       # replaces dark pool
+    all_alerts += scan_capitol_trades(seen_data)
+    all_alerts += scan_openinsider(seen_data)
 
-    # Real-time social
+    # ── Social / real-time ────────────────────────────────────────────────────
     all_alerts += scan_truthsocial(seen_data)
     all_alerts += scan_reddit(seen_data)
 
-    # Macro + sentiment signals
-    all_alerts += scan_macro(seen_data)
-    all_alerts += scan_benzinga(seen_data)          # replaces options flow
+    # ── Macro + news feeds (volume layer) ────────────────────────────────────
+    all_alerts += scan_macro(seen_data)          # existing GDELT + RSS + Fear&Greed
+    all_alerts += scan_news_feeds(seen_data)     # 20+ additional RSS feeds
+    all_alerts += scan_benzinga(seen_data)       # market-moving news for Tape Reader
+
+    print(f"Raw signals before enrichment: {len(all_alerts)}")
 
     # 3. Enrich detected tickers with technical analysis (yfinance)
     stock_data = enrich_with_stock_data(all_alerts)
