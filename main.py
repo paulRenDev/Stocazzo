@@ -151,9 +151,16 @@ def main():
         print(f"Portfolio checks: {len(portfolio_checks)} position updates")
 
     # 7. Queue signals for backcheck + add to history
+    # Deduplicate by ticker — only queue first signal per ticker per run to avoid
+    # flooding pending_checks with the same ticker from 20 different news articles
+    backchecked_tickers = set()
     for a in all_alerts:
         if a["source"] != "CONVERGENCE":
-            queue_for_backcheck(a, seen_data)
+            etfs = a.get("etfs", [])
+            ticker = etfs[0][0] if etfs and isinstance(etfs[0], (list, tuple)) else None
+            if ticker and ticker not in backchecked_tickers:
+                queue_for_backcheck(a, seen_data)
+                backchecked_tickers.add(ticker)
         add_to_history(a, seen_data)
 
     # 8. Generate HTML pages
