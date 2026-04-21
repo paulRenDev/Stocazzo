@@ -181,18 +181,31 @@ def fetch_stock_context(ticker: str) -> dict | None:
 def extract_tickers(all_alerts: list) -> list:
     """
     Pulls unique tickers from alert ETF lists.
-    Filters out broad market ETFs that don't need individual stock analysis.
+    Filters out very broad market ETFs — they add little signal value.
+    European tickers are resolved to US equivalents via yfinance_ticker().
     """
-    SKIP = {"SPY", "QQQ", "TLT", "IEF", "SHY", "BND", "AGG", "VXX"}
+    # Skip ultra-broad tickers that would dominate enrichment without adding signal
+    SKIP = {"SPY", "QQQ", "TLT", "IEF", "SHY", "BND", "AGG", "VXX",
+            "VOO", "VTI", "IWDA", "EQQQ"}  # European broad-market also skipped
+
+    try:
+        from etf_mapper import yfinance_ticker
+    except ImportError:
+        yfinance_ticker = lambda t: t  # noqa: E731
+
     seen = set()
     tickers = []
     for alert in all_alerts:
         for etf_tuple in alert.get("etfs", []):
-            ticker = etf_tuple[0] if isinstance(etf_tuple, (list, tuple)) else etf_tuple
+            raw_ticker = etf_tuple[0] if isinstance(etf_tuple, (list, tuple)) else etf_tuple
+            if not raw_ticker:
+                continue
+            # Resolve European tickers to US equivalents
+            ticker = yfinance_ticker(raw_ticker)
             if ticker and ticker not in seen and ticker not in SKIP:
                 seen.add(ticker)
                 tickers.append(ticker)
-    return tickers[:10]  # cap at 10 to avoid long runs
+    return tickers[:10]  # cap at 10 per run
 
 
 # ── MAIN ENTRY POINT ───────────────────────────────────────────────────────────
@@ -200,6 +213,7 @@ def enrich_with_stock_data(all_alerts: list) -> dict:
     """
     Called from main.py after scanners run.
     Returns {ticker: stock_context} for all tickers found in alerts.
+    European tickers are silently mapped to US equivalents for yfinance.
     Analysts receive this as additional context.
     """
     tickers = extract_tickers(all_alerts)
