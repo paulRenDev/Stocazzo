@@ -199,7 +199,8 @@
     "a0e75a9549cf",
     "3ccb744f66c7",
     "468423ebdf55",
-    "fdc2421c9e93"
+    "fdc2421c9e93",
+    "c47008d43e7f"
   ],
   "stats": {
     "Polymarket": {
@@ -216,6 +217,16 @@
       "hits": 0,
       "misses": 1,
       "pending": 0
+    },
+    "Dark Pool": {
+      "hits": 0,
+      "misses": 1,
+      "pending": 0
+    },
+    "Truth Social": {
+      "hits": 2,
+      "misses": 9,
+      "pending": 0
     }
   },
   "pending_checks": [
@@ -227,150 +238,6 @@
       "date": "2026-04-16T16:08:53.207205+00:00",
       "price_at_signal": 0,
       "title": "Trump: \"i just had excellent conversations with the highly respected president j"
-    },
-    {
-      "uid": "6268e160a599",
-      "source": "Dark Pool",
-      "ticker": "NVDA",
-      "direction": "ACCUMULATION",
-      "date": "2026-04-16T17:54:59.747783+00:00",
-      "price_at_signal": 198.64,
-      "title": "Dark pool: SPY, QQQ, IWM, NVDA, AMD"
-    },
-    {
-      "uid": "500615d0f735",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BEARISH",
-      "date": "2026-04-16T17:54:59.960222+00:00",
-      "price_at_signal": 229.16,
-      "title": "Trump: \"i am working very hard with our great speaker, mike johnson, along with "
-    },
-    {
-      "uid": "624842d27583",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BEARISH",
-      "date": "2026-04-16T17:55:00.143471+00:00",
-      "price_at_signal": 229.25,
-      "title": "Trump: \"jerome starkey: if hot air was a weapon starmer would have rearmed brita"
-    },
-    {
-      "uid": "85c4730b886c",
-      "source": "Truth Social",
-      "ticker": "XLE",
-      "direction": "WATCH",
-      "date": "2026-04-16T17:55:00.339097+00:00",
-      "price_at_signal": 56.64,
-      "title": "Trump: \"china is very happy that i am permanently opening the strait of hormuz. "
-    },
-    {
-      "uid": "343d17b3e17a",
-      "source": "Truth Social",
-      "ticker": "XLE",
-      "direction": "WATCH",
-      "date": "2026-04-16T17:55:00.505540+00:00",
-      "price_at_signal": 56.64,
-      "title": "Trump: \"chokehold: iran could run out of oil storage with trump blockade, wreaki"
-    },
-    {
-      "uid": "9c5e7c4556c7",
-      "source": "Truth Social",
-      "ticker": "XLE",
-      "direction": "BEARISH",
-      "date": "2026-04-16T17:55:00.691000+00:00",
-      "price_at_signal": 56.64,
-      "title": "Trump: \"will someone please tell pope leo that iran has killed at least 42,000 i"
-    },
-    {
-      "uid": "734a420b9235",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-16T17:55:00.867414+00:00",
-      "price_at_signal": 229.25,
-      "title": "Trump: \"it is my great honor to endorse highly respected state senator, carrie b"
-    },
-    {
-      "uid": "b421c50e856a",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-16T17:55:01.050718+00:00",
-      "price_at_signal": 229.25,
-      "title": "Trump: \"it is my great honor to endorse america first patriot, marty o'donnell, "
-    },
-    {
-      "uid": "23ab136875d6",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-16T17:55:01.278094+00:00",
-      "price_at_signal": 229.25,
-      "title": "Trump: \"it is my great honor to endorse highly respected state senator, and brav"
-    },
-    {
-      "uid": "eff4ba5df193",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-16T17:55:01.760362+00:00",
-      "price_at_signal": 229.25,
-      "title": "Trump: \"it is my great honor to endorse u.s. marine corps veteran and former alb"
-    },
-    {
-      "uid": "3e9307dee462",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-16T17:55:01.994079+00:00",
-      "price_at_signal": 229.16,
-      "title": "Trump: \"it is my great honor to endorse highly respected omaha city councilman, "
-    },
-    {
-      "uid": "dd9d19a9c5a4",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-16T17:55:02.343761+00:00",
-      "price_at_signal": 229.16,
-      "title": "Trump: \"it is my great honor to endorse america first patriot, eric conroy, who "
-    },
-    {
-      "uid": "1ede72cc1fa0",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-16T17:55:02.862628+00:00",
-      "price_at_signal": 229.16,
-      "title": "Trump: \"it is my great honor to endorse highly respected state representative ho"
-    },
-    {
-      "uid": "31843a5643ef",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "WATCH",
-      "date": "2026-04-16T17:55:03.095800+00:00",
-      "price_at_signal": 229.16,
-      "title": "Trump: \"it is my great honor to endorse maga warrior, jim kingston, who is runni"
-    },
-    {
-      "uid": "045f55b844a4",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-16T17:55:03.329895+00:00",
-      "price_at_signal": 229.16,
-      "title": "Trump: \"it is my great honor to endorse highly respected san diego county superv"
-    },
-    {
-      "uid": "2925e4685dcf",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "WATCH",
-      "date": "2026-04-16T17:55:03.526777+00:00",
-      "price_at_signal": 229.16,
-      "title": "Trump: \"i am working very hard with our great speaker, mike johnson, along with "
     },
     {
       "uid": "e87b4da2717b",
@@ -1208,49 +1075,18 @@
       "date": "2026-04-21T17:50:22.462424+00:00",
       "price_at_signal": 432.75,
       "title": "Why gold prices are forecast to rise to new record highs - Goldman Sachs"
+    },
+    {
+      "uid": "c47008d43e7f",
+      "source": "Google News RSS",
+      "ticker": "XLE",
+      "direction": "BEARISH",
+      "date": "2026-04-21T17:56:47.401770+00:00",
+      "price_at_signal": 55.59,
+      "title": "Top Fed official sees potential rate hike amid higher gas prices, inflation conc"
     }
   ],
   "history": [
-    {
-      "uid": "7b1420f5d653",
-      "date": "16/04/2026 15:33 UTC",
-      "date_be": "16/04/2026 17:33 CEST",
-      "source": "Lobbying",
-      "type": "Senate/House \u00b7 LMT",
-      "direction": "WATCH",
-      "title": "LMT lobbying: $4,300,000 in last 90 days",
-      "detail": "10 lobbying filings. Latest: Defense and aerospace technology company. Period: Q4",
-      "urgency": "LOW",
-      "keywords": "LMT, lobbying, regulation",
-      "etfs": [
-        [
-          "LMT",
-          "Lockheed Martin",
-          "NYSE"
-        ],
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://finnhub.io/stock-lobbying/LMT",
-      "confidence": 35,
-      "hit_rate": "50% (historical baseline)",
-      "reasoning_stored": {
-        "why": "LMT spent $4,300,000 lobbying in 90 days \u2014 10 filings. Large lobbying spend precedes regulatory changes or contract wins.",
-        "signal_type": "Senate/House lobbying disclosure. High spend = anticipating regulation or government contract.",
-        "confidence": 35,
-        "source_weight": 2,
-        "hit_rate": "50% (historical baseline)",
-        "caveat": "Lobbying is routine for large companies. Only valuable as sector context, not directional signal."
-      },
-      "verified": null,
-      "pct_change": -5.8,
-      "verified_date": "21/04/2026 15:41 UTC",
-      "price_entry": 604.62,
-      "price_now": 569.37
-    },
     {
       "uid": "acefd863227a",
       "date": "16/04/2026 15:33 UTC",
@@ -1526,11 +1362,11 @@
         "hit_rate": "50% (historical baseline)",
         "caveat": "No directional info \u2014 dark pools can be buy OR sell. Needs confirmation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": 0.4,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 198.64,
+      "price_now": 199.52
     },
     {
       "uid": "2e469813dd1c",
@@ -2141,11 +1977,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": true,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.16,
+      "price_now": 222.99
     },
     {
       "uid": "624842d27583",
@@ -2186,11 +2022,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": true,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.25,
+      "price_now": 222.99
     },
     {
       "uid": "85c4730b886c",
@@ -2232,10 +2068,10 @@
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
       "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "pct_change": -1.9,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 56.64,
+      "price_now": 55.59
     },
     {
       "uid": "343d17b3e17a",
@@ -2277,10 +2113,10 @@
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
       "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "pct_change": -1.9,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 56.64,
+      "price_now": 55.59
     },
     {
       "uid": "14812c35cbe0",
@@ -2345,11 +2181,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -1.9,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 56.64,
+      "price_now": 55.59
     },
     {
       "uid": "734a420b9235",
@@ -2380,11 +2216,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.25,
+      "price_now": 222.99
     },
     {
       "uid": "b421c50e856a",
@@ -2425,11 +2261,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.25,
+      "price_now": 222.99
     },
     {
       "uid": "23ab136875d6",
@@ -2470,11 +2306,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.25,
+      "price_now": 222.99
     },
     {
       "uid": "eff4ba5df193",
@@ -2515,11 +2351,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.25,
+      "price_now": 222.99
     },
     {
       "uid": "3e9307dee462",
@@ -2560,11 +2396,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.16,
+      "price_now": 222.99
     },
     {
       "uid": "dd9d19a9c5a4",
@@ -2605,11 +2441,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.16,
+      "price_now": 222.99
     },
     {
       "uid": "1ede72cc1fa0",
@@ -2650,11 +2486,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.16,
+      "price_now": 222.99
     },
     {
       "uid": "31843a5643ef",
@@ -2696,10 +2532,10 @@
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
       "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.16,
+      "price_now": 222.99
     },
     {
       "uid": "045f55b844a4",
@@ -2740,11 +2576,11 @@
         "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "verified": false,
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.16,
+      "price_now": 222.99
     },
     {
       "uid": "2925e4685dcf",
@@ -2786,10 +2622,10 @@
         "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
       },
       "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
+      "pct_change": -2.7,
+      "verified_date": "21/04/2026 17:55 UTC",
+      "price_entry": 229.16,
+      "price_now": 222.99
     },
     {
       "uid": "e87b4da2717b",
@@ -9241,6 +9077,52 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "c47008d43e7f",
+      "date": "21/04/2026 17:56 UTC",
+      "date_be": "21/04/2026 19:56 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 energy, fed",
+      "direction": "BEARISH",
+      "title": "Top Fed official sees potential rate hike amid higher gas prices, inflation concerns - PBS",
+      "detail": "top fed official sees potential rate hike amid higher gas prices, inflation concerns &nbsp;&nbsp; pbs",
+      "urgency": "LOW",
+      "keywords": "energy, fed, macro",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ],
+        [
+          "OIH",
+          "VanEck Oil Services ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZFhWNF9JdEo0cThCUldFMkFHU2dyZTc4VDFSUDhXdFBWMFpPeDFYZHFwUFlfOWYyeFFFSS0ybXRqUDBSWUNmbXdqbmJEN1BGWExfTml2aktUNkdQTjh5SXctNDRyXzE3V2RJaVE4NEJ4LThLUzZCNjg2MkxGYW5qS2xYWHFXQm1xNlFhN0hGX0FySldsUF9rdGJrYlpyOWh4cllVN3NJVE1DX25uNVNNRFJpRW5OVTZsOVNVWtIBwgFBVV95cUxQazVKaG1GbUJERTFmRUU0b2FWQndRekctemh6azZ2UllDUFEwRC16MWtxOGxCVVpTWWpqZVIyRXU0cmxNMl9rdjBWYzJ6dmZ6b0RYLS1DZy04Q1JRbFJycjNkTlAtaUNlZkVKTDVTaUJQSXhaWVppQUhFeGZXRnNFU0VFMmZkR1M0XzZHWGUxNXRIQWtpeHBpNXU0MExuekE2ZmZwZkRGSTY5cXhIR0c4RFZCYkdCUUo1Q0ViY1JCY0FiQQ?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Top Fed official sees potential rate hike amid higher gas prices, inflation conc. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -9517,7 +9399,7 @@
       "price_at_signal": 701.32,
       "check_4h": "2026-04-17T06:39:15.587036+00:00",
       "check_24h": "2026-04-17T18:12:49.596724+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T17:55:32.804208+00:00",
       "result_4h": {
         "pct": 0.05,
         "hit": false,
@@ -9528,7 +9410,11 @@
         "hit": false,
         "price": 709.59
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.64,
+        "hit": false,
+        "price": 705.79
+      }
     },
     {
       "uid": "90e52208e23b",
@@ -9546,7 +9432,7 @@
       "price_at_signal": 640.58,
       "check_4h": "2026-04-17T06:39:15.802757+00:00",
       "check_24h": "2026-04-17T18:12:49.863893+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T17:55:33.034648+00:00",
       "result_4h": {
         "pct": -0.02,
         "hit": false,
@@ -9557,7 +9443,11 @@
         "hit": false,
         "price": 647.46
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.81,
+        "hit": false,
+        "price": 645.74
+      }
     },
     {
       "uid": "d6edbb74c4cc",
@@ -9575,7 +9465,7 @@
       "price_at_signal": 701.32,
       "check_4h": "2026-04-17T06:39:15.966584+00:00",
       "check_24h": "2026-04-17T18:12:50.144738+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T17:55:33.271743+00:00",
       "result_4h": {
         "pct": 0.05,
         "hit": false,
@@ -9586,7 +9476,11 @@
         "hit": false,
         "price": 709.59
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": 0.64,
+        "hit": false,
+        "price": 705.79
+      }
     },
     {
       "uid": "a8ba3e8e0817",
@@ -9604,7 +9498,7 @@
       "price_at_signal": 439.64,
       "check_4h": "2026-04-17T06:39:16.117974+00:00",
       "check_24h": "2026-04-17T18:12:50.431053+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T17:55:33.545607+00:00",
       "result_4h": {
         "pct": 0.1,
         "hit": false,
@@ -9615,7 +9509,11 @@
         "hit": false,
         "price": 446.56
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": -1.67,
+        "hit": false,
+        "price": 432.31
+      }
     },
     {
       "uid": "74a8cddbdb5e",
@@ -9652,7 +9550,7 @@
       "price_at_signal": 229.16,
       "check_4h": "2026-04-17T06:39:16.665165+00:00",
       "check_24h": "2026-04-17T18:12:51.070342+00:00",
-      "check_5d": null,
+      "check_5d": "2026-04-21T17:55:37.432431+00:00",
       "result_4h": {
         "pct": -0.06,
         "hit": false,
@@ -9663,7 +9561,11 @@
         "hit": false,
         "price": 233.12
       },
-      "result_5d": null
+      "result_5d": {
+        "pct": -2.69,
+        "hit": true,
+        "price": 222.99
+      }
     },
     {
       "uid": "1a1ac031b4a3",
@@ -11640,8 +11542,8 @@
     }
   ],
   "platform_score": {
-    "hits": 2,
-    "misses": 88,
+    "hits": 3,
+    "misses": 92,
     "watches": 39,
     "by_window": {
       "4h": {
@@ -11655,30 +11557,30 @@
         "pnl": 54.239999999999995
       },
       "5d": {
-        "hits": 0,
-        "misses": 3,
+        "hits": 1,
+        "misses": 7,
         "pnl": 0.0
       }
     },
     "by_theme": {
       "risk_off": {
         "hits": 0,
-        "misses": 18,
+        "misses": 19,
         "pnl": -61.57
       },
       "defense": {
-        "hits": 1,
+        "hits": 2,
         "misses": 20,
         "pnl": -0.23000000000000043
       },
       "tech": {
         "hits": 0,
-        "misses": 22,
+        "misses": 23,
         "pnl": 16.32
       },
       "macro": {
         "hits": 0,
-        "misses": 14,
+        "misses": 15,
         "pnl": 35.75
       },
       "energy": {
@@ -11687,7 +11589,7 @@
       },
       "risk_on": {
         "hits": 0,
-        "misses": 23,
+        "misses": 24,
         "pnl": 61.71
       },
       "crypto": {
@@ -12357,7 +12259,7 @@
     }
   ],
   "position_book": {
-    "cash": 77985.08,
+    "cash": 75985.08,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -12570,6 +12472,42 @@
         ],
         "themes": [
           "Tech \u2014 The Macro Man"
+        ],
+        "confidence": 40,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "XLE": {
+        "side": "SHORT",
+        "ticker": "XLE",
+        "shares": 17.988847,
+        "avg_entry": 55.59,
+        "invested_eur": 1000.0,
+        "open_date": "2026-04-21T17:56:44.270980+00:00",
+        "open_be": "21/04/2026 19:56 CEST",
+        "signals": [
+          "panel-XLE-21/04/2026"
+        ],
+        "themes": [
+          "Energy \u2014 The Macro Man"
+        ],
+        "confidence": 40,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "USO": {
+        "side": "SHORT",
+        "ticker": "USO",
+        "shares": 7.971939,
+        "avg_entry": 125.44,
+        "invested_eur": 1000.0,
+        "open_date": "2026-04-21T17:56:44.554089+00:00",
+        "open_be": "21/04/2026 19:56 CEST",
+        "signals": [
+          "panel-USO-21/04/2026"
+        ],
+        "themes": [
+          "Oil \u2014 The Macro Man"
         ],
         "confidence": 40,
         "check_4h": null,
