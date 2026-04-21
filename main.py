@@ -118,15 +118,57 @@ def main():
 
     if panel_dir in ("BULLISH", "BEARISH") and panel_conf >= 40 and panel_etfs:
         etf_to_sector = {
-            "XLE":"Energy","IEO":"Energy","XOM":"Energy",
-            "ITA":"Defense","LMT":"Defense","RTX":"Defense",
-            "GLD":"Gold","IGLN":"Gold",
-            "QQQ":"Tech","SOXX":"Semiconductors","NVDA":"Semiconductors",
-            "TLT":"Bonds/Rates","LIT":"Critical Minerals",
-            "COPX":"Critical Minerals","SETM":"Critical Minerals",
-            "IBIT":"Crypto","SPY":"Broad Market",
-            "EEM":"Emerging Markets","AFK":"Africa","MCHI":"China",
-            "XAR":"Defense/Aerospace","INRG":"Renewables","TAN":"Renewables",
+            # Energy
+            "XLE":"Energy","IEO":"Energy","XOM":"Energy","CVX":"Energy",
+            "USO":"Oil","BNO":"Oil","UNG":"Natural Gas","VDE":"Energy",
+            "OIH":"Oil Services","MLPA":"Energy Pipelines",
+            # Defense
+            "ITA":"Defense","XAR":"Defense","LMT":"Defense",
+            "RTX":"Defense","NOC":"Defense","BA":"Defense","GD":"Defense",
+            # Renewables
+            "INRG":"Renewables","ICLN":"Renewables","TAN":"Solar","FAN":"Wind",
+            "KRBN":"Carbon",
+            # Precious metals
+            "GLD":"Gold","IAU":"Gold","IGLN":"Gold","GDX":"Gold Miners",
+            "SLV":"Silver","SIVR":"Silver",
+            # Tech
+            "QQQ":"Tech","XLK":"Tech","VGT":"Tech",
+            "SOXX":"Semiconductors","SMH":"Semiconductors",
+            "NVDA":"Semiconductors","TSM":"Semiconductors","INTC":"Semiconductors",
+            "BOTZ":"AI/Robotics","AIQ":"AI","ROBO":"Robotics",
+            "CLOU":"Cloud","IGV":"Software",
+            "CIBR":"Cybersecurity","HACK":"Cybersecurity","BUG":"Cybersecurity",
+            # Crypto
+            "IBIT":"Crypto","FBTC":"Crypto","GBTC":"Crypto",
+            "ETHA":"Ethereum","COIN":"Crypto","MSTR":"Crypto",
+            # Bonds/Rates
+            "TLT":"Bonds","IEF":"Bonds","EDV":"Bonds","SHY":"Short Bonds",
+            "TBT":"Short Bonds","TIP":"TIPS","IBTM":"Euro Bonds",
+            "HYG":"High Yield","LQD":"Investment Grade",
+            # Commodities
+            "GSG":"Commodities","DBC":"Commodities","PDBC":"Commodities",
+            "LIT":"Lithium","COPX":"Copper","REMX":"Rare Earth",
+            "URA":"Uranium","URNM":"Uranium",
+            "DBA":"Agriculture","MOO":"Agriculture","WEAT":"Wheat",
+            # Financials
+            "XLF":"Financials","VFH":"Financials","KBE":"Banking",
+            "KRE":"Regional Banks","JPM":"Financials","GS":"Financials",
+            # Healthcare
+            "XLV":"Healthcare","VHT":"Healthcare","IBB":"Biotech",
+            "XBI":"Biotech","IHE":"Pharma","ARKG":"Genomics",
+            # Broad market
+            "SPY":"Broad Market","VOO":"Broad Market","IWM":"Small Cap",
+            "EEM":"Emerging Markets","VWO":"Emerging Markets",
+            "MCHI":"China","KWEB":"China Tech","FXI":"China",
+            "INDA":"India","EWJ":"Japan","VGK":"Europe","EZU":"Eurozone",
+            "KSA":"Saudi Arabia","AFK":"Africa","EZA":"South Africa",
+            # Real estate
+            "VNQ":"Real Estate","IYR":"Real Estate",
+            # Infrastructure
+            "IGF":"Infrastructure","PAVE":"Infrastructure",
+            # Individual stocks
+            "TSLA":"EV/Tech","PLTR":"AI/Defense","AMZN":"Tech",
+            "AAPL":"Tech","META":"Tech","GOOGL":"Tech","MSFT":"Tech",
         }
         active_analysts = [v["name"] for v in (analyst_verdicts or [])
                            if v.get("verdict") == panel_dir and v.get("conviction", 0) >= 40]
