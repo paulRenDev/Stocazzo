@@ -13,6 +13,7 @@ Status per feed (verified against actual GitHub Actions runs 21/04/2026):
 import re
 import hashlib
 import feedparser
+from datetime import datetime, timezone
 from helpers import now_be
 from etf_mapper import get_etfs
 from state import is_seen, mark_seen
@@ -141,10 +142,15 @@ def _clean(text: str) -> str:
 
 
 def _title_uid(title: str) -> str:
-    """Dedup by title content — same story on multiple feeds gets same hash."""
+    """
+    Dedup by title + date — same story on multiple feeds gets same hash today,
+    but re-surfaces tomorrow if still relevant. Prevents permanent dedup of
+    ongoing stories (e.g. tariff negotiations that run for weeks).
+    """
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     normalized = re.sub(r'[^a-z0-9 ]', '', title.lower().strip())
     normalized = re.sub(r'\s+', ' ', normalized)[:80]
-    return hashlib.md5(normalized.encode()).hexdigest()[:12]
+    return hashlib.md5(f"{normalized}|{today}".encode()).hexdigest()[:12]
 
 
 def _score(text: str):
