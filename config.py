@@ -30,10 +30,10 @@ BACKCHECK_DAYS_FAST    = 1
 HIT_THRESHOLD_PCT      = 2.0
 
 # ── POLYMARKET FILTERS ────────────────────────────────────────────────────────
-POLYMARKET_MIN_VOLUME  = 30_000
-POLYMARKET_HIGH_VOLUME = 200_000
-POLYMARKET_MIN_PROB    = 0.72
-POLYMARKET_MAX_PROB    = 0.10
+POLYMARKET_MIN_VOLUME  = 20_000   # lowered from 30k
+POLYMARKET_HIGH_VOLUME = 100_000  # lowered from 200k
+POLYMARKET_MIN_PROB    = 0.55     # lowered from 0.72 — catches 55%+ markets
+POLYMARKET_MAX_PROB    = 0.20     # raised from 0.10 — catches <20% markets
 
 # ── KALSHI FILTERS ────────────────────────────────────────────────────────────
 KALSHI_MIN_VOLUME  = 5_000
@@ -307,7 +307,7 @@ POLYMARKET_KEYWORDS = [
     "tariff", "trade war", "trade deal", "sanction", "ceasefire",
     "invasion", "nato", "ukraine", "russia", "iran", "israel",
     "china", "taiwan", "north korea",
-    "opec", "oil price", "crude oil", "energy price", "natural gas", "lng", "pipeline",
+    "opec", "oil price", "crude oil", "energy price", "natural gas", "lng", "pipeline", "oil", "energy",
     "recession", "inflation", "gdp", "unemployment", "cpi", "pce",
     # Political / presidential
     "trump", "executive order", "president signs", "federal election",
@@ -315,13 +315,13 @@ POLYMARKET_KEYWORDS = [
     "debt ceiling", "government shutdown", "federal budget",
     # Fed / rates
     "federal reserve", "rate cut", "rate hike", "interest rate",
-    "fomc", "jerome powell", "ecb rate", "bank of england",
+    "fomc", "jerome powell", "ecb rate", "bank of england", "fed cut", "fed hike", "fed pause", "rate decision", "rate cut", "rate hike",
     "yield curve", "us treasury", "us dollar", "currency crisis",
     # Crypto
     "bitcoin", "ethereum", "crypto regulation", "stablecoin",
     "btc price", "eth price", "crypto etf",
     # Equities / sectors
-    "stock market", "s&p 500", "nasdaq", "market crash",
+    "stock market", "s&p 500", "nasdaq", "market crash", "s&p", "dow jones", "earnings", "ipo",
     "semiconductor", "nvidia", "chip shortage", "ai regulation",
     "defense spending", "military budget", "arms deal",
     # Commodities
