@@ -504,7 +504,9 @@
     "abb692a608a5",
     "6a2a31eef736",
     "26f650bc0e55",
-    "62f5bc1d9e74"
+    "62f5bc1d9e74",
+    "84e1ee810874",
+    "9160e09f9c57"
   ],
   "stats": {
     "Polymarket": {
@@ -1955,84 +1957,27 @@
       "date": "2026-04-22T15:49:16.813103+00:00",
       "price_at_signal": 217.46,
       "title": "Stock Market Today: Nasdaq Picks Up Steam On Trump Ceasefire; United Airlines Ta"
+    },
+    {
+      "uid": "84e1ee810874",
+      "source": "Yahoo Finance RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-22T16:46:39.986763+00:00",
+      "price_at_signal": 218.19,
+      "title": "Stock Market Today: Nasdaq Flashes Highs On Trump Ceasefire; Boeing Soars (Live "
+    },
+    {
+      "uid": "9160e09f9c57",
+      "source": "Motley Fool RSS",
+      "ticker": "XLE",
+      "direction": "BULLISH",
+      "date": "2026-04-22T16:46:40.115362+00:00",
+      "price_at_signal": 56.3,
+      "title": "President Trump Indefinitely Extends the Iran Ceasefire. How Will This Impact th"
     }
   ],
   "history": [
-    {
-      "uid": "9709710eee4a",
-      "date": "21/04/2026 23:11 UTC",
-      "date_be": "22/04/2026 01:11 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will Trump agree to Iranian enrichment of uranium in April?",
-      "detail": "Market pricing NO at 81% | 24h vol: $142,706 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=81%, vol=$142,706",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-trump-agree-to-iranian-enrichment-of-uranium-in-april",
-      "confidence": 81,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 81% with $142,706 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 81,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "a1f39ce23ece",
-      "date": "21/04/2026 23:11 UTC",
-      "date_be": "22/04/2026 01:11 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 14m ago",
-      "direction": "BULLISH",
-      "title": "Trump: \"my administration just delivered a big win for the great commonwealth of pennsyl\"",
-      "detail": "my administration just delivered a big win for the great commonwealth of pennsylvania, which i love, and won by the largest margin in history. based on this, the commerce department worked with govern",
-      "urgency": "MEDIUM",
-      "keywords": "deal",
-      "etfs": [],
-      "link": "https://truthsocial.com/@realDonaldTrump/116445165496999724",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 14m ago. Matched: deal",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "e3317c86830d",
       "date": "21/04/2026 23:11 UTC",
@@ -11151,6 +11096,98 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "84e1ee810874",
+      "date": "22/04/2026 16:46 UTC",
+      "date_be": "22/04/2026 18:46 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense, macro",
+      "direction": "BULLISH",
+      "title": "Stock Market Today: Nasdaq Flashes Highs On Trump Ceasefire; Boeing Soars (Live Coverage)",
+      "detail": "stock market today: the dow jones index rose wednesday after trump extended the u.s.-iran ceasefire. tesla earnings are due late.",
+      "urgency": "LOW",
+      "keywords": "defense, macro",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/m/7ab1524e-92c4-32c9-81b7-f9d2fd027cef/stock-market-today%3A-nasdaq.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Stock Market Today: Nasdaq Flashes Highs On Trump Ceasefire; Boeing Soars (Live . 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "9160e09f9c57",
+      "date": "22/04/2026 16:46 UTC",
+      "date_be": "22/04/2026 18:46 CEST",
+      "source": "Motley Fool RSS",
+      "type": "Motley Fool \u00b7 energy, defense",
+      "direction": "BULLISH",
+      "title": "President Trump Indefinitely Extends the Iran Ceasefire. How Will This Impact the Oil Markets?",
+      "detail": "there's no end to the current oil market disruption in sight.",
+      "urgency": "LOW",
+      "keywords": "energy, defense",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ],
+        [
+          "OIH",
+          "VanEck Oil Services ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.fool.com/investing/2026/04/22/president-trump-indefinitely-extends-the-iran-ceas/?source=iedfolrf0000001",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Motley Fool: President Trump Indefinitely Extends the Iran Ceasefire. How Will This Impact th. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Motley Fool",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -15634,6 +15671,48 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "0964ec79de59",
+      "theme": "defense",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "ITA",
+      "score": 4,
+      "confidence": 34,
+      "sources": [
+        "Yahoo Finance RSS",
+        "Motley Fool RSS"
+      ],
+      "date": "2026-04-22T16:46:37.881322+00:00",
+      "price_at_signal": 218.19,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "c7b078577c57",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 4,
+      "confidence": 34,
+      "sources": [
+        "Yahoo Finance RSS",
+        "Motley Fool RSS"
+      ],
+      "date": "2026-04-22T16:46:38.054545+00:00",
+      "price_at_signal": 709.06,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
@@ -16354,7 +16433,7 @@
     }
   ],
   "position_book": {
-    "cash": 43907.02,
+    "cash": 41907.02,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -16430,21 +16509,23 @@
       "XAR": {
         "side": "LONG",
         "ticker": "XAR",
-        "shares": 20.311156,
-        "avg_entry": 270.7872,
-        "invested_eur": 5500.0,
+        "shares": 24.124021,
+        "avg_entry": 269.441,
+        "invested_eur": 6500.0,
         "open_date": "2026-04-20T07:24:47.410453+00:00",
         "open_be": "20/04/2026 09:24 CEST",
         "signals": [
           "panel-XAR-20/04/2026",
           "panel-XAR-20/04/2026",
           "panel-XAR-21/04/2026",
+          "panel-XAR-22/04/2026",
           "panel-XAR-22/04/2026"
         ],
         "themes": [
           "1 analyst bullish: The Macro Man. Consid",
           "Defense/Aerospace \u2014 The Macro Man",
-          "Defense \u2014 The Trump Whisperer + The Macro Man"
+          "Defense \u2014 The Trump Whisperer + The Macro Man",
+          "Defense \u2014 The Macro Man"
         ],
         "confidence": 40,
         "check_4h": {
@@ -16465,14 +16546,15 @@
       "ITA": {
         "side": "LONG",
         "ticker": "ITA",
-        "shares": 37.887106,
-        "avg_entry": 224.3508,
-        "invested_eur": 8500.0,
+        "shares": 42.464184,
+        "avg_entry": 223.718,
+        "invested_eur": 9500.0,
         "open_date": "2026-04-21T04:22:01.856003+00:00",
         "open_be": "21/04/2026 06:22 CEST",
         "signals": [
           "panel-ITA-21/04/2026",
           "panel-ITA-21/04/2026",
+          "panel-ITA-22/04/2026",
           "panel-ITA-22/04/2026",
           "panel-ITA-22/04/2026"
         ],
@@ -16690,7 +16772,13 @@
           "Broad Market \u2014 The Insider"
         ],
         "confidence": 65,
-        "check_4h": null,
+        "check_4h": {
+          "price": 709.16,
+          "pct": -0.72,
+          "pnl_eur": -18.04,
+          "date": "2026-04-22T16:46:39.873134+00:00",
+          "hit": false
+        },
         "check_24h": null
       }
     },
@@ -16971,13 +17059,13 @@
     "realised_pnl": -92.98,
     "platform_score": {
       "total_hits": 0,
-      "total_misses": 20,
-      "total_pnl": -636.6,
+      "total_misses": 21,
+      "total_pnl": -654.64,
       "by_window": {
         "4h": {
           "hits": 0,
-          "misses": 16,
-          "pnl": -404.76
+          "misses": 17,
+          "pnl": -422.8
         },
         "24h": {
           "hits": 0,
@@ -17080,6 +17168,11 @@
           "hits": 0,
           "misses": 1,
           "pnl": -2.73
+        },
+        "Broad Market \u2014 The Insider": {
+          "hits": 0,
+          "misses": 1,
+          "pnl": -18.04
         }
       },
       "rolling": []
