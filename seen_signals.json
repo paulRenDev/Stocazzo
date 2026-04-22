@@ -563,12 +563,15 @@
     "6089660775a6",
     "31136c79ae49",
     "c05ab13025ba",
-    "0640433238a0"
+    "0640433238a0",
+    "a449c27cd46b",
+    "280bb8ea2bf7",
+    "209e25ebfde2"
   ],
   "stats": {
     "Polymarket": {
       "hits": 2,
-      "misses": 15,
+      "misses": 19,
       "pending": 0
     },
     "Lobbying": {
@@ -1350,42 +1353,6 @@
       "title": "Stock Market Today, April 21: Markets in Wait-and-See Mode as Hopes for New U.S."
     },
     {
-      "uid": "e368ee7c3a83",
-      "source": "Polymarket",
-      "ticker": "XLE",
-      "direction": "BEARISH",
-      "date": "2026-04-21T23:11:50.184425+00:00",
-      "price_at_signal": 55.87,
-      "title": "US x Iran permanent peace deal by April 30, 2026?"
-    },
-    {
-      "uid": "c8ba5f7dc63b",
-      "source": "Polymarket",
-      "ticker": "SPY",
-      "direction": "BEARISH",
-      "date": "2026-04-21T23:11:50.497607+00:00",
-      "price_at_signal": 704.08,
-      "title": "Will Donald Trump announce that the United States blockade of the Strait of Horm"
-    },
-    {
-      "uid": "6bc662009b2d",
-      "source": "Polymarket",
-      "ticker": "ITA",
-      "direction": "BEARISH",
-      "date": "2026-04-21T23:11:50.711406+00:00",
-      "price_at_signal": 223.09,
-      "title": "Trump announces end of military operations against Iran by April 30th?"
-    },
-    {
-      "uid": "5c881f8fbfec",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BEARISH",
-      "date": "2026-04-21T23:11:50.925349+00:00",
-      "price_at_signal": 42.51,
-      "title": "Will the price of Bitcoin be between $66,000 and $68,000 on April 22?"
-    },
-    {
       "uid": "4f32dd857ee8",
       "source": "Polymarket",
       "ticker": "XLE",
@@ -2041,146 +2008,27 @@
       "date": "2026-04-22T23:05:23.529809+00:00",
       "price_at_signal": 219.15,
       "title": "S&P, Nasdaq close at records on Iran ceasefire extension, earnings"
+    },
+    {
+      "uid": "a449c27cd46b",
+      "source": "Google News RSS",
+      "ticker": "SPY",
+      "direction": "BEARISH",
+      "date": "2026-04-22T23:59:45.672568+00:00",
+      "price_at_signal": 0,
+      "title": "TGT (Target Corporation) posts 12.1 percent Q1 2026 EPS beat, shares climb 2.79 "
+    },
+    {
+      "uid": "209e25ebfde2",
+      "source": "Google News RSS",
+      "ticker": "SOXX",
+      "direction": "BULLISH",
+      "date": "2026-04-22T23:59:45.804007+00:00",
+      "price_at_signal": 0,
+      "title": "KMT (Kennametal Inc.) posts Q1 2026 earnings beat, shares edge higher despite sl"
     }
   ],
   "history": [
-    {
-      "uid": "41eff42c15cb",
-      "date": "22/04/2026 02:14 UTC",
-      "date_be": "22/04/2026 04:14 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will the price of Bitcoin be above $72,000 on April 22?",
-      "detail": "Market pricing YES at 99% | 24h vol: $120,991 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=99%, vol=$120,991",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-72k-on-april-22",
-      "confidence": 99,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 99% with $120,991 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 99,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "8202a4fee4de",
-      "date": "22/04/2026 02:14 UTC",
-      "date_be": "22/04/2026 04:14 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will WTI Crude Oil (WTI) hit (LOW) $70 in April?",
-      "detail": "Market pricing NO at 88% | 24h vol: $120,844 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=88%, vol=$120,844",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ],
-        [
-          "OIH",
-          "VanEck Oil Services ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-low-70-in-april-315-213-178-948-858-448",
-      "confidence": 88,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 88% with $120,844 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 88,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "8f1a067048aa",
-      "date": "22/04/2026 02:14 UTC",
-      "date_be": "22/04/2026 04:14 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 1h 38m ago",
-      "direction": "BULLISH",
-      "title": "Trump: \"iran doesn't want the strait of hormuz closed, they want it open so they can mak\"",
-      "detail": "iran doesn't want the strait of hormuz closed, they want it open so they can make $500 million dollars a day (which is, therefore, what they are losing if it is closed!). they only say they want it cl",
-      "urgency": "MEDIUM",
-      "keywords": "iran, deal",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116445555373723862",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 1h 38m ago. Matched: iran, deal",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "cede260a25f8",
       "date": "22/04/2026 02:14 UTC",
@@ -11275,6 +11123,144 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "a449c27cd46b",
+      "date": "22/04/2026 23:59 UTC",
+      "date_be": "23/04/2026 01:59 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BEARISH",
+      "title": "TGT (Target Corporation) posts 12.1 percent Q1 2026 EPS beat, shares climb 2.79 percent on positive investor sentiment. ",
+      "detail": "tgt (target corporation) posts 12.1 percent q1 2026 eps beat, shares climb 2.79 percent on positive investor sentiment. - earnings miss &nbsp;&nbsp; ubnd th\u00e0nh ph\u1ed1 h\u1ea3i ph\u00f2ng",
+      "urgency": "LOW",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTm5Ya0psMFliUjByTkNlOXRhSkdFcjNmNFlKTnhXek5LWGtYZHZUZ1dya3ZqNXMzdnZXTjcxSjNaYzZEaVkzVU1rcGhwQl9OaUtkRzAtVDRZb0VvZkpGcFJqdUtXSzlHc3Z0cU9hYk43UWJUREthd0E2Yms4aFZBd0hPc3Q5Rm90ZUZYbWNVei1EU3ZpWXlNcXhJa2tjZTNzSmNuandmTEJ3MWNxN09oQUlJOWozMlNNbjBkM0VjekxFT0R4LWotaWUyLWJtOXFzek4wTHo3a1VpWTF0dzJ2T3NVSmd2RlNFSFE?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: TGT (Target Corporation) posts 12.1 percent Q1 2026 EPS beat, shares climb 2.79 . 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "280bb8ea2bf7",
+      "date": "22/04/2026 23:59 UTC",
+      "date_be": "23/04/2026 01:59 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BULLISH",
+      "title": "PBA (Pembina) delivers Q4 2025 earnings beat, shares climb on 5.3 percent year over year revenue growth. - Crowd Breakou",
+      "detail": "pba (pembina) delivers q4 2025 earnings beat, shares climb on 5.3 percent year over year revenue growth. - crowd breakout signals &nbsp;&nbsp; ubnd th\u00e0nh ph\u1ed1 h\u1ea3i ph\u00f2ng",
+      "urgency": "MEDIUM",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPc2xpYVBvc3VsRXFkaTVDemRKclk4cDN4VmpFd292a0pDSGdMMUpHOW9USkNuaWVwRXNKWEVDcUFYdzJFRGlMelpsSElkdUhPNzZMUEd0N2tiMnJJX0pOeWNQYVMxOFJzR29BNGI2MzA0Y1JEcWRMYVlvZkNYYzdIa0RaRVZ3Tk5CUmFqTU5YUkJDWS1IRkdEelZtRHIzTUVvMHE3NVJJdUtZV1NlcHFyQ1hxN1pxaC04cEVFVF9wMkYzdzFpY0lac1htSXR4OGZnRGpzZnFwQTg?oc=5",
+      "confidence": 41,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: PBA (Pembina) delivers Q4 2025 earnings beat, shares climb on 5.3 percent year o. 2 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 41,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "209e25ebfde2",
+      "date": "22/04/2026 23:59 UTC",
+      "date_be": "23/04/2026 01:59 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 tech, macro",
+      "direction": "BULLISH",
+      "title": "KMT (Kennametal Inc.) posts Q1 2026 earnings beat, shares edge higher despite slight year over year revenue decline. - C",
+      "detail": "kmt (kennametal inc.) posts q1 2026 earnings beat, shares edge higher despite slight year over year revenue decline. &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
+      "urgency": "LOW",
+      "keywords": "tech, macro",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQZHRzNjFMeGkxVlJKQnB0S0s0TDZXNWNMVjJVMk85VlhJTGFGWjFzb2ppN1RhQlVkcGtyZjcwOE44V2IwS2xfWjRzNkNhZUdWNTNNeFNZZm1FNjdDVXFnNm1PWTlaOGJvRGtsNjRuQURYYTYtRmlfcGIxamoxdDRQOEp3akJGeGFqQW5IdFdjei1uZHYyaklCc0RqZkZmUmRka01TRmI3T3VsbElBMTd3SGc4eTIxMG0wdi00NDFBb1NMTmpRc21wa092SVBJQklURXRUNEpUck1idVNrSGtUcGVOdTg?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: KMT (Kennametal Inc.) posts Q1 2026 earnings beat, shares edge higher despite sl. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -16882,7 +16868,7 @@
     }
   ],
   "position_book": {
-    "cash": 40015.32,
+    "cash": 38015.32,
     "total_capital": 100000.0,
     "positions": {
       "XAR": {
@@ -16996,9 +16982,9 @@
       "QQQ": {
         "side": "LONG",
         "ticker": "QQQ",
-        "shares": 11.585687,
-        "avg_entry": 647.3505,
-        "invested_eur": 7500.0,
+        "shares": 13.112148,
+        "avg_entry": 648.2538,
+        "invested_eur": 8500.0,
         "open_date": "2026-04-21T17:31:55.938034+00:00",
         "open_be": "21/04/2026 19:31 CEST",
         "signals": [
@@ -17007,7 +16993,8 @@
           "panel-QQQ-21/04/2026",
           "panel-QQQ-22/04/2026",
           "panel-QQQ-22/04/2026",
-          "panel-QQQ-22/04/2026"
+          "panel-QQQ-22/04/2026",
+          "panel-QQQ-23/04/2026"
         ],
         "themes": [
           "Tech \u2014 The Macro Man"
@@ -17107,16 +17094,18 @@
       "SPY": {
         "side": "LONG",
         "ticker": "SPY",
-        "shares": 3.521573,
-        "avg_entry": 709.91,
-        "invested_eur": 2500.0,
+        "shares": 4.927627,
+        "avg_entry": 710.2809,
+        "invested_eur": 3500.0,
         "open_date": "2026-04-22T17:47:25.878380+00:00",
         "open_be": "22/04/2026 19:47 CEST",
         "signals": [
-          "panel-SPY-22/04/2026"
+          "panel-SPY-22/04/2026",
+          "panel-SPY-23/04/2026"
         ],
         "themes": [
-          "Broad Market \u2014 The Insider + The Macro Man"
+          "Broad Market \u2014 The Insider + The Macro Man",
+          "Broad Market \u2014 The Macro Man"
         ],
         "confidence": 65,
         "check_4h": null,
