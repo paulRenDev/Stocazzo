@@ -408,7 +408,24 @@
     "ac66a619bf60",
     "d811b108c2b5",
     "fe1fc3a87134",
-    "a01cf94f53af"
+    "a01cf94f53af",
+    "4c520b07135c",
+    "c641b5277521",
+    "2acf154ae966",
+    "1781f8cd21e5",
+    "3a04243f1874",
+    "ce2daf914765",
+    "86ff9c5aae1c",
+    "31f95347b9e0",
+    "1b080a679eee",
+    "e1e3d1dc8c66",
+    "80dad642da47",
+    "73d6798508dc",
+    "e6c05d8b4fe8",
+    "fa249dc0078a",
+    "f2dbea3a123c",
+    "06f575ee1fb8",
+    "a60404d7bf2f"
   ],
   "stats": {
     "Polymarket": {
@@ -1625,832 +1642,45 @@
       "date": "2026-04-22T02:14:52.697446+00:00",
       "price_at_signal": 0,
       "title": "Travelers Q1 Earnings Beat, Revenues Miss, Dividend Raised - Yahoo Finance"
+    },
+    {
+      "uid": "4c520b07135c",
+      "source": "Polymarket",
+      "ticker": "IBIT",
+      "direction": "BULLISH",
+      "date": "2026-04-22T05:11:34.132223+00:00",
+      "price_at_signal": 42.529,
+      "title": "Will Bitcoin reach $80,000 in April?"
+    },
+    {
+      "uid": "c641b5277521",
+      "source": "Polymarket",
+      "ticker": "XLE",
+      "direction": "BEARISH",
+      "date": "2026-04-22T05:11:34.344626+00:00",
+      "price_at_signal": 55.85,
+      "title": "US x Iran permanent peace deal by May 31, 2026?"
+    },
+    {
+      "uid": "31f95347b9e0",
+      "source": "Polymarket",
+      "ticker": "SPY",
+      "direction": "BEARISH",
+      "date": "2026-04-22T05:11:34.605391+00:00",
+      "price_at_signal": 704.08,
+      "title": "Will Eric Trump win the 2028 Republican presidential nomination?"
+    },
+    {
+      "uid": "fa249dc0078a",
+      "source": "Polymarket",
+      "ticker": "ITA",
+      "direction": "BEARISH",
+      "date": "2026-04-22T05:11:34.863601+00:00",
+      "price_at_signal": 223.09,
+      "title": "Will US withdraw from NATO by April 30?"
     }
   ],
   "history": [
-    {
-      "uid": "2de32df523ea",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Iran agrees to surrender enriched uranium stockpile by April 30, 2026?",
-      "detail": "Market pricing NO at 82% | 24h vol: $716,064 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=82%, vol=$716,064",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/iran-agrees-to-surrender-enriched-uranium-stockpile-by-april-30-2026",
-      "confidence": 82,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 82% with $716,064 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 82,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "107dde94691d",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will the U.S. invade Iran before 2027?",
-      "detail": "Market pricing NO at 66% | 24h vol: $684,887 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=66%, vol=$684,887",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-the-us-invade-iran-before-2027",
-      "confidence": 66,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 66% with $684,887 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 66,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "82cf3c2ed511",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Iran x Israel/US conflict ends by May 15?",
-      "detail": "Market pricing YES at 100% | 24h vol: $604,459 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$604,459",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $604,459 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "027b782c257c",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will the price of Bitcoin be above $72,000 on April 21?",
-      "detail": "Market pricing YES at 100% | 24h vol: $601,077 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$601,077",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-72k-on-april-21",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $601,077 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "4270f7481ec7",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "US x Iran ceasefire extended by April 21, 2026?",
-      "detail": "Market pricing NO at 82% | 24h vol: $549,859 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=82%, vol=$549,859",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-the-us-x-iran-ceasefire-be-extended-by-april-21-2026-365",
-      "confidence": 82,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 82% with $549,859 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 82,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "3b93e647fd1a",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will the price of Bitcoin be above $76,000 on April 21?",
-      "detail": "Market pricing NO at 100% | 24h vol: $543,651 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$543,651",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-76k-on-april-21",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 100% with $543,651 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "de0db67be06d",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will Trump post \"POTUS\" this week on Truth Social?",
-      "detail": "Market pricing YES at 100% | 24h vol: $515,716 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$515,716",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "TLT",
-          "iShares 20+ Year Treasury Bond ETF",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-trump-post-potus-this-week-on-truth-social",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $515,716 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "b71271252e4e",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will the Iranian regime fall by May 31?",
-      "detail": "Market pricing NO at 96% | 24h vol: $486,065 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=96%, vol=$486,065",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-the-iranian-regime-fall-by-may-31",
-      "confidence": 96,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 96% with $486,065 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 96,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "5766ceb31e01",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will the price of Bitcoin be above $80,000 on April 21?",
-      "detail": "Market pricing NO at 100% | 24h vol: $480,647 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$480,647",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-80k-on-april-21",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 100% with $480,647 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "60945d366fee",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will the price of Bitcoin be above $78,000 on April 21?",
-      "detail": "Market pricing NO at 100% | 24h vol: $429,214 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$429,214",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-78k-on-april-21",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 100% with $429,214 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "0308fcf55f98",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will the price of Bitcoin be above $74,000 on April 21?",
-      "detail": "Market pricing YES at 100% | 24h vol: $419,708 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$419,708",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-74k-on-april-21",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $419,708 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "a1edce6153dc",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will the price of Bitcoin be above $82,000 on April 21?",
-      "detail": "Market pricing NO at 100% | 24h vol: $407,193 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$407,193",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-82k-on-april-21",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 100% with $407,193 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "720ec1a25f16",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Iran x Israel/US conflict ends by December 31?",
-      "detail": "Market pricing YES at 100% | 24h vol: $390,727 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$390,727",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-december-31-788-548",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $390,727 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "b398e6868434",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will Bitcoin reach $150,000 in April?",
-      "detail": "Market pricing NO at 100% | 24h vol: $369,676 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$369,676",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-bitcoin-reach-150k-in-april-2026",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 100% with $369,676 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "beb96684f1c8",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will the price of Bitcoin be above $70,000 on April 21?",
-      "detail": "Market pricing YES at 100% | 24h vol: $367,053 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$367,053",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-70k-on-april-21",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $367,053 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "273940753db6",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "US x Iran diplomatic meeting by April 30, 2026?",
-      "detail": "Market pricing YES at 72% | 24h vol: $342,976 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=72%, vol=$342,976",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263",
-      "confidence": 72,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 72% with $342,976 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 72,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "95203cc56e81",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will China invade Taiwan by end of 2026?",
-      "detail": "Market pricing NO at 93% | 24h vol: $335,460 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=93%, vol=$335,460",
-      "etfs": [
-        [
-          "BOTZ",
-          "Global X Robotics & AI ETF",
-          "NASDAQ"
-        ],
-        [
-          "AIQ",
-          "Global X Artificial Intelligence & Technology ETF",
-          "NASDAQ"
-        ],
-        [
-          "ROBO",
-          "ROBO Global Robotics & Automation ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-china-invade-taiwan-before-2027",
-      "confidence": 93,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 93% with $335,460 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 93,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "c16ac153bcef",
-      "date": "21/04/2026 18:01 UTC",
-      "date_be": "21/04/2026 20:01 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will the price of Ethereum be above $1,900 on April 22?",
-      "detail": "Market pricing YES at 100% | 24h vol: $315,170 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$315,170",
-      "etfs": [
-        [
-          "ETHA",
-          "iShares Ethereum Trust ETF",
-          "NASDAQ"
-        ],
-        [
-          "FETH",
-          "Fidelity Ethereum Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/ethereum-above-1900-on-april-22",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $315,170 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "3ba92d3323bc",
       "date": "21/04/2026 18:01 UTC",
@@ -10886,6 +10116,823 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "106113b442a3",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 15",
+      "direction": "MIXED",
+      "title": "[2x CONVERGENCE] ITA \u2014 MIXED",
+      "detail": "Score: 15pts across 2 independent sources: Polymarket, Macro RSS",
+      "urgency": "HIGH",
+      "keywords": "ITA",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "Sources split on ITA \u2014 no clear direction",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Polymarket",
+            "direction": "BEARISH",
+            "urgency": "HIGH",
+            "points": 10,
+            "reasoning": "weight=5 + urgency=3 + hit_rate=80%x2 = 10pts",
+            "signal": "Will US withdraw from NATO by April 30?"
+          },
+          {
+            "source": "Macro RSS",
+            "direction": "BULLISH",
+            "urgency": "MEDIUM",
+            "points": 5,
+            "reasoning": "weight=2 + urgency=2 + hit_rate=50%x2 = 5pts",
+            "signal": "Iran accuses US of violating international law over vessel s"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "4c520b07135c",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "Will Bitcoin reach $80,000 in April?",
+      "detail": "Market pricing YES at 60% | 24h vol: $356,076 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=60%, vol=$356,076",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-bitcoin-reach-80k-in-april-2026",
+      "confidence": 60,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 60% with $356,076 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 60,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "c641b5277521",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran permanent peace deal by May 31, 2026?",
+      "detail": "Market pricing NO at 53% | 24h vol: $310,139 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=53%, vol=$310,139",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-may-31-2026-333",
+      "confidence": 53,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 53% with $310,139 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 53,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "2acf154ae966",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran diplomatic meeting by April 24, 2026?",
+      "detail": "Market pricing NO at 82% | 24h vol: $258,998 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=82%, vol=$258,998",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-24-2026",
+      "confidence": 82,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 82% with $258,998 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 82,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1781f8cd21e5",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "Will the price of Bitcoin be above $70,000 on April 22?",
+      "detail": "Market pricing YES at 100% | 24h vol: $203,213 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$203,213",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-70k-on-april-22",
+      "confidence": 100,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 100% with $203,213 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "3a04243f1874",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will the price of Bitcoin be above $82,000 on April 22?",
+      "detail": "Market pricing NO at 100% | 24h vol: $169,923 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$169,923",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-82k-on-april-22",
+      "confidence": 100,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 100% with $169,923 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "ce2daf914765",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will Bitcoin reach $79,000 on April 21?",
+      "detail": "Market pricing NO at 100% | 24h vol: $159,393 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$159,393",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-bitcoin-reach-79k-on-april-21",
+      "confidence": 100,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 100% with $159,393 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "86ff9c5aae1c",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will Bitcoin reach $85,000 in April?",
+      "detail": "Market pricing NO at 90% | 24h vol: $157,427 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=90%, vol=$157,427",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-bitcoin-reach-85k-in-april-2026",
+      "confidence": 90,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 90% with $157,427 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 90,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "31f95347b9e0",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will Eric Trump win the 2028 Republican presidential nomination?",
+      "detail": "Market pricing NO at 99% | 24h vol: $146,384 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=99%, vol=$146,384",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "TLT",
+          "iShares 20+ Year Treasury Bond ETF",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-eric-trump-win-the-2028-republican-presidential-nomination",
+      "confidence": 99,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 99% with $146,384 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 99,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1b080a679eee",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will the price of Bitcoin be above $84,000 on April 23?",
+      "detail": "Market pricing NO at 100% | 24h vol: $143,208 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$143,208",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-84k-on-april-23",
+      "confidence": 100,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 100% with $143,208 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "e1e3d1dc8c66",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will the price of Bitcoin be above $80,000 on April 22?",
+      "detail": "Market pricing NO at 98% | 24h vol: $132,782 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=98%, vol=$132,782",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-80k-on-april-22",
+      "confidence": 98,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 98% with $132,782 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 98,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "80dad642da47",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will Donald Trump Jr. win the 2028 Republican presidential nomination?",
+      "detail": "Market pricing NO at 98% | 24h vol: $127,215 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=98%, vol=$127,215",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "TLT",
+          "iShares 20+ Year Treasury Bond ETF",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-donald-trump-jr-win-the-2028-republican-presidential-nomination",
+      "confidence": 98,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 98% with $127,215 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 98,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "73d6798508dc",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will Bitcoin dip to $60,000 in April?",
+      "detail": "Market pricing NO at 98% | 24h vol: $123,924 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=98%, vol=$123,924",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-bitcoin-dip-to-60k-in-april-2026-459",
+      "confidence": 98,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 98% with $123,924 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 98,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "e6c05d8b4fe8",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "Will the price of Bitcoin be above $74,000 on April 22?",
+      "detail": "Market pricing YES at 99% | 24h vol: $112,870 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=99%, vol=$112,870",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-74k-on-april-22",
+      "confidence": 99,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 99% with $112,870 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 99,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "fa249dc0078a",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will US withdraw from NATO by April 30?",
+      "detail": "Market pricing NO at 99% | 24h vol: $112,460 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=99%, vol=$112,460",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-us-withdraw-from-nato-by-april-30-583-663",
+      "confidence": 99,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 99% with $112,460 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 99,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "f2dbea3a123c",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $120 in April?",
+      "detail": "Market pricing NO at 91% | 24h vol: $109,243 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=91%, vol=$109,243",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ],
+        [
+          "OIH",
+          "VanEck Oil Services ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-120-in-april",
+      "confidence": 91,
+      "hit_rate": "0% (1 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 91% with $109,243 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 91,
+        "source_weight": 5,
+        "hit_rate": "0% (1 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "06f575ee1fb8",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider",
+      "direction": "SELL",
+      "title": "Jassy Andrew R \u2014 SELL 31,000 shares of AMZN",
+      "detail": "AMZN insider SELL. Shares changed: -31,000 | Total held: 2,207,118 | Filed: 2026-04-21",
+      "urgency": "LOW",
+      "keywords": "AMZN, insider, sell",
+      "etfs": [],
+      "link": "https://finnhub.io/stock-insider-transactions/AMZN",
+      "confidence": 35,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Jassy Andrew R filed SELL of 31,000 AMZN shares.  ",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 35,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "a60404d7bf2f",
+      "date": "22/04/2026 05:11 UTC",
+      "date_be": "22/04/2026 07:11 CEST",
+      "source": "Macro RSS",
+      "type": "Financial Times \u00b7 defense",
+      "direction": "BULLISH",
+      "title": "Iran accuses US of violating international law over vessel seizure",
+      "detail": "Iran\u2019s ambassador to UN also accused Washington of \u2018continuing internationally wrongful acts\u2019 that breached ceasefire agreement",
+      "urgency": "MEDIUM",
+      "keywords": "defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.ft.com/content/da5f559c-f340-4091-95ca-dd930627f292",
+      "confidence": 40,
+      "hit_rate": "0% (2 verified signals)",
+      "reasoning_stored": {
+        "why": "Financial Times reports on defense. 1 bullish / 0 bearish signals in text.",
+        "signal_type": "News RSS \u2014 Financial Times. Macro context signal.",
+        "confidence": 40,
+        "source_weight": 2,
+        "hit_rate": "0% (2 verified signals)",
+        "caveat": "News follows events \u2014 not predictive. Use to confirm crony signals or set macro context."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
@@ -14326,6 +14373,130 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "e97c40e574b5",
+      "theme": "defense",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "ITA",
+      "score": 41,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Macro RSS"
+      ],
+      "date": "2026-04-22T05:11:32.788301+00:00",
+      "price_at_signal": 222.86501,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "a66f0586bca5",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 22,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "Macro RSS"
+      ],
+      "date": "2026-04-22T05:11:33.018654+00:00",
+      "price_at_signal": 704.14001,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "9de0585c6e56",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 22,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "SEC EDGAR"
+      ],
+      "date": "2026-04-22T05:11:33.244291+00:00",
+      "price_at_signal": 429.70999,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "4db8a53039f9",
+      "theme": "crypto",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "IBIT",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-22T05:11:33.468544+00:00",
+      "price_at_signal": 42.529,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "774d37c90206",
+      "theme": "energy",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "XLE",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-22T05:11:33.689751+00:00",
+      "price_at_signal": 55.85,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "86a1272f7bd3",
+      "theme": "commodities",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-22T05:11:33.912877+00:00",
+      "price_at_signal": 429.70999,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
@@ -15046,7 +15217,7 @@
     }
   ],
   "position_book": {
-    "cash": 55439.02,
+    "cash": 50439.02,
     "total_capital": 100000.0,
     "positions": {
       "NVDA": {
@@ -15304,6 +15475,42 @@
           "Gold \u2014 The Insider"
         ],
         "confidence": 75,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "IBIT": {
+        "side": "SHORT",
+        "ticker": "IBIT",
+        "shares": 58.809692,
+        "avg_entry": 42.51,
+        "invested_eur": 2500.0,
+        "open_date": "2026-04-22T05:11:32.203468+00:00",
+        "open_be": "22/04/2026 07:11 CEST",
+        "signals": [
+          "panel-IBIT-22/04/2026"
+        ],
+        "themes": [
+          "Crypto \u2014 The Insider"
+        ],
+        "confidence": 56,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "FBTC": {
+        "side": "SHORT",
+        "ticker": "FBTC",
+        "shares": 38.273117,
+        "avg_entry": 65.32,
+        "invested_eur": 2500.0,
+        "open_date": "2026-04-22T05:11:32.563604+00:00",
+        "open_be": "22/04/2026 07:11 CEST",
+        "signals": [
+          "panel-FBTC-22/04/2026"
+        ],
+        "themes": [
+          "Crypto \u2014 The Insider"
+        ],
+        "confidence": 56,
         "check_4h": null,
         "check_24h": null
       }
