@@ -659,12 +659,42 @@
     "142ef7766d30",
     "50f5a0967fb1",
     "9ccbb090e34e",
-    "77f14e29e5d3"
+    "77f14e29e5d3",
+    "82f4d443f19d",
+    "2e75bc1cd954",
+    "e3d5a62e5f16",
+    "48d7e644fc45",
+    "438d59461106",
+    "087625a4eef0",
+    "e29d694cd8df",
+    "0fcd2f8c08b9",
+    "de89e07662b9",
+    "e21c28301081",
+    "702eec576d8d",
+    "7b218b87c640",
+    "4882d2f377ac",
+    "8f9218153038",
+    "7a7263cd4b1b",
+    "a21f23cbadda",
+    "f28690e14989",
+    "fcd9bbcba23f",
+    "78c9b4b54776",
+    "727f161f9bad",
+    "7fe3050b8db7",
+    "9020bd197afe",
+    "8e00fb21b23a",
+    "7e75549affc3",
+    "cddf0e43de10",
+    "d01cabf1597e",
+    "e838a0df7ef7",
+    "0d27da667fed",
+    "972e6ef2ad17",
+    "46f69650d4c9"
   ],
   "stats": {
     "Polymarket": {
-      "hits": 2,
-      "misses": 19,
+      "hits": 3,
+      "misses": 22,
       "pending": 0
     },
     "Lobbying": {
@@ -1554,42 +1584,6 @@
       "title": "Travelers Q1 Earnings Beat, Revenues Miss, Dividend Raised - Yahoo Finance"
     },
     {
-      "uid": "4c520b07135c",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BULLISH",
-      "date": "2026-04-22T05:11:34.132223+00:00",
-      "price_at_signal": 42.529,
-      "title": "Will Bitcoin reach $80,000 in April?"
-    },
-    {
-      "uid": "c641b5277521",
-      "source": "Polymarket",
-      "ticker": "XLE",
-      "direction": "BEARISH",
-      "date": "2026-04-22T05:11:34.344626+00:00",
-      "price_at_signal": 55.85,
-      "title": "US x Iran permanent peace deal by May 31, 2026?"
-    },
-    {
-      "uid": "31f95347b9e0",
-      "source": "Polymarket",
-      "ticker": "SPY",
-      "direction": "BEARISH",
-      "date": "2026-04-22T05:11:34.605391+00:00",
-      "price_at_signal": 704.08,
-      "title": "Will Eric Trump win the 2028 Republican presidential nomination?"
-    },
-    {
-      "uid": "fa249dc0078a",
-      "source": "Polymarket",
-      "ticker": "ITA",
-      "direction": "BEARISH",
-      "date": "2026-04-22T05:11:34.863601+00:00",
-      "price_at_signal": 223.09,
-      "title": "Will US withdraw from NATO by April 30?"
-    },
-    {
       "uid": "53b7cafa574c",
       "source": "Polymarket",
       "ticker": "XLE",
@@ -2200,1389 +2194,63 @@
       "date": "2026-04-23T03:31:18.206857+00:00",
       "price_at_signal": 435.26,
       "title": "Why gold prices are forecast to rise to new record highs - Goldman Sachs"
+    },
+    {
+      "uid": "82f4d443f19d",
+      "source": "Polymarket",
+      "ticker": "XLE",
+      "direction": "BEARISH",
+      "date": "2026-04-23T05:53:42.978896+00:00",
+      "price_at_signal": 56.54,
+      "title": "US x Iran permanent peace deal by May 31, 2026?"
+    },
+    {
+      "uid": "087625a4eef0",
+      "source": "Polymarket",
+      "ticker": "IBIT",
+      "direction": "BEARISH",
+      "date": "2026-04-23T05:53:43.107265+00:00",
+      "price_at_signal": 44.75,
+      "title": "Will the price of Bitcoin be above $80,000 on April 23?"
+    },
+    {
+      "uid": "e29d694cd8df",
+      "source": "Polymarket",
+      "ticker": "ITA",
+      "direction": "BEARISH",
+      "date": "2026-04-23T05:53:43.241368+00:00",
+      "price_at_signal": 219.15,
+      "title": "Trump announces end of military operations against Iran by April 24th?"
+    },
+    {
+      "uid": "7b218b87c640",
+      "source": "Truth Social",
+      "ticker": "TLT",
+      "direction": "WATCH",
+      "date": "2026-04-23T05:53:43.381428+00:00",
+      "price_at_signal": 86.74,
+      "title": "Trump: \"federal government must step up for election integrity: https://www.wash"
+    },
+    {
+      "uid": "9020bd197afe",
+      "source": "Google News RSS",
+      "ticker": "SPY",
+      "direction": "BULLISH",
+      "date": "2026-04-23T05:53:43.525688+00:00",
+      "price_at_signal": 711.21,
+      "title": "ARHS Arhaus posts Q4 2025 earnings beat and 8.5 percent revenue growth as shares"
+    },
+    {
+      "uid": "cddf0e43de10",
+      "source": "Google News RSS",
+      "ticker": "SOXX",
+      "direction": "BULLISH",
+      "date": "2026-04-23T05:53:43.658530+00:00",
+      "price_at_signal": 431.77,
+      "title": "Commodity Currencies Falter Amidst Global Uncertainty, Propelling Gold and Silve"
     }
   ],
   "history": [
-    {
-      "uid": "1cbbb2df839d",
-      "date": "22/04/2026 12:44 UTC",
-      "date_be": "22/04/2026 14:44 CEST",
-      "source": "Yahoo Finance RSS",
-      "type": "Yahoo S&P500 \u00b7 defense",
-      "direction": "BULLISH",
-      "title": "US Equity Futures Rise Pre-Bell After Trump Extends US-Iran Ceasefire",
-      "detail": "us equity futures were higher pre-bell wednesday after president donald trump extended the ceasefire",
-      "urgency": "LOW",
-      "keywords": "defense",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "XAR",
-          "SPDR S&P Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "DFEN",
-          "Direxion Daily Aerospace & Defense Bull 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://finance.yahoo.com/markets/stocks/articles/us-equity-futures-rise-pre-115826077.html?.tsrc=rss",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Yahoo S&P500: US Equity Futures Rise Pre-Bell After Trump Extends US-Iran Ceasefire. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Yahoo S&P500",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "11b2e8204c76",
-      "date": "22/04/2026 12:44 UTC",
-      "date_be": "22/04/2026 14:44 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 tech, macro",
-      "direction": "BULLISH",
-      "title": "Is Mawson (MIGI) stock outperforming the market | Q3 2025: Earnings Beat Estimates - Shared Trade Ideas - C\u1ed5ng th\u00f4ng tin",
-      "detail": "is mawson (migi) stock outperforming the market | q3 2025: earnings beat estimates - shared trade ideas &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
-      "urgency": "HIGH",
-      "keywords": "tech, macro",
-      "etfs": [
-        [
-          "SOXX",
-          "iShares Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SMH",
-          "VanEck Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SOXS",
-          "Direxion Daily Semiconductor Bear 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPLUdFNk5haUNNR3psX01fcnFoVTRzNVZkVDJydEVEbTJ0Yms5QjVuQTZRRk01WmFBWVVIX1VqS3JyeDVTLWZubUJNaml3NTdoZXlHRkg3eGNhYk1xZUJ3bVJMTWdacmhNRGJyWnJOb0Q2Wkc5LS1qemhHWlNETTBUTURZbEs2R2NzNm93SFZ5TDJkMUJtY0hlRHJpQ1lTUHlSeXg4dHIyV3hBck5TLWxyb0JKSF9xSndSek84S0ZB?oc=5",
-      "confidence": 49,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: Is Mawson (MIGI) stock outperforming the market | Q3 2025: Earnings Beat Estimat. 3 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 49,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "30b88e816726",
-      "date": "22/04/2026 12:44 UTC",
-      "date_be": "22/04/2026 14:44 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 tech, macro",
-      "direction": "BEARISH",
-      "title": "Ready (RCD) Stock: Market Confidence Review | Q4 2025: Earnings Underperform - Earnings Miss - C\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9",
-      "detail": "ready (rcd) stock: market confidence review | q4 2025: earnings underperform - earnings miss &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
-      "urgency": "MEDIUM",
-      "keywords": "tech, macro",
-      "etfs": [
-        [
-          "SOXX",
-          "iShares Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SMH",
-          "VanEck Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SOXS",
-          "Direxion Daily Semiconductor Bear 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPaThUVUhtMTZXcXItc3RneEctcUlsemJXRFJuQ2hsUlNjbTFtODNkZUhieGkyYWZfQ2ZHd0dERU8zdUxnOGZ3U1lHbEVSRzFrQUdXbGxTS3JqMzg3QUtPcjc0UmxEVUxKRDliTTFqMFFBUUNUc3NhRXhOZkg4OGhPTm1nZ2I1UF9EZWVrTGZNMXo5TTZsVWFNUnhXNUJNZFk5MzdKaWMwdngtdnIyaWdXVjhHaw?oc=5",
-      "confidence": 41,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: Ready (RCD) Stock: Market Confidence Review | Q4 2025: Earnings Underperform - E. 0 bullish / 2 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 41,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "c5be9184a0ce",
-      "date": "22/04/2026 12:44 UTC",
-      "date_be": "22/04/2026 14:44 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Energy \u00b7 energy, defense",
-      "direction": "BULLISH",
-      "title": "OPEC Weighs Shock Output Surge as Iran Conflict Rattles Oil Markets - Crude Oil Prices Today | OilPrice.com",
-      "detail": "opec weighs shock output surge as iran conflict rattles oil markets &nbsp;&nbsp; crude oil prices today | oilprice.com",
-      "urgency": "LOW",
-      "keywords": "energy, defense",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ],
-        [
-          "OIH",
-          "VanEck Oil Services ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNN05SM1o5d2hMa2Z5Q1cxNVJCYVR5Z3I4Nlk5VkhZcUJTY3Voamh0YjJQLUlSbFZRNU5TajdzS0RrRVZmby14WWVycktlM3kwZkFHSzBEeVJvV1RfNHhoazRreGViN3lXV3VrdDZHbmxCdmtVZFlqSkI3Wk56c29xM0RLYmgxWmw4SEpYbTVfOUVBVzE2dnhuNHBVVW9la2tDSThkbzFPZTBQN1EwTS1pQlBxRW9HbVRUQXRnY1JGNHTSAcYBQVVfeXFMUFNVZGNrTTZmMEJBaGU3WVJYZE1XYnBIcUxsZ3Z2dVRhdzRtNlQ2dlFBTW5pOHN2cElXRzBDWTJGWnhFTTMxT3ZLaGtJN1RoQUNDam13d1RmNjVid0hhTXBXYjgySjdlOEdiU2NpMll5QXhQa3lyZU9OZVVvc1JpT0hOVE9RYVhvb2lUeTlUNnZ0T3dwMTdlVlotVUR0dzhpY2dtQU9nOW1nWmI3YjI2U2ZSdXowUnY3VllzMHFkVXV6MW1lcnVR?oc=5",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Energy: OPEC Weighs Shock Output Surge as Iran Conflict Rattles Oil Markets - Crude Oil . 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Energy",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "f71096b2469b",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "CONVERGENCE",
-      "type": "3 sources \u00b7 score 22",
-      "direction": "BUY",
-      "title": "[3x CONVERGENCE] GLD \u2014 BUY",
-      "detail": "Score: 22pts across 3 independent sources: Polymarket, Truth Social, Google News RSS",
-      "urgency": "HIGH",
-      "keywords": "GLD",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://paulrendev.github.io/Stocazzo",
-      "confidence": 95,
-      "hit_rate": "No historical data yet for convergence signals",
-      "reasoning_stored": {
-        "why": "2/3 sources bullish on GLD",
-        "signal_type": "Multi-source convergence \u2014 strongest signal type",
-        "confidence": 95,
-        "source_weight": 5,
-        "hit_rate": "No historical data yet for convergence signals",
-        "caveat": "Convergence != certainty. Check macro context before acting.",
-        "breakdown": [
-          {
-            "source": "Polymarket",
-            "direction": "BEARISH",
-            "urgency": "HIGH",
-            "points": 10,
-            "reasoning": "weight=5 + urgency=3 + hit_rate=80%x2 = 10pts",
-            "signal": "US x Iran permanent peace deal by April 30, 2026?"
-          },
-          {
-            "source": "Truth Social",
-            "direction": "BEARISH",
-            "urgency": "MEDIUM",
-            "points": 8,
-            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
-            "signal": "Trump: \"how can the democrats not like how the u.s. supreme "
-          },
-          {
-            "source": "Google News RSS",
-            "direction": "BULLISH",
-            "urgency": "LOW",
-            "points": 4,
-            "reasoning": "weight=2 + urgency=1 + hit_rate=43%x2 = 4pts",
-            "signal": "EU parliament blocks US trade deal after Trump\u2019s tariff thre"
-          }
-        ]
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "ba6b3efecfcf",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "US x Iran permanent peace deal by April 30, 2026?",
-      "detail": "Market pricing NO at 80% | 24h vol: $2,099,201 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=80%, vol=$2,099,201",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-30-2026-925",
-      "confidence": 80,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 80% with $2,099,201 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 80,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "0eaa52a91e70",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will Donald Trump announce that the United States blockade of the Strait of Hormuz has been lifted by April 23, 2026?",
-      "detail": "Market pricing NO at 93% | 24h vol: $699,319 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=93%, vol=$699,319",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "TLT",
-          "iShares 20+ Year Treasury Bond ETF",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-donald-trump-announce-that-the-united-states-blockade-of-the-strait-of-hormuz-has-been-lifted-by-april-23-2026",
-      "confidence": 93,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 93% with $699,319 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 93,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "13bd6de0972e",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "US x Iran diplomatic meeting by April 30, 2026?",
-      "detail": "Market pricing YES at 63% | 24h vol: $516,084 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=63%, vol=$516,084",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263-225",
-      "confidence": 63,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 63% with $516,084 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 63,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "2eedffc0f21f",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will Bitcoin reach $80,000 in April?",
-      "detail": "Market pricing YES at 82% | 24h vol: $432,271 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=82%, vol=$432,271",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-bitcoin-reach-80k-in-april-2026",
-      "confidence": 82,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 82% with $432,271 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 82,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "dbe71730cc9c",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will the price of Bitcoin be above $78,000 on April 22?",
-      "detail": "Market pricing YES at 91% | 24h vol: $193,433 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=91%, vol=$193,433",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-78k-on-april-22",
-      "confidence": 91,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 91% with $193,433 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 91,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "420ea26d7426",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Bitcoin Up or Down - April 22, 9AM ET",
-      "detail": "Market pricing YES at 100% | 24h vol: $159,475 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$159,475",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-up-or-down-april-22-2026-9am-et",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $159,475 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "85cd7dd6362b",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "S&P 500 (SPX) Opens Up or Down on April 22?",
-      "detail": "Market pricing YES at 100% | 24h vol: $156,625 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$156,625",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "VOO",
-          "Vanguard S&P 500 ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/spx-opens-up-or-down-on-april-22-2026",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $156,625 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "c2724286d63d",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Bitcoin Up or Down - April 22, 8AM ET",
-      "detail": "Market pricing NO at 100% | 24h vol: $152,817 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$152,817",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-up-or-down-april-22-2026-8am-et",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 100% with $152,817 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "c7b792395402",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $110 in April?",
-      "detail": "Market pricing NO at 82% | 24h vol: $126,354 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=82%, vol=$126,354",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ],
-        [
-          "OIH",
-          "VanEck Oil Services ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-110-in-april",
-      "confidence": 82,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 82% with $126,354 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 82,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "4ef8d5c4e4b9",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 42m ago",
-      "direction": "BEARISH",
-      "title": "Trump: \"how can the democrats not like how the u.s. supreme court votes. the democrat ju\"",
-      "detail": "how can the democrats not like how the u.s. supreme court votes. the democrat justices stick together like glue, never failing to wander from the warped and perverse policies, ideas, and cases put bef",
-      "urgency": "MEDIUM",
-      "keywords": "tariff, war, import",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "TLT",
-          "iShares 20+ Year Treasury Bond ETF",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116448643198694972",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 42m ago. Matched: tariff, war, import",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "83260bed6915",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 10h 22m ago",
-      "direction": "BULLISH",
-      "title": "Trump: \"great job of explaining usa \"winning\" by jim hanson of \"middle east forum\" on je\"",
-      "detail": "great job of explaining usa \"winning\" by jim hanson of \"middle east forum\" on jesse watters primetime! | Posted: 10h 22m ago | Keywords: middle east",
-      "urgency": "MEDIUM",
-      "keywords": "middle east",
-      "etfs": [],
-      "link": "https://truthsocial.com/@realDonaldTrump/116446361617264811",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 10h 22m ago. Matched: middle east",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "b3e70a329ea1",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 10h 42m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"iran is collapsing financially! they want the strait of hormuz opened immediatel\"",
-      "detail": "iran is collapsing financially! they want the strait of hormuz opened immediately- starving for cash! losing 500 million dollars a day. military and police complaining that they are not getting paid. ",
-      "urgency": "MEDIUM",
-      "keywords": "iran, military",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "XAR",
-          "SPDR S&P Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116446283085364326",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 10h 42m ago. Matched: iran, military",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "10840d72a3f4",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 11h 5m ago",
-      "direction": "WATCH",
-      "title": "Trump: \"federal grand jury charges southern poverty law center with fraud over hate rati\"",
-      "detail": "federal grand jury charges southern poverty law center with fraud over hate ratings: https://justthenews.com/nation/crime/justice-department-launches-criminal-investigation-against-southern-poverty-la",
-      "urgency": "MEDIUM",
-      "keywords": "fed",
-      "etfs": [
-        [
-          "TLT",
-          "iShares 20+ Year Treasury Bond ETF",
-          "NASDAQ"
-        ],
-        [
-          "IEF",
-          "iShares 7-10 Year Treasury Bond ETF",
-          "NASDAQ"
-        ],
-        [
-          "SHY",
-          "iShares 1-3 Year Treasury Bond ETF",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116446193585410965",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 11h 5m ago. Matched: fed",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "4f6732b0be0c",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Truth Social",
-      "type": "Trump post \u00b7 12h 21m ago",
-      "direction": "BEARISH",
-      "title": "Trump: \"salena zito: trump has a way with pennsylvania. this interview shows why.https:/\"",
-      "detail": "salena zito: trump has a way with pennsylvania. this interview shows why.https://www.washingtonpost.com/opinions/2025/11/19/trump-interview-pennsylvania-steel-tariffs/ | Posted: 12h 21m ago | Keywords",
-      "urgency": "MEDIUM",
-      "keywords": "tariff",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "EEM",
-          "iShares MSCI Emerging Markets ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://truthsocial.com/@realDonaldTrump/116445894900653474",
-      "confidence": 60,
-      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-      "reasoning_stored": {
-        "why": "Trump posted market-relevant content 12h 21m ago. Matched: tariff",
-        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
-        "confidence": 60,
-        "source_weight": 4,
-        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
-        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "027a1d46519f",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Yahoo Finance RSS",
-      "type": "Yahoo S&P500 \u00b7 defense, macro",
-      "direction": "BULLISH",
-      "title": "Stock Market Today: Dow Gets Boost On Trump Ceasefire; GE Vernova Soars (Live Coverage)",
-      "detail": "stock market today: the dow jones index rose wednesday after trump extended the u.s.-iran ceasefire. tesla earnings are due late.",
-      "urgency": "LOW",
-      "keywords": "defense, macro",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "XAR",
-          "SPDR S&P Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "DFEN",
-          "Direxion Daily Aerospace & Defense Bull 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://finance.yahoo.com/m/7ab1524e-92c4-32c9-81b7-f9d2fd027cef/stock-market-today%3A-dow-gets.html?.tsrc=rss",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Yahoo S&P500: Stock Market Today: Dow Gets Boost On Trump Ceasefire; GE Vernova Soars (Live Co. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Yahoo S&P500",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "e0f80fae40a0",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Yahoo Finance RSS",
-      "type": "Yahoo S&P500 \u00b7 tech, macro",
-      "direction": "BULLISH",
-      "title": "Nvidia Partner Beats Views With Accelerating Earnings Growth, But AI Stock Falls.",
-      "detail": "vertiv earnings beat while the ai infrastructure firm and nvidia partner guided slightly higher on 2026. vertiv stock fell.",
-      "urgency": "LOW",
-      "keywords": "tech, macro",
-      "etfs": [
-        [
-          "SOXX",
-          "iShares Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SMH",
-          "VanEck Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SOXS",
-          "Direxion Daily Semiconductor Bear 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://finance.yahoo.com/m/b1d7f5d8-5d67-3bc1-8958-190450f31ac7/nvidia-partner-beats-views.html?.tsrc=rss",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Yahoo S&P500: Nvidia Partner Beats Views With Accelerating Earnings Growth, But AI Stock Falls. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Yahoo S&P500",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "7d5870c0627b",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Yahoo Finance RSS",
-      "type": "Yahoo S&P500 \u00b7 fed, tech",
-      "direction": "BULLISH",
-      "title": "IBKR Q3 2024 Earnings Call Transcript",
-      "detail": "this quarter, the long-awaited interest rate cut in the u.s. finally happened. for the industry as a whole, options contract volumes were up 12% over last year, reaching a new record and surpassing ev",
-      "urgency": "LOW",
-      "keywords": "fed, tech, macro",
-      "etfs": [],
-      "link": "https://www.fool.com/earnings/call-transcripts/2026/04/22/ibkr-q3-2024-earnings-call-transcript/?.tsrc=rss",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Yahoo S&P500: IBKR Q3 2024 Earnings Call Transcript. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Yahoo S&P500",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "ca76ce0f1d5a",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Yahoo Finance RSS",
-      "type": "Yahoo S&P500 \u00b7 defense",
-      "direction": "BULLISH",
-      "title": "Stocks rise after Trump extends Iran ceasefire. What's next for markets?",
-      "detail": "us stock futures (es=f, nq=f, ym=f) are moving higher wednesday morning after president trump extended the ceasefire agreement with iran as the two nations continue peace talks in pakistan. morning br",
-      "urgency": "LOW",
-      "keywords": "defense",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "XAR",
-          "SPDR S&P Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "DFEN",
-          "Direxion Daily Aerospace & Defense Bull 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://finance.yahoo.com/video/stocks-rise-after-trump-extends-iran-ceasefire-whats-next-for-markets-131807235.html?.tsrc=rss",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Yahoo S&P500: Stocks rise after Trump extends Iran ceasefire. What's next for markets?. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Yahoo S&P500",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "acd6d0607b23",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Yahoo Finance RSS",
-      "type": "Yahoo S&P500 \u00b7 defense",
-      "direction": "BULLISH",
-      "title": "Exchange-Traded Funds, Equity Futures Higher Pre-Bell Wednesday Amid Extended US-Iran Ceasefire",
-      "detail": "the broad market exchange-traded fund spdr s&amp;p 500 etf trust (spy) was up 0.6%, and the actively tra",
-      "urgency": "LOW",
-      "keywords": "defense",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "XAR",
-          "SPDR S&P Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "DFEN",
-          "Direxion Daily Aerospace & Defense Bull 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://finance.yahoo.com/markets/stocks/articles/exchange-traded-funds-equity-futures-131424366.html?.tsrc=rss",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Yahoo S&P500: Exchange-Traded Funds, Equity Futures Higher Pre-Bell Wednesday Amid Extended US. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Yahoo S&P500",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "f5c718534976",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 macro",
-      "direction": "BEARISH",
-      "title": "M/I HOMES INC (NYSE:MHO) Reports Mixed Q1 2026 Results with EPS Beat and Revenue Miss - ChartMill",
-      "detail": "m/i homes inc (nyse:mho) reports mixed q1 2026 results with eps beat and revenue miss &nbsp;&nbsp; chartmill",
-      "urgency": "LOW",
-      "keywords": "macro",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "QQQ",
-          "Invesco QQQ Trust",
-          "NASDAQ"
-        ],
-        [
-          "IWM",
-          "iShares Russell 2000 ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPN041dFpWaXc2T0Rrek1XNElWM0xzOG41TG9oejRMeTRPX2ttUGlYTEo2a1VMZWxfdHJ4NEgzVkptZlZWeDV3djlaVjIyNnBGNWxMYlRBd2s5VFNuT1BxZnZtRXBsY1ZYdEZSZktRUkVvVjVnNHhYNWc5UlhpRU1xOUJwdFNscHpWV3Nza2ZzWHB1a2o0a3IyRXhYVmhaR0hXSTh1S2JBbFJma29vM1ZFRG5CM0paMERoRThCTmNXV3I5dEwwaW1Bd2k0Vl8?oc=5",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: M/I HOMES INC (NYSE:MHO) Reports Mixed Q1 2026 Results with EPS Beat and Revenue. 0 bullish / 1 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "6189d1e9bd51",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 tech, macro",
-      "direction": "BULLISH",
-      "title": "Teck Resources (TECK) vs Competition | Q4 2025: Earnings Beat Estimates - Market Share - C\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh L\u00e0o",
-      "detail": "teck resources (teck) vs competition | q4 2025: earnings beat estimates - market share &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
-      "urgency": "MEDIUM",
-      "keywords": "tech, macro",
-      "etfs": [
-        [
-          "SOXX",
-          "iShares Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SMH",
-          "VanEck Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SOXS",
-          "Direxion Daily Semiconductor Bear 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONVU0a1ZDcVF2bGJpNnZJSVhkbnFzZG96ajdzaWNQT0YyVXNqeEZIXzNKeVF1Qm0zTHVvN3RJRV9uSkp1V0pqRWhFbkcwaDQ1WVdZeGFXQVRCWmJXekNLNkdmRW55cFE0ZFN6ZUJRQ2JfOWpDcTZ1Q3VyQWkwWTdSZnNGM0J2SDU4cmd4ZGZVSUxucWt6R2ZRZ3Fac3ZXTE9CaVVvc3lONmxTWGMzUlE?oc=5",
-      "confidence": 41,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: Teck Resources (TECK) vs Competition | Q4 2025: Earnings Beat Estimates - Market. 2 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 41,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "9522237df078",
-      "date": "22/04/2026 14:24 UTC",
-      "date_be": "22/04/2026 16:24 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Tariffs \u00b7 trade",
-      "direction": "BULLISH",
-      "title": "EU parliament blocks US trade deal after Trump\u2019s tariff threat - The Guardian",
-      "detail": "eu parliament blocks us trade deal after trump\u2019s tariff threat &nbsp;&nbsp; the guardian",
-      "urgency": "LOW",
-      "keywords": "trade",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "EEM",
-          "iShares MSCI Emerging Markets ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNUm1QV2FtelpCcTM5QTBBSnpTVXZTa0I3RzdSTndOZ1hPOXhhbWQyZUs4cTJKa05aMVh4UFJ2ZWpPblBwblNhUHFfMmctN1JpSXRVTWdzY3Jld0YzczdtM2dSME01a3QzZ09wMFRBbHQ2MUhKMjFUVVk3aUNrWGxOQTBHLWozTjhkY2tpSXZpWE4zdWVTdmVNVnRNYkFwNXZiU3c?oc=5",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Tariffs: EU parliament blocks US trade deal after Trump\u2019s tariff threat - The Guardian. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Tariffs",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "34f057201f12",
-      "date": "22/04/2026 15:49 UTC",
-      "date_be": "22/04/2026 17:49 CEST",
-      "source": "CONVERGENCE",
-      "type": "2 sources \u00b7 score 14",
-      "direction": "BUY",
-      "title": "[2x CONVERGENCE] IBIT \u2014 BUY",
-      "detail": "Score: 14pts across 2 independent sources: Polymarket, Yahoo Finance RSS",
-      "urgency": "HIGH",
-      "keywords": "IBIT",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://paulrendev.github.io/Stocazzo",
-      "confidence": 95,
-      "hit_rate": "No historical data yet for convergence signals",
-      "reasoning_stored": {
-        "why": "2/2 sources bullish on IBIT",
-        "signal_type": "Multi-source convergence \u2014 strongest signal type",
-        "confidence": 95,
-        "source_weight": 5,
-        "hit_rate": "No historical data yet for convergence signals",
-        "caveat": "Convergence != certainty. Check macro context before acting.",
-        "breakdown": [
-          {
-            "source": "Polymarket",
-            "direction": "BEARISH",
-            "urgency": "HIGH",
-            "points": 10,
-            "reasoning": "weight=5 + urgency=3 + hit_rate=80%x2 = 10pts",
-            "signal": "Will Bitcoin reach $85,000 in April?"
-          },
-          {
-            "source": "Yahoo Finance RSS",
-            "direction": "BULLISH",
-            "urgency": "LOW",
-            "points": 4,
-            "reasoning": "weight=2 + urgency=1 + hit_rate=42%x2 = 4pts",
-            "signal": "Bitcoin Jumps 3.6% To $78,400 As Ceasefire Extension Lifts M"
-          }
-        ]
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "26f78dac77dd",
-      "date": "22/04/2026 15:49 UTC",
-      "date_be": "22/04/2026 17:49 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will Bitcoin reach $85,000 in April?",
-      "detail": "Market pricing NO at 79% | 24h vol: $218,177 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=79%, vol=$218,177",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-bitcoin-reach-85k-in-april-2026",
-      "confidence": 79,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 79% with $218,177 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 79,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "ac2b98f76c8d",
-      "date": "22/04/2026 15:49 UTC",
-      "date_be": "22/04/2026 17:49 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will the price of Bitcoin be above $66,000 on April 23?",
-      "detail": "Market pricing YES at 100% | 24h vol: $141,327 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$141,327",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-above-66k-on-april-23",
-      "confidence": 100,
-      "hit_rate": "0% (1 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $141,327 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "0% (1 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "2f3a6855c2f0",
       "date": "22/04/2026 15:49 UTC",
@@ -11427,189 +10095,1339 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "81c229034038",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "CONVERGENCE",
+      "type": "4 sources \u00b7 score 26",
+      "direction": "BUY",
+      "title": "[4x CONVERGENCE] ITA \u2014 BUY",
+      "detail": "Score: 26pts across 4 independent sources: Polymarket, Truth Social, Yahoo Finance RSS, Google News RSS",
+      "urgency": "HIGH",
+      "keywords": "ITA",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 95,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "2/4 sources bullish on ITA",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 95,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Polymarket",
+            "direction": "BEARISH",
+            "urgency": "HIGH",
+            "points": 10,
+            "reasoning": "weight=5 + urgency=3 + hit_rate=80%x2 = 10pts",
+            "signal": "Trump announces end of military operations against Iran by A"
+          },
+          {
+            "source": "Truth Social",
+            "direction": "BEARISH",
+            "urgency": "MEDIUM",
+            "points": 8,
+            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
+            "signal": "Trump: \"dave bossie: at trump's war department, the arsenal "
+          },
+          {
+            "source": "Yahoo Finance RSS",
+            "direction": "BULLISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=42%x2 = 4pts",
+            "signal": "Chegg and Snap Stocks Trade Up, What You Need To Know"
+          },
+          {
+            "source": "Google News RSS",
+            "direction": "BULLISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=43%x2 = 4pts",
+            "signal": "It\u2019s crunch time for Kevin Warsh: Here\u2019s how he might begin "
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "82f4d443f19d",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran permanent peace deal by May 31, 2026?",
+      "detail": "Market pricing NO at 64% | 24h vol: $708,377 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=64%, vol=$708,377",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-may-31-2026-333",
+      "confidence": 64,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 64% with $708,377 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 64,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "2e75bc1cd954",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Iran agrees to surrender enriched uranium stockpile by April 30, 2026?",
+      "detail": "Market pricing NO at 90% | 24h vol: $568,443 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=90%, vol=$568,443",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/iran-agrees-to-surrender-enriched-uranium-stockpile-by-april-30-2026",
+      "confidence": 90,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 90% with $568,443 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 90,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "e3d5a62e5f16",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran diplomatic meeting by April 30, 2026?",
+      "detail": "Market pricing NO at 52% | 24h vol: $224,799 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=52%, vol=$224,799",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263-225",
+      "confidence": 52,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 52% with $224,799 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 52,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "48d7e644fc45",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "US x Iran permanent peace deal by June 30, 2026?",
+      "detail": "Market pricing YES at 58% | 24h vol: $156,237 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=58%, vol=$156,237",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-june-30-2026",
+      "confidence": 58,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 58% with $156,237 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 58,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "438d59461106",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $100 in April?",
+      "detail": "Market pricing YES at 62% | 24h vol: $134,360 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=62%, vol=$134,360",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ],
+        [
+          "OIH",
+          "VanEck Oil Services ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-100-in-april",
+      "confidence": 62,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 62% with $134,360 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 62,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "087625a4eef0",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will the price of Bitcoin be above $80,000 on April 23?",
+      "detail": "Market pricing NO at 96% | 24h vol: $112,021 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=96%, vol=$112,021",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-80k-on-april-23",
+      "confidence": 96,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 96% with $112,021 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 96,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "e29d694cd8df",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Trump announces end of military operations against Iran by April 24th?",
+      "detail": "Market pricing NO at 99% | 24h vol: $109,874 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=99%, vol=$109,874",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/trump-announces-end-of-military-operations-against-iran-by-april-24th",
+      "confidence": 99,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 99% with $109,874 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 99,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "0fcd2f8c08b9",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "Will the price of Bitcoin be above $76,000 on April 23?",
+      "detail": "Market pricing YES at 94% | 24h vol: $109,869 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=94%, vol=$109,869",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-76k-on-april-23",
+      "confidence": 94,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 94% with $109,869 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 94,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "de89e07662b9",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will Bitcoin dip to $77,000 on April 22?",
+      "detail": "Market pricing NO at 100% | 24h vol: $102,812 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$102,812",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/will-bitcoin-dip-to-77k-on-april-22",
+      "confidence": 100,
+      "hit_rate": "12% (25 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 100% with $102,812 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "12% (25 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "e21c28301081",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 2h 53m ago",
+      "direction": "BEARISH",
+      "title": "Trump: \"dave bossie: at trump's war department, the arsenal of freedom roars again: http\"",
+      "detail": "dave bossie: at trump's war department, the arsenal of freedom roars again: https://dailycaller.com/2026/03/14/opinion-at-trumps-war-department-the-arsenal-of-freedom-roars-again-dave-bossie/ | Posted",
+      "urgency": "MEDIUM",
+      "keywords": "war",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "TLT",
+          "iShares 20+ Year Treasury Bond ETF",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116451783206320481",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 2h 53m ago. Matched: war",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "702eec576d8d",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 2h 53m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"dave bossie: senate republicans must stand tall and pass save america act: https\"",
+      "detail": "dave bossie: senate republicans must stand tall and pass save america act: https://dailycaller.com/2026/02/14/opinion-senate-republicans-must-stand-tall-and-pass-the-save-america-act-dave-bosie-opinio",
+      "urgency": "LOW",
+      "keywords": "america",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116451781911005042",
+      "confidence": 35,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 2h 53m ago. Matched: america",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 35,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "7b218b87c640",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 2h 54m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"federal government must step up for election integrity: https://www.washingtonti\"",
+      "detail": "federal government must step up for election integrity: https://www.washingtontimes.com/news/2026/jan/27/federal-government-must-step-election-integrity/ | Posted: 2h 54m ago | Keywords: fed",
+      "urgency": "MEDIUM",
+      "keywords": "fed",
+      "etfs": [
+        [
+          "TLT",
+          "iShares 20+ Year Treasury Bond ETF",
+          "NASDAQ"
+        ],
+        [
+          "IEF",
+          "iShares 7-10 Year Treasury Bond ETF",
+          "NASDAQ"
+        ],
+        [
+          "SHY",
+          "iShares 1-3 Year Treasury Bond ETF",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://truthsocial.com/@realDonaldTrump/116451779493321892",
+      "confidence": 60,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 2h 54m ago. Matched: fed",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 60,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "8f9218153038",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense",
+      "direction": "BULLISH",
+      "title": "Chegg and Snap Stocks Trade Up, What You Need To Know",
+      "detail": "a number of stocks jumped in the afternoon session after president trump extended a ceasefire with iran.",
+      "urgency": "LOW",
+      "keywords": "defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/articles/chegg-snap-stocks-trade-know-044523761.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Chegg and Snap Stocks Trade Up, What You Need To Know. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "7a7263cd4b1b",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense, tech",
+      "direction": "BULLISH",
+      "title": "Dine Brands and First Watch Shares Are Soaring, What You Need To Know",
+      "detail": "a number of stocks jumped in the afternoon session after president trump extended a ceasefire with iran. the positive sentiment was reflected across the board, with the s&amp;p 500, dow jones industri",
+      "urgency": "LOW",
+      "keywords": "defense, tech",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/articles/dine-brands-first-watch-shares-043723205.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Dine Brands and First Watch Shares Are Soaring, What You Need To Know. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "a21f23cbadda",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense, tech",
+      "direction": "BULLISH",
+      "title": "Portillo's and Dutch Bros Stocks Trade Up, What You Need To Know",
+      "detail": "a number of stocks jumped in the afternoon session after president trump extended a ceasefire with iran. the positive sentiment was reflected across the board, with the s&amp;p 500, dow jones industri",
+      "urgency": "LOW",
+      "keywords": "defense, tech",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/articles/portillos-dutch-bros-stocks-trade-042923404.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Portillo's and Dutch Bros Stocks Trade Up, What You Need To Know. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "f28690e14989",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense",
+      "direction": "BULLISH",
+      "title": "The Cheesecake Factory (CAKE) Stock Trades Up, Here Is Why",
+      "detail": "shares of restaurant company cheesecake factory (nasdaq:cake) jumped 2.8% in the afternoon session after president trump extended a ceasefire with iran.",
+      "urgency": "LOW",
+      "keywords": "defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/articles/cheesecake-factory-cake-stock-trades-042123300.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: The Cheesecake Factory (CAKE) Stock Trades Up, Here Is Why. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "fcd9bbcba23f",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense",
+      "direction": "BULLISH",
+      "title": "CECO Environmental, Rumble, TD SYNNEX, Stride, and Lumen Shares Skyrocket, What You Need To Know",
+      "detail": "a number of stocks jumped in the afternoon session after president donald trump announced an indefinite extension of the ceasefire deal with iran, reducing geopolitical risk.",
+      "urgency": "LOW",
+      "keywords": "defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/articles/ceco-environmental-rumble-td-synnex-041323767.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: CECO Environmental, Rumble, TD SYNNEX, Stride, and Lumen Shares Skyrocket, What . 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "78c9b4b54776",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense, tech",
+      "direction": "BULLISH",
+      "title": "Scholastic, AMC Entertainment, Sirius XM, AMC Networks, and Matthews Shares Are Soaring, What You Need To Know",
+      "detail": "a number of stocks jumped in the afternoon session after president trump announced an indefinite extension to the ceasefire with iran.",
+      "urgency": "LOW",
+      "keywords": "defense, tech",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/articles/scholastic-amc-entertainment-sirius-xm-040523480.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Scholastic, AMC Entertainment, Sirius XM, AMC Networks, and Matthews Shares Are . 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "727f161f9bad",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 defense, tech",
+      "direction": "BULLISH",
+      "title": "Revolve and Carvana Shares Skyrocket, What You Need To Know",
+      "detail": "a number of stocks jumped in the morning session after president trump extended a ceasefire with iran. the positive sentiment was reflected across the board, with the s&amp;p 500, dow jones industrial",
+      "urgency": "LOW",
+      "keywords": "defense, tech",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/markets/stocks/articles/revolve-carvana-shares-skyrocket-know-035723694.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Revolve and Carvana Shares Skyrocket, What You Need To Know. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "7fe3050b8db7",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Fed \u00b7 defense, fed",
+      "direction": "BULLISH",
+      "title": "It\u2019s crunch time for Kevin Warsh: Here\u2019s how he might begin selling the idea of rate cuts. It requires some complex econ",
+      "detail": "it\u2019s crunch time for kevin warsh: here\u2019s how he might begin selling the idea of rate cuts. it requires some complex economic gymnastics &nbsp;&nbsp; fortune",
+      "urgency": "LOW",
+      "keywords": "defense, fed",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRDFMMl94TWNITHpCUi1pdWpEWE9mTXluR2VIR01HQndLeGFlMlVEeDVFUXI1bUNFTnc5SUo1ZDFzYk5Zd0YteVlOc3FuNVlobU1qRDB2OU9kTjN2NDFJeTA2X0pnSjVpdU1qTVBhWFhZa3VpeGlQZW0xNXJZSzJZRnI2R1hkQlUwU2VoczB2bmVxZw?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Fed: It\u2019s crunch time for Kevin Warsh: Here\u2019s how he might begin selling the idea of . 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Fed",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "9020bd197afe",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BULLISH",
+      "title": "ARHS Arhaus posts Q4 2025 earnings beat and 8.5 percent revenue growth as shares edge higher. - Certified Trade Ideas - ",
+      "detail": "arhs arhaus posts q4 2025 earnings beat and 8.5 percent revenue growth as shares edge higher. - certified trade ideas &nbsp;&nbsp; x\u00e3 v\u0129nh c\u00f4ng",
+      "urgency": "LOW",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOejlYXzd4SlJPWnRGSlZlb2ljNURQa2NUWGc2WlhKZXdNdFAycDJRT2s5Y3dJcWFaUjhDOG9lZ2tILUlzNHNxZmhEYnZuR1RZMGlPZGZkdFlFSlloTE5EeEp1OUFyZUdGRWlPQjdJQmJPa1F1dVBBbW9IVlFlb1o0QjktMlU1ZGFVbGRxMjVoNEFMY0lzT3JURnVoLVd3cVFkSTdLVGFKV0JyWnFpdnk1Vkd0Y1FfN3JjaUtaN3dYRHlWN0hKaUNxdEdHeGVRWDRrZHlnLXlnT0Q?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: ARHS Arhaus posts Q4 2025 earnings beat and 8.5 percent revenue growth as shares. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "8e00fb21b23a",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BULLISH",
+      "title": "Is Valvoline (VVV) stock vulnerable to market downturns | Q1 2026: Earnings Beat Estimates - Social Trading Insights - C",
+      "detail": "is valvoline (vvv) stock vulnerable to market downturns | q1 2026: earnings beat estimates - social trading insights &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh t\u00e2y ninh",
+      "urgency": "MEDIUM",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOdVZkMXhwNEJoWXpRWEVaalBfZFFDMWd6UE04UVduZWZZSGFQY2Z4U1ZEdW9adnRjN3gwUnE0WXB5T1hOLVFtcWVvaldwdXIyQjhDM1dqamFFSHQ1UElXb0lIbFM4a2xnOEdVNnlXRVVyOENFSGNkdUFDUHRoc1RKTGQ2dnVTZjN3cjR5cXMtUE5jOW90UmItRmM2YWRWVFhKYnMtWHpFTGZ3RTBNSkp3bkJBY0QxaW43c0ZlNDBaYXJya18wMmRuXw?oc=5",
+      "confidence": 41,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Is Valvoline (VVV) stock vulnerable to market downturns | Q1 2026: Earnings Beat. 2 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 41,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "7e75549affc3",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Crypto \u00b7 crypto",
+      "direction": "BULLISH",
+      "title": "Crypto ETFs set to flood US market as SEC streamlines approvals - Yahoo Finance",
+      "detail": "crypto etfs set to flood us market as sec streamlines approvals &nbsp;&nbsp; yahoo finance",
+      "urgency": "LOW",
+      "keywords": "crypto",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "GBTC",
+          "Grayscale Bitcoin Trust",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5Qd2pwZ2hwejF5STBWVVpqLWxCcUFpRFNEa1QxTmY5b1VoaEpLaGRrcUlqd0c1TUVpVmtvU0JNVXdNb3ZsRjMtNDkyQkJKdnQ2VTUzZXFBLXJqUWJvQ2ZwTDFtMmFCQzBlZ2pZSDdJS3dxaWEtdklVZG5R?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Crypto: Crypto ETFs set to flood US market as SEC streamlines approvals - Yahoo Finance. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Crypto",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "cddf0e43de10",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Macro \u00b7 tech, commodities",
+      "direction": "BULLISH",
+      "title": "Commodity Currencies Falter Amidst Global Uncertainty, Propelling Gold and Silver to Record Highs - FinancialContent",
+      "detail": "commodity currencies falter amidst global uncertainty, propelling gold and silver to record highs &nbsp;&nbsp; financialcontent",
+      "urgency": "LOW",
+      "keywords": "tech, commodities",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxNalNMT1BsQk8yamZ1S2tlelo2cHA1OU9MTU9uVDNNV2MxWVBKTi1RRllUaURESVRiWGYzOHNuNE9WNlR0OVZXQUxvWGRVcEtCRXhsQ1UyQ0N4bGEtVm1tV1JwY3BOSGV2al84VmprcHMxcWVoZFhVVHhVV1puOE1RVW9Ld2FBQUtUdUJMV2lLRjJPOHJmZ3M1a3pfZWx5dmJiUEc0UW5JTXhaWFhpUnFIVkkyN1VsY1BjN2tnemJJMmFUdkFoTFRyWFhzSXk4VjJBNmw3MlIyWTJBR2Z2cmlsQ0E0Wk1xOFotTWpTTnAwV3pEYVhvRXVlOE1nNkhiU1RxVkE?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Macro: Commodity Currencies Falter Amidst Global Uncertainty, Propelling Gold and Silve. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Macro",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "d01cabf1597e",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 defense, fed",
+      "direction": "BULLISH",
+      "title": "Iran War May Lead To More Interest Rate Cuts, Fed Warns - Forbes",
+      "detail": "iran war may lead to more interest rate cuts, fed warns &nbsp;&nbsp; forbes",
+      "urgency": "LOW",
+      "keywords": "defense, fed",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMTc3N1U5V1UxclJyNy1yTlR3d0xsVTVpV19YdmVfaGgwd2xTOS0ydEQ3b3dJSDJvZnFKV3p4YjNBWFRmUkZuNUU2NlhpSVBsOVdWTnJpM2wySmJyTHdEbm94MTdnSldyX2RPdWZ3UlNlMkZ1LXlWMFQzMkJYNVlDRTIxZnYwX25VUXYzWjVwNzhrVEVKN2pRM0dFcXNmRlpDN0ZUUllOejRXWG5Hay03cWMwMjh6aTVYV3c?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Iran War May Lead To More Interest Rate Cuts, Fed Warns - Forbes. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "e838a0df7ef7",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 fed",
+      "direction": "BEARISH",
+      "title": "Fed minutes show growing openness to rate hikes at March meeting - Reuters",
+      "detail": "fed minutes show growing openness to rate hikes at march meeting &nbsp;&nbsp; reuters",
+      "urgency": "LOW",
+      "keywords": "fed",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVGtGaEhfZ2hEbzVRZXdLOXpObW5GWWF6d0xVSk5fVmNkQUg5WThtU3dWcEd3c2pTVXk0eF9Da1pTWU9LZkNXUlhUMW1RSUZya2NVYW1sRkh3N3o0WWN6VjhqZHQzY1lmbzZaQWwtZmtScXg3VVdvUk1pTjlPcy1tUkRPb3JmZDlNekExSmVBUVh4OFFXTTROaWx6WU1oMDhObmh1Q2pfYUE?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Fed minutes show growing openness to rate hikes at March meeting - Reuters. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "0d27da667fed",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 fed, commodities",
+      "direction": "BEARISH",
+      "title": "Goldman Sachs delivers blunt message on interest rate hike - thestreet.com",
+      "detail": "goldman sachs delivers blunt message on interest rate hike &nbsp;&nbsp; thestreet.com",
+      "urgency": "LOW",
+      "keywords": "fed, commodities, finance",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQMUhoTGVFN2lUdkxteUtKMnd3Qk9NV3d5cm1fUzRVcXozTHRxbkhBX1ltOEYtNG5aN2FBU0lpdEVxWG5ibFpjMlNTbHdBXzZxb21jd1pXMkljWGZJR3BpemFpWUhpMEpaQ3JJQ1EtLUVBenVKaXVoS0ZLcHNIYlJXWm5oNFIwYUVzZ0tzUlRlYklOZw?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Goldman Sachs delivers blunt message on interest rate hike - thestreet.com. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "972e6ef2ad17",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 fed, macro",
+      "direction": "BEARISH",
+      "title": "Markets now see the Fed's next move as a potential rate hike as inflation fears mount - CNBC",
+      "detail": "markets now see the fed's next move as a potential rate hike as inflation fears mount &nbsp;&nbsp; cnbc",
+      "urgency": "LOW",
+      "keywords": "fed, macro",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVGdLbTAzRjdrQ0lHT256dDg1eF9ydkF6RURjUzdqdDdrVjJ5MXlRWW4xdjQyb1RqQmcya3VfLUctTnNfSW83RWY2MVFFNE1hZlBVV3QxdHNGeTNnVllQeUhyV3l1bjcwenVqb3k2SDFhQy1kZ0JCMDN6c21sX0hGZHRHdUZ5YnJWQ1V3bnFpYUFreTBsN3FjYWxoeTBOeUx3NWtJeVF1U1M4YlJJM0c4UGNTQU90THIyWDBkSjVjb9IBxAFBVV95cUxOWVp6WDNrSWNwVk1Ya3RSQTJhV0l2dzY3c2JPc3Nhbnk1ZEVGNkVScWxNQTJUNEpram9CekZ4MW05OExmUUlaWnBucG1xTnVkaU1GN1hIVm84RlVWZ1k1bXlFSDljdzhqUUNQZzUxUDk0UERhTk83NjJMMHdicTRBaTBxdk5VejlYS1ZRZzAtbWVYcE44UkJYcU1iT2dSbHB1eTdFeWJmdURCcU1hcFFVa2dWMEJxWlpPTHVkS0FPRHdodllH?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Markets now see the Fed's next move as a potential rate hike as inflation fears . 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "46f69650d4c9",
+      "date": "23/04/2026 05:53 UTC",
+      "date_be": "23/04/2026 07:53 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 fed",
+      "direction": "BEARISH",
+      "title": "Federal Reserve officials discussed interest rate hike scenarios at their last meeting - NBC News",
+      "detail": "federal reserve officials discussed interest rate hike scenarios at their last meeting &nbsp;&nbsp; nbc news",
+      "urgency": "LOW",
+      "keywords": "fed",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQY2pYLXcxUFpnOHB0Sm90aTg2V3pMQ0RlY2JqRWdKclRIUm1jcVZCdUFxU1ZLX2VfYmpxTlJYQUtaWmt1SnNLel9XckN4dk1HaHMtQk5Pek0tOWpZaVFXZXFPNkk1Q2JsTUNSQmtNcUZ2eE8wZ1QxN1pBNTZmZEJfUFc3UWtSME9EXzNEZw?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Federal Reserve officials discussed interest rate hike scenarios at their last m. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
-    {
-      "uid": "7af84954036e",
-      "theme": "risk_off",
-      "action": "REDUCE / HEDGE",
-      "direction": "SELL / REDUCE",
-      "ticker": "GLD",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-16T19:37:50.780645+00:00",
-      "price_at_signal": 440.04,
-      "check_4h": "2026-04-17T06:39:17.715581+00:00",
-      "check_24h": "2026-04-17T19:54:13.735807+00:00",
-      "check_5d": "2026-04-21T19:54:53.824471+00:00",
-      "result_4h": {
-        "pct": 0.01,
-        "hit": false,
-        "price": 440.08
-      },
-      "result_24h": {
-        "pct": 1.37,
-        "hit": false,
-        "price": 446.07
-      },
-      "result_5d": {
-        "pct": -2.36,
-        "hit": true,
-        "price": 429.64
-      }
-    },
-    {
-      "uid": "62a801ca82ff",
-      "theme": "commodities",
-      "action": "REDUCE / HEDGE",
-      "direction": "SELL / REDUCE",
-      "ticker": "GLD",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-16T19:37:50.923785+00:00",
-      "price_at_signal": 440.04,
-      "check_4h": "2026-04-17T06:39:17.840031+00:00",
-      "check_24h": "2026-04-17T19:54:13.940771+00:00",
-      "check_5d": "2026-04-21T19:54:54.045945+00:00",
-      "result_4h": {
-        "pct": 0.01,
-        "hit": false,
-        "price": 440.08
-      },
-      "result_24h": {
-        "pct": 1.37,
-        "hit": false,
-        "price": 446.07
-      },
-      "result_5d": {
-        "pct": -2.36,
-        "hit": true,
-        "price": 429.64
-      }
-    },
-    {
-      "uid": "303f6e0cd309",
-      "theme": "fed",
-      "action": "REDUCE / HEDGE",
-      "direction": "SELL / REDUCE",
-      "ticker": "TLT",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-16T19:37:51.062197+00:00",
-      "price_at_signal": 86.37,
-      "check_4h": "2026-04-17T06:39:17.972922+00:00",
-      "check_24h": "2026-04-17T19:54:14.150242+00:00",
-      "check_5d": "2026-04-21T19:54:54.269672+00:00",
-      "result_4h": {
-        "pct": -0.1,
-        "hit": false,
-        "price": 86.28
-      },
-      "result_24h": {
-        "pct": 0.81,
-        "hit": false,
-        "price": 87.07
-      },
-      "result_5d": {
-        "pct": 0.32,
-        "hit": false,
-        "price": 86.65
-      }
-    },
-    {
-      "uid": "d753384e86b2",
-      "theme": "defense",
-      "action": "WATCH",
-      "direction": "WATCH",
-      "ticker": "ITA",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-16T20:46:25.895982+00:00",
-      "price_at_signal": 228.99,
-      "check_4h": "2026-04-17T06:39:18.108477+00:00",
-      "check_24h": "2026-04-17T21:40:07.859360+00:00",
-      "check_5d": "2026-04-21T20:50:29.992485+00:00",
-      "result_4h": {
-        "pct": 0.02,
-        "hit": null,
-        "price": 229.03
-      },
-      "result_24h": {
-        "pct": 1.29,
-        "hit": null,
-        "price": 231.94
-      },
-      "result_5d": {
-        "pct": -2.58,
-        "hit": null,
-        "price": 223.09
-      }
-    },
-    {
-      "uid": "fb279d84234f",
-      "theme": "fed",
-      "action": "WATCH",
-      "direction": "WATCH",
-      "ticker": "TLT",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-16T20:46:26.066740+00:00",
-      "price_at_signal": 86.29,
-      "check_4h": "2026-04-17T06:39:18.245211+00:00",
-      "check_24h": "2026-04-17T21:40:08.011414+00:00",
-      "check_5d": "2026-04-21T20:50:30.215256+00:00",
-      "result_4h": {
-        "pct": -0.01,
-        "hit": null,
-        "price": 86.28
-      },
-      "result_24h": {
-        "pct": 0.9,
-        "hit": null,
-        "price": 87.07
-      },
-      "result_5d": {
-        "pct": 0.32,
-        "hit": null,
-        "price": 86.57
-      }
-    },
-    {
-      "uid": "9ac59b99a817",
-      "theme": "trade",
-      "action": "WATCH",
-      "direction": "WATCH",
-      "ticker": "IWDA",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-16T20:46:26.279200+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
     {
       "uid": "84488b02eb38",
       "theme": "risk_on",
@@ -15904,10 +15722,14 @@
       ],
       "date": "2026-04-22T21:09:41.992496+00:00",
       "price_at_signal": 435.26,
-      "check_4h": null,
+      "check_4h": "2026-04-23T05:53:00.266090+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.01,
+        "hit": false,
+        "price": 435.31799
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15925,10 +15747,14 @@
       ],
       "date": "2026-04-22T21:09:42.095139+00:00",
       "price_at_signal": 56.54,
-      "check_4h": null,
+      "check_4h": "2026-04-23T05:53:00.437374+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.0,
+        "hit": false,
+        "price": 56.54
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15947,10 +15773,14 @@
       ],
       "date": "2026-04-22T21:09:42.210774+00:00",
       "price_at_signal": 711.21,
-      "check_4h": null,
+      "check_4h": "2026-04-23T05:53:00.612203+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.0,
+        "hit": false,
+        "price": 711.21002
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15968,10 +15798,14 @@
       ],
       "date": "2026-04-22T21:09:42.329961+00:00",
       "price_at_signal": 435.26,
-      "check_4h": null,
+      "check_4h": "2026-04-23T05:53:00.793346+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.01,
+        "hit": false,
+        "price": 435.31799
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15988,10 +15822,14 @@
       ],
       "date": "2026-04-22T21:09:42.465279+00:00",
       "price_at_signal": 44.75,
-      "check_4h": null,
+      "check_4h": "2026-04-23T05:53:00.963788+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.07,
+        "hit": false,
+        "price": 44.72
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16009,10 +15847,14 @@
       ],
       "date": "2026-04-22T22:04:52.800274+00:00",
       "price_at_signal": 435.26,
-      "check_4h": null,
+      "check_4h": "2026-04-23T05:53:01.137858+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.01,
+        "hit": false,
+        "price": 435.31799
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16031,10 +15873,14 @@
       ],
       "date": "2026-04-22T22:04:53.003491+00:00",
       "price_at_signal": 711.21,
-      "check_4h": null,
+      "check_4h": "2026-04-23T05:53:01.310054+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.0,
+        "hit": false,
+        "price": 711.21002
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16053,10 +15899,14 @@
       ],
       "date": "2026-04-22T22:04:53.255344+00:00",
       "price_at_signal": 655.11,
-      "check_4h": null,
+      "check_4h": "2026-04-23T05:53:01.470562+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.0,
+        "hit": false,
+        "price": 655.080017
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16302,16 +16152,152 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "74fcf9722107",
+      "theme": "defense",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "ITA",
+      "score": 50,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Truth Social",
+        "Yahoo Finance RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T05:53:41.868902+00:00",
+      "price_at_signal": 219.15,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "fb1b29c8cdd2",
+      "theme": "commodities",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 48,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Truth Social",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T05:53:42.056467+00:00",
+      "price_at_signal": 435.26,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "9a83abdeea88",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 40,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket",
+        "Yahoo Finance RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T05:53:42.305727+00:00",
+      "price_at_signal": 711.21,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "81fb5b2a871f",
+      "theme": "energy",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "XLE",
+      "score": 36,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Polymarket"
+      ],
+      "date": "2026-04-23T05:53:42.492902+00:00",
+      "price_at_signal": 56.54,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "64cce46d8d36",
+      "theme": "tech",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "QQQ",
+      "score": 31,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "Truth Social",
+        "Yahoo Finance RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T05:53:42.703073+00:00",
+      "price_at_signal": 655.11,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "ccf8953a2fd3",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 29,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "Truth Social",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T05:53:42.843498+00:00",
+      "price_at_signal": 435.26,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 9,
-    "misses": 143,
+    "misses": 151,
     "watches": 58,
     "by_window": {
       "4h": {
         "hits": 1,
-        "misses": 96,
+        "misses": 104,
         "pnl": 41.42999999999999
       },
       "24h": {
@@ -16328,7 +16314,7 @@
     "by_theme": {
       "risk_off": {
         "hits": 4,
-        "misses": 24,
+        "misses": 26,
         "pnl": -61.57
       },
       "defense": {
@@ -16338,7 +16324,7 @@
       },
       "tech": {
         "hits": 0,
-        "misses": 30,
+        "misses": 31,
         "pnl": 16.32
       },
       "macro": {
@@ -16348,21 +16334,21 @@
       },
       "energy": {
         "hits": 0,
-        "misses": 12
+        "misses": 13
       },
       "risk_on": {
         "hits": 0,
-        "misses": 35,
+        "misses": 37,
         "pnl": 61.71
       },
       "crypto": {
         "hits": 3,
-        "misses": 3,
+        "misses": 4,
         "pnl": 66.05
       },
       "commodities": {
         "hits": 1,
-        "misses": 12,
+        "misses": 13,
         "pnl": -14.95
       },
       "fed": {
@@ -17310,39 +17296,39 @@
         "check_4h": null,
         "check_24h": null
       },
-      "XLE": {
-        "side": "LONG",
-        "ticker": "XLE",
-        "shares": 44.216484,
-        "avg_entry": 56.54,
-        "invested_eur": 2500.0,
-        "open_date": "2026-04-23T03:31:14.588547+00:00",
-        "open_be": "23/04/2026 05:31 CEST",
-        "signals": [
-          "panel-XLE-23/04/2026"
-        ],
-        "themes": [
-          "Energy \u2014 The Trump Whisperer + The Macro Man"
-        ],
-        "confidence": 62,
-        "check_4h": null,
-        "check_24h": null
-      },
       "GLD": {
-        "side": "LONG",
+        "side": "SHORT",
         "ticker": "GLD",
         "shares": 5.743693,
         "avg_entry": 435.26,
         "invested_eur": 2500.0,
-        "open_date": "2026-04-23T03:31:14.946180+00:00",
-        "open_be": "23/04/2026 05:31 CEST",
+        "open_date": "2026-04-23T05:53:41.491683+00:00",
+        "open_be": "23/04/2026 07:53 CEST",
         "signals": [
           "panel-GLD-23/04/2026"
         ],
         "themes": [
-          "Gold \u2014 The Trump Whisperer + The Macro Man"
+          "Gold \u2014 The Insider + The Trump Whisperer"
         ],
-        "confidence": 62,
+        "confidence": 74,
+        "check_4h": null,
+        "check_24h": null
+      },
+      "XLE": {
+        "side": "SHORT",
+        "ticker": "XLE",
+        "shares": 44.216484,
+        "avg_entry": 56.54,
+        "invested_eur": 2500.0,
+        "open_date": "2026-04-23T05:53:41.722978+00:00",
+        "open_be": "23/04/2026 07:53 CEST",
+        "signals": [
+          "panel-XLE-23/04/2026"
+        ],
+        "themes": [
+          "Energy \u2014 The Insider + The Trump Whisperer"
+        ],
+        "confidence": 74,
         "check_4h": null,
         "check_24h": null
       }
@@ -17813,6 +17799,52 @@
         "themes": [
           "Gold \u2014 The Insider + The Trump Whisperer",
           "Gold \u2014 The Insider"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
+      },
+      {
+        "ticker": "GLD",
+        "side": "LONG",
+        "shares": 5.743693,
+        "avg_entry": 435.26,
+        "close_price": 435.26,
+        "invested_eur": 2500.0,
+        "pnl_eur": 0.0,
+        "pnl_pct": 0.0,
+        "open_date": "2026-04-23T03:31:14.946180+00:00",
+        "open_be": "23/04/2026 05:31 CEST",
+        "close_date": "2026-04-23T05:53:41.491645+00:00",
+        "close_be": "23/04/2026 07:53 CEST",
+        "hold_hours": 2.4,
+        "signals": [
+          "panel-GLD-23/04/2026"
+        ],
+        "themes": [
+          "Gold \u2014 The Trump Whisperer + The Macro Man"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
+      },
+      {
+        "ticker": "XLE",
+        "side": "LONG",
+        "shares": 44.216484,
+        "avg_entry": 56.54,
+        "close_price": 56.54,
+        "invested_eur": 2500.0,
+        "pnl_eur": 0.0,
+        "pnl_pct": 0.0,
+        "open_date": "2026-04-23T03:31:14.588547+00:00",
+        "open_be": "23/04/2026 05:31 CEST",
+        "close_date": "2026-04-23T05:53:41.722945+00:00",
+        "close_be": "23/04/2026 07:53 CEST",
+        "hold_hours": 2.4,
+        "signals": [
+          "panel-XLE-23/04/2026"
+        ],
+        "themes": [
+          "Energy \u2014 The Trump Whisperer + The Macro Man"
         ],
         "close_reason": "opposite_signal",
         "hit": false
