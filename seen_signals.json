@@ -762,7 +762,16 @@
     "498be85a8420",
     "a658feb85ce9",
     "b7b9c8525e2e",
-    "f45c08d5220c"
+    "f45c08d5220c",
+    "b4c4faf737bf",
+    "718d3db07826",
+    "860902b5c9df",
+    "998daca0721c",
+    "fc6fb247df22",
+    "53a482da7d08",
+    "ad050aee8666",
+    "51ffcacc308b",
+    "1d764c6c83db"
   ],
   "stats": {
     "Polymarket": {
@@ -2438,469 +2447,54 @@
       "date": "2026-04-23T15:59:52.067581+00:00",
       "price_at_signal": 56.65,
       "title": "PEGA (Pegasystems Inc.) delivers narrow Q4 2025 earnings beat, with shares risin"
+    },
+    {
+      "uid": "b4c4faf737bf",
+      "source": "Polymarket",
+      "ticker": "IBIT",
+      "direction": "BULLISH",
+      "date": "2026-04-23T17:28:00.397892+00:00",
+      "price_at_signal": 44.13,
+      "title": "Will the price of Bitcoin be above $78,000 on April 23?"
+    },
+    {
+      "uid": "718d3db07826",
+      "source": "Polymarket",
+      "ticker": "XLE",
+      "direction": "BEARISH",
+      "date": "2026-04-23T17:28:00.698458+00:00",
+      "price_at_signal": 56.87,
+      "title": "Iran leadership change by April 30?"
+    },
+    {
+      "uid": "998daca0721c",
+      "source": "Polymarket",
+      "ticker": "SPY",
+      "direction": "BEARISH",
+      "date": "2026-04-23T17:28:01.044940+00:00",
+      "price_at_signal": 707.12,
+      "title": "Trump out as President by June 30?"
+    },
+    {
+      "uid": "ad050aee8666",
+      "source": "Yahoo Finance RSS",
+      "ticker": "SOXX",
+      "direction": "BEARISH",
+      "date": "2026-04-23T17:28:01.430937+00:00",
+      "price_at_signal": 440.73,
+      "title": "These Stocks Are Today\u2019s Movers: Tesla, IBM, Oklo, ServiceNow, United Rentals, a"
+    },
+    {
+      "uid": "1d764c6c83db",
+      "source": "Google News RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-23T17:28:02.865072+00:00",
+      "price_at_signal": 217.12,
+      "title": "What is the outlook for Phunware (PHUN) stock this quarter | Q4 2025: Earnings B"
     }
   ],
   "history": [
-    {
-      "uid": "c28ad283463d",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Iran x Israel/US conflict ends by May 15?",
-      "detail": "Market pricing YES at 100% | 24h vol: $3,310,266 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$3,310,266",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-may-15-562-372-916-721-496",
-      "confidence": 100,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $3,310,266 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "35fdd1f44915",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "US x Iran ceasefire extended by April 22, 2026?",
-      "detail": "Market pricing NO at 74% | 24h vol: $3,047,241 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=74%, vol=$3,047,241",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-ceasefire-extended-by-april-22-2026",
-      "confidence": 74,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 74% with $3,047,241 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 74,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "7bc0aa4df5b1",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Iran x Israel/US conflict ends by April 7?",
-      "detail": "Market pricing YES at 100% | 24h vol: $3,010,726 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$3,010,726",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-april-7-346",
-      "confidence": 100,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $3,010,726 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "8dcaa47002c3",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "US x Iran permanent peace deal by April 22, 2026?",
-      "detail": "Market pricing NO at 100% | 24h vol: $2,203,663 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$2,203,663",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-22-2026",
-      "confidence": 100,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 100% with $2,203,663 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "79fee46093cc",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Iran x Israel/US conflict ends by April 15?",
-      "detail": "Market pricing YES at 100% | 24h vol: $1,948,512 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$1,948,512",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-april-15-618-586-982",
-      "confidence": 100,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $1,948,512 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "bf26aa618ce2",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will the Iranian regime fall by April 30?",
-      "detail": "Market pricing NO at 99% | 24h vol: $1,573,333 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=99%, vol=$1,573,333",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-the-iranian-regime-fall-by-april-30",
-      "confidence": 99,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 99% with $1,573,333 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 99,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "a3ed1ccfe55e",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "US x Iran permanent peace deal by April 30, 2026?",
-      "detail": "Market pricing NO at 84% | 24h vol: $1,386,205 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=84%, vol=$1,386,205",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-april-30-2026-925",
-      "confidence": 84,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 84% with $1,386,205 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 84,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "091a02d4ee50",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "U.S. forces seize another oil tanker by April 30?",
-      "detail": "Market pricing YES at 100% | 24h vol: $1,053,117 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$1,053,117",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ],
-        [
-          "OIH",
-          "VanEck Oil Services ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-forces-seize-another-oil-tanker-by-april-30",
-      "confidence": 100,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $1,053,117 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "04dd9c2ef312",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will the Fed decrease interest rates by 25 bps after the April 2026 meeting?",
-      "detail": "Market pricing NO at 100% | 24h vol: $991,190 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$991,190",
-      "etfs": [
-        [
-          "TLT",
-          "iShares 20+ Year Treasury Bond ETF",
-          "NASDAQ"
-        ],
-        [
-          "IEF",
-          "iShares 7-10 Year Treasury Bond ETF",
-          "NASDAQ"
-        ],
-        [
-          "SHY",
-          "iShares 1-3 Year Treasury Bond ETF",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-the-fed-decrease-interest-rates-by-25-bps-after-the-april-2026-meeting",
-      "confidence": 100,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 100% with $991,190 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "8b3e27421713",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Iran x Israel/US conflict ends by June 30?",
-      "detail": "Market pricing YES at 100% | 24h vol: $983,735 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$983,735",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-june-30-813-454-138-725",
-      "confidence": 100,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $983,735 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "00c50c57894b",
       "date": "23/04/2026 03:31 UTC",
@@ -11614,130 +11208,465 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "5818e8d08668",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 9",
+      "direction": "MIXED",
+      "title": "[2x CONVERGENCE] TECH \u2014 MIXED",
+      "detail": "Score: 9pts across 2 independent sources: Yahoo Finance RSS, Google News RSS",
+      "urgency": "MEDIUM",
+      "keywords": "TECH",
+      "etfs": [
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "XLK",
+          "Technology Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "VGT",
+          "Vanguard Information Technology ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 72,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "Sources split on TECH \u2014 no clear direction",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 72,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Yahoo Finance RSS",
+            "direction": "BEARISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=42%x2 = 4pts",
+            "signal": "These Stocks Are Today\u2019s Movers: Tesla, IBM, Oklo, ServiceNo"
+          },
+          {
+            "source": "Google News RSS",
+            "direction": "BULLISH",
+            "urgency": "MEDIUM",
+            "points": 5,
+            "reasoning": "weight=2 + urgency=2 + hit_rate=43%x2 = 5pts",
+            "signal": "Is Federated Hermes (FHI) stock considered high volatility |"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b4c4faf737bf",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "Will the price of Bitcoin be above $78,000 on April 23?",
+      "detail": "Market pricing YES at 100% | 24h vol: $454,182 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$454,182",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-78k-on-april-23",
+      "confidence": 100,
+      "hit_rate": "10% (40 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 100% with $454,182 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "10% (40 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "718d3db07826",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Iran leadership change by April 30?",
+      "detail": "Market pricing NO at 93% | 24h vol: $214,137 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=93%, vol=$214,137",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/iran-leadership-change-by-april-30",
+      "confidence": 93,
+      "hit_rate": "10% (40 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 93% with $214,137 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 93,
+        "source_weight": 5,
+        "hit_rate": "10% (40 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "860902b5c9df",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran diplomatic meeting by April 30, 2026?",
+      "detail": "Market pricing NO at 60% | 24h vol: $202,261 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=60%, vol=$202,261",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-30-2026-299-459-263-225",
+      "confidence": 60,
+      "hit_rate": "10% (40 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 60% with $202,261 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 60,
+        "source_weight": 5,
+        "hit_rate": "10% (40 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "998daca0721c",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Trump out as President by June 30?",
+      "detail": "Market pricing NO at 96% | 24h vol: $197,024 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=96%, vol=$197,024",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "TLT",
+          "iShares 20+ Year Treasury Bond ETF",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/trump-out-as-president-by-june-30",
+      "confidence": 96,
+      "hit_rate": "10% (40 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 96% with $197,024 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 96,
+        "source_weight": 5,
+        "hit_rate": "10% (40 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "fc6fb247df22",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "Bitcoin Up or Down - April 23, 11AM ET",
+      "detail": "Market pricing YES at 100% | 24h vol: $161,009 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$161,009",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-up-or-down-april-23-2026-11am-et",
+      "confidence": 100,
+      "hit_rate": "10% (40 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 100% with $161,009 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "10% (40 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "53a482da7d08",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "S&P 500 (SPX) Up or Down on April 23?",
+      "detail": "Market pricing NO at 94% | 24h vol: $113,236 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=94%, vol=$113,236",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "VOO",
+          "Vanguard S&P 500 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/spx-up-or-down-on-april-23-2026",
+      "confidence": 94,
+      "hit_rate": "10% (40 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 94% with $113,236 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 94,
+        "source_weight": 5,
+        "hit_rate": "10% (40 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "ad050aee8666",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 tech, macro",
+      "direction": "BEARISH",
+      "title": "These Stocks Are Today\u2019s Movers: Tesla, IBM, Oklo, ServiceNow, United Rentals, and More",
+      "detail": "tesla shares fall after the ev maker raises its capital spending guidance, while servicenow plunges after so-so first-quarter earnings.",
+      "urgency": "LOW",
+      "keywords": "tech, macro",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://finance.yahoo.com/m/cd80125f-b7e1-38af-b110-5ed88170123d/these-stocks-are-today%E2%80%99s.html?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: These Stocks Are Today\u2019s Movers: Tesla, IBM, Oklo, ServiceNow, United Rentals, a. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "51ffcacc308b",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 fed, tech",
+      "direction": "BULLISH",
+      "title": "Is Federated Hermes (FHI) stock considered high volatility | Q4 2025: Earnings Beat Estimates - AI Powered Stock Picks -",
+      "detail": "is federated hermes (fhi) stock considered high volatility | q4 2025: earnings beat estimates - ai powered stock picks &nbsp;&nbsp; x\u00e3 thanh h\u00e0",
+      "urgency": "MEDIUM",
+      "keywords": "fed, tech, macro",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQY01iNVNXY2lScjZSVTJLWGZMQ2l2cDlrQXZYc096UDVkR1RLNXhGWTZVQll4dWEta2d3UTU5em1WZnM3ckoxdHNlUGJ5cVdtbGtjdmVUSy1uZ1NucWNLQk1zM1FZeUJaMFowSkltcjRaWjFkcXdKTTJKT1IySnhTSmFxUjFEQjZIZUhrRkF4Z0ZfWWlnWW1BS1RiNmxyYmNCT256bXJkcmRycnF0d3VIQng0Q05KTmwzc2NCTjZLWEFhR2dNbDJSTEtVYnkzUnhfemtrNA?oc=5",
+      "confidence": 41,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Is Federated Hermes (FHI) stock considered high volatility | Q4 2025: Earnings B. 2 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 41,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "1d764c6c83db",
+      "date": "23/04/2026 17:28 UTC",
+      "date_be": "23/04/2026 19:28 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 defense, tech",
+      "direction": "BULLISH",
+      "title": "What is the outlook for Phunware (PHUN) stock this quarter | Q4 2025: Earnings Beat Estimates - Social Buzz Stocks - C\u1ed5n",
+      "detail": "what is the outlook for phunware (phun) stock this quarter | q4 2025: earnings beat estimates - social buzz stocks &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
+      "urgency": "MEDIUM",
+      "keywords": "defense, tech, macro",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPeHpVX1o0ZU1tWWZTY09OSFBxRjRySThaeF9tT3MzSGtNejhyTktNRk1fSW92cW9qTDhzRTY2OEhoRUlmcnNvSjU5R2syazcwRl96LS1zTnR5Rmt5cVNWR1JKbU5Mb2hRRy1Hd21BYVFMeWxlQnJsdlFBcUoxdVR1YkhFN2VQRkRjWkRxWkxMNzZBel81OVNiMHBmOTdIRkVpbWNLT085RmFoS2Jzd0JPWEdwRnRScXBZaGlINzVfN0Q1eFVuQlE?oc=5",
+      "confidence": 41,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: What is the outlook for Phunware (PHUN) stock this quarter | Q4 2025: Earnings B. 2 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 41,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
-    {
-      "uid": "d3a1771e5880",
-      "theme": "commodities",
-      "action": "REDUCE / HEDGE",
-      "direction": "SELL / REDUCE",
-      "ticker": "GLD",
-      "score": 29,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Truth Social"
-      ],
-      "date": "2026-04-20T15:49:36.426671+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "f06f584449e7",
-      "theme": "risk_off",
-      "action": "REDUCE / HEDGE",
-      "direction": "SELL / REDUCE",
-      "ticker": "GLD",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-20T15:49:36.570801+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "395c3c6f818f",
-      "theme": "risk_on",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "SPY",
-      "score": 7,
-      "confidence": 47,
-      "sources": [
-        "Macro RSS"
-      ],
-      "date": "2026-04-20T15:49:36.792688+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "6a7decd7ca62",
-      "theme": "risk_on",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "SPY",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-20T18:12:47.007216+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "f042d5b261f9",
-      "theme": "defense",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "ITA",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-20T18:12:47.142096+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "d4d00095fc6c",
-      "theme": "commodities",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "GLD",
-      "score": 10,
-      "confidence": 65,
-      "sources": [
-        "Truth Social"
-      ],
-      "date": "2026-04-20T18:12:47.286156+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
     {
       "uid": "1efaf23d4074",
       "theme": "energy",
@@ -15846,10 +15775,14 @@
       ],
       "date": "2026-04-23T09:16:24.951756+00:00",
       "price_at_signal": 435.26,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:56.421892+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.64,
+        "hit": false,
+        "price": 432.47
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15869,10 +15802,14 @@
       ],
       "date": "2026-04-23T10:52:50.944400+00:00",
       "price_at_signal": 56.54,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:56.737958+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.64,
+        "hit": false,
+        "price": 56.9
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15891,10 +15828,14 @@
       ],
       "date": "2026-04-23T10:52:51.213507+00:00",
       "price_at_signal": 711.21,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:57.245644+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.69,
+        "hit": false,
+        "price": 706.29
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15912,10 +15853,14 @@
       ],
       "date": "2026-04-23T10:52:51.474931+00:00",
       "price_at_signal": 435.26,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:57.632248+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.64,
+        "hit": false,
+        "price": 432.47
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15935,10 +15880,14 @@
       ],
       "date": "2026-04-23T10:52:51.736178+00:00",
       "price_at_signal": 711.21,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:58.002155+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.69,
+        "hit": false,
+        "price": 706.29
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15957,10 +15906,14 @@
       ],
       "date": "2026-04-23T10:52:52.035633+00:00",
       "price_at_signal": 44.75,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:58.273653+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -1.54,
+        "hit": false,
+        "price": 44.06
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -15978,10 +15931,14 @@
       ],
       "date": "2026-04-23T10:52:52.334782+00:00",
       "price_at_signal": 435.26,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:58.568115+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.64,
+        "hit": false,
+        "price": 432.47
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16001,10 +15958,14 @@
       ],
       "date": "2026-04-23T12:00:09.363260+00:00",
       "price_at_signal": 435.26,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:58.846671+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.64,
+        "hit": false,
+        "price": 432.47
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16023,10 +15984,14 @@
       ],
       "date": "2026-04-23T12:00:09.892025+00:00",
       "price_at_signal": 711.21,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:59.122172+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.69,
+        "hit": false,
+        "price": 706.29
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16045,10 +16010,14 @@
       ],
       "date": "2026-04-23T12:00:10.374842+00:00",
       "price_at_signal": 219.15,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:59.399615+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -1.11,
+        "hit": false,
+        "price": 216.72
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16065,10 +16034,14 @@
       ],
       "date": "2026-04-23T12:00:11.187198+00:00",
       "price_at_signal": 44.75,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:59.675761+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -1.54,
+        "hit": false,
+        "price": 44.06
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16085,10 +16058,14 @@
       ],
       "date": "2026-04-23T12:00:11.566015+00:00",
       "price_at_signal": 56.54,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:26:59.967506+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.64,
+        "hit": false,
+        "price": 56.9
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16105,10 +16082,14 @@
       ],
       "date": "2026-04-23T12:00:11.972943+00:00",
       "price_at_signal": 435.26,
-      "check_4h": null,
+      "check_4h": "2026-04-23T17:27:00.358061+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": -0.64,
+        "hit": false,
+        "price": 432.47
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16333,16 +16314,141 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "02939fe398b5",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 20,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T17:27:54.854560+00:00",
+      "price_at_signal": 707.12,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "93e165e0aa27",
+      "theme": "fed",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "TLT",
+      "score": 20,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T17:27:55.130983+00:00",
+      "price_at_signal": 86.4,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "6e0be8b52b44",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 19,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "Yahoo Finance RSS"
+      ],
+      "date": "2026-04-23T17:27:55.664943+00:00",
+      "price_at_signal": 432.93,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "e9e4f625a137",
+      "theme": "tech",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "QQQ",
+      "score": 18,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Yahoo Finance RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T17:27:55.975354+00:00",
+      "price_at_signal": 651.19,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "efa2b55ec75c",
+      "theme": "crypto",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "IBIT",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-23T17:27:56.309434+00:00",
+      "price_at_signal": 44.13,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "97431e8a7967",
+      "theme": "commodities",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-23T17:27:56.601050+00:00",
+      "price_at_signal": 432.93,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 9,
-    "misses": 187,
+    "misses": 200,
     "watches": 60,
     "by_window": {
       "4h": {
         "hits": 1,
-        "misses": 118,
+        "misses": 131,
         "pnl": 41.42999999999999
       },
       "24h": {
@@ -16359,12 +16465,12 @@
     "by_theme": {
       "risk_off": {
         "hits": 4,
-        "misses": 29,
+        "misses": 31,
         "pnl": -61.57
       },
       "defense": {
         "hits": 3,
-        "misses": 29,
+        "misses": 30,
         "pnl": -0.23000000000000043
       },
       "tech": {
@@ -16374,26 +16480,26 @@
       },
       "macro": {
         "hits": 0,
-        "misses": 27,
+        "misses": 28,
         "pnl": 35.75
       },
       "energy": {
         "hits": 0,
-        "misses": 18
+        "misses": 20
       },
       "risk_on": {
         "hits": 0,
-        "misses": 42,
+        "misses": 44,
         "pnl": 61.71
       },
       "crypto": {
         "hits": 3,
-        "misses": 8,
+        "misses": 10,
         "pnl": 66.05
       },
       "commodities": {
         "hits": 1,
-        "misses": 18,
+        "misses": 21,
         "pnl": -14.95
       },
       "fed": {
@@ -17053,7 +17159,7 @@
     }
   ],
   "position_book": {
-    "cash": 34882.35,
+    "cash": 35376.59,
     "total_capital": 100000.0,
     "positions": {
       "XAR": {
@@ -17341,12 +17447,13 @@
       "IBIT": {
         "side": "SHORT",
         "ticker": "IBIT",
-        "shares": 167.597766,
-        "avg_entry": 44.75,
-        "invested_eur": 7500.0,
+        "shares": 190.278646,
+        "avg_entry": 44.6713,
+        "invested_eur": 8500.0,
         "open_date": "2026-04-22T22:04:52.463177+00:00",
         "open_be": "23/04/2026 00:04 CEST",
         "signals": [
+          "panel-IBIT-23/04/2026",
           "panel-IBIT-23/04/2026",
           "panel-IBIT-23/04/2026",
           "panel-IBIT-23/04/2026"
@@ -17408,20 +17515,20 @@
         "check_24h": null
       },
       "GLD": {
-        "side": "LONG",
+        "side": "SHORT",
         "ticker": "GLD",
-        "shares": 5.761962,
-        "avg_entry": 433.88,
-        "invested_eur": 2500.0,
-        "open_date": "2026-04-23T13:59:39.079219+00:00",
-        "open_be": "23/04/2026 15:59 CEST",
+        "shares": 2.310109,
+        "avg_entry": 432.88,
+        "invested_eur": 1000.0,
+        "open_date": "2026-04-23T17:27:54.330043+00:00",
+        "open_be": "23/04/2026 19:27 CEST",
         "signals": [
           "panel-GLD-23/04/2026"
         ],
         "themes": [
-          "Gold \u2014 The Trump Whisperer + The Macro Man"
+          "Gold \u2014 The Insider"
         ],
-        "confidence": 57,
+        "confidence": 51,
         "check_4h": null,
         "check_24h": null
       }
@@ -17989,9 +18096,32 @@
         ],
         "close_reason": "opposite_signal",
         "hit": false
+      },
+      {
+        "ticker": "GLD",
+        "side": "LONG",
+        "shares": 5.761962,
+        "avg_entry": 433.88,
+        "close_price": 432.88,
+        "invested_eur": 2500.0,
+        "pnl_eur": -5.76,
+        "pnl_pct": -0.23,
+        "open_date": "2026-04-23T13:59:39.079219+00:00",
+        "open_be": "23/04/2026 15:59 CEST",
+        "close_date": "2026-04-23T17:27:54.329998+00:00",
+        "close_be": "23/04/2026 19:27 CEST",
+        "hold_hours": 3.5,
+        "signals": [
+          "panel-GLD-23/04/2026"
+        ],
+        "themes": [
+          "Gold \u2014 The Trump Whisperer + The Macro Man"
+        ],
+        "close_reason": "opposite_signal",
+        "hit": false
       }
     ],
-    "realised_pnl": -117.65,
+    "realised_pnl": -123.41,
     "platform_score": {
       "total_hits": 2,
       "total_misses": 30,
