@@ -758,12 +758,16 @@
     "601a886aa12f",
     "338e6b8c5287",
     "875275845b05",
-    "e2cbb389be27"
+    "e2cbb389be27",
+    "498be85a8420",
+    "a658feb85ce9",
+    "b7b9c8525e2e",
+    "f45c08d5220c"
   ],
   "stats": {
     "Polymarket": {
       "hits": 4,
-      "misses": 31,
+      "misses": 36,
       "pending": 0
     },
     "Lobbying": {
@@ -1734,33 +1738,6 @@
       "title": "Is Mawson (MIGI) stock outperforming the market | Q3 2025: Earnings Beat Estimat"
     },
     {
-      "uid": "ba6b3efecfcf",
-      "source": "Polymarket",
-      "ticker": "XLE",
-      "direction": "BEARISH",
-      "date": "2026-04-22T14:24:21.151151+00:00",
-      "price_at_signal": 56.47,
-      "title": "US x Iran permanent peace deal by April 30, 2026?"
-    },
-    {
-      "uid": "0eaa52a91e70",
-      "source": "Polymarket",
-      "ticker": "SPY",
-      "direction": "BEARISH",
-      "date": "2026-04-22T14:24:21.601459+00:00",
-      "price_at_signal": 710.39,
-      "title": "Will Donald Trump announce that the United States blockade of the Strait of Horm"
-    },
-    {
-      "uid": "2eedffc0f21f",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BULLISH",
-      "date": "2026-04-22T14:24:21.961861+00:00",
-      "price_at_signal": 44.88,
-      "title": "Will Bitcoin reach $80,000 in April?"
-    },
-    {
       "uid": "4ef8d5c4e4b9",
       "source": "Truth Social",
       "ticker": "ITA",
@@ -1786,24 +1763,6 @@
       "date": "2026-04-22T14:24:23.002481+00:00",
       "price_at_signal": 426.45,
       "title": "Nvidia Partner Beats Views With Accelerating Earnings Growth, But AI Stock Falls"
-    },
-    {
-      "uid": "26f78dac77dd",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BEARISH",
-      "date": "2026-04-22T15:49:16.325228+00:00",
-      "price_at_signal": 44.97,
-      "title": "Will Bitcoin reach $85,000 in April?"
-    },
-    {
-      "uid": "2f3a6855c2f0",
-      "source": "Polymarket",
-      "ticker": "XLE",
-      "direction": "BEARISH",
-      "date": "2026-04-22T15:49:16.471435+00:00",
-      "price_at_signal": 56.49,
-      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $110 in April?"
     },
     {
       "uid": "bb0609021a64",
@@ -2452,264 +2411,36 @@
       "date": "2026-04-23T13:59:44.602310+00:00",
       "price_at_signal": 440.08,
       "title": "Semiconductor Index Rises 39% In Record 16-Day Rally Driven By AI Demand"
+    },
+    {
+      "uid": "498be85a8420",
+      "source": "Macro RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-23T15:59:51.641467+00:00",
+      "price_at_signal": 220.11,
+      "title": "Kalshi traders don't see Strait of Hormuz traffic returning to normal until July"
+    },
+    {
+      "uid": "a658feb85ce9",
+      "source": "Google News RSS",
+      "ticker": "SPY",
+      "direction": "BEARISH",
+      "date": "2026-04-23T15:59:51.826004+00:00",
+      "price_at_signal": 711.1,
+      "title": "CSL (Carlisle Companies Incorporated) posts Q4 2025 EPS beat but shares fall on "
+    },
+    {
+      "uid": "b7b9c8525e2e",
+      "source": "Google News RSS",
+      "ticker": "XLE",
+      "direction": "BULLISH",
+      "date": "2026-04-23T15:59:52.067581+00:00",
+      "price_at_signal": 56.65,
+      "title": "PEGA (Pegasystems Inc.) delivers narrow Q4 2025 earnings beat, with shares risin"
     }
   ],
   "history": [
-    {
-      "uid": "a449c27cd46b",
-      "date": "22/04/2026 23:59 UTC",
-      "date_be": "23/04/2026 01:59 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 macro",
-      "direction": "BEARISH",
-      "title": "TGT (Target Corporation) posts 12.1 percent Q1 2026 EPS beat, shares climb 2.79 percent on positive investor sentiment. ",
-      "detail": "tgt (target corporation) posts 12.1 percent q1 2026 eps beat, shares climb 2.79 percent on positive investor sentiment. - earnings miss &nbsp;&nbsp; ubnd th\u00e0nh ph\u1ed1 h\u1ea3i ph\u00f2ng",
-      "urgency": "LOW",
-      "keywords": "macro",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "QQQ",
-          "Invesco QQQ Trust",
-          "NASDAQ"
-        ],
-        [
-          "IWM",
-          "iShares Russell 2000 ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNTm5Ya0psMFliUjByTkNlOXRhSkdFcjNmNFlKTnhXek5LWGtYZHZUZ1dya3ZqNXMzdnZXTjcxSjNaYzZEaVkzVU1rcGhwQl9OaUtkRzAtVDRZb0VvZkpGcFJqdUtXSzlHc3Z0cU9hYk43UWJUREthd0E2Yms4aFZBd0hPc3Q5Rm90ZUZYbWNVei1EU3ZpWXlNcXhJa2tjZTNzSmNuandmTEJ3MWNxN09oQUlJOWozMlNNbjBkM0VjekxFT0R4LWotaWUyLWJtOXFzek4wTHo3a1VpWTF0dzJ2T3NVSmd2RlNFSFE?oc=5",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: TGT (Target Corporation) posts 12.1 percent Q1 2026 EPS beat, shares climb 2.79 . 0 bullish / 1 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "280bb8ea2bf7",
-      "date": "22/04/2026 23:59 UTC",
-      "date_be": "23/04/2026 01:59 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 macro",
-      "direction": "BULLISH",
-      "title": "PBA (Pembina) delivers Q4 2025 earnings beat, shares climb on 5.3 percent year over year revenue growth. - Crowd Breakou",
-      "detail": "pba (pembina) delivers q4 2025 earnings beat, shares climb on 5.3 percent year over year revenue growth. - crowd breakout signals &nbsp;&nbsp; ubnd th\u00e0nh ph\u1ed1 h\u1ea3i ph\u00f2ng",
-      "urgency": "MEDIUM",
-      "keywords": "macro",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "QQQ",
-          "Invesco QQQ Trust",
-          "NASDAQ"
-        ],
-        [
-          "IWM",
-          "iShares Russell 2000 ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPc2xpYVBvc3VsRXFkaTVDemRKclk4cDN4VmpFd292a0pDSGdMMUpHOW9USkNuaWVwRXNKWEVDcUFYdzJFRGlMelpsSElkdUhPNzZMUEd0N2tiMnJJX0pOeWNQYVMxOFJzR29BNGI2MzA0Y1JEcWRMYVlvZkNYYzdIa0RaRVZ3Tk5CUmFqTU5YUkJDWS1IRkdEelZtRHIzTUVvMHE3NVJJdUtZV1NlcHFyQ1hxN1pxaC04cEVFVF9wMkYzdzFpY0lac1htSXR4OGZnRGpzZnFwQTg?oc=5",
-      "confidence": 41,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: PBA (Pembina) delivers Q4 2025 earnings beat, shares climb on 5.3 percent year o. 2 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 41,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "209e25ebfde2",
-      "date": "22/04/2026 23:59 UTC",
-      "date_be": "23/04/2026 01:59 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 tech, macro",
-      "direction": "BULLISH",
-      "title": "KMT (Kennametal Inc.) posts Q1 2026 earnings beat, shares edge higher despite slight year over year revenue decline. - C",
-      "detail": "kmt (kennametal inc.) posts q1 2026 earnings beat, shares edge higher despite slight year over year revenue decline. &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
-      "urgency": "LOW",
-      "keywords": "tech, macro",
-      "etfs": [
-        [
-          "SOXX",
-          "iShares Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SMH",
-          "VanEck Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SOXS",
-          "Direxion Daily Semiconductor Bear 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQZHRzNjFMeGkxVlJKQnB0S0s0TDZXNWNMVjJVMk85VlhJTGFGWjFzb2ppN1RhQlVkcGtyZjcwOE44V2IwS2xfWjRzNkNhZUdWNTNNeFNZZm1FNjdDVXFnNm1PWTlaOGJvRGtsNjRuQURYYTYtRmlfcGIxamoxdDRQOEp3akJGeGFqQW5IdFdjei1uZHYyaklCc0RqZkZmUmRka01TRmI3T3VsbElBMTd3SGc4eTIxMG0wdi00NDFBb1NMTmpRc21wa092SVBJQklURXRUNEpUck1idVNrSGtUcGVOdTg?oc=5",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: KMT (Kennametal Inc.) posts Q1 2026 earnings beat, shares edge higher despite sl. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "23e01ad03433",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "CONVERGENCE",
-      "type": "3 sources \u00b7 score 22",
-      "direction": "BUY",
-      "title": "[3x CONVERGENCE] XLE \u2014 BUY",
-      "detail": "Score: 22pts across 3 independent sources: Polymarket, Truth Social, Google News RSS",
-      "urgency": "HIGH",
-      "keywords": "XLE",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://paulrendev.github.io/Stocazzo",
-      "confidence": 95,
-      "hit_rate": "No historical data yet for convergence signals",
-      "reasoning_stored": {
-        "why": "2/3 sources bullish on XLE",
-        "signal_type": "Multi-source convergence \u2014 strongest signal type",
-        "confidence": 95,
-        "source_weight": 5,
-        "hit_rate": "No historical data yet for convergence signals",
-        "caveat": "Convergence != certainty. Check macro context before acting.",
-        "breakdown": [
-          {
-            "source": "Polymarket",
-            "direction": "BULLISH",
-            "urgency": "HIGH",
-            "points": 10,
-            "reasoning": "weight=5 + urgency=3 + hit_rate=80%x2 = 10pts",
-            "signal": "Iran x Israel/US conflict ends by May 15?"
-          },
-          {
-            "source": "Truth Social",
-            "direction": "BULLISH",
-            "urgency": "MEDIUM",
-            "points": 8,
-            "reasoning": "weight=4 + urgency=2 + hit_rate=85%x2 = 8pts",
-            "signal": "Trump: \"trump says iran won't execute 8 women after he deman"
-          },
-          {
-            "source": "Google News RSS",
-            "direction": "BEARISH",
-            "urgency": "LOW",
-            "points": 4,
-            "reasoning": "weight=2 + urgency=1 + hit_rate=43%x2 = 4pts",
-            "signal": "OPEC Output Plunges by 7 Million Bpd as War Chokes Supply - "
-          }
-        ]
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "553a63066a24",
-      "date": "23/04/2026 03:31 UTC",
-      "date_be": "23/04/2026 05:31 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will Bitcoin hit $150k by June 30, 2026?",
-      "detail": "Market pricing NO at 99% | 24h vol: $5,821,653 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=99%, vol=$5,821,653",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-bitcoin-hit-150k-by-june-30-2026",
-      "confidence": 99,
-      "hit_rate": "10% (21 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 99% with $5,821,653 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 99,
-        "source_weight": 5,
-        "hit_rate": "10% (21 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "c28ad283463d",
       "date": "23/04/2026 03:31 UTC",
@@ -11637,116 +11368,255 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "7b392bafd038",
+      "date": "23/04/2026 15:59 UTC",
+      "date_be": "23/04/2026 17:59 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 9",
+      "direction": "BUY",
+      "title": "[2x CONVERGENCE] ITA \u2014 BUY",
+      "detail": "Score: 9pts across 2 independent sources: Macro RSS, Google News RSS",
+      "urgency": "MEDIUM",
+      "keywords": "ITA",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 72,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "2/2 sources bullish on ITA",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 72,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Macro RSS",
+            "direction": "BULLISH",
+            "urgency": "MEDIUM",
+            "points": 5,
+            "reasoning": "weight=2 + urgency=2 + hit_rate=50%x2 = 5pts",
+            "signal": "Kalshi traders don't see Strait of Hormuz traffic returning "
+          },
+          {
+            "source": "Google News RSS",
+            "direction": "BULLISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=43%x2 = 4pts",
+            "signal": "Why Hollywood has called the Netflix-Warner Bros merger a di"
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "498be85a8420",
+      "date": "23/04/2026 15:59 UTC",
+      "date_be": "23/04/2026 17:59 CEST",
+      "source": "Macro RSS",
+      "type": "CNBC Markets \u00b7 defense, tech",
+      "direction": "BULLISH",
+      "title": "Kalshi traders don't see Strait of Hormuz traffic returning to normal until July",
+      "detail": "Chances that traffic returns to normal fell below 50% on Wednesday, according to Kalshi bettors, despite the U.S. and Iran extending the ceasefire.",
+      "urgency": "MEDIUM",
+      "keywords": "defense, tech",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.cnbc.com/2026/04/23/kalshi-bettors-see-strait-of-hormuz-traffic-normal-by-july.html",
+      "confidence": 40,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "CNBC Markets reports on defense, tech. 1 bullish / 0 bearish signals in text.",
+        "signal_type": "News RSS \u2014 CNBC Markets. Macro context signal.",
+        "confidence": 40,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 not predictive. Use to confirm crony signals or set macro context."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "a658feb85ce9",
+      "date": "23/04/2026 15:59 UTC",
+      "date_be": "23/04/2026 17:59 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 macro",
+      "direction": "BEARISH",
+      "title": "CSL (Carlisle Companies Incorporated) posts Q4 2025 EPS beat but shares fall on soft year-over-year revenue growth. - Mi",
+      "detail": "csl (carlisle companies incorporated) posts q4 2025 eps beat but shares fall on soft year-over-year revenue growth. - miss estimates &nbsp;&nbsp; x\u00e3 thanh h\u00e0",
+      "urgency": "LOW",
+      "keywords": "macro",
+      "etfs": [
+        [
+          "SPY",
+          "SPDR S&P 500 ETF",
+          "NYSE"
+        ],
+        [
+          "QQQ",
+          "Invesco QQQ Trust",
+          "NASDAQ"
+        ],
+        [
+          "IWM",
+          "iShares Russell 2000 ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxNV0xrV0dueWsyazY0cVFiSG1Ob2lUb1BZZmZKRmpBbXZvMTUycmNZQnMwUHR1OExWbUlXRWFRZlJfOThHM2M3ekF2M1NZd183NGFBdFR1UjQyMVlva3N6NGhDdVZGUkRSWi04aHpvT0ZkWERDME9qQjhVQWNyUFlEQVctVWlCcDBTSmVqbGlhczN1NEZMeXRvVjkySkZGdGZfSVViNHBKeGpmUTFfejkzT2psZWR2TTdpa05WOTRPVTB1UlRVLUtPZ2tNVmtQYWtGeGVFN2dUODE2Z19pR1p4by1CN0gtem9yYVo5TjROaw?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: CSL (Carlisle Companies Incorporated) posts Q4 2025 EPS beat but shares fall on . 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b7b9c8525e2e",
+      "date": "23/04/2026 15:59 UTC",
+      "date_be": "23/04/2026 17:59 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 energy, tech",
+      "direction": "BULLISH",
+      "title": "PEGA (Pegasystems Inc.) delivers narrow Q4 2025 earnings beat, with shares rising modestly in regular trading. - Stock A",
+      "detail": "pega (pegasystems inc.) delivers narrow q4 2025 earnings beat, with shares rising modestly in regular trading. - stock analysis community &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
+      "urgency": "LOW",
+      "keywords": "energy, tech, macro",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ],
+        [
+          "OIH",
+          "VanEck Oil Services ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOa1lmZVhXU25OTzdUb2hYd0xUUnVVN2o3eGR6MmlwYzVwbEZPLU96SDk2RDF1V3hNam81QUNrdG8xcFJxaWNWZWJsUDQ1aktIUlZRcC0zNVVhdTh0ZTh4X1ZXMXdGTmsxZGZkU2pOMXNhRkREUmViLVlkODNHUGdQOUNGTEprYURZcjRwVXlkV08zWHlzQ1BmamdCNnlaS0RyUW43cGxaYWFpZ0lrenFybXJRMkcxc2tjek02SmRIVmRpWWpMLVZROG5ydC0wclJINjZpMm42Mmljeksz?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: PEGA (Pegasystems Inc.) delivers narrow Q4 2025 earnings beat, with shares risin. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "f45c08d5220c",
+      "date": "23/04/2026 15:59 UTC",
+      "date_be": "23/04/2026 17:59 CEST",
+      "source": "Google News RSS",
+      "type": "Google News M&A \u00b7 defense, merger",
+      "direction": "BULLISH",
+      "title": "Why Hollywood has called the Netflix-Warner Bros merger a disaster - Australian Broadcasting Corporation",
+      "detail": "why hollywood has called the netflix-warner bros merger a disaster &nbsp;&nbsp; australian broadcasting corporation",
+      "urgency": "LOW",
+      "keywords": "defense, merger",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOcXg0aC1XUHhZUVhDTEFQSDdmQmQ5WExQdnFHQk42Rk9HQ25nSFNNRTE2UmdFdWw4S2xYUDg4MWxZaDQzSVBlQlFXeXBydEVCa2wzaWdVUUVOa3ZzcGZoc2dOR2hZT2tsZklNYXJTbDNWWGtDT2l6VmRHTkVYc1cwenRrVE4tSmp1akY2cmlPSG9obzREcm5NRU10TUk2RURjc2hZQThocTlkWlU?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News M&A: Why Hollywood has called the Netflix-Warner Bros merger a disaster - Australian . 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News M&A",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
-    {
-      "uid": "d068de720236",
-      "theme": "tech",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "QQQ",
-      "score": 8,
-      "confidence": 53,
-      "sources": [
-        "Dark Pool"
-      ],
-      "date": "2026-04-20T14:18:06.481360+00:00",
-      "price_at_signal": 646.52,
-      "check_4h": "2026-04-20T19:34:35.536786+00:00",
-      "check_24h": "2026-04-21T15:41:50.919827+00:00",
-      "check_5d": null,
-      "result_4h": {
-        "pct": -0.03,
-        "hit": false,
-        "price": 646.33
-      },
-      "result_24h": {
-        "pct": -0.05,
-        "hit": false,
-        "price": 646.22
-      },
-      "result_5d": null
-    },
-    {
-      "uid": "9d8851c1dfff",
-      "theme": "commodities",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "GLD",
-      "score": 8,
-      "confidence": 53,
-      "sources": [
-        "Dark Pool"
-      ],
-      "date": "2026-04-20T14:18:06.629427+00:00",
-      "price_at_signal": 442.42,
-      "check_4h": "2026-04-20T19:34:35.727673+00:00",
-      "check_24h": "2026-04-21T15:41:51.285194+00:00",
-      "check_5d": null,
-      "result_4h": {
-        "pct": -0.04,
-        "hit": false,
-        "price": 442.26
-      },
-      "result_24h": {
-        "pct": -1.57,
-        "hit": false,
-        "price": 435.47
-      },
-      "result_5d": null
-    },
-    {
-      "uid": "fac5f36e30bf",
-      "theme": "defense",
-      "action": "REDUCE / HEDGE",
-      "direction": "SELL / REDUCE",
-      "ticker": "ITA",
-      "score": 36,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Truth Social",
-        "Macro RSS"
-      ],
-      "date": "2026-04-20T15:49:36.112981+00:00",
-      "price_at_signal": 231.63,
-      "check_4h": "2026-04-20T20:23:59.282708+00:00",
-      "check_24h": "2026-04-21T16:42:31.602359+00:00",
-      "check_5d": null,
-      "result_4h": {
-        "pct": 0.09,
-        "hit": false,
-        "price": 231.85
-      },
-      "result_24h": {
-        "pct": -3.31,
-        "hit": true,
-        "price": 223.96
-      },
-      "result_5d": null
-    },
-    {
-      "uid": "77f8ff031860",
-      "theme": "energy",
-      "action": "REDUCE / HEDGE",
-      "direction": "SELL / REDUCE",
-      "ticker": "XLE",
-      "score": 29,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Truth Social"
-      ],
-      "date": "2026-04-20T15:49:36.283511+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
     {
       "uid": "d3a1771e5880",
       "theme": "commodities",
@@ -13023,11 +12893,19 @@
       ],
       "date": "2026-04-21T20:51:30.863559+00:00",
       "price_at_signal": 429.57,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-23T15:58:46.814857+00:00",
+      "check_24h": "2026-04-23T15:58:46.814887+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": 0.87,
+        "hit": false,
+        "price": 433.3
+      },
+      "result_24h": {
+        "pct": 0.87,
+        "hit": false,
+        "price": 433.3
+      },
       "result_5d": null
     },
     {
@@ -13043,11 +12921,19 @@
       ],
       "date": "2026-04-21T20:51:31.033168+00:00",
       "price_at_signal": 42.51,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-23T15:58:46.970025+00:00",
+      "check_24h": "2026-04-23T15:58:46.970055+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": 4.54,
+        "hit": false,
+        "price": 44.44
+      },
+      "result_24h": {
+        "pct": 4.54,
+        "hit": false,
+        "price": 44.44
+      },
       "result_5d": null
     },
     {
@@ -16361,21 +16247,107 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "d2ec84ab5ac7",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 20,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Macro RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T15:59:49.054374+00:00",
+      "price_at_signal": 711.1,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "83c389f877d3",
+      "theme": "tech",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "QQQ",
+      "score": 20,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Macro RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T15:59:49.178201+00:00",
+      "price_at_signal": 655.34,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "7330a8fb6c60",
+      "theme": "defense",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "ITA",
+      "score": 20,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Macro RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-23T15:59:49.295756+00:00",
+      "price_at_signal": 220.11,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "3b01ab8543db",
+      "theme": "trade",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "IWDA",
+      "score": 5,
+      "confidence": 35,
+      "sources": [
+        "Macro RSS"
+      ],
+      "date": "2026-04-23T15:59:49.477069+00:00",
+      "price_at_signal": 0,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 9,
-    "misses": 183,
+    "misses": 187,
     "watches": 60,
     "by_window": {
       "4h": {
         "hits": 1,
-        "misses": 116,
+        "misses": 118,
         "pnl": 41.42999999999999
       },
       "24h": {
         "hits": 4,
-        "misses": 72,
+        "misses": 74,
         "pnl": 54.239999999999995
       },
       "5d": {
@@ -16387,7 +16359,7 @@
     "by_theme": {
       "risk_off": {
         "hits": 4,
-        "misses": 27,
+        "misses": 29,
         "pnl": -61.57
       },
       "defense": {
@@ -16416,7 +16388,7 @@
       },
       "crypto": {
         "hits": 3,
-        "misses": 6,
+        "misses": 8,
         "pnl": 66.05
       },
       "commodities": {
@@ -17081,15 +17053,15 @@
     }
   ],
   "position_book": {
-    "cash": 35882.35,
+    "cash": 34882.35,
     "total_capital": 100000.0,
     "positions": {
       "XAR": {
         "side": "LONG",
         "ticker": "XAR",
-        "shares": 27.9305,
-        "avg_entry": 268.5237,
-        "invested_eur": 7500.0,
+        "shares": 31.719383,
+        "avg_entry": 267.975,
+        "invested_eur": 8500.0,
         "open_date": "2026-04-20T07:24:47.410453+00:00",
         "open_be": "20/04/2026 09:24 CEST",
         "signals": [
@@ -17098,7 +17070,8 @@
           "panel-XAR-21/04/2026",
           "panel-XAR-22/04/2026",
           "panel-XAR-22/04/2026",
-          "panel-XAR-22/04/2026"
+          "panel-XAR-22/04/2026",
+          "panel-XAR-23/04/2026"
         ],
         "themes": [
           "1 analyst bullish: The Macro Man. Consid",
