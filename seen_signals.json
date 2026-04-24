@@ -1049,12 +1049,14 @@
     "cbd2c60cd587",
     "315f734641d9",
     "5b4ced2e463e",
-    "163d706977dc"
+    "163d706977dc",
+    "b7eb9ce7727e",
+    "9cf26386ce83"
   ],
   "stats": {
     "Polymarket": {
       "hits": 5,
-      "misses": 80,
+      "misses": 83,
       "pending": 0
     },
     "Lobbying": {
@@ -2520,33 +2522,6 @@
       "title": "2 Consumer Stocks with Exciting Potential and 1 We Turn Down"
     },
     {
-      "uid": "094ca8d70cf2",
-      "source": "Polymarket",
-      "ticker": "GLD",
-      "direction": "BULLISH",
-      "date": "2026-04-23T22:28:46.868704+00:00",
-      "price_at_signal": 431.04,
-      "title": "Israel x Hezbollah Ceasefire extended by April 26, 2026?"
-    },
-    {
-      "uid": "94fee245d7a9",
-      "source": "Polymarket",
-      "ticker": "SPY",
-      "direction": "BEARISH",
-      "date": "2026-04-23T22:28:47.104260+00:00",
-      "price_at_signal": 708.45,
-      "title": "Will Donald Trump Jr. win the 2028 Republican presidential nomination?"
-    },
-    {
-      "uid": "a42cb226930a",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BULLISH",
-      "date": "2026-04-23T22:28:47.254194+00:00",
-      "price_at_signal": 44.05,
-      "title": "Bitcoin Up or Down - April 23, 4PM ET"
-    },
-    {
       "uid": "dfc67e1591f5",
       "source": "Macro RSS",
       "ticker": "QQQ",
@@ -3229,101 +3204,27 @@
       "date": "2026-04-24T22:25:27.998599+00:00",
       "price_at_signal": 215.8,
       "title": "S&P 500, Nasdaq notch record closing highs on tech, Iran hopes"
+    },
+    {
+      "uid": "b7eb9ce7727e",
+      "source": "Motley Fool RSS",
+      "ticker": "SOXX",
+      "direction": "BULLISH",
+      "date": "2026-04-24T23:06:34.238597+00:00",
+      "price_at_signal": 461.6,
+      "title": "Canopy Growth Is Rallying Again. But Is It a Dead Cat Bounce?"
+    },
+    {
+      "uid": "9cf26386ce83",
+      "source": "Google News RSS",
+      "ticker": "ITA",
+      "direction": "BULLISH",
+      "date": "2026-04-24T23:06:34.386844+00:00",
+      "price_at_signal": 215.8,
+      "title": "NATO Border States Lead 2025 Defense Spending Surge - \u0412\u043e\u0435\u043d\u043d\u043e\u0435 \u0434\u0435\u043b\u043e"
     }
   ],
   "history": [
-    {
-      "uid": "a8d446762979",
-      "date": "24/04/2026 01:12 UTC",
-      "date_be": "24/04/2026 03:12 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "US x Iran diplomatic meeting by April 25, 2026?",
-      "detail": "Market pricing NO at 97% | 24h vol: $136,551 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=97%, vol=$136,551",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-25-2026",
-      "confidence": 97,
-      "hit_rate": "8% (50 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 97% with $136,551 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 97,
-        "source_weight": 5,
-        "hit_rate": "8% (50 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "bbf0204c8a47",
-      "date": "24/04/2026 01:12 UTC",
-      "date_be": "24/04/2026 03:12 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $150 in April?",
-      "detail": "Market pricing NO at 99% | 24h vol: $136,508 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=99%, vol=$136,508",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ],
-        [
-          "OIH",
-          "VanEck Oil Services ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-150-in-april",
-      "confidence": 99,
-      "hit_rate": "8% (50 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 99% with $136,508 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 99,
-        "source_weight": 5,
-        "hit_rate": "8% (50 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "a6e79388c09b",
       "date": "24/04/2026 01:12 UTC",
@@ -12422,38 +12323,101 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "b7eb9ce7727e",
+      "date": "24/04/2026 23:06 UTC",
+      "date_be": "25/04/2026 01:06 CEST",
+      "source": "Motley Fool RSS",
+      "type": "Motley Fool \u00b7 tech",
+      "direction": "BULLISH",
+      "title": "Canopy Growth Is Rallying Again. But Is It a Dead Cat Bounce?",
+      "detail": "canopy growth shares are up 25% over the past month, but investors need to keep in mind where it started.",
+      "urgency": "LOW",
+      "keywords": "tech",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.fool.com/investing/2026/04/24/canopy-growth-is-rallying-again-but-is-it-a-dead-c/?source=iedfolrf0000001",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Motley Fool: Canopy Growth Is Rallying Again. But Is It a Dead Cat Bounce?. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Motley Fool",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "9cf26386ce83",
+      "date": "24/04/2026 23:06 UTC",
+      "date_be": "25/04/2026 01:06 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Defense \u00b7 defense",
+      "direction": "BULLISH",
+      "title": "NATO Border States Lead 2025 Defense Spending Surge - \u0412\u043e\u0435\u043d\u043d\u043e\u0435 \u0434\u0435\u043b\u043e",
+      "detail": "nato border states lead 2025 defense spending surge &nbsp;&nbsp; \u0432\u043e\u0435\u043d\u043d\u043e\u0435 \u0434\u0435\u043b\u043e",
+      "urgency": "LOW",
+      "keywords": "defense",
+      "etfs": [
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XAR",
+          "SPDR S&P Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "DFEN",
+          "Direxion Daily Aerospace & Defense Bull 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMEd0bUFHN3NaMVlfd3prWU53a3FNSlR3SGlIb0I2YXBCRDZJWmFULUpVaXNITXN5cVJ4S3BtQTVQOVF3NVdJbzBWVGFsbG9WT1JBS1c1ejZqXy1KNEE4TEV5alVCQmlSSkVZMi1TNkh0cUhra1ZiamVZX1ZhZFdPY3hOTkw0SXAxanRBSmRKVmhQaGZvQXRr?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Defense: NATO Border States Lead 2025 Defense Spending Surge - \u0412\u043e\u0435\u043d\u043d\u043e\u0435 \u0434\u0435\u043b\u043e. 1 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Defense",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
-    {
-      "uid": "4c400c03cabb",
-      "theme": "commodities",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "GLD",
-      "score": 36,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Polymarket"
-      ],
-      "date": "2026-04-22T18:51:05.683931+00:00",
-      "price_at_signal": 435.93,
-      "check_4h": "2026-04-24T06:28:01.120217+00:00",
-      "check_24h": "2026-04-24T06:28:01.120245+00:00",
-      "check_5d": null,
-      "result_4h": {
-        "pct": -1.11,
-        "hit": false,
-        "price": 431.070007
-      },
-      "result_24h": {
-        "pct": -1.11,
-        "hit": false,
-        "price": 431.070007
-      },
-      "result_5d": null
-    },
     {
       "uid": "c74a6637f2d7",
       "theme": "tech",
@@ -13995,14 +13959,18 @@
       "date": "2026-04-23T10:52:52.334782+00:00",
       "price_at_signal": 435.26,
       "check_4h": "2026-04-23T17:26:58.568115+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T23:05:26.552741+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.64,
         "hit": false,
         "price": 432.47
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.46,
+        "hit": false,
+        "price": 433.25
+      },
       "result_5d": null
     },
     {
@@ -14022,14 +13990,18 @@
       "date": "2026-04-23T12:00:09.363260+00:00",
       "price_at_signal": 435.26,
       "check_4h": "2026-04-23T17:26:58.846671+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T23:05:26.693095+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.64,
         "hit": false,
         "price": 432.47
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.46,
+        "hit": false,
+        "price": 433.25
+      },
       "result_5d": null
     },
     {
@@ -14048,14 +14020,18 @@
       "date": "2026-04-23T12:00:09.892025+00:00",
       "price_at_signal": 711.21,
       "check_4h": "2026-04-23T17:26:59.122172+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T23:05:26.864925+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.69,
         "hit": false,
         "price": 706.29
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 0.38,
+        "hit": false,
+        "price": 713.94
+      },
       "result_5d": null
     },
     {
@@ -14074,14 +14050,18 @@
       "date": "2026-04-23T12:00:10.374842+00:00",
       "price_at_signal": 219.15,
       "check_4h": "2026-04-23T17:26:59.399615+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T23:05:27.056140+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -1.11,
         "hit": false,
         "price": 216.72
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -1.53,
+        "hit": false,
+        "price": 215.8
+      },
       "result_5d": null
     },
     {
@@ -14098,14 +14078,18 @@
       "date": "2026-04-23T12:00:11.187198+00:00",
       "price_at_signal": 44.75,
       "check_4h": "2026-04-23T17:26:59.675761+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T23:05:27.295927+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -1.54,
         "hit": false,
         "price": 44.06
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -1.63,
+        "hit": false,
+        "price": 44.02
+      },
       "result_5d": null
     },
     {
@@ -17301,11 +17285,32 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "120dd793e3b0",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 4,
+      "confidence": 34,
+      "sources": [
+        "Motley Fool RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-24T23:06:34.100749+00:00",
+      "price_at_signal": 713.94,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 17,
-    "misses": 412,
+    "misses": 417,
     "watches": 61,
     "by_window": {
       "4h": {
@@ -17315,7 +17320,7 @@
       },
       "24h": {
         "hits": 9,
-        "misses": 182,
+        "misses": 187,
         "pnl": 54.239999999999995
       },
       "5d": {
@@ -17327,12 +17332,12 @@
     "by_theme": {
       "risk_off": {
         "hits": 4,
-        "misses": 59,
+        "misses": 61,
         "pnl": -61.57
       },
       "defense": {
         "hits": 3,
-        "misses": 51,
+        "misses": 52,
         "pnl": -0.23000000000000043
       },
       "tech": {
@@ -17351,12 +17356,12 @@
       },
       "risk_on": {
         "hits": 0,
-        "misses": 83,
+        "misses": 84,
         "pnl": 61.71
       },
       "crypto": {
         "hits": 7,
-        "misses": 25,
+        "misses": 26,
         "pnl": 66.05
       },
       "commodities": {
@@ -18021,15 +18026,15 @@
     }
   ],
   "position_book": {
-    "cash": 26471.72,
+    "cash": 25471.72,
     "total_capital": 100000.0,
     "positions": {
       "XAR": {
         "side": "LONG",
         "ticker": "XAR",
-        "shares": 31.719383,
-        "avg_entry": 267.975,
-        "invested_eur": 8500.0,
+        "shares": 35.618779,
+        "avg_entry": 266.7133,
+        "invested_eur": 9500.0,
         "open_date": "2026-04-20T07:24:47.410453+00:00",
         "open_be": "20/04/2026 09:24 CEST",
         "signals": [
@@ -18039,7 +18044,8 @@
           "panel-XAR-22/04/2026",
           "panel-XAR-22/04/2026",
           "panel-XAR-22/04/2026",
-          "panel-XAR-23/04/2026"
+          "panel-XAR-23/04/2026",
+          "panel-XAR-25/04/2026"
         ],
         "themes": [
           "1 analyst bullish: The Macro Man. Consid",
