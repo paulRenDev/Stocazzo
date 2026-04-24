@@ -916,12 +916,19 @@
     "74f70783bd83",
     "d40b125d4991",
     "ffe24c4034e9",
-    "40f4d4d7d350"
+    "40f4d4d7d350",
+    "c5d5227b5086",
+    "b9e23c039387",
+    "047df0b83fd3",
+    "6d71d2919e26",
+    "728a89384fc6",
+    "fdc4de1b7ed3",
+    "3154d323fc9e"
   ],
   "stats": {
     "Polymarket": {
       "hits": 5,
-      "misses": 52,
+      "misses": 55,
       "pending": 0
     },
     "Lobbying": {
@@ -2135,33 +2142,6 @@
       "title": "Why gold prices are forecast to rise to new record highs - Goldman Sachs"
     },
     {
-      "uid": "82f4d443f19d",
-      "source": "Polymarket",
-      "ticker": "XLE",
-      "direction": "BEARISH",
-      "date": "2026-04-23T05:53:42.978896+00:00",
-      "price_at_signal": 56.54,
-      "title": "US x Iran permanent peace deal by May 31, 2026?"
-    },
-    {
-      "uid": "087625a4eef0",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BEARISH",
-      "date": "2026-04-23T05:53:43.107265+00:00",
-      "price_at_signal": 44.75,
-      "title": "Will the price of Bitcoin be above $80,000 on April 23?"
-    },
-    {
-      "uid": "e29d694cd8df",
-      "source": "Polymarket",
-      "ticker": "ITA",
-      "direction": "BEARISH",
-      "date": "2026-04-23T05:53:43.241368+00:00",
-      "price_at_signal": 219.15,
-      "title": "Trump announces end of military operations against Iran by April 24th?"
-    },
-    {
       "uid": "7b218b87c640",
       "source": "Truth Social",
       "ticker": "TLT",
@@ -2844,332 +2824,45 @@
       "date": "2026-04-24T04:27:52.001006+00:00",
       "price_at_signal": 219.11,
       "title": "Fed rate cut bets revived, a bit, by Iran war ceasefire - Reuters"
+    },
+    {
+      "uid": "c5d5227b5086",
+      "source": "Polymarket",
+      "ticker": "XLE",
+      "direction": "BEARISH",
+      "date": "2026-04-24T06:28:58.980271+00:00",
+      "price_at_signal": 56.98,
+      "title": "US x Iran permanent peace deal by May 31, 2026?"
+    },
+    {
+      "uid": "b9e23c039387",
+      "source": "Polymarket",
+      "ticker": "GLD",
+      "direction": "BEARISH",
+      "date": "2026-04-24T06:28:59.145637+00:00",
+      "price_at_signal": 431.04,
+      "title": "Israel x Hezbollah Ceasefire extended by April 26, 2026?"
+    },
+    {
+      "uid": "047df0b83fd3",
+      "source": "Polymarket",
+      "ticker": "IBIT",
+      "direction": "BEARISH",
+      "date": "2026-04-24T06:28:59.309527+00:00",
+      "price_at_signal": 44.05,
+      "title": "Will the price of Bitcoin be above $82,000 on April 24?"
+    },
+    {
+      "uid": "728a89384fc6",
+      "source": "SEC EDGAR",
+      "ticker": "TSLA",
+      "direction": "SELL",
+      "date": "2026-04-24T06:28:59.446241+00:00",
+      "price_at_signal": 373.72,
+      "title": "Musk Elon \u2014 SELL 96,000,000 shares of TSLA"
     }
   ],
   "history": [
-    {
-      "uid": "c5395f1acd57",
-      "date": "23/04/2026 10:52 UTC",
-      "date_be": "23/04/2026 12:52 CEST",
-      "source": "Motley Fool RSS",
-      "type": "Motley Fool \u00b7 crypto",
-      "direction": "BULLISH",
-      "title": "Is Owning Just Bitcoin and Ethereum Enough for a Crypto Portfolio?",
-      "detail": "simple portfolios can often outperform overly complicated ones.",
-      "urgency": "LOW",
-      "keywords": "crypto",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "GBTC",
-          "Grayscale Bitcoin Trust",
-          "NYSE"
-        ]
-      ],
-      "link": "https://www.fool.com/investing/2026/04/23/is-owning-just-bitcoin-and-ethereum-enough-for-a-c/?source=iedfolrf0000001",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Motley Fool: Is Owning Just Bitcoin and Ethereum Enough for a Crypto Portfolio?. 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Motley Fool",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "931e3b1c9383",
-      "date": "23/04/2026 10:52 UTC",
-      "date_be": "23/04/2026 12:52 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 macro",
-      "direction": "BEARISH",
-      "title": "South Bow (SOBO) Economic Sensitivity | Q4 2025: EPS Beats Forecasts - Earnings Miss - C\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed T\u1ec9nh S\u01a1n L",
-      "detail": "south bow (sobo) economic sensitivity | q4 2025: eps beats forecasts - earnings miss &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh s\u01a1n la",
-      "urgency": "LOW",
-      "keywords": "macro",
-      "etfs": [
-        [
-          "SPY",
-          "SPDR S&P 500 ETF",
-          "NYSE"
-        ],
-        [
-          "QQQ",
-          "Invesco QQQ Trust",
-          "NASDAQ"
-        ],
-        [
-          "IWM",
-          "iShares Russell 2000 ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPanpjdlJQT0dvUTdOcjFOa3lvZll5cUJ3cFNrSHhqOGt2aGtvakUzS1gzR19hN2hjNFFNSjA2Mm5tNUp0aW5CT1Q5VHdQeXdfSUJMOVpzeldZOVpVcXhIcEt5d0NCaUkzTGNpdU40NFBVV2I5TWtzel9aMm1yVWRVUkdSSzkyckVIYkV3REowQ0RiWkRIWE9ENmcteDJNbF9QaXJn?oc=5",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: South Bow (SOBO) Economic Sensitivity | Q4 2025: EPS Beats Forecasts - Earnings . 0 bullish / 1 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "636dcba490c6",
-      "date": "23/04/2026 10:52 UTC",
-      "date_be": "23/04/2026 12:52 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Earnings \u00b7 tech, macro",
-      "direction": "BULLISH",
-      "title": "Is Itron (ITRI) stock trading at a premium | Q4 2025: Earnings Beat Estimates - Hot Momentum Watchlist - C\u1ed5ng th\u00f4ng tin ",
-      "detail": "is itron (itri) stock trading at a premium | q4 2025: earnings beat estimates - hot momentum watchlist &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
-      "urgency": "MEDIUM",
-      "keywords": "tech, macro",
-      "etfs": [
-        [
-          "SOXX",
-          "iShares Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SMH",
-          "VanEck Semiconductor ETF",
-          "NASDAQ"
-        ],
-        [
-          "SOXS",
-          "Direxion Daily Semiconductor Bear 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQcERBSkwwS2ZTaTdsM1pmenFJWC1JM3FxcDBnN2wxTE84NHJiY0NUTHNvXzVzOU85R2NnczBlNC0yZXhqdndqUTJncWhiaUhIaFZXU3U1VW9JdFNlNGFqdTcydVFoLWVuLW9fVTJZbXNSdUFkZEVCcjl6Q3lMTDl0ekdrRlNRUGtDUUNObzIzLWNFdzRQOHJvdTBmbW1tbWpCcEk0Z1JFUkVRX0VQa1djQjFvWWxoUQ?oc=5",
-      "confidence": 41,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Earnings: Is Itron (ITRI) stock trading at a premium | Q4 2025: Earnings Beat Estimates - . 2 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Earnings",
-        "confidence": 41,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "70b996a68190",
-      "date": "23/04/2026 10:52 UTC",
-      "date_be": "23/04/2026 12:52 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Energy \u00b7 energy, defense",
-      "direction": "BULLISH",
-      "title": "OPEC Weighs Shock Output Surge as Iran Conflict Rattles Oil Markets - Crude Oil Prices Today | OilPrice.com",
-      "detail": "opec weighs shock output surge as iran conflict rattles oil markets &nbsp;&nbsp; crude oil prices today | oilprice.com",
-      "urgency": "LOW",
-      "keywords": "energy, defense",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ],
-        [
-          "OIH",
-          "VanEck Oil Services ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNN05SM1o5d2hMa2Z5Q1cxNVJCYVR5Z3I4Nlk5VkhZcUJTY3Voamh0YjJQLUlSbFZRNU5TajdzS0RrRVZmby14WWVycktlM3kwZkFHSzBEeVJvV1RfNHhoazRreGViN3lXV3VrdDZHbmxCdmtVZFlqSkI3Wk56c29xM0RLYmgxWmw4SEpYbTVfOUVBVzE2dnhuNHBVVW9la2tDSThkbzFPZTBQN1EwTS1pQlBxRW9HbVRUQXRnY1JGNHTSAcYBQVVfeXFMUFNVZGNrTTZmMEJBaGU3WVJYZE1XYnBIcUxsZ3Z2dVRhdzRtNlQ2dlFBTW5pOHN2cElXRzBDWTJGWnhFTTMxT3ZLaGtJN1RoQUNDam13d1RmNjVid0hhTXBXYjgySjdlOEdiU2NpMll5QXhQa3lyZU9OZVVvc1JpT0hOVE9RYVhvb2lUeTlUNnZ0T3dwMTdlVlotVUR0dzhpY2dtQU9nOW1nWmI3YjI2U2ZSdXowUnY3VllzMHFkVXV6MW1lcnVR?oc=5",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Energy: OPEC Weighs Shock Output Surge as Iran Conflict Rattles Oil Markets - Crude Oil . 1 bullish / 0 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Energy",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "079d1bc97119",
-      "date": "23/04/2026 10:52 UTC",
-      "date_be": "23/04/2026 12:52 CEST",
-      "source": "Google News RSS",
-      "type": "Google News Rates \u00b7 fed, tech",
-      "direction": "BEARISH",
-      "title": "EXPLAINER: How the BSP\u2019s interest rate hikes or cuts affect ordinary Filipinos - GMA Network",
-      "detail": "explainer: how the bsp\u2019s interest rate hikes or cuts affect ordinary filipinos &nbsp;&nbsp; gma network",
-      "urgency": "LOW",
-      "keywords": "fed, tech",
-      "etfs": [],
-      "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNdTBjR0k1WUZ6RXFlUkxCbFVldHM5d3dGS18tSHF3QjRrdkRueGdKdU9ZdGxHT3RGVVhHZS11OHNFNFVibDF1UTFZSUFmZTJmQi1zek1pX1FFRjZNb2ZWVDBVM0NSd2tlZ3BrVzN1c2I3R2NlUXdNN1R0S1kwV3NIT2pPdlNqUWFNczBRSGtTeTdFN21BUEpXS040UlpqTWE4SUN5RmpFcDZmZ0V6TVUzdlh0cjBDX1lVZU1fejFHaFVpZzVUUmp0eHVxUnhaWkxmWm040gHYAUFVX3lxTFBpSVV6SFIyUmdpNDRVbm04SzZ1SnFaZTRnY2N6MHQwTlFxWU16S0RBb0RjcUhaazF1eVlKNFNnRnRrTGVnalR6bU11aDEtaFFhNXNmTnQyMVdnU1JNNGRXemhCYUdqRVRLTGgyNjEzU1JJeFZYb1BFYXlPbF9ORF9UTXRUWE5adHBlLUxrUU9wUlJObkpxRnJaVVNDZXo2UnlhTzBBcE0xRDBoYjJXQnVrMndQekZUVjF4U0RXRU1sMk9CTlF1bEY2WFZHd1pEYWVfTjItLXUxSA?oc=5",
-      "confidence": 33,
-      "hit_rate": "0% (3 verified signals)",
-      "reasoning_stored": {
-        "why": "Google News Rates: EXPLAINER: How the BSP\u2019s interest rate hikes or cuts affect ordinary Filipinos -. 0 bullish / 1 bearish signals.",
-        "signal_type": "News RSS \u2014 Google News Rates",
-        "confidence": 33,
-        "source_weight": 2,
-        "hit_rate": "0% (3 verified signals)",
-        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "9a2034810936",
-      "date": "23/04/2026 12:00 UTC",
-      "date_be": "23/04/2026 14:00 CEST",
-      "source": "CONVERGENCE",
-      "type": "2 sources \u00b7 score 8",
-      "direction": "SELL",
-      "title": "[2x CONVERGENCE] MACRO \u2014 SELL",
-      "detail": "Score: 8pts across 2 independent sources: Yahoo Finance RSS, Google News RSS",
-      "urgency": "MEDIUM",
-      "keywords": "MACRO",
-      "etfs": [
-        [
-          "ITA",
-          "iShares U.S. Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "XAR",
-          "SPDR S&P Aerospace & Defense ETF",
-          "NYSE"
-        ],
-        [
-          "DFEN",
-          "Direxion Daily Aerospace & Defense Bull 3X",
-          "NYSE"
-        ]
-      ],
-      "link": "https://paulrendev.github.io/Stocazzo",
-      "confidence": 64,
-      "hit_rate": "No historical data yet for convergence signals",
-      "reasoning_stored": {
-        "why": "2/2 sources bearish on MACRO",
-        "signal_type": "Multi-source convergence \u2014 strongest signal type",
-        "confidence": 64,
-        "source_weight": 5,
-        "hit_rate": "No historical data yet for convergence signals",
-        "caveat": "Convergence != certainty. Check macro context before acting.",
-        "breakdown": [
-          {
-            "source": "Yahoo Finance RSS",
-            "direction": "BEARISH",
-            "urgency": "LOW",
-            "points": 4,
-            "reasoning": "weight=2 + urgency=1 + hit_rate=42%x2 = 4pts",
-            "signal": "Lockheed Falls on Earnings Miss. Defense Fears Linger."
-          },
-          {
-            "source": "Google News RSS",
-            "direction": "BEARISH",
-            "urgency": "LOW",
-            "points": 4,
-            "reasoning": "weight=2 + urgency=1 + hit_rate=43%x2 = 4pts",
-            "signal": "HUNTINGTON BANCSHARES INC (NASDAQ:HBAN) Earnings: Adjusted E"
-          }
-        ]
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "4fdf94df49b3",
-      "date": "23/04/2026 12:00 UTC",
-      "date_be": "23/04/2026 14:00 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Bitcoin Up or Down - April 23, 7AM ET",
-      "detail": "Market pricing YES at 100% | 24h vol: $121,047 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=100%, vol=$121,047",
-      "etfs": [
-        [
-          "IBIT",
-          "iShares Bitcoin Trust",
-          "NASDAQ"
-        ],
-        [
-          "FBTC",
-          "Fidelity Wise Origin Bitcoin Fund",
-          "NYSE"
-        ],
-        [
-          "MSTR",
-          "MicroStrategy",
-          "NASDAQ"
-        ]
-      ],
-      "link": "https://polymarket.com/event/bitcoin-up-or-down-april-23-2026-7am-et",
-      "confidence": 100,
-      "hit_rate": "12% (33 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 100% with $121,047 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 100,
-        "source_weight": 5,
-        "hit_rate": "12% (33 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "3dce96db3b3b",
       "date": "23/04/2026 12:00 UTC",
@@ -12090,139 +11783,287 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "c5d5227b5086",
+      "date": "24/04/2026 06:28 UTC",
+      "date_be": "24/04/2026 08:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "US x Iran permanent peace deal by May 31, 2026?",
+      "detail": "Market pricing NO at 72% | 24h vol: $984,583 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=72%, vol=$984,583",
+      "etfs": [
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ],
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "USO",
+          "United States Oil Fund",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/us-x-iran-permanent-peace-deal-by-may-31-2026-333",
+      "confidence": 72,
+      "hit_rate": "8% (60 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 72% with $984,583 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 72,
+        "source_weight": 5,
+        "hit_rate": "8% (60 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "b9e23c039387",
+      "date": "24/04/2026 06:28 UTC",
+      "date_be": "24/04/2026 08:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Israel x Hezbollah Ceasefire extended by April 26, 2026?",
+      "detail": "Market pricing NO at 50% | 24h vol: $654,620 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=50%, vol=$654,620",
+      "etfs": [
+        [
+          "GLD",
+          "SPDR Gold Shares",
+          "NYSE"
+        ],
+        [
+          "ITA",
+          "iShares U.S. Aerospace & Defense ETF",
+          "NYSE"
+        ],
+        [
+          "XLE",
+          "Energy Select Sector SPDR ETF",
+          "NYSE"
+        ]
+      ],
+      "link": "https://polymarket.com/event/israel-x-hezbollah-ceasefire-extended-by-april-26-2026",
+      "confidence": 50,
+      "hit_rate": "8% (60 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 50% with $654,620 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 50,
+        "source_weight": 5,
+        "hit_rate": "8% (60 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "047df0b83fd3",
+      "date": "24/04/2026 06:28 UTC",
+      "date_be": "24/04/2026 08:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BEARISH",
+      "title": "Will the price of Bitcoin be above $82,000 on April 24?",
+      "detail": "Market pricing NO at 100% | 24h vol: $127,972 | Signal: BEARISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$127,972",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-above-82k-on-april-24",
+      "confidence": 100,
+      "hit_rate": "8% (60 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability NO at 100% with $127,972 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "8% (60 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "6d71d2919e26",
+      "date": "24/04/2026 06:28 UTC",
+      "date_be": "24/04/2026 08:28 CEST",
+      "source": "Polymarket",
+      "type": "Prediction Market",
+      "direction": "BULLISH",
+      "title": "Bitcoin Up or Down - April 24, 1AM ET",
+      "detail": "Market pricing YES at 100% | 24h vol: $118,431 | Signal: BULLISH",
+      "urgency": "HIGH",
+      "keywords": "p=100%, vol=$118,431",
+      "etfs": [
+        [
+          "IBIT",
+          "iShares Bitcoin Trust",
+          "NASDAQ"
+        ],
+        [
+          "FBTC",
+          "Fidelity Wise Origin Bitcoin Fund",
+          "NYSE"
+        ],
+        [
+          "MSTR",
+          "MicroStrategy",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://polymarket.com/event/bitcoin-up-or-down-april-24-2026-1am-et",
+      "confidence": 100,
+      "hit_rate": "8% (60 verified signals)",
+      "reasoning_stored": {
+        "why": "Market probability YES at 100% with $118,431 24h volume",
+        "signal_type": "Prediction market \u2014 top 200 by volume",
+        "confidence": 100,
+        "source_weight": 5,
+        "hit_rate": "8% (60 verified signals)",
+        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "728a89384fc6",
+      "date": "24/04/2026 06:28 UTC",
+      "date_be": "24/04/2026 08:28 CEST",
+      "source": "SEC EDGAR",
+      "type": "Form 4 \u00b7 Insider \u00b7 LARGE",
+      "direction": "SELL",
+      "title": "Musk Elon \u2014 SELL 96,000,000 shares of TSLA",
+      "detail": "TSLA insider SELL. Shares changed: -96,000,000 | Total held: 423,743,904 | Filed: 2026-04-23",
+      "urgency": "MEDIUM",
+      "keywords": "TSLA, insider, sell",
+      "etfs": [
+        [
+          "TSLA",
+          "Tesla Inc",
+          "NASDAQ"
+        ]
+      ],
+      "link": "https://finnhub.io/stock-insider-transactions/TSLA",
+      "confidence": 50,
+      "hit_rate": "50% (historical baseline)",
+      "reasoning_stored": {
+        "why": "Musk Elon filed SELL of 96,000,000 TSLA shares.  Large position.",
+        "signal_type": "SEC Form 4 mandatory disclosure \u2014 2 business days reporting lag (much faster than STOCK Act).",
+        "confidence": 50,
+        "source_weight": 3,
+        "hit_rate": "50% (historical baseline)",
+        "caveat": "Sells often = tax/diversification, not conviction. Buys by CEOs/CFOs = stronger signal."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "fdc4de1b7ed3",
+      "date": "24/04/2026 06:28 UTC",
+      "date_be": "24/04/2026 08:28 CEST",
+      "source": "Truth Social",
+      "type": "Trump post \u00b7 1h 14m ago",
+      "direction": "WATCH",
+      "title": "Trump: \"the southern poverty law center, one of the greatest political scams in american\"",
+      "detail": "the southern poverty law center, one of the greatest political scams in american history, has been charged with fraud. this is another democrat hoax, along with act blue, and many others. if it is tru",
+      "urgency": "LOW",
+      "keywords": "america",
+      "etfs": [],
+      "link": "https://truthsocial.com/@realDonaldTrump/116457972455781406",
+      "confidence": 35,
+      "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+      "reasoning_stored": {
+        "why": "Trump posted market-relevant content 1h 14m ago. Matched: america",
+        "signal_type": "Direct presidential statement \u2014 historically fastest market mover. Historical lead time: 15-30 min.",
+        "confidence": 35,
+        "source_weight": 4,
+        "hit_rate": "Historical: 9 Apr 2026 \u2192 +9.5% Nasdaq in 23 min after buy signal",
+        "caveat": "Not all Trump posts move markets. High urgency keywords have strongest historical correlation."
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "3154d323fc9e",
+      "date": "24/04/2026 06:28 UTC",
+      "date_be": "24/04/2026 08:28 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Rates \u00b7 fed",
+      "direction": "BEARISH",
+      "title": "Wharton\u2019s Jeremy Siegel has blunt message on interest rate hikes - thestreet.com",
+      "detail": "wharton\u2019s jeremy siegel has blunt message on interest rate hikes &nbsp;&nbsp; thestreet.com",
+      "urgency": "LOW",
+      "keywords": "fed",
+      "etfs": [],
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQSVRSX0ozR3NDMGRTdHpfYVRZbDA2WVlzTm5Zc1FaZncyemtTMGZJQmZrTlVxY3V4ZlJPTHBCMzRvUFFFeEw1Tzk5QldmNDMxZE5KR0lSU0k3VFVnYjh3Q1B1VXFyNTQzWS1fcHk1c2t4MGdFNUFMZ1RxSmJuX2lhZElESjBkZmh6OG5ETVdaWVZuZUozQWFhOQ?oc=5",
+      "confidence": 33,
+      "hit_rate": "0% (3 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Rates: Wharton\u2019s Jeremy Siegel has blunt message on interest rate hikes - thestreet.com. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Rates",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (3 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
-    {
-      "uid": "922831d76858",
-      "theme": "energy",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "XLE",
-      "score": 38,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Polymarket",
-        "Yahoo Finance RSS"
-      ],
-      "date": "2026-04-21T21:44:09.729935+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "6cb9641be5a9",
-      "theme": "commodities",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "GLD",
-      "score": 36,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Polymarket"
-      ],
-      "date": "2026-04-21T21:44:09.897340+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "c6fafc47f28c",
-      "theme": "risk_on",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "SPY",
-      "score": 21,
-      "confidence": 90,
-      "sources": [
-        "Polymarket",
-        "Yahoo Finance RSS",
-        "Google News RSS"
-      ],
-      "date": "2026-04-21T21:44:10.082673+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "522efcfc1080",
-      "theme": "tech",
-      "action": "WATCH",
-      "direction": "WATCH",
-      "ticker": "QQQ",
-      "score": 4,
-      "confidence": 34,
-      "sources": [
-        "Yahoo Finance RSS",
-        "Google News RSS"
-      ],
-      "date": "2026-04-21T21:44:10.205624+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "8264b6a97ace",
-      "theme": "risk_off",
-      "action": "REDUCE / HEDGE",
-      "direction": "SELL / REDUCE",
-      "ticker": "GLD",
-      "score": 4,
-      "confidence": 34,
-      "sources": [
-        "Motley Fool RSS",
-        "Google News RSS"
-      ],
-      "date": "2026-04-21T21:44:10.308937+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
-    {
-      "uid": "23ed4868e7d9",
-      "theme": "risk_on",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "SPY",
-      "score": 34,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Polymarket",
-        "Motley Fool RSS",
-        "Google News RSS"
-      ],
-      "date": "2026-04-21T22:27:14.810695+00:00",
-      "price_at_signal": 0,
-      "check_4h": null,
-      "check_24h": null,
-      "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
-      "result_5d": null
-    },
     {
       "uid": "ed3f87dbe2f5",
       "theme": "commodities",
@@ -13682,14 +13523,18 @@
       "date": "2026-04-22T14:24:17.908195+00:00",
       "price_at_signal": 435.92,
       "check_4h": "2026-04-22T18:50:21.543305+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T06:27:57.373452+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.01,
         "hit": false,
         "price": 435.89
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -1.12,
+        "hit": false,
+        "price": 431.04
+      },
       "result_5d": null
     },
     {
@@ -13708,14 +13553,18 @@
       "date": "2026-04-22T14:24:18.037178+00:00",
       "price_at_signal": 56.47,
       "check_4h": "2026-04-22T18:50:21.939574+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T06:27:57.545153+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.07,
         "hit": false,
         "price": 56.51
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 0.9,
+        "hit": false,
+        "price": 56.98
+      },
       "result_5d": null
     },
     {
@@ -13735,14 +13584,18 @@
       "date": "2026-04-22T14:24:18.223686+00:00",
       "price_at_signal": 652.12,
       "check_4h": "2026-04-22T18:50:22.266527+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T06:27:57.665137+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.26,
         "hit": false,
         "price": 653.79
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.11,
+        "hit": false,
+        "price": 651.42
+      },
       "result_5d": null
     },
     {
@@ -13762,14 +13615,18 @@
       "date": "2026-04-22T14:24:18.456971+00:00",
       "price_at_signal": 710.39,
       "check_4h": "2026-04-22T18:50:22.579989+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T06:27:57.790042+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.06,
         "hit": false,
         "price": 709.97
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.27,
+        "hit": false,
+        "price": 708.45
+      },
       "result_5d": null
     },
     {
@@ -13788,14 +13645,18 @@
       "date": "2026-04-22T14:24:18.599729+00:00",
       "price_at_signal": 435.92,
       "check_4h": "2026-04-22T18:50:22.945454+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T06:27:58.048044+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.01,
         "hit": false,
         "price": 435.89
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -1.12,
+        "hit": false,
+        "price": 431.04
+      },
       "result_5d": null
     },
     {
@@ -13814,11 +13675,19 @@
       ],
       "date": "2026-04-22T15:49:12.679459+00:00",
       "price_at_signal": 709.69,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:27:58.228033+00:00",
+      "check_24h": "2026-04-24T06:27:58.228061+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -0.17,
+        "hit": false,
+        "price": 708.45
+      },
+      "result_24h": {
+        "pct": -0.17,
+        "hit": false,
+        "price": 708.45
+      },
       "result_5d": null
     },
     {
@@ -13836,11 +13705,19 @@
       ],
       "date": "2026-04-22T15:49:12.852119+00:00",
       "price_at_signal": 44.97,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:27:58.396313+00:00",
+      "check_24h": "2026-04-24T06:27:58.396338+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -2.05,
+        "hit": false,
+        "price": 44.05
+      },
+      "result_24h": {
+        "pct": -2.05,
+        "hit": false,
+        "price": 44.05
+      },
       "result_5d": null
     },
     {
@@ -14050,11 +13927,19 @@
       ],
       "date": "2026-04-22T17:47:27.456239+00:00",
       "price_at_signal": 86.87,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:28:00.221207+00:00",
+      "check_24h": "2026-04-24T06:28:00.221234+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -0.35,
+        "hit": false,
+        "price": 86.57
+      },
+      "result_24h": {
+        "pct": -0.35,
+        "hit": false,
+        "price": 86.57
+      },
       "result_5d": null
     },
     {
@@ -14072,11 +13957,19 @@
       ],
       "date": "2026-04-22T17:47:27.842089+00:00",
       "price_at_signal": 653.69,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:28:00.368332+00:00",
+      "check_24h": "2026-04-24T06:28:00.368360+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -0.35,
+        "hit": false,
+        "price": 651.40997
+      },
+      "result_24h": {
+        "pct": -0.35,
+        "hit": false,
+        "price": 651.40997
+      },
       "result_5d": null
     },
     {
@@ -14092,11 +13985,19 @@
       ],
       "date": "2026-04-22T17:47:28.181908+00:00",
       "price_at_signal": 44.7,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:28:00.520854+00:00",
+      "check_24h": "2026-04-24T06:28:00.520884+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -1.43,
+        "hit": false,
+        "price": 44.06
+      },
+      "result_24h": {
+        "pct": -1.43,
+        "hit": false,
+        "price": 44.06
+      },
       "result_5d": null
     },
     {
@@ -14115,11 +14016,19 @@
       ],
       "date": "2026-04-22T18:51:04.500566+00:00",
       "price_at_signal": 218.52,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:28:00.668933+00:00",
+      "check_24h": "2026-04-24T06:28:00.668961+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": 0.24,
+        "hit": false,
+        "price": 219.039993
+      },
+      "result_24h": {
+        "pct": 0.24,
+        "hit": false,
+        "price": 219.039993
+      },
       "result_5d": null
     },
     {
@@ -14138,11 +14047,19 @@
       ],
       "date": "2026-04-22T18:51:04.943004+00:00",
       "price_at_signal": 709.96,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:28:00.814596+00:00",
+      "check_24h": "2026-04-24T06:28:00.814626+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -0.21,
+        "hit": false,
+        "price": 708.44
+      },
+      "result_24h": {
+        "pct": -0.21,
+        "hit": false,
+        "price": 708.44
+      },
       "result_5d": null
     },
     {
@@ -14160,11 +14077,19 @@
       ],
       "date": "2026-04-22T18:51:05.376637+00:00",
       "price_at_signal": 56.51,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:28:00.966010+00:00",
+      "check_24h": "2026-04-24T06:28:00.966038+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": 0.81,
+        "hit": false,
+        "price": 56.965
+      },
+      "result_24h": {
+        "pct": 0.81,
+        "hit": false,
+        "price": 56.965
+      },
       "result_5d": null
     },
     {
@@ -14181,11 +14106,19 @@
       ],
       "date": "2026-04-22T18:51:05.683931+00:00",
       "price_at_signal": 435.93,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:28:01.120217+00:00",
+      "check_24h": "2026-04-24T06:28:01.120245+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -1.11,
+        "hit": false,
+        "price": 431.070007
+      },
+      "result_24h": {
+        "pct": -1.11,
+        "hit": false,
+        "price": 431.070007
+      },
       "result_5d": null
     },
     {
@@ -14203,11 +14136,19 @@
       ],
       "date": "2026-04-22T18:51:06.066923+00:00",
       "price_at_signal": 653.87,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T06:28:01.271389+00:00",
+      "check_24h": "2026-04-24T06:28:01.271421+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -0.38,
+        "hit": false,
+        "price": 651.40997
+      },
+      "result_24h": {
+        "pct": -0.38,
+        "hit": false,
+        "price": 651.40997
+      },
       "result_5d": null
     },
     {
@@ -16871,21 +16812,144 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "f20f775084ed",
+      "theme": "risk_off",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 28,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "SEC EDGAR",
+        "Google News RSS"
+      ],
+      "date": "2026-04-24T06:28:57.842142+00:00",
+      "price_at_signal": 431.04,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "6718dc2bb40f",
+      "theme": "macro",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "SPY",
+      "score": 23,
+      "confidence": 90,
+      "sources": [
+        "Polymarket",
+        "Truth Social"
+      ],
+      "date": "2026-04-24T06:28:58.026505+00:00",
+      "price_at_signal": 708.45,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "5726ecccb1a8",
+      "theme": "energy",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "XLE",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-24T06:28:58.182389+00:00",
+      "price_at_signal": 56.98,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "95d5fa4922ad",
+      "theme": "commodities",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "GLD",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-24T06:28:58.321965+00:00",
+      "price_at_signal": 431.04,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "1d0630de5a28",
+      "theme": "defense",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "ITA",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-24T06:28:58.660324+00:00",
+      "price_at_signal": 219.11,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "2f4283c4aba9",
+      "theme": "crypto",
+      "action": "REDUCE / HEDGE",
+      "direction": "SELL / REDUCE",
+      "ticker": "IBIT",
+      "score": 17,
+      "confidence": 90,
+      "sources": [
+        "Polymarket"
+      ],
+      "date": "2026-04-24T06:28:58.821380+00:00",
+      "price_at_signal": 44.05,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
     "hits": 17,
-    "misses": 253,
+    "misses": 278,
     "watches": 61,
     "by_window": {
       "4h": {
         "hits": 4,
-        "misses": 150,
+        "misses": 160,
         "pnl": 41.42999999999999
       },
       "24h": {
         "hits": 9,
-        "misses": 108,
+        "misses": 123,
         "pnl": 54.239999999999995
       },
       "5d": {
@@ -16897,46 +16961,46 @@
     "by_theme": {
       "risk_off": {
         "hits": 4,
-        "misses": 40,
+        "misses": 41,
         "pnl": -61.57
       },
       "defense": {
         "hits": 3,
-        "misses": 34,
+        "misses": 36,
         "pnl": -0.23000000000000043
       },
       "tech": {
         "hits": 0,
-        "misses": 40,
+        "misses": 45,
         "pnl": 16.32
       },
       "macro": {
         "hits": 0,
-        "misses": 34,
+        "misses": 35,
         "pnl": 35.75
       },
       "energy": {
         "hits": 4,
-        "misses": 26
+        "misses": 29
       },
       "risk_on": {
         "hits": 0,
-        "misses": 56,
+        "misses": 60,
         "pnl": 61.71
       },
       "crypto": {
         "hits": 7,
-        "misses": 12,
+        "misses": 16,
         "pnl": 66.05
       },
       "commodities": {
         "hits": 1,
-        "misses": 28,
+        "misses": 31,
         "pnl": -14.95
       },
       "fed": {
         "hits": 0,
-        "misses": 8,
+        "misses": 10,
         "pnl": -7.41
       }
     },
@@ -17591,7 +17655,7 @@
     }
   ],
   "position_book": {
-    "cash": 27468.13,
+    "cash": 22468.13,
     "total_capital": 100000.0,
     "positions": {
       "XAR": {
@@ -17849,19 +17913,21 @@
       "XLE": {
         "side": "SHORT",
         "ticker": "XLE",
-        "shares": 105.284711,
-        "avg_entry": 56.9883,
-        "invested_eur": 6000.0,
+        "shares": 149.159755,
+        "avg_entry": 56.9859,
+        "invested_eur": 8500.0,
         "open_date": "2026-04-23T19:57:37.982756+00:00",
         "open_be": "23/04/2026 21:57 CEST",
         "signals": [
           "panel-XLE-23/04/2026",
           "panel-XLE-23/04/2026",
+          "panel-XLE-24/04/2026",
           "panel-XLE-24/04/2026"
         ],
         "themes": [
           "Energy \u2014 The Insider",
-          "Energy \u2014 The Trump Whisperer + The Macro Man"
+          "Energy \u2014 The Trump Whisperer + The Macro Man",
+          "Energy \u2014 The Insider + The Macro Man"
         ],
         "confidence": 62,
         "check_4h": null,
@@ -17870,17 +17936,19 @@
       "GLD": {
         "side": "SHORT",
         "ticker": "GLD",
-        "shares": 8.114653,
-        "avg_entry": 431.3185,
-        "invested_eur": 3500.0,
+        "shares": 13.914579,
+        "avg_entry": 431.2024,
+        "invested_eur": 6000.0,
         "open_date": "2026-04-23T19:57:38.110041+00:00",
         "open_be": "23/04/2026 21:57 CEST",
         "signals": [
           "panel-GLD-23/04/2026",
+          "panel-GLD-24/04/2026",
           "panel-GLD-24/04/2026"
         ],
         "themes": [
-          "Gold \u2014 The Insider"
+          "Gold \u2014 The Insider",
+          "Gold \u2014 The Insider + The Macro Man"
         ],
         "confidence": 62,
         "check_4h": null,
