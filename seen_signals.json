@@ -1056,7 +1056,7 @@
   "stats": {
     "Polymarket": {
       "hits": 5,
-      "misses": 83,
+      "misses": 84,
       "pending": 0
     },
     "Lobbying": {
@@ -2529,15 +2529,6 @@
       "date": "2026-04-23T22:28:47.472022+00:00",
       "price_at_signal": 651.42,
       "title": "Trump says Israel and Lebanon will extend ceasefire by 3 weeks"
-    },
-    {
-      "uid": "3f259dc57512",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BULLISH",
-      "date": "2026-04-23T23:28:48.786922+00:00",
-      "price_at_signal": 44.05,
-      "title": "Will the price of Bitcoin be above $72,000 on April 24?"
     },
     {
       "uid": "7a7f33de5308",
@@ -14106,14 +14097,18 @@
       "date": "2026-04-23T12:00:11.566015+00:00",
       "price_at_signal": 56.54,
       "check_4h": "2026-04-23T17:26:59.967506+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T23:54:33.299760+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": 0.64,
         "hit": false,
         "price": 56.9
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": 0.58,
+        "hit": false,
+        "price": 56.87
+      },
       "result_5d": null
     },
     {
@@ -14130,14 +14125,18 @@
       "date": "2026-04-23T12:00:11.972943+00:00",
       "price_at_signal": 435.26,
       "check_4h": "2026-04-23T17:27:00.358061+00:00",
-      "check_24h": null,
+      "check_24h": "2026-04-24T23:54:33.452018+00:00",
       "check_5d": null,
       "result_4h": {
         "pct": -0.64,
         "hit": false,
         "price": 432.47
       },
-      "result_24h": null,
+      "result_24h": {
+        "pct": -0.46,
+        "hit": false,
+        "price": 433.25
+      },
       "result_5d": null
     },
     {
@@ -14157,11 +14156,19 @@
       ],
       "date": "2026-04-23T13:59:39.394732+00:00",
       "price_at_signal": 56.88,
-      "check_4h": null,
-      "check_24h": null,
+      "check_4h": "2026-04-24T23:54:33.593773+00:00",
+      "check_24h": "2026-04-24T23:54:33.593797+00:00",
       "check_5d": null,
-      "result_4h": null,
-      "result_24h": null,
+      "result_4h": {
+        "pct": -0.02,
+        "hit": false,
+        "price": 56.87
+      },
+      "result_24h": {
+        "pct": -0.02,
+        "hit": false,
+        "price": 56.87
+      },
       "result_5d": null
     },
     {
@@ -17310,17 +17317,17 @@
   ],
   "platform_score": {
     "hits": 17,
-    "misses": 417,
+    "misses": 421,
     "watches": 61,
     "by_window": {
       "4h": {
         "hits": 4,
-        "misses": 235,
+        "misses": 236,
         "pnl": 41.42999999999999
       },
       "24h": {
         "hits": 9,
-        "misses": 187,
+        "misses": 190,
         "pnl": 54.239999999999995
       },
       "5d": {
@@ -17352,7 +17359,7 @@
       },
       "energy": {
         "hits": 4,
-        "misses": 48
+        "misses": 51
       },
       "risk_on": {
         "hits": 0,
@@ -17366,7 +17373,7 @@
       },
       "commodities": {
         "hits": 1,
-        "misses": 49,
+        "misses": 50,
         "pnl": -14.95
       },
       "fed": {
