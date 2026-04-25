@@ -1154,12 +1154,14 @@
     "4bb1b8acd604",
     "5866ce1998dc",
     "0f49dfd55392",
-    "96c560564eda"
+    "96c560564eda",
+    "9b82de97c103",
+    "9878b8059f5a"
   ],
   "stats": {
     "Polymarket": {
       "hits": 5,
-      "misses": 97,
+      "misses": 100,
       "pending": 0
     },
     "Lobbying": {
@@ -1169,7 +1171,7 @@
     },
     "Macro RSS": {
       "hits": 0,
-      "misses": 3,
+      "misses": 4,
       "pending": 0
     },
     "Dark Pool": {
@@ -1246,15 +1248,6 @@
       "date": "2026-04-20T07:24:49.223904+00:00",
       "price_at_signal": 0,
       "title": "US navy seizes Iranian ship after it breaches blockade"
-    },
-    {
-      "uid": "6f3f5d987825",
-      "source": "Macro RSS",
-      "ticker": "ITA",
-      "direction": "BULLISH",
-      "date": "2026-04-20T08:33:29.298034+00:00",
-      "price_at_signal": 232.059998,
-      "title": "Oil rebounds as Iran threatens to retaliate for US attack on cargo ship"
     },
     {
       "uid": "45cbe6e728da",
@@ -2661,33 +2654,6 @@
       "title": "Musk Elon \u2014 SELL 96,000,000 shares of TSLA"
     },
     {
-      "uid": "2e01adae269f",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BEARISH",
-      "date": "2026-04-24T08:35:26.502853+00:00",
-      "price_at_signal": 44.05,
-      "title": "Will Bitcoin reach $90,000 in April?"
-    },
-    {
-      "uid": "56bd9ac4235a",
-      "source": "Polymarket",
-      "ticker": "XLE",
-      "direction": "BEARISH",
-      "date": "2026-04-24T08:35:26.685100+00:00",
-      "price_at_signal": 56.98,
-      "title": "Will the Iranian regime fall before 2027?"
-    },
-    {
-      "uid": "268f870cc2f6",
-      "source": "Polymarket",
-      "ticker": "ETHA",
-      "direction": "BEARISH",
-      "date": "2026-04-24T08:35:26.927083+00:00",
-      "price_at_signal": 17.49,
-      "title": "Will the price of Ethereum be above $2,600 on April 24?"
-    },
-    {
       "uid": "506035bb7fa8",
       "source": "Yahoo Finance RSS",
       "ticker": "ITA",
@@ -3307,147 +3273,18 @@
       "date": "2026-04-25T06:13:18.121021+00:00",
       "price_at_signal": 215.8,
       "title": "Fed rate cut pushed back to late 2026 on war-related inflation risks: Reuters po"
+    },
+    {
+      "uid": "9b82de97c103",
+      "source": "Yahoo Finance RSS",
+      "ticker": "SOXX",
+      "direction": "BEARISH",
+      "date": "2026-04-25T08:38:15.071702+00:00",
+      "price_at_signal": 461.6,
+      "title": "Will There Be a Stock Market Crash Under President Donald Trump? One Forecasting"
     }
   ],
   "history": [
-    {
-      "uid": "f7cb4a99011c",
-      "date": "24/04/2026 14:23 UTC",
-      "date_be": "24/04/2026 16:23 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "US x Iran diplomatic meeting by April 28, 2026?",
-      "detail": "Market pricing NO at 74% | 24h vol: $217,178 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=74%, vol=$217,178",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-28-2026",
-      "confidence": 74,
-      "hit_rate": "7% (74 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 74% with $217,178 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 74,
-        "source_weight": 5,
-        "hit_rate": "7% (74 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "aa6166bf1ff5",
-      "date": "24/04/2026 14:23 UTC",
-      "date_be": "24/04/2026 16:23 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BEARISH",
-      "title": "US x Iran diplomatic meeting by April 27, 2026?",
-      "detail": "Market pricing NO at 86% | 24h vol: $215,799 | Signal: BEARISH",
-      "urgency": "HIGH",
-      "keywords": "p=86%, vol=$215,799",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "GLD",
-          "SPDR Gold Shares",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/us-x-iran-diplomatic-meeting-by-april-27-2026",
-      "confidence": 86,
-      "hit_rate": "7% (74 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability NO at 86% with $215,799 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 86,
-        "source_weight": 5,
-        "hit_rate": "7% (74 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
-    {
-      "uid": "5aa3f724c258",
-      "date": "24/04/2026 14:23 UTC",
-      "date_be": "24/04/2026 16:23 CEST",
-      "source": "Polymarket",
-      "type": "Prediction Market",
-      "direction": "BULLISH",
-      "title": "Will WTI Crude Oil (WTI) hit (HIGH) $100 in April?",
-      "detail": "Market pricing YES at 57% | 24h vol: $213,582 | Signal: BULLISH",
-      "urgency": "HIGH",
-      "keywords": "p=57%, vol=$213,582",
-      "etfs": [
-        [
-          "XLE",
-          "Energy Select Sector SPDR ETF",
-          "NYSE"
-        ],
-        [
-          "USO",
-          "United States Oil Fund",
-          "NYSE"
-        ],
-        [
-          "OIH",
-          "VanEck Oil Services ETF",
-          "NYSE"
-        ]
-      ],
-      "link": "https://polymarket.com/event/will-wti-crude-oil-wti-hit-high-100-in-april",
-      "confidence": 57,
-      "hit_rate": "7% (74 verified signals)",
-      "reasoning_stored": {
-        "why": "Market probability YES at 57% with $213,582 24h volume",
-        "signal_type": "Prediction market \u2014 top 200 by volume",
-        "confidence": 57,
-        "source_weight": 5,
-        "hit_rate": "7% (74 verified signals)",
-        "caveat": "Anonymous accounts \u2014 cannot verify insider vs retail",
-        "breakdown": []
-      },
-      "verified": null,
-      "pct_change": null,
-      "verified_date": null,
-      "price_entry": null,
-      "price_now": null
-    },
     {
       "uid": "afa313b4c6ff",
       "date": "24/04/2026 14:23 UTC",
@@ -12451,71 +12288,164 @@
       "verified_date": null,
       "price_entry": null,
       "price_now": null
+    },
+    {
+      "uid": "a9b17f410e54",
+      "date": "25/04/2026 08:38 UTC",
+      "date_be": "25/04/2026 10:38 CEST",
+      "source": "CONVERGENCE",
+      "type": "2 sources \u00b7 score 9",
+      "direction": "MIXED",
+      "title": "[2x CONVERGENCE] SOXX \u2014 MIXED",
+      "detail": "Score: 9pts across 2 independent sources: Yahoo Finance RSS, Google News RSS",
+      "urgency": "MEDIUM",
+      "keywords": "SOXX",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://paulrendev.github.io/Stocazzo",
+      "confidence": 72,
+      "hit_rate": "No historical data yet for convergence signals",
+      "reasoning_stored": {
+        "why": "Sources split on SOXX \u2014 no clear direction",
+        "signal_type": "Multi-source convergence \u2014 strongest signal type",
+        "confidence": 72,
+        "source_weight": 5,
+        "hit_rate": "No historical data yet for convergence signals",
+        "caveat": "Convergence != certainty. Check macro context before acting.",
+        "breakdown": [
+          {
+            "source": "Yahoo Finance RSS",
+            "direction": "BEARISH",
+            "urgency": "LOW",
+            "points": 4,
+            "reasoning": "weight=2 + urgency=1 + hit_rate=42%x2 = 4pts",
+            "signal": "Will There Be a Stock Market Crash Under President Donald Tr"
+          },
+          {
+            "source": "Google News RSS",
+            "direction": "BULLISH",
+            "urgency": "MEDIUM",
+            "points": 5,
+            "reasoning": "weight=2 + urgency=2 + hit_rate=43%x2 = 5pts",
+            "signal": "Mechanics Bancorp (MCHB) Stock: Market Sentiment Analysis | "
+          }
+        ]
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "9b82de97c103",
+      "date": "25/04/2026 08:38 UTC",
+      "date_be": "25/04/2026 10:38 CEST",
+      "source": "Yahoo Finance RSS",
+      "type": "Yahoo S&P500 \u00b7 tech",
+      "direction": "BEARISH",
+      "title": "Will There Be a Stock Market Crash Under President Donald Trump? One Forecasting Tool With 155 Years of History in Its S",
+      "detail": "this measure has an immaculate track record of predicting big moves for stocks.",
+      "urgency": "LOW",
+      "keywords": "tech",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://www.fool.com/investing/2026/04/25/stock-market-crash-donald-trump-155-years-history/?.tsrc=rss",
+      "confidence": 33,
+      "hit_rate": "0% (4 verified signals)",
+      "reasoning_stored": {
+        "why": "Yahoo S&P500: Will There Be a Stock Market Crash Under President Donald Trump? One Forecasting. 0 bullish / 1 bearish signals.",
+        "signal_type": "News RSS \u2014 Yahoo S&P500",
+        "confidence": 33,
+        "source_weight": 2,
+        "hit_rate": "0% (4 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
+    },
+    {
+      "uid": "9878b8059f5a",
+      "date": "25/04/2026 08:38 UTC",
+      "date_be": "25/04/2026 10:38 CEST",
+      "source": "Google News RSS",
+      "type": "Google News Earnings \u00b7 tech, macro",
+      "direction": "BULLISH",
+      "title": "Mechanics Bancorp (MCHB) Stock: Market Sentiment Analysis | Q4 2025: Earnings Beat Estimates - Network Effect - C\u1ed5ng th\u00f4",
+      "detail": "mechanics bancorp (mchb) stock: market sentiment analysis | q4 2025: earnings beat estimates - network effect &nbsp;&nbsp; c\u1ed5ng th\u00f4ng tin \u0111i\u1ec7n t\u1eed t\u1ec9nh l\u00e0o cai",
+      "urgency": "MEDIUM",
+      "keywords": "tech, macro",
+      "etfs": [
+        [
+          "SOXX",
+          "iShares Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SMH",
+          "VanEck Semiconductor ETF",
+          "NASDAQ"
+        ],
+        [
+          "SOXS",
+          "Direxion Daily Semiconductor Bear 3X",
+          "NYSE"
+        ]
+      ],
+      "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPYW9TcTR6VmUyX3B5cUJHNzRGLWxmUmptR2N6eGV5NWVtV1h1NkM3N2gwNVpqZXQyYVJ2TmZ3TFZCZlVRNzNBelFqQlNKbmxCeUpvaG1ET0ViSTJQUVJzcmd1QUlTRUo3SGVreG0zeFlicnZTTVRpOWlYNTZCdjZvRDRNaXlHbHU5VE1qOV84d0NiQmdHX3ZLejlSc3prelMtNEhzQXpQZllnREltVDRVbVAtUG15dTF6SFdTRUd0NXNFalU?oc=5",
+      "confidence": 41,
+      "hit_rate": "0% (4 verified signals)",
+      "reasoning_stored": {
+        "why": "Google News Earnings: Mechanics Bancorp (MCHB) Stock: Market Sentiment Analysis | Q4 2025: Earnings Be. 2 bullish / 0 bearish signals.",
+        "signal_type": "News RSS \u2014 Google News Earnings",
+        "confidence": 41,
+        "source_weight": 2,
+        "hit_rate": "0% (4 verified signals)",
+        "caveat": "News follows events \u2014 use to confirm crony signals or set macro context.",
+        "breakdown": []
+      },
+      "verified": null,
+      "pct_change": null,
+      "verified_date": null,
+      "price_entry": null,
+      "price_now": null
     }
   ],
   "advice_checks": [
-    {
-      "uid": "8dc394cdb89c",
-      "theme": "risk_on",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "SPY",
-      "score": 25,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Yahoo Finance RSS",
-        "Motley Fool RSS",
-        "Google News RSS"
-      ],
-      "date": "2026-04-22T23:05:22.704618+00:00",
-      "price_at_signal": 711.21,
-      "check_4h": "2026-04-24T16:41:10.064108+00:00",
-      "check_24h": "2026-04-24T16:41:10.064131+00:00",
-      "check_5d": null,
-      "result_4h": {
-        "pct": 0.32,
-        "hit": false,
-        "price": 713.47
-      },
-      "result_24h": {
-        "pct": 0.32,
-        "hit": false,
-        "price": 713.47
-      },
-      "result_5d": null
-    },
-    {
-      "uid": "7b13d7eea78f",
-      "theme": "tech",
-      "action": "BUY / ACCUMULATE",
-      "direction": "BUY",
-      "ticker": "QQQ",
-      "score": 25,
-      "confidence": 90,
-      "sources": [
-        "CONVERGENCE",
-        "Yahoo Finance RSS",
-        "Motley Fool RSS",
-        "Google News RSS"
-      ],
-      "date": "2026-04-22T23:05:22.810660+00:00",
-      "price_at_signal": 655.11,
-      "check_4h": "2026-04-24T16:41:10.215742+00:00",
-      "check_24h": "2026-04-24T16:41:10.215766+00:00",
-      "check_5d": null,
-      "result_4h": {
-        "pct": 1.27,
-        "hit": false,
-        "price": 663.41
-      },
-      "result_24h": {
-        "pct": 1.27,
-        "hit": false,
-        "price": 663.41
-      },
-      "result_5d": null
-    },
     {
       "uid": "3a68dcf68f3f",
       "theme": "defense",
@@ -17467,6 +17397,48 @@
       "result_4h": null,
       "result_24h": null,
       "result_5d": null
+    },
+    {
+      "uid": "06deab79beb5",
+      "theme": "tech",
+      "action": "WATCH",
+      "direction": "WATCH",
+      "ticker": "QQQ",
+      "score": 18,
+      "confidence": 90,
+      "sources": [
+        "CONVERGENCE",
+        "Yahoo Finance RSS",
+        "Google News RSS"
+      ],
+      "date": "2026-04-25T08:38:14.826693+00:00",
+      "price_at_signal": 663.88,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
+    },
+    {
+      "uid": "6c23fd57c529",
+      "theme": "risk_on",
+      "action": "BUY / ACCUMULATE",
+      "direction": "BUY",
+      "ticker": "SPY",
+      "score": 3,
+      "confidence": 23,
+      "sources": [
+        "Google News RSS"
+      ],
+      "date": "2026-04-25T08:38:14.961711+00:00",
+      "price_at_signal": 713.94,
+      "check_4h": null,
+      "check_24h": null,
+      "check_5d": null,
+      "result_4h": null,
+      "result_24h": null,
+      "result_5d": null
     }
   ],
   "platform_score": {
@@ -18187,7 +18159,7 @@
     }
   ],
   "position_book": {
-    "cash": 26971.03,
+    "cash": 25971.03,
     "total_capital": 100000.0,
     "positions": {
       "XAR": {
@@ -18269,9 +18241,9 @@
       "SMH": {
         "side": "LONG",
         "ticker": "SMH",
-        "shares": 17.497602,
-        "avg_entry": 485.7809,
-        "invested_eur": 8500.0,
+        "shares": 19.47217,
+        "avg_entry": 487.8758,
+        "invested_eur": 9500.0,
         "open_date": "2026-04-21T17:19:05.643826+00:00",
         "open_be": "21/04/2026 19:19 CEST",
         "signals": [
@@ -18281,6 +18253,7 @@
           "panel-SMH-23/04/2026",
           "panel-SMH-24/04/2026",
           "panel-SMH-24/04/2026",
+          "panel-SMH-25/04/2026",
           "panel-SMH-25/04/2026"
         ],
         "themes": [
