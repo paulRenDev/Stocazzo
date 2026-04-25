@@ -1,8 +1,8 @@
 name: Stocazzo Scanner
 
 on:
-  schedule:
-    - cron: '*/12 * * * *'
+  #schedule:
+  #  - cron: '*/12 * * * *'
   workflow_dispatch:
 
 permissions:
