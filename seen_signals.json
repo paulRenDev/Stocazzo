@@ -1159,7 +1159,7 @@
   "stats": {
     "Polymarket": {
       "hits": 5,
-      "misses": 94,
+      "misses": 97,
       "pending": 0
     },
     "Lobbying": {
@@ -1173,12 +1173,12 @@
       "pending": 0
     },
     "Dark Pool": {
-      "hits": 0,
+      "hits": 1,
       "misses": 3,
       "pending": 0
     },
     "Truth Social": {
-      "hits": 7,
+      "hits": 9,
       "misses": 10,
       "pending": 0
     }
@@ -1203,42 +1203,6 @@
       "title": "Trump: \"i just had excellent conversations with the highly respected president j"
     },
     {
-      "uid": "f3dabdf7fcdc",
-      "source": "Dark Pool",
-      "ticker": "NVDA",
-      "direction": "ACCUMULATION",
-      "date": "2026-04-20T07:24:48.090713+00:00",
-      "price_at_signal": 201.68,
-      "title": "Dark pool: SPY, QQQ, IWM, NVDA, HYG"
-    },
-    {
-      "uid": "b2e74d6ff27c",
-      "source": "Lobbying",
-      "ticker": "LMT",
-      "direction": "WATCH",
-      "date": "2026-04-20T07:24:48.192836+00:00",
-      "price_at_signal": 592.19,
-      "title": "LMT lobbying: $4,230,000 in last 90 days"
-    },
-    {
-      "uid": "07c82ac17438",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BEARISH",
-      "date": "2026-04-20T07:24:48.301307+00:00",
-      "price_at_signal": 231.94,
-      "title": "Trump: \"ruddy: trump already won the war with 9 victories: https://www.newsmax.c"
-    },
-    {
-      "uid": "49ecd59bb8e6",
-      "source": "Truth Social",
-      "ticker": "XLE",
-      "direction": "WATCH",
-      "date": "2026-04-20T07:24:48.402332+00:00",
-      "price_at_signal": 55.02,
-      "title": "Trump: \"mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mcla"
-    },
-    {
       "uid": "1016c48d066c",
       "source": "Truth Social",
       "ticker": "IWDA",
@@ -1246,24 +1210,6 @@
       "date": "2026-04-20T07:24:48.627498+00:00",
       "price_at_signal": 0,
       "title": "Trump: \"tariffs are a discipline, not a press release: https://www.wsj.com/opini"
-    },
-    {
-      "uid": "a0b3b1f93467",
-      "source": "Truth Social",
-      "ticker": "ITA",
-      "direction": "BEARISH",
-      "date": "2026-04-20T07:24:48.734851+00:00",
-      "price_at_signal": 231.94,
-      "title": "Trump: \"today, an iranian-flagged cargo ship named touska, nearly 900 feet long "
-    },
-    {
-      "uid": "47b320b8e362",
-      "source": "Truth Social",
-      "ticker": "XLE",
-      "direction": "WATCH",
-      "date": "2026-04-20T07:24:48.831280+00:00",
-      "price_at_signal": 55.02,
-      "title": "Trump: \"mclaughlin poll: voters back trump on iran: https://www.newsmax.com/mcla"
     },
     {
       "uid": "9e539a681c0a",
@@ -2704,33 +2650,6 @@
       "date": "2026-04-24T04:27:52.001006+00:00",
       "price_at_signal": 219.11,
       "title": "Fed rate cut bets revived, a bit, by Iran war ceasefire - Reuters"
-    },
-    {
-      "uid": "c5d5227b5086",
-      "source": "Polymarket",
-      "ticker": "XLE",
-      "direction": "BEARISH",
-      "date": "2026-04-24T06:28:58.980271+00:00",
-      "price_at_signal": 56.98,
-      "title": "US x Iran permanent peace deal by May 31, 2026?"
-    },
-    {
-      "uid": "b9e23c039387",
-      "source": "Polymarket",
-      "ticker": "GLD",
-      "direction": "BEARISH",
-      "date": "2026-04-24T06:28:59.145637+00:00",
-      "price_at_signal": 431.04,
-      "title": "Israel x Hezbollah Ceasefire extended by April 26, 2026?"
-    },
-    {
-      "uid": "047df0b83fd3",
-      "source": "Polymarket",
-      "ticker": "IBIT",
-      "direction": "BEARISH",
-      "date": "2026-04-24T06:28:59.309527+00:00",
-      "price_at_signal": 44.05,
-      "title": "Will the price of Bitcoin be above $82,000 on April 24?"
     },
     {
       "uid": "728a89384fc6",
@@ -16276,10 +16195,14 @@
       ],
       "date": "2026-04-24T15:45:08.863840+00:00",
       "price_at_signal": 711.88,
-      "check_4h": null,
+      "check_4h": "2026-04-25T07:46:00.381941+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.29,
+        "hit": false,
+        "price": 713.97998
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16298,10 +16221,14 @@
       ],
       "date": "2026-04-24T15:45:09.163209+00:00",
       "price_at_signal": 711.88,
-      "check_4h": null,
+      "check_4h": "2026-04-25T07:46:00.531971+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.29,
+        "hit": false,
+        "price": 713.97998
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16319,10 +16246,14 @@
       ],
       "date": "2026-04-24T15:45:09.492847+00:00",
       "price_at_signal": 661.16,
-      "check_4h": null,
+      "check_4h": "2026-04-25T07:46:00.685391+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.42,
+        "hit": false,
+        "price": 663.90997
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16342,10 +16273,14 @@
       ],
       "date": "2026-04-24T16:42:21.203046+00:00",
       "price_at_signal": 663.31,
-      "check_4h": null,
+      "check_4h": "2026-04-25T07:46:00.827836+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.09,
+        "hit": false,
+        "price": 663.90997
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -16364,10 +16299,14 @@
       ],
       "date": "2026-04-24T16:42:22.066813+00:00",
       "price_at_signal": 713.42,
-      "check_4h": null,
+      "check_4h": "2026-04-25T07:46:00.982152+00:00",
       "check_24h": null,
       "check_5d": null,
-      "result_4h": null,
+      "result_4h": {
+        "pct": 0.08,
+        "hit": false,
+        "price": 713.97998
+      },
       "result_24h": null,
       "result_5d": null
     },
@@ -17532,12 +17471,12 @@
   ],
   "platform_score": {
     "hits": 17,
-    "misses": 474,
+    "misses": 479,
     "watches": 67,
     "by_window": {
       "4h": {
         "hits": 4,
-        "misses": 264,
+        "misses": 269,
         "pnl": 41.42999999999999
       },
       "24h": {
@@ -17564,12 +17503,12 @@
       },
       "tech": {
         "hits": 0,
-        "misses": 68,
+        "misses": 70,
         "pnl": 16.32
       },
       "macro": {
         "hits": 0,
-        "misses": 52,
+        "misses": 53,
         "pnl": 35.75
       },
       "energy": {
@@ -17578,7 +17517,7 @@
       },
       "risk_on": {
         "hits": 0,
-        "misses": 97,
+        "misses": 99,
         "pnl": 61.71
       },
       "crypto": {
