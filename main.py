@@ -1,6 +1,3 @@
-### `main.py`
-
-```python
 """
 main.py — Stocazzo v8
 Orchestrator. Calls everything, does nothing else itself.
@@ -203,4 +200,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
