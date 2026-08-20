@@ -1,8 +1,3 @@
-### Bestandsnaam: `docs/portfolio_sync.gs`
-
-*(dit bestand is voor later — het Google Apps Script dat je sheet automatisch synct. Je kan dit ook overslaan voor nu en gewoon rechtstreeks pasten in je Google Sheet's Apps Script editor in plaats van in GitHub — zie de setup-instructies bovenaan het bestand zelf.)*
-
-```javascript
 /**
  * portfolio_sync.gs — pushes the "PORTEFEUILLE" holdings table from this
  * Google Sheet to real_holdings.json in the Stocazzo GitHub repo, so the
