@@ -1,4 +1,3 @@
-```python
 """
 real_portfolio.py — Paul's actual ME-DIRECT holdings.
 
@@ -91,4 +90,3 @@ def load_holdings():
 
 
 MY_HOLDINGS = load_holdings()
-```
