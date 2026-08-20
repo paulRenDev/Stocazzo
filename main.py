@@ -1,35 +1,28 @@
+### `main.py`
+
+```python
 """
-main.py — Stocazzo v7.2
+main.py — Stocazzo v8
 Orchestrator. Calls everything, does nothing else itself.
 
+v8: Crony-signal pivot. Polymarket/Kalshi/Truth Social/SEC EDGAR/Capitol
+    Trades/OpenInsider/Reddit/Benzinga scanners are switched off — Stocazzo
+    as an insider-signal tracker is retired. The macro/geopolitical layer
+    (GDELT + RSS + Fear&Greed + broad news feeds) is now the primary
+    function, feeding a real-portfolio advice engine (output/portfolio_advice.py)
+    that maps signals onto Paul's actual ME-DIRECT holdings (real_portfolio.py)
+    instead of a generic virtual portfolio. Dashboard/virtual-portfolio
+    machinery is left in place but now runs on a much smaller signal set.
 v7.1: Stock enrichment — yfinance technical context passed to analyst panel.
-v7.2: Signal volume expansion:
-      - scan_news_feeds: 20+ RSS feeds (Reuters, AP, MarketWatch, Yahoo, Google News, etc.)
-      - scan_polymarket_expanded: all financial Polymarket categories (not just politics)
-      - scan_capitol_trades + scan_openinsider: replace dead congress/pelosi/darkpool
-      - scan_benzinga: replaces blocked options flow
-      Dropped: scan_congress (403), scan_pelosi (broken regex),
-               scan_dark_pool (cloud blocked), scan_unusual_whales (cloud blocked).
+v7.2: Signal volume expansion (scan_news_feeds, expanded scanners) — see git history.
 """
 from helpers import now_utc
 from state import load_seen, add_to_history, commit_seen
 from scoring import run_backcheck, queue_for_backcheck, update_history_backcheck
 
-# Crony scanners
-from scanners.polymarket_expanded import scan_polymarket_expanded   # expanded (all categories)
-from scanners.polymarket          import scan_polymarket             # original (politics, keep as fallback)
-from scanners.kalshi              import scan_kalshi
-from scanners.edgar               import scan_edgar
-from scanners.truthsocial         import scan_truthsocial
-from scanners.social              import scan_reddit
-
-# New reliable scanners (v7.2)
-from scanners.capitol_trades_and_openinsider import scan_capitol_trades, scan_openinsider
-from scanners.benzinga_rss                   import scan_benzinga
-from scanners.news_feeds                     import scan_news_feeds
-
-# Macro scanners
-from scanners.macro import scan_macro
+# Macro / geopolitical scanners — the only signal sources since v8
+from scanners.macro       import scan_macro
+from scanners.news_feeds  import scan_news_feeds
 
 # Stock enrichment (v7.1)
 from scanners.stock_analyzer import enrich_with_stock_data
@@ -39,14 +32,15 @@ from convergence     import build_convergence
 from output.advice   import build_advice, log_advice_for_scoring, run_advice_backcheck
 from output.analysts import build_analyst_panel
 from portfolio       import open_position, update_positions
+from output.portfolio_advice import build_portfolio_advice
 
 # Output
 from output.page_builder import generate_live_html, generate_history_html, generate_index_html, generate_sources_html
-from output.mail_builder import send_email
+from output.mail_builder import send_portfolio_email
 
 
 def main():
-    print(f"=== Stocazzo v7.2 started: {now_utc()} ===")
+    print(f"=== Stocazzo v8 started: {now_utc()} ===")
 
     seen_data = load_seen()
     print(f"Previously seen: {len(seen_data.get('ids', []))} items | "
@@ -63,30 +57,10 @@ def main():
     if advice_backcheck:
         print(f"Advice backcheck: {len(advice_backcheck)} results")
 
-    # 2. Run all scanners
+    # 2. Run scanners — macro/geopolitical only since v8 (crony scanners retired)
     all_alerts = []
-
-    # ── Crony signals (pre-news, highest weight) ───────────────────────────────
-    pm_expanded = scan_polymarket_expanded(seen_data)
-    if pm_expanded:
-        all_alerts += pm_expanded
-    else:
-        # Fallback to original if expanded fails
-        all_alerts += scan_polymarket(seen_data)
-
-    all_alerts += scan_kalshi(seen_data)
-    all_alerts += scan_edgar(seen_data)
-    all_alerts += scan_capitol_trades(seen_data)
-    all_alerts += scan_openinsider(seen_data)
-
-    # ── Social / real-time ────────────────────────────────────────────────────
-    all_alerts += scan_truthsocial(seen_data)
-    all_alerts += scan_reddit(seen_data)
-
-    # ── Macro + news feeds (volume layer) ────────────────────────────────────
-    all_alerts += scan_macro(seen_data)          # existing GDELT + RSS + Fear&Greed
-    all_alerts += scan_news_feeds(seen_data)     # 20+ additional RSS feeds
-    all_alerts += scan_benzinga(seen_data)       # market-moving news for Tape Reader
+    all_alerts += scan_macro(seen_data)          # GDELT + RSS + Fear&Greed
+    all_alerts += scan_news_feeds(seen_data)     # broader macro/geopolitical RSS
 
     print(f"Raw signals before enrichment: {len(all_alerts)}")
 
@@ -187,7 +161,11 @@ def main():
     if advice_cards:
         log_advice_for_scoring(advice_cards, seen_data)
 
-    # 6b. Update existing portfolio positions
+    # 6a. Build advice for Paul's real ME-DIRECT holdings — the primary output since v8
+    portfolio_cards = build_portfolio_advice(all_alerts, seen_data)
+    print(f"Portfolio advice: {len(portfolio_cards)} holdings have an active signal this run")
+
+    # 6b. Update existing (virtual) portfolio positions
     portfolio_checks = update_positions(seen_data)
     if portfolio_checks:
         print(f"Portfolio checks: {len(portfolio_checks)} position updates")
@@ -211,30 +189,12 @@ def main():
     generate_sources_html(seen_data)
     generate_index_html()
 
-    # 9. Send email — only on meaningful events
-    priority = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}
-    all_alerts.sort(key=lambda x: (
-        0 if x["source"] == "CONVERGENCE"
-        else priority.get(x.get("urgency", "LOW"), 2)
-    ))
-
-    high_alerts        = [a for a in all_alerts if a.get("urgency") == "HIGH" or a.get("source") == "CONVERGENCE"]
-    medium_alerts      = [a for a in all_alerts if a.get("urgency") == "MEDIUM"]
-    portfolio_closings = [c for c in portfolio_checks if c.get("window") == "5d"]
-
-    should_mail = (
-        len(high_alerts) > 0 or
-        len(medium_alerts) >= 5 or
-        len(backcheck_results) > 0 or
-        len(portfolio_closings) > 0
-    )
-
-    if should_mail:
-        print(f"Sending email: {len(high_alerts)} HIGH, {len(medium_alerts)} MEDIUM, "
-              f"{len(backcheck_results)} backchecks, {len(portfolio_closings)} closed positions")
-        send_email(all_alerts, backcheck_results, seen_data, advice_cards)
+    # 9. Send email — only when a real holding has an active geopolitical signal
+    if portfolio_cards:
+        print(f"Sending portfolio advice email: {len(portfolio_cards)} holdings affected")
+        send_portfolio_email(portfolio_cards, advice_cards, seen_data)
     else:
-        print(f"No email — {len(all_alerts)} low-priority signals only")
+        print("No email — no real holding was hit by a geopolitical signal this run")
 
     # 10. Save and commit
     commit_seen(seen_data)
@@ -243,3 +203,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+```
