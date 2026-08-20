@@ -1,3 +1,6 @@
+### `output/mail_builder.py`
+
+```python
 """
 output/mail_builder.py — CronyPony v7
 Builds and sends HTML emails. No scan logic.
@@ -323,3 +326,83 @@ def send_email(alerts, backcheck_results, seen_data, advice_cards=None):
 
     except Exception as e:
         print(f"Mail fout: {e}")
+
+
+# ── PORTFOLIO ADVICE EMAIL (v8 — post-crony pivot) ────────────────────────────
+def send_portfolio_email(portfolio_cards, general_advice_cards, seen_data):
+    """
+    Sends the geopolitical portfolio advice mail: per real ME-DIRECT holding,
+    what geopolitical signals fired and what to do about it. Only sends when
+    at least one holding has an active signal.
+    """
+    from output.portfolio_advice import format_portfolio_advice_html
+    from output.advice import format_advice_html_section
+
+    if not portfolio_cards:
+        return
+
+    if not GMAIL_USER or not GMAIL_PASSWORD:
+        print("Email: geen credentials — enkel console output")
+        for c in portfolio_cards:
+            print(f"\n[{c['action']}] {c['ticker']} — {c['n_signals']} signals")
+        return
+
+    n_reduce = sum(1 for c in portfolio_cards if c["action"] == "REDUCE / HEDGE")
+    n_accum  = sum(1 for c in portfolio_cards if c["action"] == "ACCUMULATE")
+
+    macro_section = ""
+    if general_advice_cards:
+        macro_section = (
+            f"<div style='background:#f5f5f0;padding:12px 16px;border-top:1px solid #e8e8e0;"
+            f"border-bottom:1px solid #e8e8e0;'>"
+            f"<div style='font-size:10px;font-family:monospace;color:#6b6b6b;text-transform:uppercase;"
+            f"letter-spacing:0.06em;'>Bredere macro-context (niet gekoppeld aan een positie)</div></div>"
+            f"<div style='padding:12px 16px;'>{format_advice_html_section(general_advice_cards)}</div>"
+        )
+
+    html = (
+        f"<html><body style='font-family:Arial,sans-serif;background:#f5f5f0;margin:0;padding:20px;'>"
+        f"<div style='max-width:680px;margin:0 auto;background:white;border:1px solid #d8d8d0;"
+        f"border-radius:8px;overflow:hidden;'>"
+        f"<div style='background:#007a5e;padding:20px 24px;'>"
+        f"<div style='font-family:monospace;font-size:10px;color:#9fe1cb;letter-spacing:0.12em;'>"
+        f"STOCAZZO // PORTFOLIO ADVIES</div>"
+        f"<div style='font-size:22px;font-weight:300;color:white;'>"
+        f"{len(portfolio_cards)} positie{'s' if len(portfolio_cards) != 1 else ''} geraakt door geopolitiek nieuws</div>"
+        f"<div style='font-size:12px;color:#9fe1cb;margin-top:4px;font-family:monospace;'>"
+        f"{now_utc()} &nbsp;·&nbsp; {now_be()}</div></div>"
+        f"<div style='padding:12px 16px;background:#fafaf8;font-size:12px;color:#6b6b6b;"
+        f"border-bottom:1px solid #f0f0eb;'>"
+        f"{n_reduce} REDUCE / HEDGE &nbsp;·&nbsp; {n_accum} ACCUMULATE &nbsp;·&nbsp; "
+        f"{len(portfolio_cards) - n_reduce - n_accum} MONITOR</div>"
+        f"{format_portfolio_advice_html(portfolio_cards)}"
+        f"{macro_section}"
+        f"<div style='padding:16px 24px;background:#f5f5f0;border-top:1px solid #d8d8d0;'>"
+        f"<div style='font-size:11px;color:#9a9a9a;font-family:monospace;'>"
+        f"Bronnen: GDELT · Reuters/FT/ECB/WSJ/CNBC RSS · Google News · CNN Fear &amp; Greed<br>"
+        f"Holdings via real_holdings.json — controleer en corrigeer altijd zelf voor je handelt.<br>"
+        f"<a href='{SITE_URL}' style='color:#1a5fb5;'>Open Stocazzo →</a>"
+        f"</div></div></div></body></html>"
+    )
+
+    recipients = [e.strip() for e in ALERT_EMAIL.split(",") if e.strip()]
+
+    try:
+        msg = MIMEMultipart("alternative")
+        msg["Subject"] = (
+            f"{'[ACTIE] ' if n_reduce else ''}Stocazzo Portfolio: "
+            f"{len(portfolio_cards)} positie{'s' if len(portfolio_cards) != 1 else ''} — {now_be()}"
+        )
+        msg["From"] = GMAIL_USER
+        msg["To"]   = ", ".join(recipients)
+        msg.attach(MIMEText(html, "html"))
+
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(GMAIL_USER, GMAIL_PASSWORD)
+            smtp.sendmail(GMAIL_USER, recipients, msg.as_string())
+
+        print(f"Portfolio mail verstuurd naar: {', '.join(recipients)}")
+
+    except Exception as e:
+        print(f"Portfolio mail fout: {e}")
+```
