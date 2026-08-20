@@ -1,6 +1,3 @@
-### `output/mail_builder.py`
-
-```python
 """
 output/mail_builder.py — CronyPony v7
 Builds and sends HTML emails. No scan logic.
@@ -405,4 +402,3 @@ def send_portfolio_email(portfolio_cards, general_advice_cards, seen_data):
 
     except Exception as e:
         print(f"Portfolio mail fout: {e}")
-```
