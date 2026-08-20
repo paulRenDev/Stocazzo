@@ -1,16 +1,54 @@
 {
-  "generated_at": "2026-08-20T00:00:00+00:00",
-  "source": "manual snapshot from Google Sheets 'PORTEFEUILLE' table — replace with docs/portfolio_sync.gs once set up",
+  "generated_at": "2026-08-20T17:19:59.354Z",
+  "source": "Google Sheets — portfolio_sync.gs",
   "holdings": [
-    {"ticker": "HLTW",  "name": "Amundi MSCI World Health Care UCITS EUR Acc ETF",             "exchange": "EPA",     "currency": "EUR", "shares": 1,  "value_eur": 532.43},
-    {"ticker": "COSW",  "name": "Amundi S&P World Consumer Staples Screened UCITS Acc ETF",     "exchange": "EPA",     "currency": "EUR", "shares": 45, "value_eur": 484.20},
-    {"ticker": "NUCL",  "name": "VanEck Uranium and Nuclear Technologies UCITS ETF",            "exchange": "EPA",     "currency": "EUR", "shares": 10, "value_eur": 455.80},
-    {"ticker": "IWVL",  "name": "iShares Edge MSCI World Value Factor UCITS ETF USD A",         "exchange": "LON",     "currency": "USD", "shares": 12, "value_eur": 836.07},
-    {"ticker": "IWDA",  "name": "iShares Core MSCI World UCITS ETF USD (Acc)",                  "exchange": "AMS",     "currency": "EUR", "shares": 21, "value_eur": 2651.01},
-    {"ticker": "TWEKA", "name": "TKH Group NV",                                                 "exchange": "AMS",     "currency": "EUR", "shares": 1,  "value_eur": 48.68},
-    {"ticker": "EVS",   "name": "EVS Broadcast Equipment SA",                                   "exchange": "EBR",     "currency": "EUR", "shares": 1,  "value_eur": 28.50},
-    {"ticker": "HO",    "name": "Thales SA",                                                    "exchange": "EPA",     "currency": "EUR", "shares": 1,  "value_eur": 256.10},
-    {"ticker": "SPCX",  "name": "Space Exploration Technologies Corp (SpaceX)",                 "exchange": "NASDAQ",  "currency": "USD", "shares": 1,  "value_eur": 112.35}
-  ],
-  "note": "TWEKA/EVS/HO/SPCX come from the sheet's transaction log, not the auto-updating ETF detail table — verify these are still held before trusting advice on them."
+    {
+      "ticker": "HLTW",
+      "name": "Amundi MSCI World Health Care UCITS EUR Acc ETF",
+      "exchange": "EPA",
+      "currency": "EUR",
+      "shares": 1,
+      "value_eur": 532.43
+    },
+    {
+      "ticker": "COSW",
+      "name": "Amundi S&P World Consumer Staples Screened UCITS Acc ETF",
+      "exchange": "EPA",
+      "currency": "EUR",
+      "shares": 45,
+      "value_eur": 484.2
+    },
+    {
+      "ticker": "NUCL",
+      "name": "VanEck Uranium and Nuclear Technologies UCITS ETF",
+      "exchange": "EPA",
+      "currency": "EUR",
+      "shares": 10,
+      "value_eur": 455.79999999999995
+    },
+    {
+      "ticker": "IWVL",
+      "name": "iShares Edge MSCI Wld Val Fctr UCITS ETF USD A",
+      "exchange": "LON",
+      "currency": "USD",
+      "shares": 12,
+      "value_eur": 836.4621599999999
+    },
+    {
+      "ticker": "IWDA",
+      "name": "iShares Core MSCI World UCITS ETF USD (Acc)",
+      "exchange": "AMS",
+      "currency": "EUR",
+      "shares": 11,
+      "value_eur": 1387.98
+    },
+    {
+      "ticker": "IWDA",
+      "name": "iShares Core MSCI World UCITS ETF USD (Acc)",
+      "exchange": "LON",
+      "currency": "USD",
+      "shares": 10,
+      "value_eur": 1262.763825
+    }
+  ]
 }
