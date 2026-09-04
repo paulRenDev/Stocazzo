@@ -1,11 +1,21 @@
 # WPML findings — DJI Mini 5 Pro + RC 2
 
-Source: `examples/original_dji_mission.kmz`, provided by the user, a real
-export for the DJI Mini 5 Pro + RC 2. This is the **only** real sample
-analyzed so far (one file, no altered-parameter comparison sample yet) —
-treat everything below as confirmed-for-this-one-file, not as a general
-DJI spec. Re-run `mission.parser.inspect_kmz` against any new sample
-before assuming it generalizes.
+Sources, both real exports for the DJI Mini 5 Pro + RC 2, provided by the
+user:
+
+- `examples/original_dji_mission.kmz` — the base sample.
+- `examples/original_dji_mission_wp2_edited.kmz` — the same mission,
+  pulled directly from the RC 2's own storage
+  (`Internal shared storage/Android/data/dji.go.v5/files/waypoint/`)
+  after the third waypoint's height/position was edited in DJI Fly and
+  re-saved.
+
+Two samples, one single-waypoint edit between them — still a narrow base
+(no altitude-only edit isolated from a position edit yet, no mapping-grid
+mission yet). Treat anything below not explicitly marked "confirmed via
+diff" as observed-in-these-two-files, not a general DJI spec. Re-run
+`mission.parser.inspect_kmz` against any new sample before assuming it
+generalizes.
 
 ## Archive layout
 
@@ -123,33 +133,72 @@ position), not reset per waypoint.
 redundant with the per-waypoint `gimbalRotate`/`gimbalEvenlyRotate`
 actions above; relationship between the two not yet understood.
 
-## Editable vs do-not-modify (preliminary — needs the round-trip test to confirm)
+## Confirmed via diff (second sample)
 
-This is a **hypothesis**, not yet validated by the single-parameter
-round-trip test in `docs/BUILD_SPEC.md` sec. 7 (that needs a second sample:
-same mission, one field changed in DJI Fly, re-exported).
+`examples/original_dji_mission_wp2_edited.kmz` is the same mission as the
+base sample, with waypoint index 2's height edited from 50 m to 201 m in
+DJI Fly and re-saved. Diffing the two parsed missions
+(`tests/test_diff_findings.py` encodes this as a regression test):
 
-**Likely editable** (per-waypoint mission content):
-`executeHeight`, `waypointSpeed`, coordinates, `waypointHeadingParam`,
-`waypointTurnParam`, gimbal-related actions, `autoFlightSpeed`,
-`finishAction`, `flyToWaylineMode`, `exitOnRCLost`/`executeRCLostAction`.
+- **Only waypoint 2 changed** — `executeHeight` (50 → 201) and its
+  coordinates shifted slightly (likely an incidental drag alongside the
+  height edit, not proof coordinates alone are independently editable,
+  but proof editing them doesn't break anything else). Waypoints 0 and 1
+  are byte-for-byte identical across both files, action groups and
+  `actionId`s included.
+- **`wpml:missionConfig` is completely unchanged**, including `droneInfo` —
+  confirms mission-level config and per-waypoint content are edited
+  independently.
+- **`createTime`/`updateTime` both changed** on the re-export (different
+  millisecond timestamps) — these are refreshed by DJI Fly on every
+  save, not stable mission identity. A generator that later supports real
+  edits should set `update_time` to the current time on export while
+  preserving the original `create_time`, mirroring this; not done yet
+  since Phase 1 has no edit workflow built yet, only identity round-trip.
+- **`distance`/`duration` stayed `0`** in both files despite the edit —
+  confirms these aren't recomputed by whatever last touched the file, so
+  the generator doesn't need to compute them either (at least not to stay
+  consistent with what DJI Fly itself produces here).
+- **`actionId` numbering was untouched** by an edit to the waypoint that
+  owns one of the actions (`stopRecord`, `actionId=3`) — the ID scheme
+  isn't renumbered by unrelated edits.
+
+This confirms `executeHeight` is safely, independently per-waypoint
+editable. It does **not** yet isolate a coordinates-only edit, and it's
+still only one aircraft/app version combination.
+
+## Editable vs do-not-modify
+
+**Confirmed editable:** `executeHeight` (per waypoint, diff-confirmed
+above).
+
+**Likely editable, not yet isolated by a diff:** `waypointSpeed`,
+coordinates, `waypointHeadingParam`, `waypointTurnParam`, gimbal-related
+actions, `autoFlightSpeed`, `finishAction`, `flyToWaylineMode`,
+`exitOnRCLost`/`executeRCLostAction`. Confirm each with its own
+single-field-changed sample before the UI marks it "safe to edit" per
+brief §11/§15.
 
 **Do not modify without further evidence:**
 `droneInfo` (aircraft identity — changing this on a Mini-5-Pro-only tool
-makes no sense anyway), `author`/`createTime` (metadata, not flight
-data), the WPML namespace/version string, `actionId` numbering scheme
-(unclear whether DJI Fly requires strict monotonic IDs or just uniqueness).
+makes no sense anyway), `author` (metadata, not flight data), the WPML
+namespace/version string, `actionId` numbering scheme (unclear whether
+DJI Fly requires strict monotonic IDs or just uniqueness).
+
+**Refreshed on every export, not user-editable content:** `createTime`
+(set once, preserve), `updateTime` (bump on every save/export).
 
 ## Next steps to de-risk further
 
-1. Get a second real export: same physical mission, one parameter changed
-   in DJI Fly (start with altitude), re-exported. Diff the two files
-   field-by-field to confirm which fields actually change and whether
-   anything else changes as a side effect.
+1. ~~Get a second real export...~~ **Done** — see "Confirmed via diff"
+   above. Still worth getting a sample that changes *only* coordinates
+   (no height change) to isolate that field cleanly, and one that changes
+   a mission-level field (e.g. `finishAction`) rather than a per-waypoint
+   one.
 2. Get a real DJI-Fly-generated **mapping** mission (grid pattern, many
    waypoints, `startRecord`/`takePhoto` actions) to inform Phase 2
-   (`mission/mapping.py`) — this sample is a plain 3-point route, not a
-   mapping grid.
+   (`mission/mapping.py`) — both samples so far are the same plain 3-point
+   route, not a mapping grid.
 3. Manually re-import the round-trip-regenerated file
    (`mission.generator.export_mission` output, unchanged from parse) into
    DJI Fly and confirm it's accepted and flies identically to the

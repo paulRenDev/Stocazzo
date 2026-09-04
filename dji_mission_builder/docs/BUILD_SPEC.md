@@ -1,13 +1,16 @@
 # Build Spec — DJI Mapping Mission Builder
 
-Status: **Phase 0 started** — one real DJI Mini 5 Pro + RC 2 export has
-been analyzed (`examples/original_dji_mission.kmz`, findings in
-`docs/WPML_FINDINGS.md`), and a structured parser/generator/validator
-exist and pass an identity round-trip test against it. Phase 0 is not
-*complete*: a second sample (same mission, one parameter changed and
-re-exported) is still needed to confirm which fields are actually safe to
-edit (see `docs/WPML_FINDINGS.md`, "Next steps"), and no real DJI-Fly
-*mapping*-grid mission has been seen yet, which Phase 2 needs. This
+Status: **Phase 0 well underway** — two real DJI Mini 5 Pro + RC 2 exports
+have been analyzed (`examples/original_dji_mission.kmz` and
+`examples/original_dji_mission_wp2_edited.kmz`, the same mission with one
+waypoint's height edited and re-saved). Findings are in
+`docs/WPML_FINDINGS.md`; a structured parser/generator/validator exist and
+pass both an identity round-trip test and a diff-based regression test
+confirming `executeHeight` is safely, independently per-waypoint editable.
+Phase 0 is not *complete*: several other fields are still only "likely
+editable" pending their own isolated diff sample, and no real DJI-Fly
+*mapping*-grid mission has been seen yet, which Phase 2 needs (see
+`docs/WPML_FINDINGS.md`, "Next steps"). This
 document turns the original Dutch project brief (`docs/PROJECT_BRIEF.md`)
 into a sequenced, buildable spec. It exists so that any agent (Opus,
 Sonnet, or a human) can pick up a phase and know exactly what "done" looks
