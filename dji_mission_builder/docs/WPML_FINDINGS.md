@@ -1,21 +1,24 @@
 # WPML findings — DJI Mini 5 Pro + RC 2
 
-Sources, both real exports for the DJI Mini 5 Pro + RC 2, provided by the
+Sources, all real exports for the DJI Mini 5 Pro + RC 2, provided by the
 user:
 
-- `examples/original_dji_mission.kmz` — the base sample.
+- `examples/original_dji_mission.kmz` — the base sample, 3 waypoints.
 - `examples/original_dji_mission_wp2_edited.kmz` — the same mission,
   pulled directly from the RC 2's own storage
   (`Internal shared storage/Android/data/dji.go.v5/files/waypoint/`)
   after the third waypoint's height/position was edited in DJI Fly and
   re-saved.
+- `examples/original_dji_mission_14wp_loop.kmz` — a different, larger
+  mission: 14 waypoints in a freeform loop (not a mapping grid — no
+  `startRecord`/`takePhoto` actions anywhere). Useful for confirming
+  which per-sample patterns above generalize beyond 3 waypoints.
 
-Two samples, one single-waypoint edit between them — still a narrow base
-(no altitude-only edit isolated from a position edit yet, no mapping-grid
-mission yet). Treat anything below not explicitly marked "confirmed via
-diff" as observed-in-these-two-files, not a general DJI spec. Re-run
-`mission.parser.inspect_kmz` against any new sample before assuming it
-generalizes.
+Three samples, still all plain waypoint/gimbal missions — no mapping-grid
+export yet (see "Next steps"). Treat anything below not explicitly marked
+"confirmed via diff" or "confirmed at n=14" as observed-in-these-files,
+not a general DJI spec. Re-run `mission.parser.inspect_kmz` against any
+new sample before assuming it generalizes.
 
 ## Archive layout
 
@@ -103,14 +106,16 @@ Coordinates (lon, lat — note KML's lon,lat order):
 (Lennik, Belgium area — consistent with the user's home location.)
 
 `waypointHeadingParam`: mode `followWayline` in all three; `angleEnable`
-toggles 1/0/1 across the three waypoints with no other visible effect in
-this sample — meaning unconfirmed.
+is `1` on waypoint 0 and 2 (first and last), `0` on waypoint 1 (middle).
+**Confirmed at n=14** (see below): this is exactly the pattern in the
+14-waypoint sample too — `1` only on the first and last waypoint of the
+route, `0` on every waypoint in between.
 
 `waypointTurnParam`: waypoint 0 and 2 use
 `toPointAndStopWithContinuityCurvature`; waypoint 1 (the middle one) uses
-`toPointAndPassWithContinuityCurvature` — consistent with "stop at start
-and end, pass through the middle point," a plausible general DJI Fly
-pattern but confirmed only for this one route shape.
+`toPointAndPassWithContinuityCurvature`. **Confirmed at n=14**: "stop" at
+the first and last waypoint of the route, "pass" through every waypoint
+in between, holds exactly for the 14-waypoint sample as well.
 
 ### Action groups / actions
 
@@ -124,14 +129,50 @@ pattern but confirmed only for this one route shape.
 No `startRecord`/`takePhoto` action appears anywhere in this sample —
 recording was presumably started manually in DJI Fly rather than via a
 mission action, or a start action exists under a mechanism not
-represented in this file. **Open question**, not resolved by this sample.
-`actionId` values are globally incrementing across the whole mission
-(1, 2, 4, 3 — note 3 and 4 appear out of numeric order relative to
-position), not reset per waypoint.
+represented in this file. **Still an open question** — the 14-waypoint
+sample (below) has no camera actions at all either, so neither sample
+resolves how a real mapping mission expresses photo/video triggers.
 
 `waypointGimbalHeadingParam` on every waypoint is `pitch=0, yaw=0` —
 redundant with the per-waypoint `gimbalRotate`/`gimbalEvenlyRotate`
 actions above; relationship between the two not yet understood.
+
+## Confirmed at n=14 (third sample, `original_dji_mission_14wp_loop.kmz`)
+
+A structurally different mission (14 waypoints, freeform loop, no
+recording actions) lets several patterns above be checked beyond n=3.
+Parses cleanly and round-trips correctly (`tests/test_generator.py`
+covers this file too) — including the case of a waypoint with **no**
+`actionGroup` element at all (waypoint 13, the last one), which the
+parser already handles since it treats `action_groups` as "however many
+`<wpml:actionGroup>` elements are present, possibly zero."
+
+- **First/last-waypoint pattern confirmed**: `waypointTurnMode` is
+  `toPointAndStopWithContinuityCurvature` only on waypoint 0 and waypoint
+  13 (the last), `toPointAndPassWithContinuityCurvature` on all 12 in
+  between. `waypointHeadingAngleEnable` is `1` only on waypoint 0 and 13,
+  `0` on all of the rest. Both generalize cleanly from the 3-waypoint
+  sample.
+- **`actionGroupId` is reused, not globally unique**: waypoint 0 has
+  groups `1` (its `gimbalRotate`) and `2` (its `gimbalEvenlyRotate`);
+  every one of waypoints 1-12 has exactly one group, and *all twelve use
+  `actionGroupId=2`* again. This overturns the earlier "uniqueness
+  unclear" note below — group IDs plainly repeat across waypoints and
+  seem to identify a *role* (`1` = the initial gimbal-rotate step, `2` =
+  a per-transition gimbal-evenly-rotate step) rather than being a unique
+  instance ID. Waypoint 13 has no action group at all.
+- **`actionId` is a single global counter across the whole mission,
+  incrementing once per individual `<wpml:action>` regardless of which
+  group it's in**: 1, 2 (waypoint 0's two actions), then 3, 4, 5, ... 14
+  (one per waypoint 1 through 12), then nothing for waypoint 13 (it has
+  no actions to number). No resets, no gaps except where a waypoint has
+  zero actions.
+- This also resolves the "out of numeric order" oddity noted in the
+  3-waypoint sample (actionIds 1, 2, 4, 3): that mission's middle
+  waypoint (id 4) and last waypoint (id 3) simply reflect the same
+  global counter *combined with* the last waypoint's action having been
+  added to the mission before the middle waypoint's, not a bug or a
+  meaningful ordering signal.
 
 ## Confirmed via diff (second sample)
 
@@ -182,8 +223,14 @@ brief §11/§15.
 **Do not modify without further evidence:**
 `droneInfo` (aircraft identity — changing this on a Mini-5-Pro-only tool
 makes no sense anyway), `author` (metadata, not flight data), the WPML
-namespace/version string, `actionId` numbering scheme (unclear whether
-DJI Fly requires strict monotonic IDs or just uniqueness).
+namespace/version string. `actionId` (confirmed: a single global,
+gapless-except-for-actionless-waypoints counter across the whole mission
+— see "Confirmed at n=14") and `actionGroupId` (confirmed: reused by role,
+not unique — same caveat) are understood well enough to *generate*
+correctly for a newly-built mission, but a generator that edits an
+*existing* real mission should still preserve the original file's IDs
+verbatim rather than renumbering, since it's not yet confirmed DJI Fly
+tolerates a renumbered scheme on re-import.
 
 **Refreshed on every export, not user-editable content:** `createTime`
 (set once, preserve), `updateTime` (bump on every save/export).
@@ -195,10 +242,13 @@ DJI Fly requires strict monotonic IDs or just uniqueness).
    (no height change) to isolate that field cleanly, and one that changes
    a mission-level field (e.g. `finishAction`) rather than a per-waypoint
    one.
-2. Get a real DJI-Fly-generated **mapping** mission (grid pattern, many
-   waypoints, `startRecord`/`takePhoto` actions) to inform Phase 2
-   (`mission/mapping.py`) — both samples so far are the same plain 3-point
-   route, not a mapping grid.
+2. **Still the main gap**: a real DJI-Fly-generated **mapping** mission
+   (grid/lawnmower pattern, many waypoints, `startRecord`/`takePhoto`
+   actions) to inform Phase 2 (`mission/mapping.py`). All three samples
+   so far are plain waypoint routes (freeform or a short line), not a
+   mapping grid, and none has a photo/video action anywhere — how DJI Fly
+   expresses "take a photo/start recording at this waypoint" is still
+   completely unconfirmed.
 3. Manually re-import the round-trip-regenerated file
    (`mission.generator.export_mission` output, unchanged from parse) into
    DJI Fly and confirm it's accepted and flies identically to the

@@ -1,15 +1,19 @@
 # Build Spec — DJI Mapping Mission Builder
 
-Status: **Phase 0 well underway** — two real DJI Mini 5 Pro + RC 2 exports
-have been analyzed (`examples/original_dji_mission.kmz` and
-`examples/original_dji_mission_wp2_edited.kmz`, the same mission with one
-waypoint's height edited and re-saved). Findings are in
-`docs/WPML_FINDINGS.md`; a structured parser/generator/validator exist and
-pass both an identity round-trip test and a diff-based regression test
-confirming `executeHeight` is safely, independently per-waypoint editable.
-Phase 0 is not *complete*: several other fields are still only "likely
-editable" pending their own isolated diff sample, and no real DJI-Fly
-*mapping*-grid mission has been seen yet, which Phase 2 needs (see
+Status: **Phase 0 well underway** — three real DJI Mini 5 Pro + RC 2
+exports have been analyzed: `examples/original_dji_mission.kmz` (3
+waypoints), `examples/original_dji_mission_wp2_edited.kmz` (the same
+mission with one waypoint's height edited and re-saved), and
+`examples/original_dji_mission_14wp_loop.kmz` (a structurally different
+14-waypoint freeform loop). Findings are in `docs/WPML_FINDINGS.md`; the
+parser/generator/validator pass identity round-trip tests against all
+three, a diff-based test confirming `executeHeight` is safely,
+independently per-waypoint editable, and structural-pattern tests
+confirming several formatting rules (turn mode and heading-angle-enable
+at the route's start/end, `actionGroupId` reuse, `actionId` as one global
+counter) generalize beyond 3 waypoints. Phase 0 is not *complete*: the
+main remaining gap is that no sample so far is an actual mapping-grid
+mission or contains a photo/video action, which Phase 2 needs (see
 `docs/WPML_FINDINGS.md`, "Next steps"). This
 document turns the original Dutch project brief (`docs/PROJECT_BRIEF.md`)
 into a sequenced, buildable spec. It exists so that any agent (Opus,
