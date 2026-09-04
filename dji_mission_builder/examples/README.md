@@ -24,11 +24,16 @@ parser/generator/validator in actual DJI output instead of assumptions
   again, with a new waypoint appended at the end. Confirms first/last
   waypoint markers are recomputed on every save, not fixed per waypoint.
   See `docs/WPML_FINDINGS.md`, "Confirmed: first/last-waypoint markers".
+- `original_dji_mission_20wp_multi_photo.kmz` — a different 20-waypoint
+  route with 8 `takePhoto` actions. Confirms a single-point action group
+  can bundle more than one action, and that `waypointSpeed` is
+  independent of `missionConfig.globalTransitionalSpeed`. See
+  `docs/WPML_FINDINGS.md`, "Confirmed: compound action groups".
 
-Findings from all five are documented in `docs/WPML_FINDINGS.md`, and the
+Findings from all six are documented in `docs/WPML_FINDINGS.md`, and the
 diffs/patterns are encoded as regression tests in
-`tests/test_diff_findings.py`, `tests/test_structural_patterns.py`, and
-`tests/test_camera_actions.py`.
+`tests/test_diff_findings.py`, `tests/test_structural_patterns.py`,
+`tests/test_camera_actions.py`, and `tests/test_multi_photo_route.py`.
 
 ## What's still useful to add here
 

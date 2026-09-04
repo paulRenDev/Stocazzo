@@ -1,12 +1,14 @@
 # Build Spec — DJI Mapping Mission Builder
 
-Status: **Phase 0 well underway** — five real DJI Mini 5 Pro + RC 2
+Status: **Phase 0 well underway** — six real DJI Mini 5 Pro + RC 2
 exports have been analyzed: `examples/original_dji_mission.kmz` (3
 waypoints), `examples/original_dji_mission_wp2_edited.kmz` (one
 waypoint's height edited), `examples/original_dji_mission_14wp_loop.kmz`
-(a structurally different 14-waypoint freeform loop), and two further
-edits of that loop adding camera actions and an appended waypoint
-(`..._14wp_with_camera_actions.kmz`, `..._15wp_with_camera_actions.kmz`).
+(a structurally different 14-waypoint freeform loop), two further edits
+of that loop adding camera actions and an appended waypoint
+(`..._14wp_with_camera_actions.kmz`, `..._15wp_with_camera_actions.kmz`),
+and a 20-waypoint route with 8 `takePhoto` actions
+(`..._20wp_multi_photo.kmz`).
 Findings are in `docs/WPML_FINDINGS.md`; the parser/generator/validator
 pass identity round-trip tests against all five, plus diff-based tests
 confirming: `executeHeight` is safely, independently per-waypoint

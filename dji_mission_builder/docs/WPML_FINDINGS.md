@@ -24,8 +24,12 @@ user:
   position/speed edit alongside it), and waypoint 12's speed changed.
   This is what shows the first/last-waypoint markers are recomputed on
   every save, not a fixed property of a given waypoint.
+- `examples/original_dji_mission_20wp_multi_photo.kmz` — a different,
+  larger route: 20 waypoints, 8 `takePhoto` actions, uniform 1.4 m/s
+  waypoint speed. Not a lawnmower grid (waypoints aren't evenly spaced
+  parallel lines), but the richest multi-photo sample so far.
 
-Five samples, still all plain waypoint routes — no mapping/lawnmower-grid
+Six samples, still all plain waypoint routes — no mapping/lawnmower-grid
 export yet (see "Next steps"). Treat anything below not explicitly marked
 "confirmed via diff" or "confirmed at n=14" as observed-in-these-files,
 not a general DJI spec. Re-run `mission.parser.inspect_kmz` against any
@@ -263,6 +267,31 @@ sample:
   single-field diff — see below).
 - `actionId` renumbering happened again here too, consistent with the
   correction above.
+
+## Confirmed: compound action groups & independent speed fields (6th sample)
+
+`examples/original_dji_mission_20wp_multi_photo.kmz`: a 20-waypoint route
+with 8 `takePhoto` actions scattered across it.
+
+- **A single-point `actionGroupId=1` group can hold more than one
+  action**: waypoint 0's group 1 has *both* `takePhoto` and
+  `gimbalRotate` (in that order), not just one. So "single-point trigger
+  group" means "one or more actions executed together at this point," not
+  strictly one.
+- **`waypointSpeed` and `globalTransitionalSpeed` are independent**: every
+  waypoint in this route uses `waypointSpeed=1.4`, while
+  `missionConfig.globalTransitionalSpeed` stayed `2.5` (its usual value
+  in every sample so far). Confirms these are two separate speed knobs —
+  presumably per-wayline speed vs. the speed used for
+  non-wayline/transitional flight (e.g. flying to the first waypoint).
+- Still **only `reachPoint` triggers** — 27 action triggers in this file,
+  all `reachPoint`. Discrete point-triggered photos (as many as needed,
+  scattered anywhere along a route) is therefore a confirmed, viable
+  fallback for Phase 2 even if an interval/distance trigger is never
+  found: a lawnmower-grid mission could in principle be generated as one
+  `takePhoto` action per grid waypoint rather than needing a continuous
+  trigger mode. Whether DJI Fly's own mapping mode actually does that or
+  uses something else is still unconfirmed.
 
 ## Confirmed via diff (second sample)
 
