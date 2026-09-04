@@ -1,20 +1,27 @@
 # Build Spec — DJI Mapping Mission Builder
 
-Status: **Phase 0 well underway** — three real DJI Mini 5 Pro + RC 2
+Status: **Phase 0 well underway** — five real DJI Mini 5 Pro + RC 2
 exports have been analyzed: `examples/original_dji_mission.kmz` (3
-waypoints), `examples/original_dji_mission_wp2_edited.kmz` (the same
-mission with one waypoint's height edited and re-saved), and
-`examples/original_dji_mission_14wp_loop.kmz` (a structurally different
-14-waypoint freeform loop). Findings are in `docs/WPML_FINDINGS.md`; the
-parser/generator/validator pass identity round-trip tests against all
-three, a diff-based test confirming `executeHeight` is safely,
-independently per-waypoint editable, and structural-pattern tests
-confirming several formatting rules (turn mode and heading-angle-enable
-at the route's start/end, `actionGroupId` reuse, `actionId` as one global
-counter) generalize beyond 3 waypoints. Phase 0 is not *complete*: the
-main remaining gap is that no sample so far is an actual mapping-grid
-mission or contains a photo/video action, which Phase 2 needs (see
-`docs/WPML_FINDINGS.md`, "Next steps"). This
+waypoints), `examples/original_dji_mission_wp2_edited.kmz` (one
+waypoint's height edited), `examples/original_dji_mission_14wp_loop.kmz`
+(a structurally different 14-waypoint freeform loop), and two further
+edits of that loop adding camera actions and an appended waypoint
+(`..._14wp_with_camera_actions.kmz`, `..._15wp_with_camera_actions.kmz`).
+Findings are in `docs/WPML_FINDINGS.md`; the parser/generator/validator
+pass identity round-trip tests against all five, plus diff-based tests
+confirming: `executeHeight` is safely, independently per-waypoint
+editable; `takePhoto`/`startRecord`/`stopRecord` actions and their exact
+parameter shapes; that `actionGroupId` marks single-point-trigger (1) vs.
+transition (2) action groups; that `actionId` is a global, no-duplicates
+counter that is **not** stable across edits; and that first/last-waypoint
+markers (`waypointTurnMode`, `waypointHeadingAngleEnable`, whether a
+transition action group exists) are recomputed by DJI Fly on every save
+based on current route position, not fixed per waypoint. Phase 0 is not
+*complete*: the main remaining gap is that no sample so far is an actual
+mapping-grid mission, and it's still unconfirmed whether continuous
+photo capture uses an interval/distance trigger rather than the one-shot
+`reachPoint` trigger seen everywhere so far — both needed before Phase 2
+(see `docs/WPML_FINDINGS.md`, "Next steps"). This
 document turns the original Dutch project brief (`docs/PROJECT_BRIEF.md`)
 into a sequenced, buildable spec. It exists so that any agent (Opus,
 Sonnet, or a human) can pick up a phase and know exactly what "done" looks

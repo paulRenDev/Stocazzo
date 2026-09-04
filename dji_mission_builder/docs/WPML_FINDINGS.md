@@ -10,11 +10,22 @@ user:
   after the third waypoint's height/position was edited in DJI Fly and
   re-saved.
 - `examples/original_dji_mission_14wp_loop.kmz` — a different, larger
-  mission: 14 waypoints in a freeform loop (not a mapping grid — no
+  mission: 14 waypoints in a freeform loop (originally no
   `startRecord`/`takePhoto` actions anywhere). Useful for confirming
   which per-sample patterns above generalize beyond 3 waypoints.
+- `examples/original_dji_mission_14wp_with_camera_actions.kmz` — the
+  *same* 14-waypoint loop, re-edited in DJI Fly: waypoints 3, 5, 9, 11, 13
+  repositioned slightly, waypoint 3's speed changed to 8.1 m/s, and
+  `takePhoto` / `startRecord` / `stopRecord` actions added. This is what
+  finally shows how DJI Fly expresses a camera trigger.
+- `examples/original_dji_mission_15wp_with_camera_actions.kmz` — the same
+  mission again, edited further: a new waypoint 14 appended at a new
+  location, a second `takePhoto` added at waypoint 1 (with a small
+  position/speed edit alongside it), and waypoint 12's speed changed.
+  This is what shows the first/last-waypoint markers are recomputed on
+  every save, not a fixed property of a given waypoint.
 
-Three samples, still all plain waypoint/gimbal missions — no mapping-grid
+Five samples, still all plain waypoint routes — no mapping/lawnmower-grid
 export yet (see "Next steps"). Treat anything below not explicitly marked
 "confirmed via diff" or "confirmed at n=14" as observed-in-these-files,
 not a general DJI spec. Re-run `mission.parser.inspect_kmz` against any
@@ -127,11 +138,7 @@ in between, holds exactly for the 14-waypoint sample as well.
 - Waypoint 2: one action group, one action, `stopRecord`.
 
 No `startRecord`/`takePhoto` action appears anywhere in this sample —
-recording was presumably started manually in DJI Fly rather than via a
-mission action, or a start action exists under a mechanism not
-represented in this file. **Still an open question** — the 14-waypoint
-sample (below) has no camera actions at all either, so neither sample
-resolves how a real mapping mission expresses photo/video triggers.
+**resolved below**, see "Confirmed: camera/recording actions".
 
 `waypointGimbalHeadingParam` on every waypoint is `pitch=0, yaw=0` —
 redundant with the per-waypoint `gimbalRotate`/`gimbalEvenlyRotate`
@@ -174,6 +181,89 @@ parser already handles since it treats `action_groups` as "however many
   added to the mission before the middle waypoint's, not a bug or a
   meaningful ordering signal.
 
+## Confirmed: camera/recording actions (4th sample)
+
+`examples/original_dji_mission_14wp_with_camera_actions.kmz` is the
+14-waypoint loop, re-edited to add camera actions. This finally answers
+the open question above:
+
+- **`takePhoto`**: a single-point action (its `actionGroup`'s
+  `actionGroupStartIndex == actionGroupEndIndex`), in its own group with
+  `actionGroupId=1` — the same group ID role as `gimbalRotate` at
+  waypoint 0 (see below). Params: `payloadPositionIndex` and a **new
+  field, `useGlobalPayloadLensIndex`** (value `0` in this single-lens
+  Mini 5 Pro sample — presumably relevant for multi-lens aircraft).
+- **`startRecord`**: same shape as `takePhoto`, same two params
+  (`payloadPositionIndex`, `useGlobalPayloadLensIndex`).
+- **`stopRecord`**: same shape, but only `payloadPositionIndex` — no
+  `useGlobalPayloadLensIndex` (makes sense: stopping doesn't need to
+  select a lens).
+- All three use `actionTriggerType=reachPoint` — the same trigger type as
+  every other action seen so far. No interval- or distance-based trigger
+  has been observed yet, so **continuous photo capture during a mapping
+  run (the classic photogrammetry "every N meters" behavior) is still
+  unconfirmed** — everything seen so far is a one-shot trigger at a
+  specific waypoint.
+- **`actionGroupId` role, refined**: it's not "gimbal vs. camera" as
+  first guessed — it's "single-point trigger" (id `1`: `gimbalRotate`,
+  `takePhoto`, `startRecord`, `stopRecord` all use it, whichever waypoint
+  they're on) vs. "spans-two-waypoints transition" (id `2`:
+  `gimbalEvenlyRotate`, always `startIndex+1 == endIndex`).
+- **Correction to the earlier `actionId` claim**: the 3-waypoint sample's
+  "single global gapless counter" was only verified within one static
+  snapshot. Comparing this edited file to its pre-edit version
+  (`original_dji_mission_14wp_loop.kmz`) shows existing actions' IDs are
+  **not stable across edits**: e.g. waypoint 4's `gimbalEvenlyRotate` was
+  id `6` before this edit and is id `7` after it, purely because new
+  camera actions were inserted elsewhere in the mission. `actionId`
+  remains a single global namespace with no duplicates in either
+  snapshot, but do not assume a given action keeps its ID once further
+  edits happen anywhere else in the mission — and do not assume the
+  numbering follows waypoint/document order (it doesn't: e.g. the new
+  `takePhoto` at waypoint 5 got id `6`, lower than waypoint 4's
+  transition action at id `7`, despite waypoint 4 coming first in the
+  file).
+
+## Confirmed: first/last-waypoint markers are recomputed, not fixed (5th sample)
+
+`examples/original_dji_mission_15wp_with_camera_actions.kmz` takes the
+4th sample and appends a brand-new waypoint 14 at a new location, plus
+adds a second `takePhoto` at waypoint 1 (with a small position/speed edit
+alongside it) and changes waypoint 12's speed. Diffing against the 4th
+sample:
+
+- **Former waypoint 13** (previously the route's last waypoint: `turnMode
+  = toPointAndStopWithContinuityCurvature`, `headingAngleEnable = 1`, one
+  action group) **reverted to a normal middle waypoint**: `turnMode`
+  became `toPointAndPassWithContinuityCurvature`, `headingAngleEnable`
+  became `0`, and it **gained a new `gimbalEvenlyRotate` transition
+  action group** (`actionGroupId=2`) it didn't have before — because it
+  now needs to transition onward to the new waypoint 14. Its existing
+  `stopRecord` action group (`actionGroupId=1`) was untouched.
+- **New waypoint 14** is the new last waypoint: `turnMode = ...Stop...`,
+  `headingAngleEnable = 1`, no action groups — exactly the pattern the
+  *original* last waypoint had before this edit.
+- This **confirms the first/last-waypoint markers found in the earlier
+  samples are recomputed by DJI Fly on every save based on current route
+  position**, not a fixed attribute attached to a specific waypoint. A
+  generator that supports real editing (inserting/appending waypoints)
+  must recompute `turnMode`/`headingAngleEnable` for whichever waypoints
+  are currently first/last, and must add/remove the transition action
+  group accordingly — this is real, confirmed generator logic, not
+  speculation, though not yet implemented since Phase 1 has no edit
+  workflow built yet.
+- A second `takePhoto` coexists fine with the first one, confirming
+  multiple photo triggers in one mission are unremarkable. It was added
+  to a waypoint (1) that previously had no single-point action group,
+  alongside a small coordinate shift and a speed change (2.5 → 15.0 m/s)
+  — consistent with the earlier finding that editing one waypoint doesn't
+  disturb others. Waypoint 12's speed also changed (2.5 → 15.0 m/s) with
+  no other edit to it, reinforcing `waypointSpeed` as independently
+  per-waypoint editable (still "likely", not yet isolated by its own
+  single-field diff — see below).
+- `actionId` renumbering happened again here too, consistent with the
+  correction above.
+
 ## Confirmed via diff (second sample)
 
 `examples/original_dji_mission_wp2_edited.kmz` is the same mission as the
@@ -210,30 +300,46 @@ still only one aircraft/app version combination.
 
 ## Editable vs do-not-modify
 
-**Confirmed editable:** `executeHeight` (per waypoint, diff-confirmed
-above).
+**Confirmed editable:** `executeHeight` (per waypoint, diff-confirmed via
+2nd sample). `takePhoto`/`startRecord`/`stopRecord` actions can be added
+to any waypoint independently (4th/5th samples). Waypoints can be
+appended, which correctly recomputes first/last-waypoint markers on the
+next save (5th sample) — confirmed as an *output* behavior of DJI Fly;
+our own generator doesn't implement waypoint insertion yet (Phase 2).
 
-**Likely editable, not yet isolated by a diff:** `waypointSpeed`,
-coordinates, `waypointHeadingParam`, `waypointTurnParam`, gimbal-related
-actions, `autoFlightSpeed`, `finishAction`, `flyToWaylineMode`,
-`exitOnRCLost`/`executeRCLostAction`. Confirm each with its own
-single-field-changed sample before the UI marks it "safe to edit" per
-brief §11/§15.
+**Likely editable, not yet isolated by a single-field diff:**
+`waypointSpeed` (changed twice across samples, always alongside other
+edits, never in isolation), coordinates, `waypointHeadingParam`,
+`waypointTurnParam`, gimbal-related actions, `autoFlightSpeed`,
+`finishAction`, `flyToWaylineMode`, `exitOnRCLost`/`executeRCLostAction`.
+Confirm each with its own single-field-changed sample before the UI marks
+it "safe to edit" per brief §11/§15.
 
 **Do not modify without further evidence:**
 `droneInfo` (aircraft identity — changing this on a Mini-5-Pro-only tool
 makes no sense anyway), `author` (metadata, not flight data), the WPML
-namespace/version string. `actionId` (confirmed: a single global,
-gapless-except-for-actionless-waypoints counter across the whole mission
-— see "Confirmed at n=14") and `actionGroupId` (confirmed: reused by role,
-not unique — same caveat) are understood well enough to *generate*
-correctly for a newly-built mission, but a generator that edits an
-*existing* real mission should still preserve the original file's IDs
-verbatim rather than renumbering, since it's not yet confirmed DJI Fly
-tolerates a renumbered scheme on re-import.
+namespace/version string. `actionId` and `actionGroupId`: understood well
+enough to *generate* correctly for a newly-built mission (`actionGroupId`
+1 = single-point trigger, 2 = transition; `actionId` a single global,
+no-duplicates counter), but **do not assume actionId is stable across
+edits** (confirmed false — see "Confirmed: camera/recording actions") or
+that it follows waypoint/document order (also confirmed false). A
+generator that edits an *existing* real mission should preserve the
+original file's IDs verbatim for anything it doesn't touch, and mint new
+IDs by taking `max(existing) + 1` for new actions — simple and always
+valid, even though it won't match DJI Fly's own (still not fully
+understood) renumbering behavior exactly.
 
 **Refreshed on every export, not user-editable content:** `createTime`
 (set once, preserve), `updateTime` (bump on every save/export).
+
+**Dynamically recomputed on every save, not fixed per-waypoint:**
+`waypointTurnMode` and `waypointHeadingAngleEnable`'s "first/last
+waypoint" values, and whether a waypoint has a transition
+(`gimbalEvenlyRotate`) action group at all — see "Confirmed: first/last
+waypoint markers" above. A generator must compute these from the
+waypoint's current position in the route, never copy them from a
+previous version of the same waypoint.
 
 ## Next steps to de-risk further
 
@@ -242,13 +348,13 @@ tolerates a renumbered scheme on re-import.
    (no height change) to isolate that field cleanly, and one that changes
    a mission-level field (e.g. `finishAction`) rather than a per-waypoint
    one.
-2. **Still the main gap**: a real DJI-Fly-generated **mapping** mission
-   (grid/lawnmower pattern, many waypoints, `startRecord`/`takePhoto`
-   actions) to inform Phase 2 (`mission/mapping.py`). All three samples
-   so far are plain waypoint routes (freeform or a short line), not a
-   mapping grid, and none has a photo/video action anywhere — how DJI Fly
-   expresses "take a photo/start recording at this waypoint" is still
-   completely unconfirmed.
+2. ~~Get a real DJI-Fly export with camera actions...~~ **Done** — see
+   "Confirmed: camera/recording actions" above. **Still the main gap**: a
+   real DJI-Fly-generated **mapping** mission (grid/lawnmower pattern,
+   many waypoints) to inform Phase 2 (`mission/mapping.py`), and
+   specifically whether photogrammetry-style continuous capture uses an
+   interval/distance trigger rather than the one-shot `reachPoint`
+   trigger seen in every sample so far.
 3. Manually re-import the round-trip-regenerated file
    (`mission.generator.export_mission` output, unchanged from parse) into
    DJI Fly and confirm it's accepted and flies identically to the
