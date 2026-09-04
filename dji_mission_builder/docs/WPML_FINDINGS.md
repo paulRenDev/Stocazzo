@@ -35,6 +35,66 @@ export yet (see "Next steps"). Treat anything below not explicitly marked
 not a general DJI spec. Re-run `mission.parser.inspect_kmz` against any
 new sample before assuming it generalizes.
 
+## Cross-reference: DJI's official WPML spec exists — with a big caveat
+
+DJI does publish an open WPML spec on GitHub:
+[`dji-sdk/Cloud-API-Doc`](https://github.com/dji-sdk/Cloud-API-Doc), under
+`docs/en/60.api-reference/00.dji-wpml/` (`10.overview.md`,
+`20.template-kml.md`, `30.waylines-wpml.md`, `40.common-element.md`).
+It confirms the overall shape we reverse-engineered (KMZ archive,
+`template.kml` + `waylines.wpml` + optional `res/`, `missionConfig`,
+`Folder`/`Placemark`, `actionGroup`/`action`) and is worth reading before
+Phase 2.
+
+**The catch: every single field in that spec's "Product Support" column
+lists only M300 RTK, M350 RTK, M30/M30T, M3E/M3T/M3M, M3D/M3TD — never
+the Mini series.** This document describes the enterprise Dock/Cloud-API
+ecosystem, not the consumer DJI Fly app our Mini 5 Pro + RC 2 exports come
+from. Treat everything below as a **hypothesis to validate against a real
+Mini 5 Pro sample**, not confirmed spec — exactly the same rule as
+brief §1/AGENTS.md applies to public docs, not just to our own
+assumptions.
+
+Two concrete things the spec gets *wrong* for our real samples, which is
+exactly why this caveat matters:
+
+- Its example uses `xmlns:wpml="http://www.dji.com/wpmz/1.0.2"`. **Every
+  one of our six real Mini 5 Pro exports uses
+  `xmlns:wpml="http://www.uav.com/wpmz/1.0.2"`** — a different host in
+  the URI, same version number. Don't assume `dji.com` even though the
+  official docs use it.
+- It says `actionTriggerType=betweenAdjacentPoints` "should be used with
+  gimbalEvenlyRotate" for a transition spanning two waypoints. **All six
+  of our samples instead use `reachPoint`** for those same
+  `gimbalEvenlyRotate` transition groups (`actionGroupId=2`). Consumer
+  DJI Fly evidently does it differently than the spec's enterprise
+  example.
+
+Given both of those are wrong for real Mini 5 Pro output, don't take the
+rest on faith either — but two parts of the spec are worth specifically
+testing once a real DJI-Fly mapping-mode export exists, because if they
+hold they'd shortcut a lot of Phase 2 design work:
+
+- **`wpml:actionTriggerType` has two more values than we've seen**:
+  `multipleTiming` (paired with `takePhoto` + `actionTriggerParam` in
+  seconds → equal-*time*-interval capture) and `multipleDistance` (paired
+  with `takePhoto` + `actionTriggerParam` in meters → equal-*distance*-
+  interval capture — the classic photogrammetry "photo every N meters").
+  This is the natural candidate for resolving our one remaining real gap
+  (brief §3's "foto-interval"/"afstand tussen foto's"). **Unconfirmed for
+  Mini 5 Pro** — every sample we have uses one-shot `reachPoint` triggers
+  only.
+- **`template.kml`'s mapping-template fields** (`wpml:templateType` =
+  `mapping2d`/`mapping3d`/`mappingStrip`, `wpml:shootType` =
+  `time`/`distance`, `wpml:direction` [0-360], a `wpml:overlap` block with
+  `orthoCameraOverlapH`/`orthoCameraOverlapW` for forward/side overlap %,
+  a survey-area `Polygon`, `wpml:globalShootHeight`) map almost exactly
+  onto brief §3's mapping parameters. **Also unconfirmed for Mini 5
+  Pro/DJI Fly** — could be the real mechanism, could be entirely
+  different on the consumer app. Worth using as the *first thing to check
+  for* in a real Mini-5-Pro mapping-mode export, not as something
+  `mission/mapping.py` should be built against untested.
+
 ## Archive layout
 
 ```
@@ -380,10 +440,13 @@ previous version of the same waypoint.
 2. ~~Get a real DJI-Fly export with camera actions...~~ **Done** — see
    "Confirmed: camera/recording actions" above. **Still the main gap**: a
    real DJI-Fly-generated **mapping** mission (grid/lawnmower pattern,
-   many waypoints) to inform Phase 2 (`mission/mapping.py`), and
-   specifically whether photogrammetry-style continuous capture uses an
-   interval/distance trigger rather than the one-shot `reachPoint`
-   trigger seen in every sample so far.
+   many waypoints) to inform Phase 2 (`mission/mapping.py`). DJI's
+   official spec (see "Cross-reference" above) names candidate fields to
+   specifically check for — `templateType=mapping2d/mapping3d`,
+   `actionTriggerType=multipleDistance` for interval capture — but two
+   other things in that same spec already don't match our real samples,
+   so a real Mini-5-Pro mapping export is still required to confirm
+   either actually applies, not assumed from the enterprise docs.
 3. Manually re-import the round-trip-regenerated file
    (`mission.generator.export_mission` output, unchanged from parse) into
    DJI Fly and confirm it's accepted and flies identically to the

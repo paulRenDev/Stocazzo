@@ -121,6 +121,24 @@ actions → through the same generator/validator/export path as Phase 1.
 This is pure geometry + the deterministic engine in the brief's
 architecture diagram (§16); still no AI involved.
 
+DJI's official (but enterprise/Dock-oriented, **not confirmed for Mini 5
+Pro**) WPML spec at
+[`dji-sdk/Cloud-API-Doc`](https://github.com/dji-sdk/Cloud-API-Doc)
+happens to define almost exactly this: `template.kml`'s `templateType=
+mapping2d/mapping3d`, `direction`, `shootType=time|distance`, an
+`overlap` block (`orthoCameraOverlapH`/`orthoCameraOverlapW` for
+forward/side %), and a survey `Polygon`; separately,
+`actionTriggerType=multipleDistance` + `takePhoto` describes exactly the
+"photo every N meters" behavior this phase needs. Use this as the
+**starting hypothesis** for the field names and geometry, not as ground
+truth — see `docs/WPML_FINDINGS.md`, "Cross-reference: DJI's official
+WPML spec" for two concrete cases where that spec's enterprise example
+already doesn't match real Mini 5 Pro output (namespace URI,
+`actionTriggerType` on transition groups). The first real DJI-Fly
+mapping-mode export for the Mini 5 Pro should be checked against this
+hypothesis before `mission/mapping.py` is written, not used to justify
+skipping that check.
+
 ### Phase 3 — v0.3: AI assistant (brief §4, §17)
 
 A chat surface that turns natural language into the structured parameter
