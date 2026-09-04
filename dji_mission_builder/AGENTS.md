@@ -25,22 +25,24 @@ and corrects at least one of its own earlier claims once evidence
 disproved it (that's expected — update it the same way when new evidence
 does that again).
 
-**Do not write `mission/mapping.py`, `wpml/schemas/*`, or `wpml/templates/*`
-against guessed DJI XML structure or assumed mapping-grid behavior.** No
-sample so far is an actual mapping/lawnmower-grid mission, and every
-camera trigger seen is a one-shot `reachPoint` — Phase 2 (the
-grid/overlap engine) needs a real DJI-Fly-generated mapping mission
-before it can be built on evidence. DJI does publish an official WPML
-spec (`dji-sdk/Cloud-API-Doc` on GitHub) that happens to define exactly
-the mapping-template fields brief §3 needs (`templateType=mapping2d`,
-`overlap`, `direction`, `actionTriggerType=multipleDistance` for interval
-capture) — see `docs/WPML_FINDINGS.md`, "Cross-reference: DJI's official
-WPML spec". Use it as a **hypothesis to test**, not as license to build
-`mapping.py` without a real sample: that same document's enterprise
-example already gets two things wrong for real Mini 5 Pro output
-(namespace URI, transition-group trigger type), so nothing in it should
-be trusted for the Mini 5 Pro until independently confirmed. Re-read
-`docs/BUILD_SPEC.md` §1 if tempted to skip that confirmation step.
+**`mission/mapping.py` is unblocked — see `docs/BUILD_SPEC.md` Phase 2.**
+No sample is an actual mapping/lawnmower-grid mission, but evidence
+(`docs/WPML_FINDINGS.md`, "Cross-reference") indicates DJI Fly has no
+native mapping mode on the Mini 5 Pro at all, so there's nothing to wait
+for: build the grid geometry as this project's own math (brief §3) and
+emit it through the plain-waypoint-mission structure already implemented
+and tested — one `takePhoto` (`reachPoint`) per grid waypoint, mirroring
+`examples/original_dji_mission_20wp_multi_photo.kmz`. Do NOT reach for
+DJI's official `templateType=mapping2d`/`overlap`/`multipleDistance`
+fields (from `dji-sdk/Cloud-API-Doc`) — that spec is enterprise/Dock-only
+(its own "Product Support" tables never list the Mini series) and two of
+its details already contradict our real Mini 5 Pro samples (namespace
+URI, transition-group trigger type), so nothing in it should be trusted
+for this aircraft without independent confirmation.
+
+**`wpml/schemas/*` and `wpml/templates/*` stay empty** — the dataclass
+parser/generator already serve that role across six structurally
+different samples; revisit only if that stops holding up.
 
 **Do not mark any field "confirmed editable" beyond what
 `docs/WPML_FINDINGS.md`'s "Editable vs do-not-modify" section already

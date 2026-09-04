@@ -80,20 +80,50 @@ hold they'd shortcut a lot of Phase 2 design work:
   seconds → equal-*time*-interval capture) and `multipleDistance` (paired
   with `takePhoto` + `actionTriggerParam` in meters → equal-*distance*-
   interval capture — the classic photogrammetry "photo every N meters").
-  This is the natural candidate for resolving our one remaining real gap
-  (brief §3's "foto-interval"/"afstand tussen foto's"). **Unconfirmed for
-  Mini 5 Pro** — every sample we have uses one-shot `reachPoint` triggers
-  only.
+  **Update: very likely N/A for the Mini 5 Pro, not just unconfirmed.**
+  Multiple community sources (Litchi forum, DJI forum, GitHub issue
+  threads — secondary sources, not an official DJI statement, so still
+  worth a real test if one's ever done) independently report that DJI's
+  consumer drones — Mini 3 Pro, Mini 4 Pro, **and the Mini 5 Pro
+  specifically** — do not support WPML-based automatic camera
+  auto-triggering (interval/distance) at all; the documented workaround
+  is manually enabling the camera's own interval-shoot mode before
+  flying and tuning the mission's speed/altitude to match it separately.
+  This lines up exactly with our own empirical evidence: 0 of 6 real
+  samples ever used anything but `reachPoint`, despite one of them
+  (the 20-waypoint sample) having 8 separate `takePhoto` actions — a user
+  or automated tool wanting many photos along a route already has to
+  place a discrete `takePhoto` at each point, which is exactly the
+  pattern we've confirmed works. **Conclusion for Phase 2**: don't wait
+  for or design around a `multipleDistance` trigger for this aircraft —
+  generate one `takePhoto` (`reachPoint`) action per grid waypoint
+  instead, per the confirmed pattern. If a future real test proves
+  otherwise, revise this.
 - **`template.kml`'s mapping-template fields** (`wpml:templateType` =
   `mapping2d`/`mapping3d`/`mappingStrip`, `wpml:shootType` =
   `time`/`distance`, `wpml:direction` [0-360], a `wpml:overlap` block with
   `orthoCameraOverlapH`/`orthoCameraOverlapW` for forward/side overlap %,
   a survey-area `Polygon`, `wpml:globalShootHeight`) map almost exactly
-  onto brief §3's mapping parameters. **Also unconfirmed for Mini 5
-  Pro/DJI Fly** — could be the real mechanism, could be entirely
-  different on the consumer app. Worth using as the *first thing to check
-  for* in a real Mini-5-Pro mapping-mode export, not as something
-  `mission/mapping.py` should be built against untested.
+  onto brief §3's mapping parameters. **Update: probably not applicable
+  at all, and that's fine.** DJI Fly on the Mini 5 Pro appears to have no
+  native automated mapping/grid mode in the first place — third-party
+  tools that already do mapping-grid missions for the Mini 5 Pro (e.g.
+  "WaypointMap") compute the grid themselves and hand DJI Fly a plain
+  waypoint-mission `.kmz` to execute, not a `templateType=mapping2d`
+  file. That means the `templateType=mapping2d`/`overlap`/`Polygon`
+  machinery is very likely enterprise/DJI-Pilot-2-only and irrelevant
+  here — which is actually good news: it means `mission/mapping.py`
+  doesn't need to reverse-engineer a DJI-Fly mapping mode at all. It just
+  needs to (a) compute the lawnmower grid geometry itself (brief §3:
+  front/side overlap → line spacing/photo spacing/GSD, this is pure math
+  the tool already has to own per the brief's core principle) and (b)
+  emit it as a longer version of the plain-waypoint-mission structure
+  already confirmed working, with one `takePhoto` (`reachPoint`) action
+  per grid waypoint — exactly the shape of the 20-waypoint multi-photo
+  sample, just laid out as a systematic grid instead of a freeform route.
+  No new WPML field categories are expected to be needed. Still worth a
+  sanity check against a real Mini-5-Pro grid export if one ever
+  surfaces, but not a blocker any more.
 
 ## Archive layout
 

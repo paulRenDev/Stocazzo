@@ -10,7 +10,7 @@ of that loop adding camera actions and an appended waypoint
 and a 20-waypoint route with 8 `takePhoto` actions
 (`..._20wp_multi_photo.kmz`).
 Findings are in `docs/WPML_FINDINGS.md`; the parser/generator/validator
-pass identity round-trip tests against all five, plus diff-based tests
+pass identity round-trip tests against all six, plus diff-based tests
 confirming: `executeHeight` is safely, independently per-waypoint
 editable; `takePhoto`/`startRecord`/`stopRecord` actions and their exact
 parameter shapes; that `actionGroupId` marks single-point-trigger (1) vs.
@@ -18,12 +18,21 @@ transition (2) action groups; that `actionId` is a global, no-duplicates
 counter that is **not** stable across edits; and that first/last-waypoint
 markers (`waypointTurnMode`, `waypointHeadingAngleEnable`, whether a
 transition action group exists) are recomputed by DJI Fly on every save
-based on current route position, not fixed per waypoint. Phase 0 is not
-*complete*: the main remaining gap is that no sample so far is an actual
-mapping-grid mission, and it's still unconfirmed whether continuous
-photo capture uses an interval/distance trigger rather than the one-shot
-`reachPoint` trigger seen everywhere so far — both needed before Phase 2
-(see `docs/WPML_FINDINGS.md`, "Next steps"). This
+based on current route position, not fixed per waypoint.
+
+**Phase 2 is now considered unblocked**, not waiting on a real
+mapping-grid sample: cross-referencing DJI's official WPML spec and
+independent third-party sources (see `docs/WPML_FINDINGS.md`,
+"Cross-reference") strongly indicates (a) DJI Fly on the Mini 5 Pro has
+no native mapping/grid mode at all — third-party tools compute the grid
+externally and hand DJI Fly a plain waypoint mission, exactly this
+project's own architecture — and (b) WPML's interval/distance camera
+auto-trigger (`multipleTiming`/`multipleDistance`) isn't supported on
+this aircraft anyway, consistent with all six real samples using only
+one-shot `reachPoint` triggers. So Phase 2 doesn't need a DJI-generated
+mapping export to build against: it needs to compute the grid itself
+(pure geometry, brief §3) and emit it through the already-confirmed
+plain-waypoint-mission structure, one `takePhoto` per grid point. This
 document turns the original Dutch project brief (`docs/PROJECT_BRIEF.md`)
 into a sequenced, buildable spec. It exists so that any agent (Opus,
 Sonnet, or a human) can pick up a phase and know exactly what "done" looks
@@ -39,7 +48,7 @@ hand-edit mission XML. The AI assistant's only output is a structured
 parameter object (see §5); everything from there to the `.kmz` on disk is
 deterministic code, covered by tests.
 
-## 1. Why Phase 0 blocks everything else
+## 1. Why Phase 0 came first
 
 DJI's Wayline Mission format (WPML, wrapped in a `.kmz`) is not fully public
 spec — DJI publishes a *partial* schema for its Cloud API, but what DJI Fly
@@ -50,58 +59,60 @@ file. Guessing at the schema and shipping a generator against the guess is
 exactly the "op goed geluk XML aanpassen" failure mode the brief explicitly
 rules out (brief §11, §18).
 
-So: no `mission/generator.py`, `mission/mapping.py` (the KMZ-facing parts),
-or `wpml/schemas/*` gets implemented against assumptions. They get built
-against a real exported mission.
+So: `mission/generator.py`, `mission/mapping.py` (the KMZ-facing parts),
+and `wpml/schemas/*` don't get implemented against assumptions. They get
+built against real exported missions.
 
-**What we have:** one real export, `examples/original_dji_mission.kmz` — a
-plain 3-waypoint route, `droneEnumValue=68`/`droneSubEnumValue=0`. See
-`docs/WPML_FINDINGS.md` for the full field-by-field breakdown.
+**What we have:** six real exports, from `examples/original_dji_mission.kmz`
+(3 waypoints, `droneEnumValue=68`/`droneSubEnumValue=0`) through a
+20-waypoint multi-photo route. See `docs/WPML_FINDINGS.md` for the full
+field-by-field breakdown, including two diff-confirmed edits and a
+cross-reference against DJI's official (enterprise-oriented) WPML spec.
 
-**What we still need from the user:** at least one more `.kmz`, ideally
-two: (a) the *same* mission re-exported after changing exactly one
-parameter (start with altitude) in DJI Fly, to confirm what "editable"
-actually means field-by-field (§7); (b) a real DJI-Fly-generated
-*mapping*-grid mission (many waypoints, `startRecord`/`takePhoto`
-actions) — the current sample is a plain route, not a mapping mission, so
-it doesn't yet inform Phase 2 (§3 mapping.py).
+**What's still open, but no longer blocking:** no sample is an actual
+mapping/lawnmower-grid mission — but per `docs/WPML_FINDINGS.md`,
+"Cross-reference", that's very likely because DJI Fly has no native
+mapping mode on the Mini 5 Pro at all, so there may never be one to
+capture. Phase 2 can proceed on the plain-waypoint-mission structure
+already confirmed (§3 Phase 2, below) rather than waiting on it.
 
 ## 2. Current implementation status
 
 | Module | Brief section | Status |
 |---|---|---|
 | `mission/naming.py` | §6 (filename standard), §7 (versioning), §8 (mission ID + metadata) | **Implemented + tested** |
-| `mission/parser.py` | §18 (generic inspector) + real WPML 1.0.2 structured parser | **Implemented + tested** against `examples/original_dji_mission.kmz` |
-| `mission/generator.py` | §2, §11 | **Implemented + tested** — identity round-trip against the real sample passes (structural equivalence; DJI Fly re-import still needs manual confirmation, see §7) |
+| `mission/parser.py` | §18 (generic inspector) + real WPML 1.0.2 structured parser | **Implemented + tested** against all six real samples |
+| `mission/generator.py` | §2, §11 | **Implemented + tested** — identity round-trip against every real sample passes (structural equivalence; DJI Fly re-import still needs manual confirmation, see §7) |
 | `mission/validator.py` | §12 | **Implemented + tested** — structural/range checks only; aircraft-specific numeric limits (max altitude/speed) intentionally NOT hardcoded, see the module docstring |
-| `mission/mapping.py` | §3 | **Stubbed** — needs a real mapping-grid sample, see §1 |
+| `mission/mapping.py` | §3 | **Stubbed, ready to start** — no longer waiting on a real mapping-grid sample, see §3 Phase 2 below |
 | `wpml/schemas/*`, `wpml/templates/*` | §11 | **Empty** — the parser/generator currently model the WPML structure directly as dataclasses rather than a separate schema layer; revisit once a second/third real sample either confirms this generalizes or shows it needs to be split out |
 | `app/*` (map UI, mission editor) | §9, §14, §15 | **Not started** — UI work should follow the engine, not precede it (see brief §18, and the advisor thread the user forwarded: build the engine core first) |
 
 ## 3. Phase plan
 
-### Phase 0 — Reverse-engineering (in progress)
+### Phase 0 — Reverse-engineering (well underway)
 
-Done for the one sample analyzed: archive layout, namespace/version,
-mission-config fields, waypoint fields, action groups — all documented in
-`docs/WPML_FINDINGS.md`, backed by `mission/parser.py`'s structured parser
-and its tests.
+Done across the six samples analyzed: archive layout, namespace/version,
+mission-config fields, waypoint fields, action groups, camera actions,
+dynamic first/last-waypoint markers, compound action groups — all
+documented in `docs/WPML_FINDINGS.md`, backed by `mission/parser.py`'s
+structured parser and a battery of tests.
 
-Still open (see `docs/WPML_FINDINGS.md`, "Next steps"):
+Still open (see `docs/WPML_FINDINGS.md`, "Next steps") but none of these
+block Phase 2 any more:
 
-1. A second real sample — same mission, one field changed in DJI Fly,
-   re-exported — to confirm which fields are safe to edit vs which
-   silently break DJI Fly's acceptance of the file, and to move the
-   "editable vs do-not-modify" table there from hypothesis to confirmed.
-2. A real DJI-Fly-generated mapping-grid mission, needed before Phase 2
-   can start on solid ground.
-3. Manual DJI Fly import of the round-trip-regenerated file (produced by
+1. A sample isolating a coordinates-only edit, and one changing a
+   mission-level field (e.g. `finishAction`) — would move a few more rows
+   from "likely editable" to "confirmed" in the editable-field table.
+2. Manual DJI Fly import of a round-trip-regenerated file (produced by
    `mission.generator.export_mission` with zero intentional changes) to
    confirm DJI Fly actually accepts it, not just that it re-parses
    identically.
-4. Once (1)-(3) are in hand: decide whether `wpml/schemas/*` and
-   `wpml/templates/*` need to exist as a separate layer, or whether the
-   dataclass-based parser/generator already serve that role well enough.
+3. Decide whether `wpml/schemas/*` and `wpml/templates/*` need to exist
+   as a separate layer, or whether the dataclass-based parser/generator
+   already serve that role well enough — leaning toward the latter given
+   how cleanly six structurally different samples have fit the same
+   dataclasses so far.
 
 ### Phase 1 — MVP v0.1 (brief §17)
 
@@ -121,23 +132,22 @@ actions → through the same generator/validator/export path as Phase 1.
 This is pure geometry + the deterministic engine in the brief's
 architecture diagram (§16); still no AI involved.
 
-DJI's official (but enterprise/Dock-oriented, **not confirmed for Mini 5
-Pro**) WPML spec at
-[`dji-sdk/Cloud-API-Doc`](https://github.com/dji-sdk/Cloud-API-Doc)
-happens to define almost exactly this: `template.kml`'s `templateType=
-mapping2d/mapping3d`, `direction`, `shootType=time|distance`, an
-`overlap` block (`orthoCameraOverlapH`/`orthoCameraOverlapW` for
-forward/side %), and a survey `Polygon`; separately,
-`actionTriggerType=multipleDistance` + `takePhoto` describes exactly the
-"photo every N meters" behavior this phase needs. Use this as the
-**starting hypothesis** for the field names and geometry, not as ground
-truth — see `docs/WPML_FINDINGS.md`, "Cross-reference: DJI's official
-WPML spec" for two concrete cases where that spec's enterprise example
-already doesn't match real Mini 5 Pro output (namespace URI,
-`actionTriggerType` on transition groups). The first real DJI-Fly
-mapping-mode export for the Mini 5 Pro should be checked against this
-hypothesis before `mission/mapping.py` is written, not used to justify
-skipping that check.
+**This does not need a new WPML shape.** DJI's official WPML spec defines
+a `templateType=mapping2d/mapping3d` mechanism with its own
+`overlap`/`direction`/`shootType`/`Polygon` fields, but that spec's
+"Product Support" only ever lists enterprise Dock aircraft, and
+independent sources indicate DJI Fly has no such native mode on the Mini
+5 Pro at all — third-party grid-mapping tools for this aircraft compute
+the grid themselves and hand DJI Fly a plain waypoint mission (see
+`docs/WPML_FINDINGS.md`, "Cross-reference", for the sourcing and the
+caveats). So: this project's grid math is genuinely this project's to
+own (which the brief says outright anyway), and its *output* is just a
+longer version of the plain-waypoint-mission structure already
+implemented and tested in `mission/parser.py`/`generator.py` — a
+`WaylineFolder` with many `Waypoint`s, one `takePhoto` (`reachPoint`)
+action per grid point, mirroring the confirmed pattern in
+`examples/original_dji_mission_20wp_multi_photo.kmz`. No interval/distance
+trigger needed or expected to work on this aircraft.
 
 ### Phase 3 — v0.3: AI assistant (brief §4, §17)
 
