@@ -31,6 +31,12 @@ KNOWN_ACTUATOR_FUNCS: set[str] = {
     "takePhoto",
 }
 
+# Commonly reported across DJI Fly / DJI GS Pro waypoint missions (99 per
+# mission, auto-split into segments beyond that) -- not independently
+# confirmed for the Mini 5 Pro specifically, so this is a WARNING, not a
+# hard cap, per this project's rule against acting on unconfirmed limits.
+COMMONLY_REPORTED_MAX_WAYPOINTS = 99
+
 
 class Severity(str, Enum):
     ERROR = "ERROR"
@@ -52,6 +58,16 @@ def validate_mission(mission: WpmlMission) -> list[ValidationIssue]:
         issues.append(ValidationIssue(Severity.ERROR, "Mission has no wayline folders"))
     if not all_waypoints:
         issues.append(ValidationIssue(Severity.ERROR, "Mission has no waypoints"))
+    elif len(all_waypoints) > COMMONLY_REPORTED_MAX_WAYPOINTS:
+        issues.append(
+            ValidationIssue(
+                Severity.WARNING,
+                f"Mission has {len(all_waypoints)} waypoints; DJI Fly waypoint missions are "
+                f"commonly reported to cap out around {COMMONLY_REPORTED_MAX_WAYPOINTS} (not "
+                "independently confirmed for the Mini 5 Pro) — verify DJI Fly accepts this "
+                "many, or reduce overlap/area, before flying",
+            )
+        )
 
     di = mission.mission_config.drone_info
     drone_key = (di.drone_enum_value, di.drone_sub_enum_value)

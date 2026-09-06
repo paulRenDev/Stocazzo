@@ -8,7 +8,18 @@ Core principle: **the AI decides what the user means; a deterministic
 mission engine computes and generates the actual flight plan.** The AI
 never writes KMZ/XML directly.
 
-## Status: Phase 0 well underway, Phase 2 implemented
+## Quick start (just want to use it?)
+
+1. Install [Python 3](https://www.python.org/downloads/) if you don't have it.
+2. Double-click `run.bat` (Windows) or run `./run.sh` (Mac/Linux) from
+   this folder.
+3. Your browser opens to a map. Draw an area, set your mission settings,
+   click **Preview**, then **Exporteer .kmz**.
+
+No Python knowledge needed — the scripts install the one dependency
+(Flask) and start the app for you. See "Web UI" below for what's built.
+
+## Status: Phase 0 well underway, Phase 2 + a first Phase 4 UI implemented
 
 This project deliberately did not start with a UI or a guessed WPML
 implementation. Six real DJI Fly exports (Mini 5 Pro + RC 2) have been
@@ -38,6 +49,23 @@ a generic KMZ inspector plus the real WPML 1.0.2 parser
 structural validation (`mission/validator.py`), and the mapping-grid
 engine (`mission/mapping.py`).
 
+## Web UI
+
+A local Flask app (`app/server.py`) with a Leaflet map (brief sec. 9):
+draw a polygon, set altitude/overlap/direction/speed/gimbal pitch, hit
+**Preview** to see the computed flight grid and stats (waypoints,
+distance, photo count, estimated flight time) plus any
+validator warnings/errors, then **Exporteer .kmz** to download a
+correctly-named, auto-versioned mission file. Runs entirely on your own
+machine — nothing is uploaded anywhere. Only real map tile imagery needs
+internet; the map/drawing library itself is vendored in
+`app/static/vendor/` (see its `NOTICE.md`), not loaded from a CDN.
+
+Not built yet: importing an existing `.kmz` to view/edit (brief sec. 2),
+Quick Mission mode vs. Expert Mode (brief sec. 14-15), and the AI chat
+assistant (brief sec. 4, Phase 3) — this UI only covers the
+manually-configured 2D mapping path from Phase 2.
+
 ## Read first
 
 - [`docs/PROJECT_BRIEF.md`](docs/PROJECT_BRIEF.md) — the original project
@@ -54,18 +82,21 @@ engine (`mission/mapping.py`).
 dji_mission_builder/
 ├── AGENTS.md
 ├── README.md
+├── run.sh / run.bat    start the web UI (installs Flask, opens browser)
 ├── docs/
-├── app/            (not started — UI follows the engine)
-├── mission/        naming.py, parser.py, generator.py, validator.py,
-│                   mapping.py — all implemented and tested
-├── wpml/           empty — parser/generator dataclasses serve this role
+├── app/                server.py (Flask) + static/ (JS/CSS, vendored
+│                       Leaflet/Leaflet.draw) + templates/ (index.html)
+├── mission/            naming.py, parser.py, generator.py, validator.py,
+│                       mapping.py — all implemented and tested
+├── wpml/               empty — parser/generator dataclasses serve this role
 ├── tests/
-└── examples/       drop real DJI .kmz files here
+└── examples/           drop real DJI .kmz files here
 ```
 
 ## Running tests
 
 ```bash
 cd dji_mission_builder
+pip install -r requirements.txt
 python -m pytest tests/
 ```

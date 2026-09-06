@@ -44,6 +44,17 @@ transition-group trigger type).
 parser/generator already serve that role across six structurally
 different samples; revisit only if that stops holding up.
 
+**`app/` has a first working UI** (Flask + Leaflet, brief §9): draw a
+polygon, set mapping params, preview, export a versioned `.kmz`. It is a
+thin HTTP layer only — `app/server.py` must never build or validate a
+mission itself, only call into `mission/`. Verified with a real
+headless-browser run (see `docs/BUILD_SPEC.md` Phase 4), not just
+`tests/test_app.py`'s Flask-test-client tests. Leaflet/Leaflet.draw are
+vendored in `app/static/vendor/` (see its `NOTICE.md`) rather than
+CDN-loaded — keep it that way; don't reintroduce a CDN `<script>` tag for
+them. Not yet built: importing an existing mission, Quick/Expert mode
+distinction, the AI chat surface, or anything beyond WP2D.
+
 **Do not mark any field "confirmed editable" beyond what
 `docs/WPML_FINDINGS.md`'s "Editable vs do-not-modify" section already
 lists as confirmed.** Several fields remain "likely editable, not yet
@@ -79,11 +90,12 @@ isolated by a diff" even after six samples — see that section.
   hardcoded aircraft-specific limits yet (see its docstring).
 - `mission/mapping.py` — Phase 2 grid engine: `CameraModel`/footprint/GSD
   math, `generate_lawnmower_grid`, `build_mapping_mission`.
+- `app/server.py` + `app/static/`/`app/templates/` — Phase 4 local web UI.
 - Tests for all of the above, run against the real samples
   (`tests/test_parser.py`, `test_generator.py`, `test_validator.py`,
   `test_diff_findings.py`, `test_structural_patterns.py`,
   `test_camera_actions.py`, `test_multi_photo_route.py`,
-  `test_mapping.py`).
+  `test_mapping.py`, `test_app.py`).
 
 Extending the parser/generator to cover fields from a *new* real sample is
 in scope any time — that's exactly how Phase 0 is meant to grow. Guessing
@@ -93,11 +105,16 @@ fields that no sample has shown is not.
 
 Confirming the "editable vs do-not-modify" hypothesis in
 `docs/WPML_FINDINGS.md` (needs a same-mission-one-field-changed pair for
-the fields still marked "likely" rather than "confirmed"); validating
+the fields still marked "likely" rather than "confirmed"), and validating
 `mission/mapping.py`'s camera model and axis-mapping assumptions against
-a real mapping-grid export if one ever surfaces; and the map/mission-editor
-UI (needs the engine to be further along first, per brief §18). See build
-spec §1–3 for the full phase breakdown.
+a real mapping-grid export if one ever surfaces. See build spec §1–3 for
+the full phase breakdown.
+
+## What's next (not blocked on samples, just not built yet)
+
+Import-and-edit flow in the UI, Quick Mission vs. Expert Mode, the AI
+chat assistant (Phase 3), and WP3D/WPINS/WPVID mission types. See build
+spec §3 Phase 3/4.
 
 ## Style
 

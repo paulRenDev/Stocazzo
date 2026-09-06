@@ -86,7 +86,7 @@ already confirmed (§3 Phase 2, below) rather than waiting on it.
 | `mission/validator.py` | §12 | **Implemented + tested** — structural/range checks only; aircraft-specific numeric limits (max altitude/speed) intentionally NOT hardcoded, see the module docstring |
 | `mission/mapping.py` | §3 | **Implemented + tested** — polygon → lawnmower grid → `WpmlMission`, one `takePhoto` per waypoint; camera model sourced from Mini 5 Pro manufacturer specs (unverified against a real mapping export, see the module docstring) |
 | `wpml/schemas/*`, `wpml/templates/*` | §11 | **Empty** — the parser/generator currently model the WPML structure directly as dataclasses rather than a separate schema layer; revisit once a second/third real sample either confirms this generalizes or shows it needs to be split out |
-| `app/*` (map UI, mission editor) | §9, §14, §15 | **Not started** — UI work should follow the engine, not precede it (see brief §18, and the advisor thread the user forwarded: build the engine core first) |
+| `app/*` (map UI, mission editor) | §9, §14, §15 | **First version implemented** — a local Flask app with a Leaflet map: draw a polygon, set mapping parameters, preview the computed grid + stats, export a versioned `.kmz`. See §3 Phase 4 below for what's not covered yet |
 
 ## 3. Phase plan
 
@@ -162,21 +162,43 @@ but a computed mapping altitude/speed could — see
 
 Not yet done within Phase 2: the polygon-clipping is single-interval per
 scan line (correct for convex/simple shapes, documented limitation for
-strongly concave polygons — see `generate_lawnmower_grid`'s docstring),
-and there's no CLI/UI surface yet to actually draw a polygon or run this
-against a live mission (that's Phase 4, brief §9/§14/§15).
+strongly concave polygons — see `generate_lawnmower_grid`'s docstring).
 
-### Phase 3 — v0.3: AI assistant (brief §4, §17)
+### Phase 3 — v0.3: AI assistant (brief §4, §17) — not started
 
 A chat surface that turns natural language into the structured parameter
 JSON shown in brief §4 — and stops there. The mission engine from Phase 2
 consumes that JSON exactly as if a human had typed it into the Quick
 Mission form (brief §14). The AI never sees or touches XML.
 
-### Phase 4: UI polish (brief §9, §15)
+### Phase 4: UI (brief §9, §14, §15) — first version implemented
 
-Map view, expert mode, quick mission mode. Deliberately last: every prior
-phase is independently testable headlessly.
+`app/server.py` (Flask) + `app/templates/index.html` +
+`app/static/main.js`: a three-pane layout matching brief §9 (settings
+left, Leaflet map middle, mission-info right). Draw a polygon with
+Leaflet.draw, set the Phase 2 mapping parameters, **Preview** computes
+the grid via `mission.mapping` and validates via `mission.validator`
+(errors block export, warnings don't), **Exporteer .kmz** downloads a
+correctly-named, auto-versioned file via `mission.naming`/`generator`.
+Runs locally via `run.sh`/`run.bat` — no install beyond Python + Flask,
+no data leaves the user's machine. Leaflet/Leaflet.draw are vendored in
+`app/static/vendor/` rather than CDN-loaded, so only real map tile
+imagery needs internet at runtime.
+
+Verified with a real headless-browser run (draw polygon → preview →
+export → downloaded file re-parses cleanly through `mission.parser`),
+not just the Flask-test-client tests in `tests/test_app.py`.
+
+Not yet covered by this first UI pass, still open for a later Phase 4
+iteration:
+
+- Importing an existing `.kmz` to view/edit (brief §2, §13) — this UI
+  only creates new mapping missions.
+- Quick Mission mode vs. Expert Mode as distinct UI states (brief §14-15)
+  — currently one form with every Phase-2 parameter exposed.
+- The AI chat surface (Phase 3) feeding into this same form/preview flow.
+- WP3D/WPINS/WPVID mission types — `mission/mapping.py` only builds
+  WP2D so far.
 
 ## 4. Directory layout
 
@@ -188,10 +210,11 @@ dji_mission_builder/
 │   ├── PROJECT_BRIEF.md   # original brief, verbatim
 │   ├── BUILD_SPEC.md      # this file
 │   └── WPML_FINDINGS.md   # created in Phase 0, once a real KMZ exists
-├── app/
-│   ├── ui/
-│   ├── map/
-│   └── mission_editor/
+├── run.sh / run.bat       # start the web UI
+├── app/                   # Flask app (Phase 4, first version)
+│   ├── server.py
+│   ├── static/            # main.js, style.css, vendor/ (Leaflet, vendored)
+│   └── templates/         # index.html
 ├── mission/
 │   ├── parser.py          # implemented (Phase 0 inspector + WPML parser)
 │   ├── generator.py       # implemented

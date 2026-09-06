@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DJI Mapping Mission Builder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/leaflet/leaflet.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/leaflet-draw/leaflet.draw.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>DJI Mapping Mission Builder</h1>
+    <span class="subtitle">DJI Mini 5 Pro + RC 2 &middot; 2D mapping (WP2D)</span>
+  </header>
+
+  <div class="app-body">
+    <aside class="panel panel-settings">
+      <h2>Missie-instellingen</h2>
+
+      <label>Naam / locatie
+        <input type="text" id="mission-name" value="Boerderij Jos" />
+      </label>
+
+      <label>Type
+        <select id="mission-type" disabled>
+          <option value="WP2D" selected>WP2D &mdash; 2D mapping</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Vlucht</legend>
+        <label>Hoogte AGL (m)
+          <input type="number" id="altitude" value="80" min="2" max="500" step="1" />
+        </label>
+        <label>Vliegrichting (&deg;, 0=noord)
+          <input type="number" id="direction" value="0" min="0" max="359" step="1" />
+        </label>
+        <label>Snelheid (m/s)
+          <input type="number" id="speed" value="5" min="0.5" max="15" step="0.1" />
+        </label>
+        <label>Gimbal pitch (&deg;)
+          <input type="number" id="gimbal-pitch" value="-90" min="-90" max="0" step="1" />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Mapping</legend>
+        <label>Front overlap (%)
+          <input type="number" id="front-overlap" value="80" min="10" max="95" step="1" />
+        </label>
+        <label>Side overlap (%)
+          <input type="number" id="side-overlap" value="70" min="10" max="95" step="1" />
+        </label>
+      </fieldset>
+
+      <p class="hint">Teken een gebied op de kaart met de polygoon-tool
+      (vierkantje-icoon links op de kaart), pas de instellingen aan, en
+      klik op <strong>Preview</strong>.</p>
+
+      <div class="actions">
+        <button id="btn-preview" type="button">Preview</button>
+        <button id="btn-export" type="button" disabled>Exporteer .kmz</button>
+      </div>
+
+      <div id="issues" class="issues" hidden></div>
+    </aside>
+
+    <main class="panel panel-map">
+      <div id="map"></div>
+    </main>
+
+    <aside class="panel panel-info">
+      <h2>Missie-informatie</h2>
+      <dl class="stats" id="stats">
+        <dt>Missie</dt><dd id="stat-name">&mdash;</dd>
+        <dt>Type</dt><dd id="stat-type">WP2D</dd>
+        <dt>Hoogte</dt><dd id="stat-altitude">&mdash;</dd>
+        <dt>Front overlap</dt><dd id="stat-front">&mdash;</dd>
+        <dt>Side overlap</dt><dd id="stat-side">&mdash;</dd>
+        <dt>Waypoints</dt><dd id="stat-waypoints">&mdash;</dd>
+        <dt>Afstand</dt><dd id="stat-distance">&mdash;</dd>
+        <dt>Aantal foto's</dt><dd id="stat-photos">&mdash;</dd>
+        <dt>Geschatte vliegtijd</dt><dd id="stat-time">&mdash;</dd>
+      </dl>
+      <p class="hint hint-safety">Deze tool start nooit de drone. Ze
+      genereert uitsluitend een missiebestand (.kmz) dat je zelf in DJI Fly
+      importeert en activeert.</p>
+    </aside>
+  </div>
+
+  <script src="{{ url_for('static', filename='vendor/leaflet/leaflet.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/leaflet-draw/leaflet.draw.js') }}"></script>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
