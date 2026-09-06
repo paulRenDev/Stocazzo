@@ -84,7 +84,7 @@ already confirmed (§3 Phase 2, below) rather than waiting on it.
 | `mission/parser.py` | §18 (generic inspector) + real WPML 1.0.2 structured parser | **Implemented + tested** against all six real samples |
 | `mission/generator.py` | §2, §11 | **Implemented + tested** — identity round-trip against every real sample passes (structural equivalence; DJI Fly re-import still needs manual confirmation, see §7) |
 | `mission/validator.py` | §12 | **Implemented + tested** — structural/range checks only; aircraft-specific numeric limits (max altitude/speed) intentionally NOT hardcoded, see the module docstring |
-| `mission/mapping.py` | §3 | **Stubbed, ready to start** — no longer waiting on a real mapping-grid sample, see §3 Phase 2 below |
+| `mission/mapping.py` | §3 | **Implemented + tested** — polygon → lawnmower grid → `WpmlMission`, one `takePhoto` per waypoint; camera model sourced from Mini 5 Pro manufacturer specs (unverified against a real mapping export, see the module docstring) |
 | `wpml/schemas/*`, `wpml/templates/*` | §11 | **Empty** — the parser/generator currently model the WPML structure directly as dataclasses rather than a separate schema layer; revisit once a second/third real sample either confirms this generalizes or shows it needs to be split out |
 | `app/*` (map UI, mission editor) | §9, §14, §15 | **Not started** — UI work should follow the engine, not precede it (see brief §18, and the advisor thread the user forwarded: build the engine core first) |
 
@@ -124,30 +124,47 @@ field" round-trip against a live DJI Fly still needs step (1) above before
 the UI can honestly claim any given field is safe to edit. No map UI
 required yet — a CLI or a plain data dump is enough to satisfy v0.1.
 
-### Phase 2 — v0.2: mapping engine (brief §3, §17)
+### Phase 2 — v0.2: mapping engine (brief §3, §17) — **implemented**
 
-Polygon in → flight-grid generation (front/side overlap, line spacing,
-photo spacing, direction, start/end point, turn mode) → waypoints + camera
-actions → through the same generator/validator/export path as Phase 1.
-This is pure geometry + the deterministic engine in the brief's
-architecture diagram (§16); still no AI involved.
+`mission/mapping.py`: polygon in → boustrophedon flight-grid generation
+(front/side overlap → line spacing/photo spacing via a Mini-5-Pro camera
+model, compass-bearing direction, first/last-waypoint turn/heading
+markers recomputed per the confirmed dynamic-marker behavior) →
+`WpmlMission` → the same `mission.generator`/`mission.validator`/export
+path as Phase 1. Pure geometry, no AI involved, matching the brief's
+architecture diagram (§16).
 
-**This does not need a new WPML shape.** DJI's official WPML spec defines
-a `templateType=mapping2d/mapping3d` mechanism with its own
-`overlap`/`direction`/`shootType`/`Polygon` fields, but that spec's
-"Product Support" only ever lists enterprise Dock aircraft, and
-independent sources indicate DJI Fly has no such native mode on the Mini
-5 Pro at all — third-party grid-mapping tools for this aircraft compute
-the grid themselves and hand DJI Fly a plain waypoint mission (see
-`docs/WPML_FINDINGS.md`, "Cross-reference", for the sourcing and the
-caveats). So: this project's grid math is genuinely this project's to
-own (which the brief says outright anyway), and its *output* is just a
-longer version of the plain-waypoint-mission structure already
-implemented and tested in `mission/parser.py`/`generator.py` — a
-`WaylineFolder` with many `Waypoint`s, one `takePhoto` (`reachPoint`)
-action per grid point, mirroring the confirmed pattern in
-`examples/original_dji_mission_20wp_multi_photo.kmz`. No interval/distance
-trigger needed or expected to work on this aircraft.
+**This did not need a new WPML shape**, confirming the Phase 0 research:
+DJI's official WPML spec defines a `templateType=mapping2d/mapping3d`
+mechanism with its own `overlap`/`direction`/`shootType`/`Polygon`
+fields, but that spec's "Product Support" only ever lists enterprise Dock
+aircraft, and independent sources indicate DJI Fly has no such native
+mode on the Mini 5 Pro at all (see `docs/WPML_FINDINGS.md`,
+"Cross-reference"). So `mission/mapping.py` owns the grid math itself
+(brief §3 says this outright anyway) and emits it through the
+already-confirmed plain-waypoint-mission structure — a `WaylineFolder`
+with many `Waypoint`s, one `takePhoto` (`reachPoint`) action per grid
+point, mirroring `examples/original_dji_mission_20wp_multi_photo.kmz`.
+No interval/distance trigger used or needed.
+
+Two things in `mission/mapping.py` are explicitly flagged in its
+docstring as *not* reverse-engineered facts, since no real DJI-Fly
+mapping-grid export exists to check them against: the Mini 5 Pro camera
+model (sensor resolution/FOV, sourced from manufacturer spec pages, used
+to compute footprint/GSD/spacing) and the across-track/along-track axis
+mapping (which photo dimension governs line spacing vs. photo spacing).
+Revisit both if a real mapping export or camera calibration ever
+surfaces. Fixed alongside this: `mission/generator.py` had a latent
+precision bug (`:g` formatting silently truncates to 6 significant
+figures) that every real sample's round numbers happened not to trigger,
+but a computed mapping altitude/speed could — see
+`tests/test_generator.py::test_high_precision_values_survive_round_trip`.
+
+Not yet done within Phase 2: the polygon-clipping is single-interval per
+scan line (correct for convex/simple shapes, documented limitation for
+strongly concave polygons — see `generate_lawnmower_grid`'s docstring),
+and there's no CLI/UI surface yet to actually draw a polygon or run this
+against a live mission (that's Phase 4, brief §9/§14/§15).
 
 ### Phase 3 — v0.3: AI assistant (brief §4, §17)
 
@@ -176,14 +193,14 @@ dji_mission_builder/
 │   ├── map/
 │   └── mission_editor/
 ├── mission/
-│   ├── parser.py          # Phase 0 inspector now; WPML parser after Phase 0
-│   ├── generator.py       # stub until Phase 0 findings exist
-│   ├── mapping.py         # stub until Phase 2
-│   ├── validator.py       # stub until Phase 0 findings exist
+│   ├── parser.py          # implemented (Phase 0 inspector + WPML parser)
+│   ├── generator.py       # implemented
+│   ├── mapping.py         # implemented (Phase 2 grid engine)
+│   ├── validator.py       # implemented
 │   └── naming.py          # implemented
 ├── wpml/
-│   ├── schemas/           # empty until Phase 0
-│   └── templates/         # empty until Phase 0
+│   ├── schemas/           # empty -- parser/generator dataclasses serve this role
+│   └── templates/         # empty -- see above
 ├── tests/
 └── examples/
     └── (drop real .kmz files here — see examples/README.md)

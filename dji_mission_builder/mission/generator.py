@@ -23,6 +23,18 @@ _KML_OPEN = '<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:wpml="http://www.
 _KML_CLOSE = "</kml>\n"
 
 
+def _fmt_num(value: float) -> str:
+    """Format a float without the precision loss of `:g` (6 significant
+    figures), while still writing whole numbers as "50" not "50.0" to
+    match observed real DJI output. Every real sample seen so far only
+    has round numbers, so this bug was latent until Phase 2 started
+    generating computed values (e.g. altitudes/speeds with more digits).
+    """
+    if value == int(value):
+        return str(int(value))
+    return repr(value)
+
+
 def _mission_config_xml(mission: WpmlMission, indent: str) -> str:
     cfg = mission.mission_config
     di = cfg.drone_info
@@ -32,7 +44,7 @@ def _mission_config_xml(mission: WpmlMission, indent: str) -> str:
         f"{indent}  <wpml:finishAction>{cfg.finish_action}</wpml:finishAction>\n"
         f"{indent}  <wpml:exitOnRCLost>{cfg.exit_on_rc_lost}</wpml:exitOnRCLost>\n"
         f"{indent}  <wpml:executeRCLostAction>{cfg.execute_rc_lost_action}</wpml:executeRCLostAction>\n"
-        f"{indent}  <wpml:globalTransitionalSpeed>{cfg.global_transitional_speed:g}</wpml:globalTransitionalSpeed>\n"
+        f"{indent}  <wpml:globalTransitionalSpeed>{_fmt_num(cfg.global_transitional_speed)}</wpml:globalTransitionalSpeed>\n"
         f"{indent}  <wpml:droneInfo>\n"
         f"{indent}    <wpml:droneEnumValue>{di.drone_enum_value}</wpml:droneEnumValue>\n"
         f"{indent}    <wpml:droneSubEnumValue>{di.drone_sub_enum_value}</wpml:droneSubEnumValue>\n"
@@ -97,11 +109,11 @@ def _waypoint_xml(wp: Waypoint, indent: str) -> str:
         f"{indent}    </coordinates>\n"
         f"{indent}  </Point>\n"
         f"{indent}  <wpml:index>{wp.index}</wpml:index>\n"
-        f"{indent}  <wpml:executeHeight>{wp.execute_height:g}</wpml:executeHeight>\n"
-        f"{indent}  <wpml:waypointSpeed>{wp.speed:g}</wpml:waypointSpeed>\n"
+        f"{indent}  <wpml:executeHeight>{_fmt_num(wp.execute_height)}</wpml:executeHeight>\n"
+        f"{indent}  <wpml:waypointSpeed>{_fmt_num(wp.speed)}</wpml:waypointSpeed>\n"
         f"{indent}  <wpml:waypointHeadingParam>\n"
         f"{indent}    <wpml:waypointHeadingMode>{heading.mode}</wpml:waypointHeadingMode>\n"
-        f"{indent}    <wpml:waypointHeadingAngle>{heading.angle:g}</wpml:waypointHeadingAngle>\n"
+        f"{indent}    <wpml:waypointHeadingAngle>{_fmt_num(heading.angle)}</wpml:waypointHeadingAngle>\n"
         f"{indent}    <wpml:waypointPoiPoint>{heading.poi_point}</wpml:waypointPoiPoint>\n"
         f"{indent}    <wpml:waypointHeadingAngleEnable>{int(heading.angle_enable)}</wpml:waypointHeadingAngleEnable>\n"
         f"{indent}    <wpml:waypointHeadingPathMode>{heading.path_mode}</wpml:waypointHeadingPathMode>\n"
@@ -109,13 +121,13 @@ def _waypoint_xml(wp: Waypoint, indent: str) -> str:
         f"{indent}  </wpml:waypointHeadingParam>\n"
         f"{indent}  <wpml:waypointTurnParam>\n"
         f"{indent}    <wpml:waypointTurnMode>{turn.mode}</wpml:waypointTurnMode>\n"
-        f"{indent}    <wpml:waypointTurnDampingDist>{turn.damping_dist:g}</wpml:waypointTurnDampingDist>\n"
+        f"{indent}    <wpml:waypointTurnDampingDist>{_fmt_num(turn.damping_dist)}</wpml:waypointTurnDampingDist>\n"
         f"{indent}  </wpml:waypointTurnParam>\n"
         f"{indent}  <wpml:useStraightLine>{int(wp.use_straight_line)}</wpml:useStraightLine>\n"
         f"{groups_xml}"
         f"{indent}  <wpml:waypointGimbalHeadingParam>\n"
-        f"{indent}    <wpml:waypointGimbalPitchAngle>{gimbal.pitch_angle:g}</wpml:waypointGimbalPitchAngle>\n"
-        f"{indent}    <wpml:waypointGimbalYawAngle>{gimbal.yaw_angle:g}</wpml:waypointGimbalYawAngle>\n"
+        f"{indent}    <wpml:waypointGimbalPitchAngle>{_fmt_num(gimbal.pitch_angle)}</wpml:waypointGimbalPitchAngle>\n"
+        f"{indent}    <wpml:waypointGimbalYawAngle>{_fmt_num(gimbal.yaw_angle)}</wpml:waypointGimbalYawAngle>\n"
         f"{indent}  </wpml:waypointGimbalHeadingParam>\n"
         f"{indent}</Placemark>\n"
     )
@@ -128,9 +140,9 @@ def _folder_xml(folder: WaylineFolder, indent: str) -> str:
         f"{indent}  <wpml:templateId>{folder.template_id}</wpml:templateId>\n"
         f"{indent}  <wpml:executeHeightMode>{folder.execute_height_mode}</wpml:executeHeightMode>\n"
         f"{indent}  <wpml:waylineId>{folder.wayline_id}</wpml:waylineId>\n"
-        f"{indent}  <wpml:distance>{folder.distance:g}</wpml:distance>\n"
-        f"{indent}  <wpml:duration>{folder.duration:g}</wpml:duration>\n"
-        f"{indent}  <wpml:autoFlightSpeed>{folder.auto_flight_speed:g}</wpml:autoFlightSpeed>\n"
+        f"{indent}  <wpml:distance>{_fmt_num(folder.distance)}</wpml:distance>\n"
+        f"{indent}  <wpml:duration>{_fmt_num(folder.duration)}</wpml:duration>\n"
+        f"{indent}  <wpml:autoFlightSpeed>{_fmt_num(folder.auto_flight_speed)}</wpml:autoFlightSpeed>\n"
         f"{waypoints_xml}"
         f"{indent}</Folder>\n"
     )

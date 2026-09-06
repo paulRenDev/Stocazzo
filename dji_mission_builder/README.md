@@ -8,24 +8,35 @@ Core principle: **the AI decides what the user means; a deterministic
 mission engine computes and generates the actual flight plan.** The AI
 never writes KMZ/XML directly.
 
-## Status: Phase 0 in progress
+## Status: Phase 0 well underway, Phase 2 implemented
 
 This project deliberately did not start with a UI or a guessed WPML
-implementation. One real DJI Fly export (Mini 5 Pro + RC 2) has been
-reverse-engineered — see `docs/WPML_FINDINGS.md` — and a structured
-parser, generator, and validator exist, with a passing identity
-round-trip test against that real file (`tests/test_generator.py`).
+implementation. Six real DJI Fly exports (Mini 5 Pro + RC 2) have been
+reverse-engineered — see `docs/WPML_FINDINGS.md` — informing a structured
+parser, generator, and validator, all passing identity round-trip tests
+against every real sample.
 
-**Still needed to move Phase 0 forward:** a second `.kmz` — the same
-mission re-exported after changing one setting (start with altitude) in
-DJI Fly — to confirm which fields are actually safe to edit, plus a real
-DJI-Fly-generated *mapping*-grid mission to inform Phase 2. Drop new
-samples into `examples/`; see `examples/README.md`.
+Research (DJI's official WPML spec, plus independent sources — see
+`docs/WPML_FINDINGS.md`, "Cross-reference") indicates DJI Fly has no
+native mapping/grid mode on the Mini 5 Pro at all, and that WPML's
+interval/distance photo trigger isn't supported on this aircraft either.
+That unblocked Phase 2 without needing a real mapping-grid export: the
+grid engine (`mission/mapping.py`) computes the lawnmower grid itself and
+emits it through the already-confirmed plain-waypoint structure, one
+`takePhoto` per waypoint.
 
-Implemented and tested so far: mission naming/versioning
-(`mission/naming.py`), a generic KMZ inspector plus the real WPML 1.0.2
-parser (`mission/parser.py`), the KMZ generator (`mission/generator.py`),
-and structural validation (`mission/validator.py`).
+**Still useful to add** (not blocking): a `.kmz` isolating a
+coordinates-only edit or a mission-level field change (moves more fields
+from "likely editable" to "confirmed" in `docs/WPML_FINDINGS.md`), and a
+real DJI-Fly mapping-grid export or camera calibration if one ever
+surfaces, to check `mission/mapping.py`'s camera-model assumptions. Drop
+new samples into `examples/`; see `examples/README.md`.
+
+Implemented and tested: mission naming/versioning (`mission/naming.py`),
+a generic KMZ inspector plus the real WPML 1.0.2 parser
+(`mission/parser.py`), the KMZ generator (`mission/generator.py`),
+structural validation (`mission/validator.py`), and the mapping-grid
+engine (`mission/mapping.py`).
 
 ## Read first
 
@@ -45,9 +56,9 @@ dji_mission_builder/
 ├── README.md
 ├── docs/
 ├── app/            (not started — UI follows the engine)
-├── mission/        naming.py, parser.py, generator.py, validator.py
-│                   implemented and tested; mapping.py stubbed (Phase 2)
-├── wpml/           empty — see build spec sec. 2 on whether it's needed
+├── mission/        naming.py, parser.py, generator.py, validator.py,
+│                   mapping.py — all implemented and tested
+├── wpml/           empty — parser/generator dataclasses serve this role
 ├── tests/
 └── examples/       drop real DJI .kmz files here
 ```
