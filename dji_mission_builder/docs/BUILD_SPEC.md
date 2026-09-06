@@ -85,6 +85,7 @@ already confirmed (§3 Phase 2, below) rather than waiting on it.
 | `mission/generator.py` | §2, §11 | **Implemented + tested** — identity round-trip against every real sample passes (structural equivalence; DJI Fly re-import still needs manual confirmation, see §7) |
 | `mission/validator.py` | §12 | **Implemented + tested** — structural/range checks only; aircraft-specific numeric limits (max altitude/speed) intentionally NOT hardcoded, see the module docstring |
 | `mission/mapping.py` | §3 | **Implemented + tested** — polygon → lawnmower grid → `WpmlMission`, one `takePhoto` per waypoint; camera model sourced from Mini 5 Pro manufacturer specs (unverified against a real mapping export, see the module docstring) |
+| `mission/editor.py` | §17 items 6-7 | **Implemented + tested** — uniform altitude/speed edits on an already-parsed mission; gimbal/photo-action edits (items 8-9) not yet done |
 | `wpml/schemas/*`, `wpml/templates/*` | §11 | **Empty** — the parser/generator currently model the WPML structure directly as dataclasses rather than a separate schema layer; revisit once a second/third real sample either confirms this generalizes or shows it needs to be split out |
 | `app/*` (map UI, mission editor) | §9, §14, §15 | **First version implemented** — a local Flask app with a Leaflet map: draw a polygon, set mapping parameters, preview the computed grid + stats, export a versioned `.kmz`. See §3 Phase 4 below for what's not covered yet |
 
@@ -175,30 +176,56 @@ Mission form (brief §14). The AI never sees or touches XML.
 
 `app/server.py` (Flask) + `app/templates/index.html` +
 `app/static/main.js`: a three-pane layout matching brief §9 (settings
-left, Leaflet map middle, mission-info right). Draw a polygon with
-Leaflet.draw, set the Phase 2 mapping parameters, **Preview** computes
-the grid via `mission.mapping` and validates via `mission.validator`
-(errors block export, warnings don't), **Exporteer .kmz** downloads a
-correctly-named, auto-versioned file via `mission.naming`/`generator`.
+left, Leaflet map middle, mission-info right), with two tabs.
+
+- **New Mapping Mission**: draw a polygon with Leaflet.draw, set the
+  Phase 2 mapping parameters, **Preview** computes the grid via
+  `mission.mapping` and validates via `mission.validator` (errors block
+  export, warnings don't), **Export .kmz** downloads a correctly-named,
+  auto-versioned file via `mission.naming`/`generator`.
+- **Import Existing Mission** (brief §2, §13): upload a real `.kmz`,
+  `mission.parser` reads it and the route/settings render on the map and
+  in the info panel (altitude/speed shown as a range if not uniform
+  across waypoints — an imported mission need not be a generated grid).
+  Optionally set a new uniform altitude and/or speed via the new
+  `mission/editor.py` (brief §17 items 6-7: the only two Phase-1 MVP
+  edits implemented so far), pick a mission type (defaults to `WPGEN`,
+  since an arbitrary imported route isn't necessarily a mapping mission),
+  and **Export Edited Version**. The uploaded file is re-parsed fresh
+  server-side for every request and never written to disk — the original
+  is untouched (brief §2's "originele file moet altijd onaangeroerd
+  blijven"), and every export is a new, separately versioned file.
+
+All user-facing text is English with DJI's own terminology (see
+AGENTS.md's Style section) — the brief itself is Dutch, but the tool it
+describes should read the way DJI Fly/Pilot do.
+
 Runs locally via `run.sh`/`run.bat` — no install beyond Python + Flask,
 no data leaves the user's machine. Leaflet/Leaflet.draw are vendored in
 `app/static/vendor/` rather than CDN-loaded, so only real map tile
 imagery needs internet at runtime.
 
-Verified with a real headless-browser run (draw polygon → preview →
-export → downloaded file re-parses cleanly through `mission.parser`),
-not just the Flask-test-client tests in `tests/test_app.py`.
+Verified with real headless-browser runs for both tabs (draw polygon →
+preview → export → downloaded file re-parses cleanly; and upload a real
+sample → analyze → edit altitude → export → re-parses with the edit
+applied and nothing else changed), not just the Flask-test-client tests
+in `tests/test_app.py`. Caught and fixed one real CSS bug this way: an
+author rule that set `display` on an element silently defeated its
+`hidden` attribute (browsers resolve author-vs-user-agent origin before
+specificity, so a plain author rule beats the UA's `[hidden]{display:
+none}`) — fixed with an explicit `[hidden]{display:none!important}`
+reset in `app/static/style.css`.
 
-Not yet covered by this first UI pass, still open for a later Phase 4
-iteration:
+Not yet covered, still open for a later Phase 4 iteration:
 
-- Importing an existing `.kmz` to view/edit (brief §2, §13) — this UI
-  only creates new mapping missions.
 - Quick Mission mode vs. Expert Mode as distinct UI states (brief §14-15)
   — currently one form with every Phase-2 parameter exposed.
 - The AI chat surface (Phase 3) feeding into this same form/preview flow.
 - WP3D/WPINS/WPVID mission types — `mission/mapping.py` only builds
-  WP2D so far.
+  WP2D so far (the import tab's mission-type dropdown is UI-only; it
+  doesn't change how `mission/mapping.py` builds a *new* mission).
+- Gimbal and photo-action edits on imported missions (brief §17 items
+  8-9) — `mission/editor.py` only covers altitude and speed.
 
 ## 4. Directory layout
 
@@ -219,6 +246,7 @@ dji_mission_builder/
 │   ├── parser.py          # implemented (Phase 0 inspector + WPML parser)
 │   ├── generator.py       # implemented
 │   ├── mapping.py         # implemented (Phase 2 grid engine)
+│   ├── editor.py          # implemented (edit an already-parsed mission)
 │   ├── validator.py       # implemented
 │   └── naming.py          # implemented
 ├── wpml/

@@ -5,6 +5,7 @@ browser, no real Leaflet map. The point is to prove the HTTP layer wires
 requests through correctly to `mission/`'s already-tested engine, not to
 re-test the engine itself.
 """
+import io
 import math
 import sys
 from pathlib import Path
@@ -15,6 +16,9 @@ PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.server import EXPORTS_DIR, app as flask_app  # noqa: E402
+from mission.parser import parse_mission  # noqa: E402
+
+EXAMPLE_KMZ = PROJECT_ROOT / "examples" / "original_dji_mission_14wp_loop.kmz"
 
 
 def _offset(lon, lat, east_m, north_m):
@@ -135,3 +139,79 @@ def test_mission_types_endpoint(client):
     data = response.get_json()
     assert "WP2D" in data["mission_types"]
     assert data["active"] == "WP2D"
+
+
+def _upload(client, route, extra_form=None):
+    with open(EXAMPLE_KMZ, "rb") as f:
+        data = {"file": (f, "original_dji_mission_14wp_loop.kmz")}
+        data.update(extra_form or {})
+        return client.post(route, data=data, content_type="multipart/form-data")
+
+
+def test_import_returns_summary_without_writing_files(client):
+    response = _upload(client, "/api/import")
+    assert response.status_code == 200
+    data = response.get_json()
+
+    assert data["waypoint_count"] == 14
+    assert data["altitude_m"]["uniform"] is True
+    assert data["altitude_m"]["min"] == 50
+    assert data["mission_config"]["drone_enum_value"] == 68
+    assert data["has_errors"] is False
+    assert data["source_filename"] == "original_dji_mission_14wp_loop.kmz"
+
+    assert not EXPORTS_DIR.exists() or not list(EXPORTS_DIR.glob("*.kmz"))
+
+
+def test_import_rejects_non_kmz_file(client):
+    response = client.post(
+        "/api/import",
+        data={"file": (io.BytesIO(b"not a kmz"), "not_a_mission.kmz")},
+        content_type="multipart/form-data",
+    )
+    assert response.status_code == 400
+    assert "error" in response.get_json()
+
+
+def test_import_export_applies_altitude_edit(client):
+    response = _upload(
+        client,
+        "/api/import/export",
+        {"name": "Geimporteerd", "mission_type": "WPGEN", "altitude_m": "65"},
+    )
+    assert response.status_code == 200
+    assert "_v01.kmz" in response.headers["Content-Disposition"]
+    assert "WPGEN" in response.headers["Content-Disposition"]
+
+    saved = sorted(EXPORTS_DIR.glob("*Geimporteerd*.kmz"))
+    assert len(saved) == 1
+    reparsed = parse_mission(str(saved[0]))
+    for folder in reparsed.folders:
+        for wp in folder.waypoints:
+            assert wp.execute_height == 65
+
+
+def test_import_export_without_edits_preserves_original_values(client):
+    response = _upload(client, "/api/import/export", {"name": "Onveranderd", "mission_type": "WPGEN"})
+    assert response.status_code == 200
+
+    saved = sorted(EXPORTS_DIR.glob("*Onveranderd*.kmz"))
+    original = parse_mission(str(EXAMPLE_KMZ))
+    reparsed = parse_mission(str(saved[0]))
+
+    assert [wp.execute_height for f in reparsed.folders for wp in f.waypoints] == [
+        wp.execute_height for f in original.folders for wp in f.waypoints
+    ]
+
+
+def test_import_export_rejects_bad_mission_type(client):
+    response = _upload(client, "/api/import/export", {"name": "Test", "mission_type": "NOTATYPE"})
+    assert response.status_code == 400
+    assert "error" in response.get_json()
+
+
+def test_original_upload_never_overwritten(client):
+    before = EXAMPLE_KMZ.read_bytes()
+    _upload(client, "/api/import/export", {"name": "Test", "mission_type": "WPGEN", "altitude_m": "99"})
+    after = EXAMPLE_KMZ.read_bytes()
+    assert before == after

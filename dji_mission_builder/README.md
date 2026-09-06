@@ -14,7 +14,7 @@ never writes KMZ/XML directly.
 2. Double-click `run.bat` (Windows) or run `./run.sh` (Mac/Linux) from
    this folder.
 3. Your browser opens to a map. Draw an area, set your mission settings,
-   click **Preview**, then **Exporteer .kmz**.
+   click **Preview**, then **Export .kmz**.
 
 No Python knowledge needed — the scripts install the one dependency
 (Flask) and start the app for you. See "Web UI" below for what's built.
@@ -51,20 +51,30 @@ engine (`mission/mapping.py`).
 
 ## Web UI
 
-A local Flask app (`app/server.py`) with a Leaflet map (brief sec. 9):
-draw a polygon, set altitude/overlap/direction/speed/gimbal pitch, hit
-**Preview** to see the computed flight grid and stats (waypoints,
-distance, photo count, estimated flight time) plus any
-validator warnings/errors, then **Exporteer .kmz** to download a
-correctly-named, auto-versioned mission file. Runs entirely on your own
-machine — nothing is uploaded anywhere. Only real map tile imagery needs
-internet; the map/drawing library itself is vendored in
-`app/static/vendor/` (see its `NOTICE.md`), not loaded from a CDN.
+A local Flask app (`app/server.py`) with a Leaflet map (brief sec. 9), all
+user-facing text in English using DJI's own terminology. Two tabs:
 
-Not built yet: importing an existing `.kmz` to view/edit (brief sec. 2),
-Quick Mission mode vs. Expert Mode (brief sec. 14-15), and the AI chat
-assistant (brief sec. 4, Phase 3) — this UI only covers the
-manually-configured 2D mapping path from Phase 2.
+- **New Mapping Mission**: draw a polygon, set altitude/overlap/
+  direction/speed/gimbal pitch, hit **Preview** to see the computed
+  flight grid and stats (waypoints, distance, photo count, estimated
+  flight time) plus any validator warnings/errors, then **Export .kmz**
+  to download a correctly-named, auto-versioned mission file.
+- **Import Existing Mission** (brief sec. 2, sec. 13): upload a real DJI
+  Fly `.kmz`, see its waypoints on the map and its settings (drone,
+  altitude, speed, finish action, distance, photos), optionally set a new
+  uniform altitude and/or speed, then **Export Edited Version**. The
+  uploaded file is never modified or stored — every export is a new,
+  separately versioned file (`mission/editor.py`).
+
+Runs entirely on your own machine — nothing is uploaded anywhere except
+to your own local server. Only real map tile imagery needs internet; the
+map/drawing library itself is vendored in `app/static/vendor/` (see its
+`NOTICE.md`), not loaded from a CDN.
+
+Not built yet: Quick Mission mode vs. Expert Mode as distinct UI states
+(brief sec. 14-15), the AI chat assistant (brief sec. 4, Phase 3), and
+gimbal/photo-action edits on imported missions (brief sec. 17 items 8-9)
+— only altitude and speed are exposed so far.
 
 ## Read first
 

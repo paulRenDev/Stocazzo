@@ -112,11 +112,20 @@ the full phase breakdown.
 
 ## What's next (not blocked on samples, just not built yet)
 
-Import-and-edit flow in the UI, Quick Mission vs. Expert Mode, the AI
-chat assistant (Phase 3), and WP3D/WPINS/WPVID mission types. See build
-spec §3 Phase 3/4.
+Quick Mission vs. Expert Mode as distinct UI states, the AI chat
+assistant (Phase 3), WP3D/WPINS/WPVID mission types, and gimbal/photo-
+action edits on imported missions (`mission/editor.py` currently only
+does altitude/speed). Import-and-edit itself is done — see `app/`. See
+build spec §3 Phase 3/4.
 
 ## Style
+
+**All user-facing text (UI labels, error messages, docs meant for the
+user) is English, using DJI's own device/software terminology** (e.g.
+"Altitude", "Gimbal Pitch", "Return to Home"/`finishAction`, "Waypoint
+mission") — not literal translations of the Dutch brief. The brief and
+this project's own docs (`docs/`) stay in whatever language they're
+already in; this rule is about what a user of the tool itself sees.
 
 - Python for `mission/` and `wpml/`. Keep modules small and testable;
   the mission engine must be usable headlessly (no UI dependency) since

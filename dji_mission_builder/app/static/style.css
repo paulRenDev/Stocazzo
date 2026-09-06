@@ -16,6 +16,15 @@
   box-sizing: border-box;
 }
 
+/* Author rules like `.stats { display: grid }` below otherwise beat the
+   browser's default `[hidden] { display: none }` (both are "normal"
+   cascade weight, and author beats user-agent on a tie) -- this keeps
+   the `hidden` attribute authoritative regardless of what else sets
+   `display` on the same element. Toggle visibility via `el.hidden`. */
+[hidden] {
+  display: none !important;
+}
+
 html, body {
   margin: 0;
   height: 100%;
@@ -43,10 +52,41 @@ html, body {
   font-size: 0.85rem;
 }
 
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.5rem 1.25rem 0;
+  background: var(--panel-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-button {
+  flex: none;
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0.5rem 0.25rem;
+  font-size: 0.85rem;
+  margin-right: 1rem;
+}
+
+.tab-button:hover:not(:disabled) {
+  background: transparent;
+  color: var(--text);
+}
+
+.tab-button.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
 .app-body {
   display: grid;
   grid-template-columns: 280px 1fr 260px;
-  height: calc(100% - 52px);
+  height: calc(100% - 89px);
 }
 
 .panel {
@@ -185,7 +225,7 @@ button:disabled {
 
 .stats {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr);
   gap: 0.35rem 0.75rem;
   font-size: 0.88rem;
   margin: 0;
@@ -200,4 +240,6 @@ button:disabled {
   font-variant-numeric: tabular-nums;
   text-align: right;
   font-weight: 600;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }

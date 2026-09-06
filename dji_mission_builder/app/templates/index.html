@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,59 +11,111 @@
 <body>
   <header class="app-header">
     <h1>DJI Mapping Mission Builder</h1>
-    <span class="subtitle">DJI Mini 5 Pro + RC 2 &middot; 2D mapping (WP2D)</span>
+    <span class="subtitle">DJI Mini 5 Pro + RC 2 &middot; DJI Fly-compatible .kmz</span>
   </header>
+
+  <div class="tabs">
+    <button class="tab-button active" id="tab-create" type="button">New Mapping Mission</button>
+    <button class="tab-button" id="tab-import" type="button">Import Existing Mission</button>
+  </div>
 
   <div class="app-body">
     <aside class="panel panel-settings">
-      <h2>Missie-instellingen</h2>
 
-      <label>Naam / locatie
-        <input type="text" id="mission-name" value="Boerderij Jos" />
-      </label>
+      <section id="section-create">
+        <h2>Mission Settings</h2>
 
-      <label>Type
-        <select id="mission-type" disabled>
-          <option value="WP2D" selected>WP2D &mdash; 2D mapping</option>
-        </select>
-      </label>
-
-      <fieldset>
-        <legend>Vlucht</legend>
-        <label>Hoogte AGL (m)
-          <input type="number" id="altitude" value="80" min="2" max="500" step="1" />
+        <label>Name / Location
+          <input type="text" id="mission-name" value="Farm North Field" />
         </label>
-        <label>Vliegrichting (&deg;, 0=noord)
-          <input type="number" id="direction" value="0" min="0" max="359" step="1" />
-        </label>
-        <label>Snelheid (m/s)
-          <input type="number" id="speed" value="5" min="0.5" max="15" step="0.1" />
-        </label>
-        <label>Gimbal pitch (&deg;)
-          <input type="number" id="gimbal-pitch" value="-90" min="-90" max="0" step="1" />
-        </label>
-      </fieldset>
 
-      <fieldset>
-        <legend>Mapping</legend>
-        <label>Front overlap (%)
-          <input type="number" id="front-overlap" value="80" min="10" max="95" step="1" />
+        <label>Type
+          <select id="mission-type" disabled>
+            <option value="WP2D" selected>WP2D &mdash; 2D Mapping</option>
+          </select>
         </label>
-        <label>Side overlap (%)
-          <input type="number" id="side-overlap" value="70" min="10" max="95" step="1" />
+
+        <fieldset>
+          <legend>Flight</legend>
+          <label>Altitude AGL (m)
+            <input type="number" id="altitude" value="80" min="2" max="500" step="1" />
+          </label>
+          <label>Flight Direction (&deg;, 0=North)
+            <input type="number" id="direction" value="0" min="0" max="359" step="1" />
+          </label>
+          <label>Speed (m/s)
+            <input type="number" id="speed" value="5" min="0.5" max="15" step="0.1" />
+          </label>
+          <label>Gimbal Pitch (&deg;)
+            <input type="number" id="gimbal-pitch" value="-90" min="-90" max="0" step="1" />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mapping</legend>
+          <label>Front Overlap (%)
+            <input type="number" id="front-overlap" value="80" min="10" max="95" step="1" />
+          </label>
+          <label>Side Overlap (%)
+            <input type="number" id="side-overlap" value="70" min="10" max="95" step="1" />
+          </label>
+        </fieldset>
+
+        <p class="hint">Draw an area on the map with the polygon tool
+        (square icon on the left of the map), adjust the settings, then
+        click <strong>Preview</strong>.</p>
+
+        <div class="actions">
+          <button id="btn-preview" type="button">Preview</button>
+          <button id="btn-export" type="button" disabled>Export .kmz</button>
+        </div>
+
+        <div id="issues" class="issues" hidden></div>
+      </section>
+
+      <section id="section-import" hidden>
+        <h2>Import Mission</h2>
+
+        <label>DJI Fly .kmz file
+          <input type="file" id="import-file" accept=".kmz" />
         </label>
-      </fieldset>
 
-      <p class="hint">Teken een gebied op de kaart met de polygoon-tool
-      (vierkantje-icoon links op de kaart), pas de instellingen aan, en
-      klik op <strong>Preview</strong>.</p>
+        <div class="actions">
+          <button id="btn-analyze" type="button">Analyze</button>
+        </div>
 
-      <div class="actions">
-        <button id="btn-preview" type="button">Preview</button>
-        <button id="btn-export" type="button" disabled>Exporteer .kmz</button>
-      </div>
+        <div id="import-issues" class="issues" hidden></div>
 
-      <div id="issues" class="issues" hidden></div>
+        <fieldset id="import-edit-fields" hidden>
+          <legend>Edit before export</legend>
+          <label>New Altitude (m, leave blank to keep unchanged)
+            <input type="number" id="import-altitude" min="2" max="500" step="1" />
+          </label>
+          <label>New Speed (m/s, leave blank to keep unchanged)
+            <input type="number" id="import-speed" min="0.5" max="15" step="0.1" />
+          </label>
+          <label>Name for new version
+            <input type="text" id="import-name" value="Imported Mission" />
+          </label>
+          <label>Mission Type
+            <select id="import-mission-type">
+              <option value="WPGEN" selected>WPGEN &mdash; Generic Waypoint Mission</option>
+              <option value="WP2D">WP2D &mdash; 2D Mapping</option>
+              <option value="WP3D">WP3D &mdash; 3D Mapping</option>
+              <option value="WPINS">WPINS &mdash; Inspection</option>
+              <option value="WPVID">WPVID &mdash; Video</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <p class="hint">The original file is never modified &mdash;
+        exporting always writes a new, separately versioned file.</p>
+
+        <div class="actions">
+          <button id="btn-import-export" type="button" disabled>Export Edited Version</button>
+        </div>
+      </section>
+
     </aside>
 
     <main class="panel panel-map">
@@ -71,21 +123,34 @@
     </main>
 
     <aside class="panel panel-info">
-      <h2>Missie-informatie</h2>
+      <h2>Mission Info</h2>
       <dl class="stats" id="stats">
-        <dt>Missie</dt><dd id="stat-name">&mdash;</dd>
+        <dt>Mission</dt><dd id="stat-name">&mdash;</dd>
         <dt>Type</dt><dd id="stat-type">WP2D</dd>
-        <dt>Hoogte</dt><dd id="stat-altitude">&mdash;</dd>
-        <dt>Front overlap</dt><dd id="stat-front">&mdash;</dd>
-        <dt>Side overlap</dt><dd id="stat-side">&mdash;</dd>
+        <dt>Altitude</dt><dd id="stat-altitude">&mdash;</dd>
+        <dt>Front Overlap</dt><dd id="stat-front">&mdash;</dd>
+        <dt>Side Overlap</dt><dd id="stat-side">&mdash;</dd>
         <dt>Waypoints</dt><dd id="stat-waypoints">&mdash;</dd>
-        <dt>Afstand</dt><dd id="stat-distance">&mdash;</dd>
-        <dt>Aantal foto's</dt><dd id="stat-photos">&mdash;</dd>
-        <dt>Geschatte vliegtijd</dt><dd id="stat-time">&mdash;</dd>
+        <dt>Distance</dt><dd id="stat-distance">&mdash;</dd>
+        <dt>Photos</dt><dd id="stat-photos">&mdash;</dd>
+        <dt>Estimated Flight Time</dt><dd id="stat-time">&mdash;</dd>
       </dl>
-      <p class="hint hint-safety">Deze tool start nooit de drone. Ze
-      genereert uitsluitend een missiebestand (.kmz) dat je zelf in DJI Fly
-      importeert en activeert.</p>
+
+      <dl class="stats" id="import-stats" hidden>
+        <dt>Source File</dt><dd id="import-stat-source">&mdash;</dd>
+        <dt>Drone</dt><dd id="import-stat-drone">&mdash;</dd>
+        <dt>Waypoints</dt><dd id="import-stat-waypoints">&mdash;</dd>
+        <dt>Altitude</dt><dd id="import-stat-altitude">&mdash;</dd>
+        <dt>Speed</dt><dd id="import-stat-speed">&mdash;</dd>
+        <dt>Finish Action</dt><dd id="import-stat-finish">&mdash;</dd>
+        <dt>Distance</dt><dd id="import-stat-distance">&mdash;</dd>
+        <dt>Photos</dt><dd id="import-stat-photos">&mdash;</dd>
+        <dt>Estimated Flight Time</dt><dd id="import-stat-time">&mdash;</dd>
+      </dl>
+
+      <p class="hint hint-safety">This tool never starts the drone. It
+      only generates a mission file (.kmz) that you import and activate
+      yourself in DJI Fly.</p>
     </aside>
   </div>
 
